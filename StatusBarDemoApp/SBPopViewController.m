@@ -18,5 +18,9 @@
     [super viewDidLoad];
     // Do view setup here.
 }
+- (IBAction)quit:(NSButton *)sender {
+    
+    [[NSApplication sharedApplication] terminate:self];
+}
 
 @end

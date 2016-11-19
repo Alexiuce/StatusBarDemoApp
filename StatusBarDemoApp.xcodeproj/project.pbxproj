@@ -11,9 +11,7 @@
 		D815815B1DD742C600F93FF9 /* SBPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81581591DD742C600F93FF9 /* SBPopViewController.xib */; };
 		D8D99FB61DD49C7700B197C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D99FB51DD49C7700B197C0 /* AppDelegate.m */; };
 		D8D99FB91DD49C7700B197C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D99FB81DD49C7700B197C0 /* main.m */; };
-		D8D99FBC1DD49C7700B197C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D99FBB1DD49C7700B197C0 /* ViewController.m */; };
 		D8D99FBE1DD49C7700B197C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D99FBD1DD49C7700B197C0 /* Assets.xcassets */; };
-		D8D99FC11DD49C7700B197C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D99FBF1DD49C7700B197C0 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +22,7 @@
 		D8D99FB41DD49C7700B197C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8D99FB51DD49C7700B197C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D8D99FB81DD49C7700B197C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D8D99FBA1DD49C7700B197C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D8D99FBB1DD49C7700B197C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D8D99FBD1DD49C7700B197C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D8D99FC01DD49C7700B197C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8D99FC21DD49C7700B197C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,13 +58,10 @@
 			children = (
 				D8D99FB41DD49C7700B197C0 /* AppDelegate.h */,
 				D8D99FB51DD49C7700B197C0 /* AppDelegate.m */,
-				D8D99FBA1DD49C7700B197C0 /* ViewController.h */,
-				D8D99FBB1DD49C7700B197C0 /* ViewController.m */,
 				D81581571DD742C600F93FF9 /* SBPopViewController.h */,
 				D81581581DD742C600F93FF9 /* SBPopViewController.m */,
 				D81581591DD742C600F93FF9 /* SBPopViewController.xib */,
 				D8D99FBD1DD49C7700B197C0 /* Assets.xcassets */,
-				D8D99FBF1DD49C7700B197C0 /* Main.storyboard */,
 				D8D99FC21DD49C7700B197C0 /* Info.plist */,
 				D8D99FB71DD49C7700B197C0 /* Supporting Files */,
 			);
@@ -144,7 +136,6 @@
 			files = (
 				D815815B1DD742C600F93FF9 /* SBPopViewController.xib in Resources */,
 				D8D99FBE1DD49C7700B197C0 /* Assets.xcassets in Resources */,
-				D8D99FC11DD49C7700B197C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8D99FBC1DD49C7700B197C0 /* ViewController.m in Sources */,
 				D8D99FB91DD49C7700B197C0 /* main.m in Sources */,
 				D8D99FB61DD49C7700B197C0 /* AppDelegate.m in Sources */,
 				D815815A1DD742C600F93FF9 /* SBPopViewController.m in Sources */,
@@ -163,17 +153,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D8D99FBF1DD49C7700B197C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8D99FC01DD49C7700B197C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D8D99FC31DD49C7700B197C0 /* Debug */ = {
