@@ -7,3 +7,6 @@
 #  Copyright © 2018 dongjiu. All rights reserved.
 echo "hello Fake Code"
 
+find $SRCROOT -name *.h 
+
+echo $?
