@@ -26,6 +26,7 @@
 		D88B75FD21A77D7100951228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D88B75FF21A77D7100951228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88B760021A77D7100951228 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D88B760721A78AC100951228 /* XCFakeCode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCFakeCode.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 				D88B75F221A77D7000951228 /* AppDelegate.m */,
 				D88B75F421A77D7000951228 /* ViewController.h */,
 				D88B75F521A77D7000951228 /* ViewController.m */,
+				D88B760721A78AC100951228 /* XCFakeCode.sh */,
 				D88B75F721A77D7000951228 /* Main.storyboard */,
 				D88B75FA21A77D7100951228 /* Assets.xcassets */,
 				D88B75FC21A77D7100951228 /* LaunchScreen.storyboard */,
@@ -81,6 +83,7 @@
 				D88B75EA21A77D7000951228 /* Sources */,
 				D88B75EB21A77D7000951228 /* Frameworks */,
 				D88B75EC21A77D7000951228 /* Resources */,
+				D88B760821A78AD700951228 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -135,6 +138,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D88B760821A78AD700951228 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/RouterDemo/XCFakeCode.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D88B75EA21A77D7000951228 /* Sources */ = {

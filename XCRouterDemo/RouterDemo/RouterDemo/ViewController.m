@@ -25,7 +25,6 @@
         NSLog(@"%s",images[i]);
     }
 
-    UIResponder
 }
 
 
