@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="SLk-OP-So9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3m5-F6-Egw"/>
                             <constraint firstItem="SLk-OP-So9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="VLi-G0-CVt"/>
