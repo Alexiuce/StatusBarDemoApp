@@ -317,7 +317,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.RouterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.RouterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
+#import <PassKit/PassKit.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
     unsigned int imageCount = 0;
     const char **images = objc_copyImageNames(&imageCount);
@@ -27,5 +29,7 @@
 
 }
 
+- (IBAction)clickPayButton:(UIButton *)sender {
+}
 
 @end
