@@ -27,15 +27,46 @@
     
     NSDecimalNumber *payNumber = [[NSDecimalNumber alloc]initWithString:@"20.5"];
     
-    PKPaymentSummaryItem *payItem = [PKPaymentSummaryItem summaryItemWithLabel:@"H" amount:payNumber];
+    PKPaymentSummaryItem *payItem = [PKPaymentSummaryItem summaryItemWithLabel:@"Hello Pay~" amount:payNumber];
+    
+    
     
     PKPaymentRequest *payRequest = [[PKPaymentRequest alloc]init];
     payRequest.countryCode = @"CN";
     payRequest.currencyCode = @"CNY";
-    payRequest.merchantIdentifier = @"com.day.pay";
-    payRequest.supportedNetworks = @[PKPaymentNetworkDiscover];
-    payRequest.merchantCapabilities = PKMerchantCapabilityCredit;
+    payRequest.merchantIdentifier = @"com.day.g";
+    
+    
+    /**
+        PKPaymentNetworkAmex
+         PKPaymentNetworkCarteBancaire
+         PKPaymentNetworkCarteBancaires
+         PKPaymentNetworkCartesBancaires
+         PKPaymentNetworkChinaUnionPay
+         PKPaymentNetworkDiscover
+         PKPaymentNetworkEftpos
+         PKPaymentNetworkElectron
+         PKPaymentNetworkIDCredit
+         PKPaymentNetworkInterac
+         PKPaymentNetworkJCB
+         PKPaymentNetworkMaestro
+         PKPaymentNetworkMasterCard
+         PKPaymentNetworkPrivateLabel
+         PKPaymentNetworkQuicPay
+         PKPaymentNetworkSuica
+         PKPaymentNetworkVisa
+         PKPaymentNetworkVPay
+     */
+    payRequest.supportedNetworks = @[PKPaymentNetworkInterac];
+    /**
+     PKMerchantCapability3DS                                  = 1UL << 0,   // Merchant supports 3DS
+     PKMerchantCapabilityEMV                                  = 1UL << 1,   // Merchant supports EMV
+     PKMerchantCapabilityCredit NS_ENUM_AVAILABLE_IOS(9_0) = 1UL << 2,   // Merchant supports credit
+     PKMerchantCapabilityDebit
+     */
+    payRequest.merchantCapabilities = PKMerchantCapabilityDebit;//PKMerchantCapabilityCredit;
     payRequest.paymentSummaryItems = @[payItem];
+    
     PKPaymentAuthorizationViewController * controller = [[PKPaymentAuthorizationViewController alloc]initWithPaymentRequest:payRequest];
     controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
