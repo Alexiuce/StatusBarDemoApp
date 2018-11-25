@@ -85,7 +85,7 @@
 }
 
 
-#pragma mark
+#pragma mark - PKPaymentAuthorizationViewControllerDelegate
 - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller{
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
