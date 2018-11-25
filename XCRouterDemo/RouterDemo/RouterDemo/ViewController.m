@@ -26,6 +26,21 @@
 
 - (IBAction)clickPayButton:(UIButton *)sender {
     
+    [self p_testApplePay];
+    
+}
+#pragma mark - private method
+
+- (void)p_testRuntimeForFramework{
+    unsigned int imageCount = 0;
+    const char **images = objc_copyImageNames(&imageCount);
+    
+    for (int i = 0; i < imageCount; i++) {
+        NSLog(@"%s",images[i]);
+    }
+}
+/** apple pay  */
+- (void)p_testApplePay{
     NSDecimalNumber *payNumber = [[NSDecimalNumber alloc]initWithString:@"20.5"];
     
     PKPaymentSummaryItem *payItem = [PKPaymentSummaryItem summaryItemWithLabel:@"Hello Pay~" amount:payNumber];
@@ -39,24 +54,24 @@
     
     
     /**
-        PKPaymentNetworkAmex
-         PKPaymentNetworkCarteBancaire
-         PKPaymentNetworkCarteBancaires
-         PKPaymentNetworkCartesBancaires
-         PKPaymentNetworkChinaUnionPay
-         PKPaymentNetworkDiscover
-         PKPaymentNetworkEftpos
-         PKPaymentNetworkElectron
-         PKPaymentNetworkIDCredit
-         PKPaymentNetworkInterac
-         PKPaymentNetworkJCB
-         PKPaymentNetworkMaestro
-         PKPaymentNetworkMasterCard
-         PKPaymentNetworkPrivateLabel
-         PKPaymentNetworkQuicPay
-         PKPaymentNetworkSuica
-         PKPaymentNetworkVisa
-         PKPaymentNetworkVPay
+     PKPaymentNetworkAmex
+     PKPaymentNetworkCarteBancaire
+     PKPaymentNetworkCarteBancaires
+     PKPaymentNetworkCartesBancaires
+     PKPaymentNetworkChinaUnionPay
+     PKPaymentNetworkDiscover
+     PKPaymentNetworkEftpos
+     PKPaymentNetworkElectron
+     PKPaymentNetworkIDCredit
+     PKPaymentNetworkInterac
+     PKPaymentNetworkJCB
+     PKPaymentNetworkMaestro
+     PKPaymentNetworkMasterCard
+     PKPaymentNetworkPrivateLabel
+     PKPaymentNetworkQuicPay
+     PKPaymentNetworkSuica
+     PKPaymentNetworkVisa
+     PKPaymentNetworkVPay
      */
     payRequest.supportedNetworks = @[PKPaymentNetworkInterac];
     /**
@@ -71,19 +86,11 @@
     PKPaymentAuthorizationViewController * controller = [[PKPaymentAuthorizationViewController alloc]initWithPaymentRequest:payRequest];
     controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
+}
+/** iap */
+- (void)p_testStoreKit{
     
 }
-#pragma mark - private method
-
-- (void)p_testRuntimeForFramework{
-    unsigned int imageCount = 0;
-    const char **images = objc_copyImageNames(&imageCount);
-    
-    for (int i = 0; i < imageCount; i++) {
-        NSLog(@"%s",images[i]);
-    }
-}
-
 
 #pragma mark - PKPaymentAuthorizationViewControllerDelegate
 - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller{
