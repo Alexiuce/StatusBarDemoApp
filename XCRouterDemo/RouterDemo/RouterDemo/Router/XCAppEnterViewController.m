@@ -55,6 +55,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSLog(@"%s",__FUNCTION__);
+    _Pragma("message \"FIXME: ADF ADSF ASDFASD FASDF \"")
 }
 
 - (void)viewDidAppear:(BOOL)animated{
