@@ -9,4 +9,10 @@ echo "hello Fake Code"
 
 find $SRCROOT -name *.h 
 
-echo $?
+echo ===================
+cat $SRCROOT/RouterDemo/Router/XCAppEnterViewController.h
+#set
+
+
+
+

@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D82990F121AB758A00B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
 		D82990F221AB758A00B59018 /* XCAppEnterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppEnterViewController.m; sourceTree = "<group>"; };
+		D82990F521AB783500B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B75F121A77D7000951228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D88B75F221A77D7000951228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		D82990F021AB755A00B59018 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				D82990F121AB758A00B59018 /* XCAppEnterViewController.h */,
+				D82990F521AB783500B59018 /* XCAppEnterViewController.h */,
 				D82990F221AB758A00B59018 /* XCAppEnterViewController.m */,
 			);
 			path = Router;
