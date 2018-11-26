@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F221AB758A00B59018 /* XCAppEnterViewController.m */; };
 		D88B75F321A77D7000951228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F221A77D7000951228 /* AppDelegate.m */; };
 		D88B75F621A77D7000951228 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F521A77D7000951228 /* ViewController.m */; };
 		D88B75F921A77D7000951228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75F721A77D7000951228 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D82990F121AB758A00B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
+		D82990F221AB758A00B59018 /* XCAppEnterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppEnterViewController.m; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B75F121A77D7000951228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D88B75F221A77D7000951228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D82990F021AB755A00B59018 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D82990F121AB758A00B59018 /* XCAppEnterViewController.h */,
+				D82990F221AB758A00B59018 /* XCAppEnterViewController.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		D88B75E521A77D7000951228 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +71,7 @@
 		D88B75F021A77D7000951228 /* RouterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D82990F021AB755A00B59018 /* Router */,
 				D88B75F121A77D7000951228 /* AppDelegate.h */,
 				D88B75F221A77D7000951228 /* AppDelegate.m */,
 				D88B75F421A77D7000951228 /* ViewController.h */,
@@ -166,6 +179,7 @@
 			files = (
 				D88B75F621A77D7000951228 /* ViewController.m in Sources */,
 				D88B760121A77D7100951228 /* main.m in Sources */,
+				D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */,
 				D88B75F321A77D7000951228 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
