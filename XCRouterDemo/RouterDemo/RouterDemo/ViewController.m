@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import <PassKit/PassKit.h>
 #import <StoreKit/StoreKit.h>
+#import "XCAppEnterViewController.h"
 
 @interface ViewController ()<PKPaymentAuthorizationViewControllerDelegate>
 
@@ -52,6 +53,15 @@
     });
     
 }
+/** 点击push button */
+- (IBAction)clickPushButton:(UIButton *)sender {
+    XCAppEnterViewController *controller = [[XCAppEnterViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+}
+
+
+
 #pragma mark - private method
 
 - (void)p_testRuntimeForFramework{

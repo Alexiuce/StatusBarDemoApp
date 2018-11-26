@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEt-J1-O4e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-OP-So9">
-                                <rect key="frame" x="40" y="112" width="84" height="30"/>
+                                <rect key="frame" x="40" y="156" width="84" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zPO-Tr-mNj"/>
                                 </constraints>
@@ -28,18 +28,47 @@
                                     <action selector="clickPayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRr-Ln-qON"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-Cw-NSR">
+                                <rect key="frame" x="59" y="248" width="84" height="30"/>
+                                <state key="normal" title="Push Button"/>
+                                <connections>
+                                    <action selector="clickPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQL-zI-LKv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="SLk-OP-So9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3m5-F6-Egw"/>
+                            <constraint firstItem="hh1-Cw-NSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="Ckj-sZ-hnK"/>
                             <constraint firstItem="SLk-OP-So9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="VLi-G0-CVt"/>
+                            <constraint firstItem="hh1-Cw-NSR" firstAttribute="top" secondItem="SLk-OP-So9" secondAttribute="bottom" constant="62" id="a2a-J7-zPN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SLk-OP-So9" secondAttribute="trailing" symbolic="YES" id="etH-nM-inM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uRD-tX-b8b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1161" y="-582"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b38-px-jIW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mEt-J1-O4e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8wK-p4-8Rt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pot-Ai-YlX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pf9-y0-2P3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="-582.45877061469275"/>
         </scene>
     </scenes>
 </document>
