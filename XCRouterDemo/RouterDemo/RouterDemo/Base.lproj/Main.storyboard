@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-OP-So9">
-                                <rect key="frame" x="40" y="112" width="75" height="30"/>
+                                <rect key="frame" x="40" y="112" width="84" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zPO-Tr-mNj"/>
                                 </constraints>
-                                <state key="normal" title="Pay Button"/>
+                                <state key="normal" title="Click Button"/>
                                 <connections>
                                     <action selector="clickPayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRr-Ln-qON"/>
                                 </connections>

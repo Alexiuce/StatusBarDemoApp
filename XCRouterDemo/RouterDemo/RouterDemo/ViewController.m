@@ -19,14 +19,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%s",__FUNCTION__);
     
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    NSLog(@"%s",__FUNCTION__);
 }
 
 
-
 - (IBAction)clickPayButton:(UIButton *)sender {
+    for (int i = 0; i < 100; i++) {
+        NSLog(@"click ......%d",i);        
+    }
     
-    [self p_testApplePay];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"button");
+    });
     
 }
 #pragma mark - private method
