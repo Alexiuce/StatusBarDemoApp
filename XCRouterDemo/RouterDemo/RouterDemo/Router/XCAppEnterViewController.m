@@ -8,6 +8,11 @@
 
 #import "XCAppEnterViewController.h"
 
+
+#define STRINGFY(s) #s
+
+#define TODO(m) _Pragma(STRINGFY(message("TODO:"STRINGFY(m))))
+
 @interface XCAppEnterViewController ()
 
 @end
@@ -24,6 +29,7 @@
     self.view.backgroundColor = UIColor.orangeColor;
     NSLog(@"%s",__FUNCTION__);
    
+    TODO("todo ")
     
     NSLog(@"normal button");
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -55,7 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSLog(@"%s",__FUNCTION__);
-    _Pragma("message \"FIXME: ADF ADSF ASDFASD FASDF \"")
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
