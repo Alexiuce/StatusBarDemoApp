@@ -6,11 +6,16 @@
 #  Created by Alexcai on 2018/11/23.
 #  Copyright © 2018 dongjiu. All rights reserved.
 echo "hello Fake Code"
+#
+#find $SRCROOT -name *.h
+#
+#echo ===================
+#cat $SRCROOT/RouterDemo/Router/XCAppEnterViewController.h
 
-find $SRCROOT -name *.h 
+grep -n  "NSLog" $SRCROOT/RouterDemo/Router/XCAppEnterViewController.m
 
-echo ===================
-cat $SRCROOT/RouterDemo/Router/XCAppEnterViewController.h
+
+exit 0
 #set
 
 
