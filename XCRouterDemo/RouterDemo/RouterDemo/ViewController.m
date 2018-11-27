@@ -47,7 +47,7 @@
 
 
 - (IBAction)clickPayButton:(UIButton *)sender {
-   
+    [self p_testDispatchRunloop];
 }
 /** 点击push button */
 - (IBAction)clickPushButton:(UIButton *)sender {
@@ -56,9 +56,21 @@
     
 }
 
-
-
 #pragma mark - private method
+
+- (void)p_testDispatchRunloop{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        for (int i = 0; i < 10000; i++) {
+            NSString *str = [NSString stringWithFormat:@"%d",1];
+            NSLog(@"%@",str);
+//        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"async main queue");
+        });
+    });
+}
 
 - (void)p_testRunloopDispatch{
     NSLog(@"click Button");
