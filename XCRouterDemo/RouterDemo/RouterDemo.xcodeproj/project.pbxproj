@@ -15,6 +15,7 @@
 		D88B75FB21A77D7100951228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88B75FA21A77D7100951228 /* Assets.xcassets */; };
 		D88B75FE21A77D7100951228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75FC21A77D7100951228 /* LaunchScreen.storyboard */; };
 		D88B760121A77D7100951228 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B760021A77D7100951228 /* main.m */; };
+		D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		D88B75FF21A77D7100951228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88B760021A77D7100951228 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D88B760721A78AC100951228 /* XCFakeCode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCFakeCode.sh; sourceTree = "<group>"; };
+		D8C138CB21ACD25A00FA92C4 /* XCRecentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRecentViewController.h; sourceTree = "<group>"; };
+		D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRecentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,8 @@
 				D82990F221AB758A00B59018 /* XCAppEnterViewController.m */,
 				D82990F721ABBF8F00B59018 /* XCAppPresentViewController.h */,
 				D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */,
+				D8C138CB21ACD25A00FA92C4 /* XCRecentViewController.h */,
+				D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			files = (
 				D82990F921ABBF8F00B59018 /* XCAppPresentViewController.m in Sources */,
 				D88B75F621A77D7000951228 /* ViewController.m in Sources */,
+				D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */,
 				D88B760121A77D7100951228 /* main.m in Sources */,
 				D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */,
 				D88B75F321A77D7000951228 /* AppDelegate.m in Sources */,
