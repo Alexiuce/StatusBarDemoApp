@@ -12,7 +12,7 @@ echo "hello Fake Code"
 #echo ===================
 #cat $SRCROOT/RouterDemo/Router/XCAppEnterViewController.h
 
-grep -n  "NSLog" $SRCROOT/RouterDemo/Router/XCAppEnterViewController.m
+grep -n "NSLog" $SRCROOT/RouterDemo/Router/XCAppEnterViewController.m
 
 
 exit 0
