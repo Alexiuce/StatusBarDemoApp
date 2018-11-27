@@ -47,11 +47,7 @@
 
 
 - (IBAction)clickPayButton:(UIButton *)sender {
-    NSLog(@"click Button");
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"button");
-    });
-    
+   
 }
 /** 点击push button */
 - (IBAction)clickPushButton:(UIButton *)sender {
@@ -63,6 +59,28 @@
 
 
 #pragma mark - private method
+
+- (void)p_testRunloopDispatch{
+    NSLog(@"click Button");
+    UILabel *outerLabel = [[UILabel alloc]initWithFrame:CGRectInset(self.view.bounds, 100, 100)];
+    outerLabel.backgroundColor = UIColor.redColor;
+    outerLabel.text = @"outer Label";
+    [self.view addSubview:outerLabel];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"button");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"inner main queue");
+            UILabel *innerLabel = [[UILabel alloc]initWithFrame:CGRectInset(self.view.bounds, 130, 150)];
+            innerLabel.backgroundColor = UIColor.orangeColor;
+            innerLabel.text = @"inner Label";
+            [self.view addSubview:innerLabel];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"third  main queue");
+            });
+        });
+    });
+    NSLog(@"after.....");
+}
 
 - (void)p_testRuntimeForFramework{
     unsigned int imageCount = 0;
