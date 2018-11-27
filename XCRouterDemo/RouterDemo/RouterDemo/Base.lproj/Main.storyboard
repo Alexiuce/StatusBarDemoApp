@@ -37,6 +37,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ei-Iu-ERb">
                                 <rect key="frame" x="31" y="318" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ubx-Te-QyT"/>
+                                </constraints>
                                 <state key="normal" title="Present Button"/>
                                 <connections>
                                     <segue destination="u8E-jz-83q" kind="presentation" id="GJV-tp-f9a"/>
@@ -45,9 +48,11 @@
                         </subviews>
                         <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Ei-Iu-ERb" secondAttribute="trailing" symbolic="YES" id="0pK-vY-36o"/>
                             <constraint firstItem="SLk-OP-So9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3m5-F6-Egw"/>
                             <constraint firstItem="hh1-Cw-NSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="Ckj-sZ-hnK"/>
                             <constraint firstItem="SLk-OP-So9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="VLi-G0-CVt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hh1-Cw-NSR" secondAttribute="trailing" symbolic="YES" id="X6U-B9-8z9"/>
                             <constraint firstItem="hh1-Cw-NSR" firstAttribute="top" secondItem="SLk-OP-So9" secondAttribute="bottom" constant="62" id="a2a-J7-zPN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SLk-OP-So9" secondAttribute="trailing" symbolic="YES" id="etH-nM-inM"/>
                             <constraint firstItem="9Ei-Iu-ERb" firstAttribute="top" secondItem="hh1-Cw-NSR" secondAttribute="bottom" constant="40" id="mSp-Rg-kai"/>

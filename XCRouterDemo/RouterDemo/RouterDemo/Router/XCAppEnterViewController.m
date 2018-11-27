@@ -29,7 +29,7 @@
     self.view.backgroundColor = UIColor.orangeColor;
     NSLog(@"%s",__FUNCTION__);
    
-    TODO("todo ")
+//    TODO("todo ")
     
     NSLog(@"normal button");
     dispatch_async(dispatch_get_main_queue(), ^{

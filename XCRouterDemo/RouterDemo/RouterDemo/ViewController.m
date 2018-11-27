@@ -20,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"dipatch main code ...");
+    });
     
 }
 - (void)viewWillAppear:(BOOL)animated{

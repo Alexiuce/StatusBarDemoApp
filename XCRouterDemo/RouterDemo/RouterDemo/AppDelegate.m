@@ -49,7 +49,7 @@
                 break;
             }
             case kCFRunLoopAfterWaiting:{
-                NSLog(@"---- runloop从休眠中环信 ---");
+                NSLog(@"---- runloop从休眠中唤醒 ---");
                 break;
             }
             default:
