@@ -47,10 +47,7 @@
 
 
 - (IBAction)clickPayButton:(UIButton *)sender {
-    for (int i = 0; i < 100; i++) {
-        NSLog(@"click ......%d",i);        
-    }
-    
+    NSLog(@"click Button");
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"button");
     });
