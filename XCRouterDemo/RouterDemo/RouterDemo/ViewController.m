@@ -13,6 +13,7 @@
 #import "XCAppEnterViewController.h"
 
 @interface ViewController ()<PKPaymentAuthorizationViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -23,6 +24,7 @@
     NSLog(@"%s",__PRETTY_FUNCTION__);
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"dipatch main code ...");
+       
     });
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -59,15 +61,26 @@
 
 - (void)p_testDispatchRunloop{
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        for (int i = 0; i < 10000; i++) {
-            NSString *str = [NSString stringWithFormat:@"%d",1];
-            NSLog(@"%@",str);
+//            NSString *str = [NSString stringWithFormat:@"%d",1];
+//            NSLog(@"%@",str);
 //        }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"async main queue");
-        });
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"async main queue");
+//        });
+//    });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSInteger i = 1;
+        /** 只有当 while 执行完毕 才会更新UI */
+        while (i) {
+            i ++;
+            if (i == 20) {
+                self.label.text = @"aaaaa";
+                i = 0;
+            }
+        }
     });
 }
 
