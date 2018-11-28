@@ -24,7 +24,6 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"dipatch main code ...");
     });
-    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     dispatch_async(dispatch_get_main_queue(), ^{
-NSLog(@"before button");
+         NSLog(@"before button");
     });
     NSLog(@"before did load ....");
     [super viewDidLoad];
