@@ -23,6 +23,9 @@
     NSLog(@"normal button");
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"button");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"inner === button");
+        });
     });
 }
 - (void)viewWillAppear:(BOOL)animated{
