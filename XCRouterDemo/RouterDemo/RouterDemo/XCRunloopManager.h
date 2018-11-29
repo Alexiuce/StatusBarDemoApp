@@ -12,8 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCRunloopManager : NSObject
 
-+ (instancetype)shareManager;
-
++ (void)addRunloopObserver;
 
 @end
 

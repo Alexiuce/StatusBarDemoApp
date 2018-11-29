@@ -10,17 +10,9 @@
 
 @implementation XCRunloopManager
 
-+ (instancetype)shareManager{
-    static dispatch_once_t onceToken;
-    XCRunloopManager *__instance = nil;
-    dispatch_once(&onceToken, ^{
-        __instance = [self new];
-    });
-    return __instance;
-}
 
 
-- (void)addRunloopObserver{
++ (void)addRunloopObserver{
     /**
      kCFRunLoopEntry   ==   1 进入runloop ,
      kCFRunLoopBeforeTimers == 2   即将处理Timer,
