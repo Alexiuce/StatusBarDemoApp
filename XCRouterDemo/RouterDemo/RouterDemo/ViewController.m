@@ -11,6 +11,7 @@
 #import <PassKit/PassKit.h>
 #import <StoreKit/StoreKit.h>
 #import "XCAppEnterViewController.h"
+#import "XCView.h"
 
 @interface ViewController ()<PKPaymentAuthorizationViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -18,6 +19,8 @@
 @end
 
 @implementation ViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
