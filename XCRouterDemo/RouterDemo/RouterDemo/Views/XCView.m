@@ -10,6 +10,9 @@
 
 @implementation XCView
 
-
+- (void)setFrame:(CGRect)frame{
+    [super setFrame:frame];
+    NSLog(@"%@",NSStringFromCGRect(frame));
+}
 
 @end
