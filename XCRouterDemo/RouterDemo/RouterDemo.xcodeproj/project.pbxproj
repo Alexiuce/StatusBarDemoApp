@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F221AB758A00B59018 /* XCAppEnterViewController.m */; };
 		D82990F921ABBF8F00B59018 /* XCAppPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */; };
+		D8409BAB21AF6542001670A1 /* XCRunloopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8409BAA21AF6542001670A1 /* XCRunloopManager.m */; };
 		D88B75F321A77D7000951228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F221A77D7000951228 /* AppDelegate.m */; };
 		D88B75F621A77D7000951228 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F521A77D7000951228 /* ViewController.m */; };
 		D88B75F921A77D7000951228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75F721A77D7000951228 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 		D82990F521AB783500B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
 		D82990F721ABBF8F00B59018 /* XCAppPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCAppPresentViewController.h; sourceTree = "<group>"; };
 		D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppPresentViewController.m; sourceTree = "<group>"; };
+		D8409BA921AF6542001670A1 /* XCRunloopManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRunloopManager.h; sourceTree = "<group>"; };
+		D8409BAA21AF6542001670A1 /* XCRunloopManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRunloopManager.m; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B75F121A77D7000951228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D88B75F221A77D7000951228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				D88B75FC21A77D7100951228 /* LaunchScreen.storyboard */,
 				D88B75FF21A77D7100951228 /* Info.plist */,
 				D88B760021A77D7100951228 /* main.m */,
+				D8409BA921AF6542001670A1 /* XCRunloopManager.h */,
+				D8409BAA21AF6542001670A1 /* XCRunloopManager.m */,
 			);
 			path = RouterDemo;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82990F921ABBF8F00B59018 /* XCAppPresentViewController.m in Sources */,
+				D8409BAB21AF6542001670A1 /* XCRunloopManager.m in Sources */,
 				D88B75F621A77D7000951228 /* ViewController.m in Sources */,
 				D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */,
 				D88B760121A77D7100951228 /* main.m in Sources */,
