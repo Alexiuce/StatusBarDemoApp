@@ -18,7 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(100, 100)];
+    [path addLineToPoint:CGPointMake(150, 250)];
+    
+    CAShapeLayer *sl = [CAShapeLayer layer];
+    sl.lineWidth = 10;
+    sl.strokeColor = UIColor.blueColor.CGColor;
+    sl.path = path.CGPath;
+    [self.view.layer addSublayer:sl];
     
 }
 
