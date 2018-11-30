@@ -12,7 +12,7 @@
 
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
-    NSLog(@"%@",NSStringFromCGRect(frame));
+//    NSLog(@"%@",NSStringFromCGRect(frame));
 }
 
 @end

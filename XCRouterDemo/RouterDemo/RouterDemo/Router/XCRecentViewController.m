@@ -18,33 +18,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   
     
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    NSLog(@"normal button");
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"button");
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"inner === button");
-        });
+}
+
+
+#pragma mark - GCD test
+
+/** set_target_queue */
+- (void)p_testForGCD{
+    
+    dispatch_queue_t q1 = dispatch_queue_create("com.alexiuc.github",NULL);
+    dispatch_async(q1, ^{
+        NSLog(@"q1  doing....%@",NSThread.currentThread);
     });
-}
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    NSLog(@"%s",__FUNCTION__);
+    
+    dispatch_queue_t q3 = dispatch_queue_create("com.aaa.github", NULL);
+    dispatch_async(q3, ^{
+        NSLog(@"q3 diong.....%@",NSThread.currentThread);
+    });
+    
+    dispatch_queue_t q4 = dispatch_queue_create("com.aaa.github", NULL);
+    dispatch_async(q4, ^{
+        NSLog(@"q4 diong.....%@",NSThread.currentThread);
+    });
+    
+    dispatch_queue_t q5 = dispatch_queue_create("com.aaa.github", NULL);
+    dispatch_async(q5, ^{
+        NSLog(@"q5 diong.....%@",NSThread.currentThread);
+    });
+    
+    dispatch_queue_t q6 = dispatch_queue_create("com.aaa.github", NULL);
+    dispatch_async(q6, ^{
+        NSLog(@"q6 diong.....%@",NSThread.currentThread);
+    });
+    
+    
+    
+//    dispatch_queue_t q2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+//    dispatch_set_target_queue(q1, q2);
+    
+    
+    
+    
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    NSLog(@"%s",__FUNCTION__);
-}
+#pragma mark - IBAction
 
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    NSLog(@"%s",__FUNCTION__);
+- (IBAction)clickGCDButton:(UIButton *)sender {
+     [self p_testForGCD];
 }
-
 @end

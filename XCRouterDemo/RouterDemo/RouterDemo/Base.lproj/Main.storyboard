@@ -141,6 +141,14 @@
                                     <segue destination="Avq-Ej-mAz" kind="show" id="ROX-6n-YmJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gne-1z-yvT">
+                                <rect key="frame" x="281" y="141" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GCD"/>
+                                <connections>
+                                    <action selector="clickGCDButton:" destination="4xC-9P-53Z" eventType="touchUpInside" id="PbV-hC-JpJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="B23-LS-363"/>

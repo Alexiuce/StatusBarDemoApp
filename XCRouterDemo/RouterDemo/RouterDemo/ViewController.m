@@ -24,36 +24,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"dipatch main code ...");
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"button");
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"inner button");
-            });
-        });
-       
-    });
+   
 }
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    NSLog(@"%s",__FUNCTION__);
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    NSLog(@"%s",__FUNCTION__);
-}
-- (void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    NSLog(@"%s",__FUNCTION__);
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    NSLog(@"%s",__FUNCTION__);
-}
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    NSLog(@"%s",__FUNCTION__);
+//}
+//
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    NSLog(@"%s",__FUNCTION__);
+//}
+//- (void)viewWillLayoutSubviews{
+//    [super viewWillLayoutSubviews];
+//    NSLog(@"%s",__FUNCTION__);
+//}
+//
+//- (void)viewDidLayoutSubviews{
+//    [super viewDidLayoutSubviews];
+//    NSLog(@"%s",__FUNCTION__);
+//}
 
 
 - (IBAction)clickPayButton:(UIButton *)sender {
@@ -67,6 +57,20 @@
 }
 
 #pragma mark - private method
+
+- (void)p_didLoad{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"dipatch main code ...");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"button");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"inner button");
+            });
+        });
+        
+    });
+}
 
 - (void)p_testDispatchRunloop{
     NSLog(@"%s", __PRETTY_FUNCTION__);
