@@ -73,20 +73,23 @@
 //        NSLog(@"q6 diong.....%@",NSThread.currentThread);
 //    });
     
-    
-    
 //    dispatch_queue_t q2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
 //    dispatch_set_target_queue(q1, q2);
     
-    
-    
-    
-    
 }
 
+- (void)p_testDispatchMain{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"Hello main ");
+    });
+    for (int i = 0; i < 100; i++) {
+        NSLog(@"%d",i);
+    }
+}
 #pragma mark - IBAction
 
 - (IBAction)clickGCDButton:(UIButton *)sender {
-     [self p_testForGCD];
+//     [self p_testForGCD];
+    [self p_testDispatchMain];
 }
 @end
