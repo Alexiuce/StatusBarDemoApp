@@ -31,16 +31,16 @@
     repLay.backgroundColor = UIColor.grayColor.CGColor;
     repLay.frame = CGRectMake(10, 300, 300, 200);
     
-    CALayer *subLayer = [CALayer layer];
-    subLayer.frame = CGRectMake(0, 0, 20, 40);
-    subLayer.anchorPoint = CGPointZero;
-    subLayer.backgroundColor = UIColor.redColor.CGColor;
-    [repLay addSublayer:subLayer];
     
     
     repLay.instanceTransform = CATransform3DMakeTranslation(30, 0, 0);
     repLay.instanceCount = 3;
     
+    CALayer *subLayer = [CALayer layer];
+    subLayer.frame = CGRectMake(0, 0, 20, 40);
+    subLayer.anchorPoint = CGPointZero;
+    subLayer.backgroundColor = UIColor.redColor.CGColor;
+    [repLay addSublayer:subLayer];
     
     [self.view.layer addSublayer:repLay];
 }
