@@ -42,6 +42,13 @@
     subLayer.backgroundColor = UIColor.redColor.CGColor;
     [repLay addSublayer:subLayer];
     
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
+    animation.toValue = @0.5;
+    animation.duration = 1;
+    animation.autoreverses = YES;
+    animation.repeatCount = MAXFLOAT;
+    [subLayer addAnimation:animation forKey:nil];
+    
     [self.view.layer addSublayer:repLay];
 }
 
