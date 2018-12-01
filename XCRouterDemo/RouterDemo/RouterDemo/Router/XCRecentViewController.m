@@ -19,6 +19,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+  
+    
+}
+
+
+#pragma mark - GCD test
+
+- (void)p_shapeLayer{
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(100, 100)];
     [path addLineToPoint:CGPointMake(150, 250)];
@@ -28,11 +36,7 @@
     sl.strokeColor = UIColor.blueColor.CGColor;
     sl.path = path.CGPath;
     [self.view.layer addSublayer:sl];
-    
 }
-
-
-#pragma mark - GCD test
 
 /** set_target_queue */
 - (void)p_testForGCD{
