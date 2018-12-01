@@ -19,12 +19,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-  
+    [self p_replicatorLayer];
     
 }
 
 
 #pragma mark - GCD test
+
+- (void)p_replicatorLayer{
+    CAReplicatorLayer *repLay = [CAReplicatorLayer layer];
+    repLay.frame = CGRectMake(100, 100, 200, 200);
+    
+    
+    
+    
+    
+    CALayer *subLayer = [CALayer layer];
+    subLayer.frame = CGRectMake(0, 0, 20, 40);
+    subLayer.backgroundColor = UIColor.redColor.CGColor;
+    [repLay addSublayer:subLayer];
+    
+    [self.view.layer addSublayer:repLay];
+}
 
 - (void)p_shapeLayer{
     UIBezierPath *path = [UIBezierPath bezierPath];
