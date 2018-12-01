@@ -28,16 +28,19 @@
 
 - (void)p_replicatorLayer{
     CAReplicatorLayer *repLay = [CAReplicatorLayer layer];
-    repLay.frame = CGRectMake(100, 100, 200, 200);
-    
-    
-    
-    
+    repLay.backgroundColor = UIColor.grayColor.CGColor;
+    repLay.frame = CGRectMake(10, 300, 300, 200);
     
     CALayer *subLayer = [CALayer layer];
     subLayer.frame = CGRectMake(0, 0, 20, 40);
+    subLayer.anchorPoint = CGPointZero;
     subLayer.backgroundColor = UIColor.redColor.CGColor;
     [repLay addSublayer:subLayer];
+    
+    
+    repLay.instanceTransform = CATransform3DMakeTranslation(30, 0, 0);
+    repLay.instanceCount = 3;
+    
     
     [self.view.layer addSublayer:repLay];
 }
