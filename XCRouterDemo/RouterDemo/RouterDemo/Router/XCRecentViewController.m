@@ -31,10 +31,9 @@
     repLay.backgroundColor = UIColor.grayColor.CGColor;
     repLay.frame = CGRectMake(10, 300, 300, 200);
     
-    
-    
     repLay.instanceTransform = CATransform3DMakeTranslation(30, 0, 0);
     repLay.instanceCount = 3;
+    repLay.instanceDelay = 0.1;
     
     CALayer *subLayer = [CALayer layer];
     subLayer.frame = CGRectMake(0, 0, 20, 40);
