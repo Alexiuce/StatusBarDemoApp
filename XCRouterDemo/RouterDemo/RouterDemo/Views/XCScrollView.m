@@ -10,7 +10,6 @@
 
 @interface XCScrollView ()
 
-@property (nonatomic, assign) CGPoint lastPoint;
 
 @end
 
@@ -30,11 +29,11 @@
 #pragma mark - Pan Gesture handle
 - (void)p_panInView:(UIPanGestureRecognizer *)pan{
     CGPoint p = [pan translationInView:self];
-    self.lastPoint = CGPointMake(p.x + self.lastPoint.x, p.y + self.lastPoint.y);
+//    self.lastPoint = CGPointMake(p.x + self.lastPoint.x, p.y + self.lastPoint.y);
     NSLog(@"%f",p.x);
     CGRect b = self.bounds;
-    b.origin.x  = - self.lastPoint.x;
-    b.origin.y = - self.lastPoint.y;
+    b.origin.x  -= p.x;
+    b.origin.y -= p.y;
     self.bounds = b;
     [pan setTranslation:CGPointZero inView:self];
    
