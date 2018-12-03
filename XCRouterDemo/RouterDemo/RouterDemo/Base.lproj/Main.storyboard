@@ -118,6 +118,14 @@
                                     <constraint firstAttribute="height" constant="126" id="6yu-lE-az9"/>
                                 </constraints>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yu-DG-zHE">
+                                <rect key="frame" x="0.0" y="377" width="375" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="delegate" destination="u8E-jz-83q" id="1fO-Xa-UhC"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -130,6 +138,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t4N-4E-5Qa"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="6yu-DG-zHE" id="WIO-G5-yjL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBF-oy-KaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
