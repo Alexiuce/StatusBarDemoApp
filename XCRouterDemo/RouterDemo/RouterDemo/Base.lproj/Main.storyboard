@@ -94,19 +94,46 @@
                                     <action selector="clickDismissButton:" destination="u8E-jz-83q" eventType="touchUpInside" id="019-xW-Bmb"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpq-KO-KsI" customClass="XCScrollView">
+                                <rect key="frame" x="0.0" y="194" width="375" height="126"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3I-8M-967">
+                                        <rect key="frame" x="-74" y="20" width="147" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZN-Dp-cjN">
+                                        <rect key="frame" x="102" y="20" width="147" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.19271725170000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-xa-hJ5">
+                                        <rect key="frame" x="277" y="20" width="147" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="6yu-lE-az9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ump-3m-BDf" firstAttribute="leading" secondItem="t4N-4E-5Qa" secondAttribute="leading" constant="12" id="6uN-pE-5oX"/>
                             <constraint firstItem="t4N-4E-5Qa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ump-3m-BDf" secondAttribute="trailing" symbolic="YES" id="7AI-aw-SJZ"/>
+                            <constraint firstItem="Lpq-KO-KsI" firstAttribute="leading" secondItem="t4N-4E-5Qa" secondAttribute="leading" id="BxQ-iA-QfX"/>
+                            <constraint firstItem="Lpq-KO-KsI" firstAttribute="top" secondItem="ump-3m-BDf" secondAttribute="bottom" constant="117" id="Do7-ub-3gI"/>
                             <constraint firstItem="ump-3m-BDf" firstAttribute="top" secondItem="t4N-4E-5Qa" secondAttribute="top" constant="27" id="hVB-ES-aJh"/>
+                            <constraint firstItem="Lpq-KO-KsI" firstAttribute="trailing" secondItem="t4N-4E-5Qa" secondAttribute="trailing" id="y6N-lS-qE5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t4N-4E-5Qa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBF-oy-KaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2858" y="-582"/>
+            <point key="canvasLocation" x="2856.8000000000002" y="-582.45877061469275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1OH-PR-zk3">
