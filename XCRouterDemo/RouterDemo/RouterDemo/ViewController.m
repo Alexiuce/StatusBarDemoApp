@@ -26,28 +26,39 @@
     [super viewDidLoad];
    
 }
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//
-//- (void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)viewWillLayoutSubviews{
-//    [super viewWillLayoutSubviews];
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//
-//- (void)viewDidLayoutSubviews{
-//    [super viewDidLayoutSubviews];
-//    NSLog(@"%s",__FUNCTION__);
-//}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    NSLog(@"%s",__FUNCTION__);
+}
 
 
 - (IBAction)clickPayButton:(UIButton *)sender {
-    [self p_testDispatchRunloop];
+    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
+//    [self p_testDispatchRunloop];
+    static NSString *imgName = @"red";
+    if ([imgName isEqualToString:@"yellow"]) {
+        imgName = @"red";
+    }else{
+        imgName = @"yellow";
+    }
+//    [sender setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+    [sender setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+    
+    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
 }
 /** 点击push button */
 - (IBAction)clickPushButton:(UIButton *)sender {
