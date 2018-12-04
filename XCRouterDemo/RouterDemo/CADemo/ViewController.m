@@ -25,10 +25,32 @@
 }
 
 - (IBAction)clickChangeColorButton:(UIButton *)sender {
+    
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:5.0];
+    
     CGFloat red = arc4random() /(CGFloat) INT_MAX;
     CGFloat green = arc4random() / (CGFloat) INT_MAX;
     CGFloat blue = arc4random() / (CGFloat) INT_MAX;
     self.redLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1].CGColor;
+    
+    [CATransaction commit];
+}
+
+/** UIView transaction */
+- (IBAction)clickChangeFrameButton:(UIButton *)sender {
+    
+    [UIView beginAnimations:@"" context:nil];
+    [UIView setAnimationDuration:5.0];
+    
+    CGFloat x = self.containerView.frame.origin.x;
+    CGFloat y = self.containerView.frame.origin.y;
+    CGFloat w = arc4random_uniform(30) + 20;
+    CGFloat h = arc4random_uniform(30) + 30;
+    
+    self.containerView.frame = CGRectMake(x, y, w, h);
+    [UIView commitAnimations];
+    
 }
 
 @end
