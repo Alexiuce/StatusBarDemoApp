@@ -17,6 +17,8 @@
 		D848357321B60762006C7AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D848357221B60762006C7AA4 /* Assets.xcassets */; };
 		D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D848357421B60762006C7AA4 /* LaunchScreen.storyboard */; };
 		D848357921B60762006C7AA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D848357821B60762006C7AA4 /* main.m */; };
+		D848358521B63086006C7AA4 /* XCUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D848358421B63086006C7AA4 /* XCUnitTest.m */; };
+		D848358C21B630A7006C7AA4 /* XCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D848358B21B630A7006C7AA4 /* XCPerson.m */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
 		D88B75F321A77D7000951228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F221A77D7000951228 /* AppDelegate.m */; };
 		D88B75F621A77D7000951228 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F521A77D7000951228 /* ViewController.m */; };
@@ -30,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D848358D21B639DA006C7AA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D88B75E621A77D7000951228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D848356621B60760006C7AA4;
+			remoteInfo = CADemo;
+		};
 		D8C138D721ACDAB400FA92C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D88B75E621A77D7000951228 /* Project object */;
@@ -70,6 +79,11 @@
 		D848357521B60762006C7AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D848357721B60762006C7AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D848357821B60762006C7AA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D848358221B63085006C7AA4 /* XCUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D848358421B63086006C7AA4 /* XCUnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCUnitTest.m; sourceTree = "<group>"; };
+		D848358621B63086006C7AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D848358A21B630A7006C7AA4 /* XCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPerson.h; sourceTree = "<group>"; };
+		D848358B21B630A7006C7AA4 /* XCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPerson.m; sourceTree = "<group>"; };
 		D87E283B21B4AECF00CA93CD /* XCScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +108,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		D848356421B60760006C7AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D848357F21B63085006C7AA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,6 +185,17 @@
 			path = CADemo;
 			sourceTree = "<group>";
 		};
+		D848358321B63086006C7AA4 /* XCUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				D848358421B63086006C7AA4 /* XCUnitTest.m */,
+				D848358A21B630A7006C7AA4 /* XCPerson.h */,
+				D848358B21B630A7006C7AA4 /* XCPerson.m */,
+				D848358621B63086006C7AA4 /* Info.plist */,
+			);
+			path = XCUnitTest;
+			sourceTree = "<group>";
+		};
 		D88B75E521A77D7000951228 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +203,7 @@
 				D8C138D321ACDAB400FA92C4 /* RouterDemoUITests */,
 				D8CBB3FB21B4FF3700D243FC /* XCARMAssembly */,
 				D848356821B60760006C7AA4 /* CADemo */,
+				D848358321B63086006C7AA4 /* XCUnitTest */,
 				D88B75EF21A77D7000951228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,6 +215,7 @@
 				D8C138D221ACDAB400FA92C4 /* RouterDemoUITests.xctest */,
 				D8CBB3FA21B4FF3700D243FC /* XCARMAssembly */,
 				D848356721B60760006C7AA4 /* CADemo.app */,
+				D848358221B63085006C7AA4 /* XCUnitTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +277,24 @@
 			productName = CADemo;
 			productReference = D848356721B60760006C7AA4 /* CADemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D848358121B63085006C7AA4 /* XCUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D848358921B63086006C7AA4 /* Build configuration list for PBXNativeTarget "XCUnitTest" */;
+			buildPhases = (
+				D848357E21B63085006C7AA4 /* Sources */,
+				D848357F21B63085006C7AA4 /* Frameworks */,
+				D848358021B63085006C7AA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D848358E21B639DA006C7AA4 /* PBXTargetDependency */,
+			);
+			name = XCUnitTest;
+			productName = XCUnitTest;
+			productReference = D848358221B63085006C7AA4 /* XCUnitTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D88B75ED21A77D7000951228 /* RouterDemo */ = {
 			isa = PBXNativeTarget;
@@ -310,6 +362,9 @@
 					D848356621B60760006C7AA4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					D848358121B63085006C7AA4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					D88B75ED21A77D7000951228 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -339,6 +394,7 @@
 				D8C138D121ACDAB400FA92C4 /* RouterDemoUITests */,
 				D8CBB3F921B4FF3700D243FC /* XCARMAssembly */,
 				D848356621B60760006C7AA4 /* CADemo */,
+				D848358121B63085006C7AA4 /* XCUnitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -351,6 +407,13 @@
 				D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */,
 				D848357321B60762006C7AA4 /* Assets.xcassets in Resources */,
 				D848357121B60760006C7AA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D848358021B63085006C7AA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +467,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D848357E21B63085006C7AA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D848358521B63086006C7AA4 /* XCUnitTest.m in Sources */,
+				D848358C21B630A7006C7AA4 /* XCPerson.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D88B75EA21A77D7000951228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +511,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D848358E21B639DA006C7AA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D848356621B60760006C7AA4 /* CADemo */;
+			targetProxy = D848358D21B639DA006C7AA4 /* PBXContainerItemProxy */;
+		};
 		D8C138D821ACDAB400FA92C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D88B75ED21A77D7000951228 /* RouterDemo */;
@@ -513,6 +590,46 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.CADemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D848358721B63086006C7AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				INFOPLIST_FILE = XCUnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCUnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D848358821B63086006C7AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				INFOPLIST_FILE = XCUnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCUnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -736,6 +853,15 @@
 			buildConfigurations = (
 				D848357A21B60762006C7AA4 /* Debug */,
 				D848357B21B60762006C7AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D848358921B63086006C7AA4 /* Build configuration list for PBXNativeTarget "XCUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D848358721B63086006C7AA4 /* Debug */,
+				D848358821B63086006C7AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
