@@ -22,6 +22,13 @@
     self.redLayer.frame = CGRectInset(self.containerView.bounds, 30, 80);
     self.redLayer.backgroundColor = UIColor.redColor.CGColor;
     [self.containerView.layer addSublayer:self.redLayer];
+    
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionReveal;
+//    transition.subtype = kCATransitionFromLeft;
+    self.redLayer.actions = @{@"backgroundColor":transition};
+    
+    
 }
 
 - (IBAction)clickChangeColorButton:(UIButton *)sender {
