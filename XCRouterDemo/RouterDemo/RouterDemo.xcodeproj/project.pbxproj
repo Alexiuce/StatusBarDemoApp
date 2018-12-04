@@ -20,6 +20,7 @@
 		D88B760121A77D7100951228 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B760021A77D7100951228 /* main.m */; };
 		D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */; };
 		D8C138D521ACDAB400FA92C4 /* RouterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138D421ACDAB400FA92C4 /* RouterDemoUITests.m */; };
+		D8CBB3FD21B4FF3700D243FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBB3FC21B4FF3700D243FC /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,18 @@
 			remoteInfo = RouterDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8CBB3F821B4FF3700D243FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D82990F221AB758A00B59018 /* XCAppEnterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppEnterViewController.m; sourceTree = "<group>"; };
@@ -59,6 +72,8 @@
 		D8C138D221ACDAB400FA92C4 /* RouterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C138D421ACDAB400FA92C4 /* RouterDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterDemoUITests.m; sourceTree = "<group>"; };
 		D8C138D621ACDAB400FA92C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8CBB3FA21B4FF3700D243FC /* XCARMAssembly */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCARMAssembly; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8CBB3FC21B4FF3700D243FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +85,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D8C138CF21ACDAB400FA92C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CBB3F721B4FF3700D243FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,6 +130,7 @@
 			children = (
 				D88B75F021A77D7000951228 /* RouterDemo */,
 				D8C138D321ACDAB400FA92C4 /* RouterDemoUITests */,
+				D8CBB3FB21B4FF3700D243FC /* XCARMAssembly */,
 				D88B75EF21A77D7000951228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +140,7 @@
 			children = (
 				D88B75EE21A77D7000951228 /* RouterDemo.app */,
 				D8C138D221ACDAB400FA92C4 /* RouterDemoUITests.xctest */,
+				D8CBB3FA21B4FF3700D243FC /* XCARMAssembly */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +173,14 @@
 				D8C138D621ACDAB400FA92C4 /* Info.plist */,
 			);
 			path = RouterDemoUITests;
+			sourceTree = "<group>";
+		};
+		D8CBB3FB21B4FF3700D243FC /* XCARMAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBB3FC21B4FF3700D243FC /* main.m */,
+			);
+			path = XCARMAssembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +222,23 @@
 			productReference = D8C138D221ACDAB400FA92C4 /* RouterDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D8CBB3F921B4FF3700D243FC /* XCARMAssembly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8CBB40021B4FF3700D243FC /* Build configuration list for PBXNativeTarget "XCARMAssembly" */;
+			buildPhases = (
+				D8CBB3F621B4FF3700D243FC /* Sources */,
+				D8CBB3F721B4FF3700D243FC /* Frameworks */,
+				D8CBB3F821B4FF3700D243FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCARMAssembly;
+			productName = XCARMAssembly;
+			productReference = D8CBB3FA21B4FF3700D243FC /* XCARMAssembly */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +255,9 @@
 					D8C138D121ACDAB400FA92C4 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = D88B75ED21A77D7000951228;
+					};
+					D8CBB3F921B4FF3700D243FC = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -224,6 +276,7 @@
 			targets = (
 				D88B75ED21A77D7000951228 /* RouterDemo */,
 				D8C138D121ACDAB400FA92C4 /* RouterDemoUITests */,
+				D8CBB3F921B4FF3700D243FC /* XCARMAssembly */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C138D521ACDAB400FA92C4 /* RouterDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8CBB3F621B4FF3700D243FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8CBB3FD21B4FF3700D243FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +572,30 @@
 			};
 			name = Release;
 		};
+		D8CBB3FE21B4FF3700D243FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D8CBB3FF21B4FF3700D243FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -537,6 +622,15 @@
 			buildConfigurations = (
 				D8C138DA21ACDAB400FA92C4 /* Debug */,
 				D8C138DB21ACDAB400FA92C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8CBB40021B4FF3700D243FC /* Build configuration list for PBXNativeTarget "XCARMAssembly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8CBB3FE21B4FF3700D243FC /* Debug */,
+				D8CBB3FF21B4FF3700D243FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
