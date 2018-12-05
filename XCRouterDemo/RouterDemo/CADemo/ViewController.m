@@ -22,26 +22,31 @@
     self.redLayer.frame = CGRectInset(self.containerView.bounds, 30, 80);
     self.redLayer.backgroundColor = UIColor.redColor.CGColor;
     [self.containerView.layer addSublayer:self.redLayer];
-    
-    CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionReveal;
+    /** 隐式动画的转换效果 */
+//    CATransition *transition = [CATransition animation];
+//    transition.type = kCATransitionReveal;
 //    transition.subtype = kCATransitionFromLeft;
-    self.redLayer.actions = @{@"backgroundColor":transition};
+//    self.redLayer.actions = @{@"backgroundColor":transition};
     
     
 }
 
 - (IBAction)clickChangeColorButton:(UIButton *)sender {
     
-    [CATransaction begin];
-    [CATransaction setAnimationDuration:5.0];
+//    [CATransaction begin];
+//    [CATransaction setAnimationDuration:5.0];
     
     CGFloat red = arc4random() /(CGFloat) INT_MAX;
     CGFloat green = arc4random() / (CGFloat) INT_MAX;
     CGFloat blue = arc4random() / (CGFloat) INT_MAX;
-    self.redLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1].CGColor;
+    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1];
+    CABasicAnimation *a1 = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+    a1.toValue = (__bridge id)color.CGColor;
+    [self.redLayer addAnimation:a1 forKey:nil];
     
-    [CATransaction commit];
+//    self.redLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1].CGColor;
+    
+//    [CATransaction commit];
 }
 
 /** UIView transaction */
