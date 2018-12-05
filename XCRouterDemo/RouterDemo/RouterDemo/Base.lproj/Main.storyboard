@@ -18,29 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-OP-So9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-OP-So9">
                                 <rect key="frame" x="40" y="156" width="99" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="zPO-Tr-mNj"/>
+                                    <constraint firstAttribute="width" constant="99" id="69l-3A-wXk"/>
+                                    <constraint firstAttribute="height" constant="30" id="VEq-Z0-NQa"/>
                                 </constraints>
-                                <state key="normal" title="Click Button">
-                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Click Button" backgroundImage="red">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="clickPayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRr-Ln-qON"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-Cw-NSR">
-                                <rect key="frame" x="59" y="248" width="84" height="30"/>
-                                <state key="normal" title="Push Button"/>
-                                <connections>
-                                    <action selector="clickPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQL-zI-LKv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ei-Iu-ERb">
                                 <rect key="frame" x="31" y="318" width="103" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ubx-Te-QyT"/>
+                                    <constraint firstAttribute="width" constant="103" id="Ivd-my-jzd"/>
+                                    <constraint firstAttribute="height" constant="30" id="tCW-ki-ywm"/>
                                 </constraints>
                                 <state key="normal" title="Present Button"/>
                                 <connections>
@@ -53,27 +48,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="g8j-RW-QwR">
+                                <rect key="frame" x="31" y="397" width="73" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="2sQ-Lk-ZFO"/>
+                                    <constraint firstAttribute="height" constant="76" id="uMc-Jb-zAY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-Cw-NSR">
+                                <rect key="frame" x="47" y="231" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="Ds0-aF-FZQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="VmT-jq-2nM"/>
+                                </constraints>
+                                <state key="normal" title="Push Button"/>
+                                <connections>
+                                    <action selector="clickPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQL-zI-LKv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Ei-Iu-ERb" secondAttribute="trailing" symbolic="YES" id="0pK-vY-36o"/>
-                            <constraint firstItem="SLk-OP-So9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3m5-F6-Egw"/>
-                            <constraint firstItem="hh1-Cw-NSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="Ckj-sZ-hnK"/>
+                            <constraint firstItem="9Ei-Iu-ERb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="0bJ-qc-5Of"/>
+                            <constraint firstItem="g8j-RW-QwR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="1dg-mw-K2L"/>
+                            <constraint firstItem="g8j-RW-QwR" firstAttribute="top" secondItem="9Ei-Iu-ERb" secondAttribute="bottom" constant="49" id="6eo-e7-LMw"/>
+                            <constraint firstItem="hh1-Cw-NSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="CdE-tq-P3g"/>
+                            <constraint firstItem="9Ei-Iu-ERb" firstAttribute="top" secondItem="hh1-Cw-NSR" secondAttribute="bottom" constant="57" id="GO6-S7-oEs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J1f-cN-Lt6" secondAttribute="bottom" constant="64" id="K3A-OW-Dsd"/>
-                            <constraint firstItem="SLk-OP-So9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="VLi-G0-CVt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hh1-Cw-NSR" secondAttribute="trailing" symbolic="YES" id="X6U-B9-8z9"/>
+                            <constraint firstItem="SLk-OP-So9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ORb-Mg-YSu"/>
+                            <constraint firstItem="SLk-OP-So9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="UdL-Se-iFI"/>
+                            <constraint firstItem="hh1-Cw-NSR" firstAttribute="top" secondItem="SLk-OP-So9" secondAttribute="bottom" constant="45" id="Ver-Uh-jVm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1f-cN-Lt6" secondAttribute="trailing" id="YeG-Us-e9t"/>
-                            <constraint firstItem="hh1-Cw-NSR" firstAttribute="top" secondItem="SLk-OP-So9" secondAttribute="bottom" constant="62" id="a2a-J7-zPN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SLk-OP-So9" secondAttribute="trailing" symbolic="YES" id="etH-nM-inM"/>
-                            <constraint firstItem="9Ei-Iu-ERb" firstAttribute="top" secondItem="hh1-Cw-NSR" secondAttribute="bottom" constant="40" id="mSp-Rg-kai"/>
                             <constraint firstItem="J1f-cN-Lt6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oRW-7v-jCv"/>
-                            <constraint firstItem="9Ei-Iu-ERb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="rsH-Wn-rFN"/>
                             <constraint firstItem="J1f-cN-Lt6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v9h-yf-gBw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="uRD-tX-b8b"/>
                     <connections>
+                        <outlet property="imgView" destination="g8j-RW-QwR" id="nQR-9A-N37"/>
                         <outlet property="label" destination="J1f-cN-Lt6" id="61i-Pl-TZb"/>
                     </connections>
                 </viewController>
@@ -253,4 +266,7 @@
             <point key="canvasLocation" x="-92" y="-336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="red" width="32" height="32"/>
+    </resources>
 </document>

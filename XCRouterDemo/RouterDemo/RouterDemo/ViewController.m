@@ -16,6 +16,7 @@
 
 @interface ViewController ()<PKPaymentAuthorizationViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end
 
@@ -56,9 +57,12 @@
     }else{
         imgName = @"yellow";
     }
-    sender.imageView.image = [UIImage imageNamed:imgName];
-    [sender setNeedsDisplay];
-    NSLog(@"%@",NSStringFromCGRect(sender.imageView.frame));
+    
+    
+//    self.imgView.image = [UIImage imageNamed:imgName];
+    
+//    sender.imageView.image = [UIImage imageNamed:imgName];
+//    NSLog(@"%@",NSStringFromCGRect(sender.imageView.frame));
     
 //    unsigned int count;
 //    Ivar *lists =  class_copyIvarList([sender class], &count);
@@ -69,8 +73,10 @@
 //        NSLog(@"%s",p_name);
 //
 //    }
-    
-    
+    UIImageView *backgroundView =  [sender valueForKeyPath:@"backgroundView"];
+    NSLog(@"back view frame = %@, image = %@",NSStringFromCGRect(backgroundView.frame),backgroundView.image);
+    backgroundView.image = [UIImage imageNamed:imgName];
+    NSLog(@"back view frame = %@, image = %@",NSStringFromCGRect(backgroundView.frame),backgroundView.image);
 //    [sender setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
 //    [sender setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
     
