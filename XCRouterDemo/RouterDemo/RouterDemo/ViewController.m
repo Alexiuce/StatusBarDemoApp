@@ -12,6 +12,7 @@
 #import <StoreKit/StoreKit.h>
 #import "XCAppEnterViewController.h"
 #import "XCView.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()<PKPaymentAuthorizationViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -47,7 +48,7 @@
 
 
 - (IBAction)clickPayButton:(UIButton *)sender {
-    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
+//    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
 //    [self p_testDispatchRunloop];
     static NSString *imgName = @"red";
     if ([imgName isEqualToString:@"yellow"]) {
@@ -55,10 +56,25 @@
     }else{
         imgName = @"yellow";
     }
-//    [sender setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
-    [sender setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+    sender.imageView.image = [UIImage imageNamed:imgName];
+    [sender setNeedsDisplay];
+    NSLog(@"%@",NSStringFromCGRect(sender.imageView.frame));
     
-    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
+//    unsigned int count;
+//    Ivar *lists =  class_copyIvarList([sender class], &count);
+//
+//    for (int i = 0; i < count; i++) {
+//       const char *p_name =  ivar_getName(lists[i]);
+//
+//        NSLog(@"%s",p_name);
+//
+//    }
+    
+    
+//    [sender setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+//    [sender setBackgroundImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+    
+//    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
 }
 /** 点击push button */
 - (IBAction)clickPushButton:(UIButton *)sender {
