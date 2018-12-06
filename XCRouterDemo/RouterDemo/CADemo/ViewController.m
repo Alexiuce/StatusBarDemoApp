@@ -22,7 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self p_setupBezierPath];
+//    [self p_setupBezierPath];
+    
+    //add the ship
+    CALayer *shipLayer = [CALayer layer];
+    shipLayer.frame = CGRectMake(0, 0, 128, 128);
+    shipLayer.position = CGPointMake(150, 150);
+    shipLayer.contents = (__bridge id)[UIImage imageNamed:@"ship"].CGImage;
+    [self.containerView.layer addSublayer:shipLayer];
+    //animate the ship rotation
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"transform.rotation";
+    animation.duration = 2.0;
+//    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
+    animation.byValue = @(M_PI * 2); //[NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
+    [shipLayer addAnimation:animation forKey:nil];
     
 }
 
@@ -59,7 +73,7 @@
 /** UIView transaction */
 - (IBAction)clickChangeFrameButton:(UIButton *)sender {
     
-   /** 创建关键帧动画 */
+    /** 创建关键帧动画 */
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     keyAnimation.duration = 4.0f;
     keyAnimation.path = self.path.CGPath;
