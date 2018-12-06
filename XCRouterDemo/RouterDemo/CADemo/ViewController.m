@@ -8,6 +8,24 @@
 
 #import "ViewController.h"
 
+
+
+@interface Spark : NSObject
+
+@property(nonatomic,copy) NSString *name;
+
+@end
+
+@implementation Spark
+
+- (void)speak {
+    NSLog(@"My name is:%@",self.name);
+}
+
+@end
+
+
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (nonatomic, strong) CALayer *redLayer;
@@ -21,24 +39,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    [self p_setupBezierPath];
+    id cls = [Spark class];
     
-    //add the ship
-    CALayer *shipLayer = [CALayer layer];
-    shipLayer.frame = CGRectMake(0, 0, 128, 128);
-    shipLayer.position = CGPointMake(150, 150);
-    shipLayer.contents = (__bridge id)[UIImage imageNamed:@"ship"].CGImage;
-    [self.containerView.layer addSublayer:shipLayer];
-    //animate the ship rotation
-    CABasicAnimation *animation = [CABasicAnimation animation];
-    animation.keyPath = @"transform.rotation";
-    animation.duration = 2.0;
-//    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
-    animation.byValue = @(M_PI * 2); //[NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
-    [shipLayer addAnimation:animation forKey:nil];
+    void *obj = &cls;
+    
+    [(__bridge id)obj speak];
     
 }
+
 
 - (IBAction)clickChangeColorButton:(UIButton *)sender {
     
@@ -120,6 +128,24 @@
 
 - (void)p_keyFrameDemo{
     
+}
+
+- (void)p_test{
+    //    [self p_setupBezierPath];
+    
+    //add the ship
+    CALayer *shipLayer = [CALayer layer];
+    shipLayer.frame = CGRectMake(0, 0, 128, 128);
+    shipLayer.position = CGPointMake(150, 150);
+    shipLayer.contents = (__bridge id)[UIImage imageNamed:@"ship"].CGImage;
+    [self.containerView.layer addSublayer:shipLayer];
+    //animate the ship rotation
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"transform.rotation";
+    animation.duration = 2.0;
+    //    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
+    animation.byValue = @(M_PI * 2); //[NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 0, 1)];
+    [shipLayer addAnimation:animation forKey:nil];
 }
 
 - (void)p_viewAnimation{
