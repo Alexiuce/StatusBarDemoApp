@@ -18,21 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yru-yp-Nep">
-                                <rect key="frame" x="67" y="58" width="240" height="219"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFS-qG-Ccv">
-                                        <rect key="frame" x="55" y="181" width="131" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                        <state key="normal" title="Change Color"/>
-                                        <connections>
-                                            <action selector="clickChangeColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLE-Sj-IsP"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yru-yp-Nep">
+                                <rect key="frame" x="0.0" y="58" width="375" height="219"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="GDR-Cl-SJl"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN3-84-RHK">
                                 <rect key="frame" x="129" y="352" width="116" height="30"/>
@@ -42,8 +33,22 @@
                                     <action selector="clickChangeFrameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mas-8g-DzG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFS-qG-Ccv">
+                                <rect key="frame" x="114" y="306" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Change Color"/>
+                                <connections>
+                                    <action selector="clickChangeColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLE-Sj-IsP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yru-yp-Nep" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="1bw-HM-MV4"/>
+                            <constraint firstItem="Yru-yp-Nep" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g7P-uN-BcH"/>
+                            <constraint firstItem="Yru-yp-Nep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oZH-gP-C5o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
