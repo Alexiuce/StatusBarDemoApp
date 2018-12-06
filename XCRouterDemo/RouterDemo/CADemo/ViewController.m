@@ -36,14 +36,26 @@
 //    [CATransaction begin];
 //    [CATransaction setAnimationDuration:5.0];
     
-    CGFloat red = arc4random() /(CGFloat) INT_MAX;
-    CGFloat green = arc4random() / (CGFloat) INT_MAX;
-    CGFloat blue = arc4random() / (CGFloat) INT_MAX;
-    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1];
-    CABasicAnimation *a1 = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-    a1.toValue = (__bridge id)color.CGColor;
-    [self.redLayer addAnimation:a1 forKey:nil];
+//    CGFloat red = arc4random() /(CGFloat) INT_MAX;
+//    CGFloat green = arc4random() / (CGFloat) INT_MAX;
+//    CGFloat blue = arc4random() / (CGFloat) INT_MAX;
+//    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1];
+    /** 1. CABasicAnimation */
+//    CABasicAnimation *a1 = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+//    a1.toValue = (__bridge id)color.CGColor;
+//    [self.redLayer addAnimation:a1 forKey:nil];
     
+    
+    /** 2. Keyframe Animation */
+    CAKeyframeAnimation *ka = [CAKeyframeAnimation animationWithKeyPath:@"backgroundColor"];
+    ka.duration = 2.0;
+    ka.values = @[(__bridge id)UIColor.redColor.CGColor,
+                  (__bridge id)UIColor.blueColor.CGColor,
+                  (__bridge id)UIColor.yellowColor.CGColor,
+                  (__bridge id)UIColor.redColor.CGColor,
+                  ];
+    
+    [self.redLayer addAnimation:ka forKey:nil];
 //    self.redLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1].CGColor;
     
 //    [CATransaction commit];
