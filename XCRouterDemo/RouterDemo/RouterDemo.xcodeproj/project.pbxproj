@@ -32,6 +32,7 @@
 		D8A4625921B8B16A00914CE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A4625821B8B16A00914CE8 /* Assets.xcassets */; };
 		D8A4625C21B8B16A00914CE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A4625A21B8B16A00914CE8 /* LaunchScreen.storyboard */; };
 		D8A4625F21B8B16A00914CE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4625E21B8B16A00914CE8 /* main.m */; };
+		D8A4626521B8C8CA00914CE8 /* XCViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4626421B8C8CA00914CE8 /* XCViewCell.m */; };
 		D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */; };
 		D8C138D521ACDAB400FA92C4 /* RouterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138D421ACDAB400FA92C4 /* RouterDemoUITests.m */; };
 		D8CBB3FD21B4FF3700D243FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBB3FC21B4FF3700D243FC /* main.m */; };
@@ -113,6 +114,8 @@
 		D8A4625B21B8B16A00914CE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A4625D21B8B16A00914CE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A4625E21B8B16A00914CE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8A4626321B8C8CA00914CE8 /* XCViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCViewCell.h; sourceTree = "<group>"; };
+		D8A4626421B8C8CA00914CE8 /* XCViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCViewCell.m; sourceTree = "<group>"; };
 		D8C138CB21ACD25A00FA92C4 /* XCRecentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRecentViewController.h; sourceTree = "<group>"; };
 		D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRecentViewController.m; sourceTree = "<group>"; };
 		D8C138D221ACDAB400FA92C4 /* RouterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +276,8 @@
 				D8A4625021B8B16800914CE8 /* AppDelegate.m */,
 				D8A4625221B8B16800914CE8 /* ViewController.h */,
 				D8A4625321B8B16800914CE8 /* ViewController.m */,
+				D8A4626321B8C8CA00914CE8 /* XCViewCell.h */,
+				D8A4626421B8C8CA00914CE8 /* XCViewCell.m */,
 				D8A4625521B8B16800914CE8 /* Main.storyboard */,
 				D8A4625821B8B16A00914CE8 /* Assets.xcassets */,
 				D8A4625A21B8B16A00914CE8 /* LaunchScreen.storyboard */,
@@ -569,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A4625421B8B16800914CE8 /* ViewController.m in Sources */,
+				D8A4626521B8C8CA00914CE8 /* XCViewCell.m in Sources */,
 				D8A4625F21B8B16A00914CE8 /* main.m in Sources */,
 				D8A4625121B8B16800914CE8 /* AppDelegate.m in Sources */,
 			);

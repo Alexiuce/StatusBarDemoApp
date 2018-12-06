@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "XCViewCell.h"
 
-@interface ViewController ()
+static NSString *const ReusedKey = @"prefetch_cell";
+
+@interface ViewController ()<UICollectionViewDataSource>
+
+@property (nonatomic, strong) NSArray *icons;
 
 @end
 
@@ -16,8 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _icons = [@"🐍,👍,💄,🎏,🐠,🍔,🏩,🎈,🐷,👠,🐣,🐙,✈️,💅,⛑,👑,👛,🐝,🌂,🌻,🎼,🎧,🚧,📎,🍻" componentsSeparatedByString:@","];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return _icons.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    XCViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ReusedKey forIndexPath:indexPath];
+    
+    cell.iconLabel.text = self.icons[indexPath.item];
+    
+    return cell;
+}
 
 @end
