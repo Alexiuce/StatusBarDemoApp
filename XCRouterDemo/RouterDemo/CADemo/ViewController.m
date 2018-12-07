@@ -40,14 +40,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    
+}
+
+- (void)p_objcDemo{
     id cls = [Spark class];
     
     void *obj = &cls;
     
     [(__bridge id)obj speak];
-    
 }
-
 
 - (IBAction)clickChangeColorButton:(UIButton *)sender {
     
@@ -136,7 +139,17 @@
     NSArray *imageNames = @[@"icon_shangfen",@"icon_lianmeng"];
     static int index = 0;
     CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionPush;
+    /**
+     kCATransitionFade
+     kCATransitionMoveIn
+     kCATransitionPush
+     kCATransitionReveal
+     */
+    transition.type = kCATransitionReveal;
+    
+    /**
+     top,left,right,bottom;
+     */
     transition.subtype = kCATransitionFromTop;
     
     [self.imageView.layer addAnimation:transition forKey:nil];
