@@ -82,12 +82,7 @@
 /** UIView transaction */
 - (IBAction)clickChangeFrameButton:(UIButton *)sender {
     
-    /** 创建关键帧动画 */
-    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    keyAnimation.duration = 4.0f;
-    keyAnimation.path = self.path.CGPath;
-    keyAnimation.rotationMode = kCAAnimationRotateAuto;
-    [self.moveLayer addAnimation:keyAnimation forKey:nil];
+    [self p_transitionDemo];
     
 }
 
@@ -128,10 +123,26 @@
 }
 
 - (void)p_keyFrameDemo{
+    /** 创建关键帧动画 */
+    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    keyAnimation.duration = 4.0f;
+    keyAnimation.path = self.path.CGPath;
+    keyAnimation.rotationMode = kCAAnimationRotateAuto;
+    [self.moveLayer addAnimation:keyAnimation forKey:nil];
     
 }
 
 - (void)p_transitionDemo{
+    NSArray *imageNames = @[@"icon_shangfen",@"icon_lianmeng"];
+    static int index = 0;
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromTop;
+    
+    [self.imageView.layer addAnimation:transition forKey:nil];
+    
+    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
+    index++;
     
 }
 - (void)p_test{
