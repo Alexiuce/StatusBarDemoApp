@@ -144,17 +144,25 @@
      kCATransitionMoveIn
      kCATransitionPush
      kCATransitionReveal
+     ---- 私有效果 -------
+     pageCurl 向上翻一页
+     pageUnCurl 向下翻一页
+     rippleEffect 滴水效果
+     suckEffect 收缩效果,如一块布被抽走
+     cube 立方体效果
+     oglFlip
      */
-    transition.type = kCATransitionReveal;
+    transition.type = @"oglFlip";
     
     /**
      top,left,right,bottom;
      */
-    transition.subtype = kCATransitionFromTop;
+    transition.subtype = kCATransitionFromLeft;
     
     [self.imageView.layer addAnimation:transition forKey:nil];
     
-    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
+//    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
+    self.imageView.image = [UIImage imageNamed:imageNames[0]];
     index++;
     
 }
