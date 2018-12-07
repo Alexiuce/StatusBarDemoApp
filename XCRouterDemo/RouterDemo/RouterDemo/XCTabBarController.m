@@ -17,10 +17,14 @@
 @implementation XCTabBarController
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-    NSLog(@"%@",item);
+    NSUInteger selectedIndex = self.selectedIndex;
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromLeft;
+    if (selectedIndex == 1) {
+        transition.subtype = kCATransitionFromLeft;
+    }else{
+        transition.subtype = kCATransitionFromRight;
+    }
 
     [self.view.layer addAnimation:transition forKey:nil];
 }

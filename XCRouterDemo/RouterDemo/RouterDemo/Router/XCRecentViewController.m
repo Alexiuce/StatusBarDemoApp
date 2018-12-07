@@ -19,10 +19,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self p_replicatorLayer];
+   
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+     [self p_replicatorLayer];
+}
 
 #pragma mark - GCD test
 
