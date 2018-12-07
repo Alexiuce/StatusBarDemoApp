@@ -25,34 +25,54 @@
                                     <constraint firstAttribute="height" constant="219" id="GDR-Cl-SJl"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN3-84-RHK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN3-84-RHK">
                                 <rect key="frame" x="129" y="352" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="4tt-5b-FtW"/>
+                                    <constraint firstAttribute="height" constant="30" id="ad5-pV-aDB"/>
+                                </constraints>
                                 <state key="normal" title="Change frame"/>
                                 <connections>
                                     <action selector="clickChangeFrameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mas-8g-DzG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFS-qG-Ccv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFS-qG-Ccv">
                                 <rect key="frame" x="114" y="306" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="6CM-eJ-9QS"/>
+                                    <constraint firstAttribute="height" constant="30" id="sd4-lU-adY"/>
+                                </constraints>
                                 <state key="normal" title="Change Color"/>
                                 <connections>
                                     <action selector="clickChangeColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLE-Sj-IsP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-ZM-z7c">
+                                <rect key="frame" x="86" y="448" width="202" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="CRA-hy-F9J"/>
+                                    <constraint firstAttribute="height" constant="97" id="rja-sD-pCc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yru-yp-Nep" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="1bw-HM-MV4"/>
+                            <constraint firstItem="YB4-ZM-z7c" firstAttribute="top" secondItem="DN3-84-RHK" secondAttribute="bottom" constant="66" id="21K-MN-IP2"/>
+                            <constraint firstItem="YB4-ZM-z7c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="H0r-iO-FLO"/>
+                            <constraint firstItem="DN3-84-RHK" firstAttribute="top" secondItem="fFS-qG-Ccv" secondAttribute="bottom" constant="16" id="N1P-55-m0q"/>
+                            <constraint firstItem="DN3-84-RHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="Wq3-Km-VDE"/>
+                            <constraint firstItem="fFS-qG-Ccv" firstAttribute="top" secondItem="Yru-yp-Nep" secondAttribute="bottom" constant="29" id="Yc7-WW-mtj"/>
                             <constraint firstItem="Yru-yp-Nep" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g7P-uN-BcH"/>
+                            <constraint firstItem="fFS-qG-Ccv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="ncV-DT-CP5"/>
                             <constraint firstItem="Yru-yp-Nep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oZH-gP-C5o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="Yru-yp-Nep" id="vrC-zC-3Tm"/>
+                        <outlet property="imageView" destination="YB4-ZM-z7c" id="Bkm-KN-7Qd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

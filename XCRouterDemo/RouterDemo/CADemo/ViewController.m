@@ -32,6 +32,7 @@
 
 @property (nonatomic, strong) UIBezierPath *path;
 @property (nonatomic, strong) CALayer *moveLayer;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -130,6 +131,9 @@
     
 }
 
+- (void)p_transitionDemo{
+    
+}
 - (void)p_test{
     //    [self p_setupBezierPath];
     
