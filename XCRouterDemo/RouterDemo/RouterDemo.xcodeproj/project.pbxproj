@@ -20,6 +20,7 @@
 		D848358521B63086006C7AA4 /* XCUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D848358421B63086006C7AA4 /* XCUnitTest.m */; };
 		D848358C21B630A7006C7AA4 /* XCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D848358B21B630A7006C7AA4 /* XCPerson.m */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
+		D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8836FF621BA05800044C67C /* XCTabBarController.m */; };
 		D88B75F321A77D7000951228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F221A77D7000951228 /* AppDelegate.m */; };
 		D88B75F621A77D7000951228 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F521A77D7000951228 /* ViewController.m */; };
 		D88B75F921A77D7000951228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75F721A77D7000951228 /* Main.storyboard */; };
@@ -93,6 +94,8 @@
 		D848358B21B630A7006C7AA4 /* XCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPerson.m; sourceTree = "<group>"; };
 		D87E283B21B4AECF00CA93CD /* XCScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
+		D8836FF521BA05800044C67C /* XCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarController.h; sourceTree = "<group>"; };
+		D8836FF621BA05800044C67C /* XCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarController.m; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B75F121A77D7000951228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D88B75F221A77D7000951228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				D88B75F221A77D7000951228 /* AppDelegate.m */,
 				D88B75F421A77D7000951228 /* ViewController.h */,
 				D88B75F521A77D7000951228 /* ViewController.m */,
+				D8836FF521BA05800044C67C /* XCTabBarController.h */,
+				D8836FF621BA05800044C67C /* XCTabBarController.m */,
 				D88B760721A78AC100951228 /* XCFakeCode.sh */,
 				D88B75F721A77D7000951228 /* Main.storyboard */,
 				D88B75FA21A77D7100951228 /* Assets.xcassets */,
@@ -565,6 +570,7 @@
 				D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */,
 				D88B760121A77D7100951228 /* main.m in Sources */,
 				D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */,
+				D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */,
 				D88B75F321A77D7000951228 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
