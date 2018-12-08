@@ -50,7 +50,7 @@
                                     <action selector="clickChangeColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLE-Sj-IsP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-ZM-z7c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_shangfen" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-ZM-z7c">
                                 <rect key="frame" x="86" y="448" width="202" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="CRA-hy-F9J"/>
@@ -89,14 +89,14 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5r-C1-lNu">
-                                        <rect key="frame" x="241" y="19" width="24" height="21"/>
+                                        <rect key="frame" x="241" y="19" width="50" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV1-3V-5oA">
-                                        <rect key="frame" x="241" y="54" width="24" height="21"/>
+                                        <rect key="frame" x="241" y="54" width="50" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -152,4 +152,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="93.103448275862078"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_shangfen" width="110" height="60"/>
+    </resources>
 </document>

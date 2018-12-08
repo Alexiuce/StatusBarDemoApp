@@ -57,7 +57,14 @@
 
 
 - (IBAction)playAnimationDemo:(UIButton *)sender{
-    NSLog(@"asdfasdf");
+    /** 创建关键帧动画 */
+    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    keyAnimation.duration = 4.0f;
+    keyAnimation.timeOffset = self.timeOffsetLabel.text.doubleValue;
+    keyAnimation.speed = self.speedLabel.text.doubleValue;
+    keyAnimation.path = self.path.CGPath;
+    keyAnimation.rotationMode = kCAAnimationRotateAuto;
+    [self.moveLayer addAnimation:keyAnimation forKey:nil];
     
 }
 
