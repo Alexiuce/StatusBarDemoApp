@@ -19,6 +19,7 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     NSUInteger selectedIndex = self.selectedIndex;
     CATransition *transition = [CATransition animation];
+
     transition.type = kCATransitionPush;
     if (selectedIndex == 1) {
         transition.subtype = kCATransitionFromLeft;

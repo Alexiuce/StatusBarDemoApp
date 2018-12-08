@@ -34,13 +34,16 @@
 @property (nonatomic, strong) CALayer *moveLayer;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeOffsetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    [self p_setupBezierPath];
     
 }
 
@@ -51,6 +54,22 @@
     
     [(__bridge id)obj speak];
 }
+
+
+- (IBAction)playAnimationDemo:(UIButton *)sender{
+    NSLog(@"asdfasdf");
+    
+}
+
+- (IBAction)changedTimeOffset:(UISlider *)sender {
+    self.timeOffsetLabel.text = [NSString stringWithFormat:@"%.1f",sender.value];
+}
+
+
+- (IBAction)changedSpeed:(UISlider *)sender {
+    self.speedLabel.text = [NSString stringWithFormat:@"%.1f",sender.value];
+}
+
 
 - (IBAction)clickChangeColorButton:(UIButton *)sender {
     
