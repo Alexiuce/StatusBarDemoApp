@@ -43,7 +43,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self p_setupBezierPath];
+//    [self p_setupBezierPath];
+    // 获取系统最后一次重启后到当前的时间秒数;
+    CFTimeInterval time = CACurrentMediaTime();
+    NSLog(@"time = %f",time);
+     [self p_graphCAMediaTimingFunc];
     
 }
 
@@ -112,6 +116,7 @@
 - (IBAction)clickChangeFrameButton:(UIButton *)sender {
     
     [self p_transitionDemo];
+   
     
 }
 
@@ -221,6 +226,34 @@
     
     self.containerView.frame = CGRectMake(x, y, w, h);
     [UIView commitAnimations];
+}
+
+- (void)p_graphCAMediaTimingFunc{
+    
+    //create timing function
+    CAMediaTimingFunction *function = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    //get control points
+    float controlPoint1[2], controlPoint2[2];
+    [function getControlPointAtIndex:1 values:controlPoint1];
+    [function getControlPointAtIndex:2 values:controlPoint2];
+    //create curve
+    UIBezierPath *path = [[UIBezierPath alloc] init];
+    [path moveToPoint:CGPointZero];
+
+    CGPoint cp1 = CGPointMake(controlPoint1[0], controlPoint1[1]);
+    CGPoint cp2 = CGPointMake(controlPoint2[0], controlPoint2[1]);
+    [path addCurveToPoint:CGPointMake(1, 1) controlPoint1:cp1 controlPoint2:cp2];
+    //scale the path up to a reasonable size for display
+    [path applyTransform:CGAffineTransformMakeScale(200, 200)];
+    //create shape layer
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.strokeColor = [UIColor redColor].CGColor;
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    shapeLayer.lineWidth = 4.0f;
+    shapeLayer.path = path.CGPath;
+    [self.containerView.layer addSublayer:shapeLayer];
+    //flip geometry so that 0,0 is in the bottom-left
+    self.containerView.layer.geometryFlipped = YES;
 }
 
 @end
