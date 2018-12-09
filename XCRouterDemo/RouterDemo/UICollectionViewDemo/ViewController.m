@@ -11,7 +11,7 @@
 
 static NSString *const ReusedKey = @"prefetch_cell";
 
-@interface ViewController ()<UICollectionViewDataSource>
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDataSourcePrefetching>
 
 @property (nonatomic, strong) NSArray *icons;
 
@@ -42,4 +42,8 @@ static NSString *const ReusedKey = @"prefetch_cell";
     return cell;
 }
 
+#pragma mark - UICollectionViewDataSourcePrefetching
+- (void)collectionView:(UICollectionView *)collectionView prefetchItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths{
+    
+}
 @end
