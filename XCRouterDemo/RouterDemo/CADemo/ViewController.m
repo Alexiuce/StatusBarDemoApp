@@ -229,9 +229,11 @@
 }
 
 - (void)p_graphCAMediaTimingFunc{
-    
+
+
     //create timing function
     CAMediaTimingFunction *function = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
     //get control points
     float controlPoint1[2], controlPoint2[2];
     [function getControlPointAtIndex:1 values:controlPoint1];
