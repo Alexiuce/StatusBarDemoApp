@@ -69,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D80099B021BDE9980094AF89 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D82990F221AB758A00B59018 /* XCAppEnterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppEnterViewController.m; sourceTree = "<group>"; };
 		D82990F521AB783500B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
 		D82990F721ABBF8F00B59018 /* XCAppPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCAppPresentViewController.h; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 				D848356A21B60760006C7AA4 /* AppDelegate.m */,
 				D848356C21B60760006C7AA4 /* ViewController.h */,
 				D848356D21B60760006C7AA4 /* ViewController.m */,
+				D80099B021BDE9980094AF89 /* README.md */,
 				D848356F21B60760006C7AA4 /* Main.storyboard */,
 				D848357221B60762006C7AA4 /* Assets.xcassets */,
 				D848357421B60762006C7AA4 /* LaunchScreen.storyboard */,
