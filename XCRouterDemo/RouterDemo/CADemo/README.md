@@ -26,5 +26,8 @@
 
 * 添加Git feature 分支
 
+* 添加 xiuce 用户提交
+
+
 
 
