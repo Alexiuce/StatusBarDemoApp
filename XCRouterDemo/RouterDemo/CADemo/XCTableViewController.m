@@ -59,6 +59,9 @@
     cell.textLabel.layer.shadowOffset = CGSizeMake(0, 2);
     cell.textLabel.layer.shadowOpacity = 0.5;
     
+//    cell.layer.shouldRasterize = YES;
+//    cell.layer.rasterizationScale = UIScreen.mainScreen.scale;
+    
     return cell;
 }
 
