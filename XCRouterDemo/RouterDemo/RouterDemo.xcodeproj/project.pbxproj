@@ -43,6 +43,7 @@
 		D8CF334821BF5C8700682A75 /* icon_pipei@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF334421BF5C8700682A75 /* icon_pipei@3x.png */; };
 		D8CF334921BF5C8700682A75 /* icon_zhandui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF334521BF5C8700682A75 /* icon_zhandui@3x.png */; };
 		D8CF334A21BF5C8700682A75 /* icon_datuan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF334621BF5C8700682A75 /* icon_datuan@3x.png */; };
+		D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,8 @@
 		D8CF334421BF5C8700682A75 /* icon_pipei@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_pipei@3x.png"; sourceTree = "<group>"; };
 		D8CF334521BF5C8700682A75 /* icon_zhandui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_zhandui@3x.png"; sourceTree = "<group>"; };
 		D8CF334621BF5C8700682A75 /* icon_datuan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_datuan@3x.png"; sourceTree = "<group>"; };
+		D8CF334D21BF7F6C00682A75 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
+		D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,15 +219,12 @@
 		D848356821B60760006C7AA4 /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8CF335021BF7F7200682A75 /* Views */,
+				D8CF334C21BF7F3A00682A75 /* ViewModels */,
+				D8CF334B21BF7F2600682A75 /* Controllers */,
 				D8CF334221BF5C7B00682A75 /* Image */,
 				D848356921B60760006C7AA4 /* AppDelegate.h */,
 				D848356A21B60760006C7AA4 /* AppDelegate.m */,
-				D848356C21B60760006C7AA4 /* ViewController.h */,
-				D848356D21B60760006C7AA4 /* ViewController.m */,
-				D8CF333F21BF565A00682A75 /* XCTableViewController.h */,
-				D8CF334021BF565A00682A75 /* XCTableViewController.m */,
-				D86BF0C321BF48B000405628 /* XCViewModel.h */,
-				D86BF0C421BF48B000405628 /* XCViewModel.m */,
 				D80099B021BDE9980094AF89 /* README.md */,
 				D848356F21B60760006C7AA4 /* Main.storyboard */,
 				D848357221B60762006C7AA4 /* Assets.xcassets */,
@@ -339,6 +339,35 @@
 				D8CF334521BF5C8700682A75 /* icon_zhandui@3x.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		D8CF334B21BF7F2600682A75 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D848356C21B60760006C7AA4 /* ViewController.h */,
+				D848356D21B60760006C7AA4 /* ViewController.m */,
+				D8CF333F21BF565A00682A75 /* XCTableViewController.h */,
+				D8CF334021BF565A00682A75 /* XCTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D8CF334C21BF7F3A00682A75 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D86BF0C321BF48B000405628 /* XCViewModel.h */,
+				D86BF0C421BF48B000405628 /* XCViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D8CF335021BF7F7200682A75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8CF334D21BF7F6C00682A75 /* XCDrawingView.h */,
+				D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */,
 				D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
