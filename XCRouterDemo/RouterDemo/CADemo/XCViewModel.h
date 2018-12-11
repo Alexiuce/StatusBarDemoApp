@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCViewModel : NSObject
 
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
