@@ -8,21 +8,21 @@
 
 #import "ViewController.h"
 
+#import "XCViewModel.h"
 
-
-@interface Spark : NSObject
-
-@property(nonatomic,copy) NSString *name;
-
-@end
-
-@implementation Spark
-
-- (void)speak {
-    NSLog(@"My name is:%@",self.name);
-}
-
-@end
+//@interface Spark : NSObject
+//
+//@property(nonatomic,copy) NSString *name;
+//
+//@end
+//
+//@implementation Spark
+//
+//- (void)speak {
+//    NSLog(@"My name is:%@",self.name);
+//}
+//
+//@end
 
 
 
@@ -49,16 +49,17 @@
     NSLog(@"time = %f",time);
 //     [self p_graphCAMediaTimingFunc];
     
+    
+    
 }
 
 - (void)p_objcDemo{
-    id cls = [Spark class];
-    
-    void *obj = &cls;
-    
-    [(__bridge id)obj speak];
+//    id cls = [Spark class];
+//
+//    void *obj = &cls;
+//
+//    [(__bridge id)obj speak];
 }
-
 
 - (IBAction)playAnimationDemo:(UIButton *)sender{
     /** 创建关键帧动画 */
