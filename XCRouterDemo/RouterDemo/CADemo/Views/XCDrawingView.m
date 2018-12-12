@@ -17,18 +17,25 @@
 
 @implementation XCDrawingView
 
++ (Class)layerClass{
+    return [CAShapeLayer class];
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-    [UIColor.clearColor setFill];
-    [UIColor.redColor setStroke];
-    [self.path stroke];
-}
+//- (void)drawRect:(CGRect)rect {
+//    // Drawing code
+//    [UIColor.clearColor setFill];
+//    [UIColor.redColor setStroke];
+//    [self.path stroke];
+//}
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    CAShapeLayer *layer = (CAShapeLayer *)self.layer;
+    layer.fillColor = UIColor.clearColor.CGColor;
+    layer.strokeColor = UIColor.redColor.CGColor;
+    
     self.path = [UIBezierPath bezierPath];
     self.path.lineWidth = 5;
     self.path.lineCapStyle = kCGLineCapRound;
@@ -47,7 +54,9 @@
     UITouch *touch = [touches anyObject];
     CGPoint p = [touch locationInView:self];
     [self.path addLineToPoint:p];
-    [self setNeedsDisplay];
+//    [self setNeedsDisplay];
+    CAShapeLayer *layer = (CAShapeLayer *) self.layer;
+    layer.path = self.path.CGPath;
     
 }
 
