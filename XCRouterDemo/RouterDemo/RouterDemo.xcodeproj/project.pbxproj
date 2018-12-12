@@ -44,6 +44,7 @@
 		D8CF334921BF5C8700682A75 /* icon_zhandui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF334521BF5C8700682A75 /* icon_zhandui@3x.png */; };
 		D8CF334A21BF5C8700682A75 /* icon_datuan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CF334621BF5C8700682A75 /* icon_datuan@3x.png */; };
 		D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */; };
+		D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		D8CF334621BF5C8700682A75 /* icon_datuan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_datuan@3x.png"; sourceTree = "<group>"; };
 		D8CF334D21BF7F6C00682A75 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
+		D8EB202521C08CE100F488E0 /* XCDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingViewController.h; sourceTree = "<group>"; };
+		D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +351,8 @@
 				D848356D21B60760006C7AA4 /* ViewController.m */,
 				D8CF333F21BF565A00682A75 /* XCTableViewController.h */,
 				D8CF334021BF565A00682A75 /* XCTableViewController.m */,
+				D8EB202521C08CE100F488E0 /* XCDrawingViewController.h */,
+				D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */,
 				D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */,
 				D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,

@@ -8,14 +8,47 @@
 
 #import "XCDrawingView.h"
 
+@interface XCDrawingView ()
+
+@property (nonatomic, strong) UIBezierPath *path;
+
+@end
+
+
 @implementation XCDrawingView
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    [UIColor.clearColor setFill];
+    [UIColor.redColor setStroke];
+    [self.path stroke];
 }
-*/
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.path = [UIBezierPath bezierPath];
+    self.path.lineWidth = 5;
+    self.path.lineCapStyle = kCGLineCapRound;
+    self.path.lineJoinStyle = kCGLineJoinRound;
+    
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    CGPoint p = [touch locationInView:self];
+    [self.path moveToPoint:p];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    CGPoint p = [touch locationInView:self];
+    [self.path addLineToPoint:p];
+    [self setNeedsDisplay];
+    
+}
 
 @end
