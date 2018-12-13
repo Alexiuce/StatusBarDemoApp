@@ -24,6 +24,9 @@
 //
 //@end
 
+my_function(){
+    return 20;
+}
 
 
 @interface ViewController ()
@@ -48,6 +51,8 @@
     CFTimeInterval time = CACurrentMediaTime();
     NSLog(@"time = %f",time);
 //     [self p_graphCAMediaTimingFunc];
+    
+    NSLog(@"%d",my_function());
     
     
     
@@ -260,3 +265,5 @@
 }
 
 @end
+
+
