@@ -28,6 +28,7 @@
 		D88B75FB21A77D7100951228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88B75FA21A77D7100951228 /* Assets.xcassets */; };
 		D88B75FE21A77D7100951228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75FC21A77D7100951228 /* LaunchScreen.storyboard */; };
 		D88B760121A77D7100951228 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B760021A77D7100951228 /* main.m */; };
+		D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */; };
 		D8A4625121B8B16800914CE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4625021B8B16800914CE8 /* AppDelegate.m */; };
 		D8A4625421B8B16800914CE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4625321B8B16800914CE8 /* ViewController.m */; };
 		D8A4625721B8B16800914CE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A4625521B8B16800914CE8 /* Main.storyboard */; };
@@ -118,6 +119,8 @@
 		D88B75FF21A77D7100951228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88B760021A77D7100951228 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D88B760721A78AC100951228 /* XCFakeCode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCFakeCode.sh; sourceTree = "<group>"; };
+		D89608B221C1E069004A2EE1 /* XCCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCollectionViewController.h; sourceTree = "<group>"; };
+		D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCollectionViewController.m; sourceTree = "<group>"; };
 		D8A4624D21B8B16800914CE8 /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A4624F21B8B16800914CE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8A4625021B8B16800914CE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -353,6 +356,8 @@
 				D8CF334021BF565A00682A75 /* XCTableViewController.m */,
 				D8EB202521C08CE100F488E0 /* XCDrawingViewController.h */,
 				D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */,
+				D89608B221C1E069004A2EE1 /* XCCollectionViewController.h */,
+				D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -618,6 +623,7 @@
 				D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
+				D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */,
 				D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */,
 				D86BF0C521BF48B000405628 /* XCViewModel.m in Sources */,
 			);
