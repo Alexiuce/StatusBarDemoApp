@@ -7,8 +7,12 @@
 //
 
 #import "XCCollectionViewController.h"
+#import "XCImageIOCollectionViewCell.h"
 
-@interface XCCollectionViewController ()
+@interface XCCollectionViewController ()<UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSArray <NSString *>*imagePaths;
 
 @end
 
@@ -16,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.imagePaths = [NSBundle.mainBundle pathsForResourcesOfType:@"png" inDirectory:@"Image"];
 }
 
 /*
@@ -28,5 +32,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - UICollectionViewDataSource
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 100;
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    XCImageIOCollectionViewCell *cell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"imageIO" forIndexPath:indexPath];
+    NSUInteger index = indexPath.item % 4;
+    NSString *imagePath = self.imagePaths[index];
+    cell.imageView.image = [UIImage imageWithContentsOfFile:imagePath];
+    
+    return cell;
+}
 @end

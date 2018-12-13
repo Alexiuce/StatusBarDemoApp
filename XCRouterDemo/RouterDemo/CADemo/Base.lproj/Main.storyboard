@@ -235,22 +235,39 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="178" id="RVo-l8-u4e"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wOh-jn-bmc">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wOh-jn-bmc">
+                                    <size key="itemSize" width="375" height="194"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="D9Q-t6-KPb">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageIO" id="D9Q-t6-KPb" customClass="XCImageIOCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="-8" width="375" height="194"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Q-3M-QmP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Q1Q-3M-QmP" firstAttribute="top" secondItem="D9Q-t6-KPb" secondAttribute="top" id="6fm-HH-Pgr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q1Q-3M-QmP" secondAttribute="trailing" id="Qvo-Nt-zY7"/>
+                                            <constraint firstItem="Q1Q-3M-QmP" firstAttribute="leading" secondItem="D9Q-t6-KPb" secondAttribute="leading" id="hwN-DU-OJJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Q1Q-3M-QmP" secondAttribute="bottom" id="s3r-zN-bh8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Q1Q-3M-QmP" id="iVJ-MZ-ran"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="DaG-px-6qK" id="TEl-5l-1VJ"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -261,6 +278,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8eB-ns-A6u"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="oWD-ka-T3c" id="0eT-nu-9bR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9h-IX-eq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
