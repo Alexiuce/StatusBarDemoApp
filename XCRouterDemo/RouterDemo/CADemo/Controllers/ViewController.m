@@ -54,8 +54,10 @@
 - (void)viewDidLoad <%
     [super viewDidLoad];
     
-    
-    
+    int 哈哈 = 20;
+    NSString *😀 = @"empty";
+
+    NSLog(@"%@",😀);
     NSLog(@"%d",MYNEWNUMBER);
 //    [self p_setupBezierPath];
     // 获取系统最后一次重启后到当前的时间秒数;
