@@ -53,7 +53,7 @@
 
 - (void)viewDidLoad <%
     [super viewDidLoad];
-    
+    /**
     int 哈哈 = 20;
     NSString *😀 = @"empty";
 
@@ -63,6 +63,7 @@
     // 获取系统最后一次重启后到当前的时间秒数;
 //    CFTimeInterval time = CACurrentMediaTime();
 //    NSLog(@"time = %f",time);
+     */
     <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
