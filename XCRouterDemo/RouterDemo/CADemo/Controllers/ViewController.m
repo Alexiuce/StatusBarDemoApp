@@ -55,8 +55,6 @@
     [self p_shareLayer];
     
     
-    
-    
 }
 
 - (void)p_objcDemo{
@@ -69,8 +67,10 @@
 
 - (void)p_shareLayer{
     CAShapeLayer *blueLayer = [CAShapeLayer layer];
-    blueLayer.frame = CGRectMake(50, 50, 100, 100);
+//    blueLayer.frame = CGRectMake(50, 50, 200, 200);
+    blueLayer.position = CGPointMake(50, 50);
     blueLayer.fillColor = UIColor.blueColor.CGColor;
+//    blueLayer.backgroundColor = UIColor.redColor.CGColor;
     blueLayer.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 100) cornerRadius:20].CGPath;
     [self.containerView.layer addSublayer:blueLayer];
 }
