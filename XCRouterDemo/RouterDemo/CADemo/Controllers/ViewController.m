@@ -10,6 +10,12 @@
 
 #import "XCViewModel.h"
 
+
+#define MYNUMBER 10
+
+%:define MYNEWNUMBER 20
+
+
 @interface Spark : NSObject
 
 @property(nonatomic,copy) NSString *name;
@@ -45,18 +51,22 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad <%
     [super viewDidLoad];
+    
+    
+    
+    NSLog(@"%d",MYNEWNUMBER);
 //    [self p_setupBezierPath];
     // 获取系统最后一次重启后到当前的时间秒数;
 //    CFTimeInterval time = CACurrentMediaTime();
 //    NSLog(@"time = %f",time);
-     [self p_graphCAMediaTimingFunc];
+    <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
 //    [self p_objcDemo];
     
-}
+%>
 
 - (void)p_objcDemo{
     
