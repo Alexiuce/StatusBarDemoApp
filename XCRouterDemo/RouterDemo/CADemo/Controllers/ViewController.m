@@ -24,9 +24,10 @@
 //
 //@end
 
-my_function(){
-    return 20;
-}
+/** c89 中 如果函数的返回值为int 类型,可以省略不写 */
+//my_function(){
+//    return 20;
+//}
 
 
 @interface ViewController ()
@@ -51,8 +52,8 @@ my_function(){
     CFTimeInterval time = CACurrentMediaTime();
     NSLog(@"time = %f",time);
 //     [self p_graphCAMediaTimingFunc];
+    [self p_shareLayer];
     
-    NSLog(@"%d",my_function());
     
     
     
@@ -64,6 +65,14 @@ my_function(){
 //    void *obj = &cls;
 //
 //    [(__bridge id)obj speak];
+}
+
+- (void)p_shareLayer{
+    CAShapeLayer *blueLayer = [CAShapeLayer layer];
+    blueLayer.frame = CGRectMake(50, 50, 100, 100);
+    blueLayer.fillColor = UIColor.blueColor.CGColor;
+    blueLayer.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 100) cornerRadius:20].CGPath;
+    [self.containerView.layer addSublayer:blueLayer];
 }
 
 - (IBAction)playAnimationDemo:(UIButton *)sender{
