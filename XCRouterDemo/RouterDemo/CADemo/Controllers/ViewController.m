@@ -51,10 +51,10 @@
     // 获取系统最后一次重启后到当前的时间秒数;
 //    CFTimeInterval time = CACurrentMediaTime();
 //    NSLog(@"time = %f",time);
-//     [self p_graphCAMediaTimingFunc];
+     [self p_graphCAMediaTimingFunc];
 //    [self p_shareLayer];
    
-    [self p_objcDemo];
+//    [self p_objcDemo];
     
 }
 
@@ -68,7 +68,7 @@
     NSString *a = @"Hello~";
     id cls = [Spark class];
 
-    NSLog(@"%p  %p",a,cls);
+//    NSLog(@"%p  %p",a,cls);
     void *obj = &cls;
 //    NSLog(@"%p, %p",&cls,self);
 
