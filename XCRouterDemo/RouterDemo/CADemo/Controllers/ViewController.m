@@ -10,19 +10,19 @@
 
 #import "XCViewModel.h"
 
-//@interface Spark : NSObject
-//
-//@property(nonatomic,copy) NSString *name;
-//
-//@end
-//
-//@implementation Spark
-//
-//- (void)speak {
-//    NSLog(@"My name is:%@",self.name);
-//}
-//
-//@end
+@interface Spark : NSObject
+
+@property(nonatomic,copy) NSString *name;
+
+@end
+
+@implementation Spark
+
+- (void)speak {
+    NSLog(@"My name is:%@",self.name);
+}
+
+@end
 
 /** c89 中 如果函数的返回值为int 类型,可以省略不写 */
 //my_function(){
@@ -49,20 +49,30 @@
     [super viewDidLoad];
 //    [self p_setupBezierPath];
     // 获取系统最后一次重启后到当前的时间秒数;
-    CFTimeInterval time = CACurrentMediaTime();
-    NSLog(@"time = %f",time);
+//    CFTimeInterval time = CACurrentMediaTime();
+//    NSLog(@"time = %f",time);
 //     [self p_graphCAMediaTimingFunc];
-    [self p_shareLayer];
-    
+//    [self p_shareLayer];
+   
+    [self p_objcDemo];
     
 }
 
 - (void)p_objcDemo{
-//    id cls = [Spark class];
-//
-//    void *obj = &cls;
-//
-//    [(__bridge id)obj speak];
+    
+//    char *a = "a";
+//    char *b = "b";
+//    char *c = "f";
+//    NSLog(@"%d == %d == %d",a[4],*b,*c);
+    
+    NSString *a = @"Hello~";
+    id cls = [Spark class];
+
+    NSLog(@"%p  %p",a,cls);
+    void *obj = &cls;
+//    NSLog(@"%p, %p",&cls,self);
+
+    [(__bridge id)obj speak];
 }
 
 - (void)p_shareLayer{
