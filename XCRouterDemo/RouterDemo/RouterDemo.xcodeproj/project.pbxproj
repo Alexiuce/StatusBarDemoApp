@@ -147,6 +147,7 @@
 		D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 		D8EB202521C08CE100F488E0 /* XCDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingViewController.h; sourceTree = "<group>"; };
 		D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingViewController.m; sourceTree = "<group>"; };
+		D8F3CAED21C506F5002FE705 /* Layer Tree.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Layer Tree.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +230,7 @@
 				D848356921B60760006C7AA4 /* AppDelegate.h */,
 				D848356A21B60760006C7AA4 /* AppDelegate.m */,
 				D80099B021BDE9980094AF89 /* README.md */,
+				D8F3CAED21C506F5002FE705 /* Layer Tree.md */,
 				D848356F21B60760006C7AA4 /* Main.storyboard */,
 				D848357221B60762006C7AA4 /* Assets.xcassets */,
 				D848357421B60762006C7AA4 /* LaunchScreen.storyboard */,
