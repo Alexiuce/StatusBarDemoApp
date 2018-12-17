@@ -82,6 +82,10 @@
 - (void)p_addLayerContents{
     UIImage *img = [UIImage imageNamed:@"icon_shangfen"];
     self.containerView.layer.contents = (__bridge id)img.CGImage;
+    /** contentsGravity 相当于UIView的contentMode: 设置内容的对齐方式 */
+//    self.containerView.layer.geometryFlipped = YES;
+    self.containerView.layer.contentsGravity = kCAGravityResizeAspect;
+    self.containerView.layer.contentsScale = img.scale;
 }
 
 - (void)p_objcDemo{
