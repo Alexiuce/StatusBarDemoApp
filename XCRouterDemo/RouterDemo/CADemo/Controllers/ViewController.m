@@ -51,7 +51,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad <%
+- (void)viewDidLoad {
     [super viewDidLoad];
     /**
     int 哈哈 = 20;
@@ -64,12 +64,19 @@
 //    CFTimeInterval time = CACurrentMediaTime();
 //    NSLog(@"time = %f",time);
      */
-    <:self p_graphCAMediaTimingFunc:>;
+//    <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
 //    [self p_objcDemo];
-    
-%>
+    [self p_addLayer];
+}
+
+- (void)p_addLayer{
+    CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake(50, 50, 100, 100);
+    layer.backgroundColor = UIColor.blueColor.CGColor;
+    [self.containerView.layer addSublayer:layer];
+}
 
 - (void)p_objcDemo{
     
