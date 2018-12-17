@@ -97,6 +97,11 @@
 //    char *c = "f";
 //    NSLog(@"%d == %d == %d",a[4],*b,*c);
     
+    float f1 = 3.141526;
+    double d1 = f1; // d1 = 3.141526 
+    NSLog(@"d1 == f1 ?  %d",d1 == f1);
+    
+    
     NSString *a = @"Hello~";
     id cls = [Spark class];
     NSLog(@"cls address == %p",cls);
