@@ -25,6 +25,8 @@
 @implementation Spark
 
 - (void)speak {
+    NSLog(@"self address == %p",self);
+    NSLog(@"self name address ==  %p",self.name);
     NSLog(@"My name is:%@",self.name);
 }
 
@@ -67,9 +69,9 @@
 //    <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
-//    [self p_objcDemo];
+    [self p_objcDemo];
 //    [self p_addLayer];
-    [self p_addLayerContents];
+//    [self p_addLayerContents];
 }
 
 - (void)p_addLayer{
@@ -97,11 +99,12 @@
     
     NSString *a = @"Hello~";
     id cls = [Spark class];
-
+    NSLog(@"cls address == %p",cls);
+    NSLog(@"a string address ==  %p",a);
 //    NSLog(@"%p  %p",a,cls);
     void *obj = &cls;
 //    NSLog(@"%p, %p",&cls,self);
-
+    
     [(__bridge id)obj speak];
 }
 
