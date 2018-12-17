@@ -68,7 +68,8 @@
 //    [self p_shareLayer];
    
 //    [self p_objcDemo];
-    [self p_addLayer];
+//    [self p_addLayer];
+    [self p_addLayerContents];
 }
 
 - (void)p_addLayer{
@@ -76,6 +77,11 @@
     layer.frame = CGRectMake(50, 50, 100, 100);
     layer.backgroundColor = UIColor.blueColor.CGColor;
     [self.containerView.layer addSublayer:layer];
+}
+
+- (void)p_addLayerContents{
+    UIImage *img = [UIImage imageNamed:@"icon_shangfen"];
+    self.containerView.layer.contents = (__bridge id)img.CGImage;
 }
 
 - (void)p_objcDemo{
