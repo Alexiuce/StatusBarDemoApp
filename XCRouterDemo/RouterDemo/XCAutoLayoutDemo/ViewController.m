@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self p_missingViewDemo];
+//    [self p_missingViewDemo];
+    [self p_intrinsicSizeDemo];
 }
 
 
@@ -65,7 +66,17 @@
         NSLog(@"%@",c);
     }
 }
-
+- (void)p_intrinsicSizeDemo{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    
+    [button setTitle:@"Hello world" forState:UIControlStateNormal];
+    NSLog(@"%@",NSStringFromCGSize(button.intrinsicContentSize));
+    [button setTitle:@"On" forState:UIControlStateNormal];
+    NSLog(@"%@",NSStringFromCGSize(button.intrinsicContentSize));
+    
+    
+    
+}
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
