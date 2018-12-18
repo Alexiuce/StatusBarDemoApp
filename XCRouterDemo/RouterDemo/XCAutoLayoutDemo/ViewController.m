@@ -53,7 +53,25 @@
     constraint = [NSLayoutConstraint constraintWithItem:viewB attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:viewA attribute:NSLayoutAttributeWidth multiplier:3.0f constant:0];
     [self.view addConstraint:constraint];
     
+    /** 检查view的约束是否有歧义: 仅对具体点view检查,不包含其内部的subviews */
+    NSString *hasAmbiguous =  view.hasAmbiguousLayout ? @"Ambiguous" :@"unAmbiguous";
+    NSLog(@"%@",hasAmbiguous);
     
+    /**  exerciseAmbiguityInLayout: 针对歧义约束进行随机设置frame */
+    [view exerciseAmbiguityInLayout];
+    /** 获取视图上的约束集合 */
+    NSArray <NSLayoutConstraint *>*vc = view.constraints;
+    for (NSLayoutConstraint *c in vc) {
+        NSLog(@"%@",c);
+    }
 }
 
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    for (UIView *v in self.view.subviews) {
+        NSLog(@"%@ frame == %@",v, NSStringFromCGRect(v.frame));
+
+    }
+}
 @end
