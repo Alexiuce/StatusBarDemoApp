@@ -73,8 +73,8 @@
     NSLog(@"%@",NSStringFromCGSize(button.intrinsicContentSize));
     [button setTitle:@"On" forState:UIControlStateNormal];
     NSLog(@"%@",NSStringFromCGSize(button.intrinsicContentSize));
-    
-    
+    /** 如果改变了控件的intrinsicContentSize 需要调用 invalidateIntrinsicContentSize 方法告知layout系统,以便在下一个布局周期时更新 */
+    [button invalidateIntrinsicContentSize];
     
 }
 
