@@ -75,7 +75,7 @@
     NSLog(@"%@",NSStringFromCGSize(button.intrinsicContentSize));
     /** 如果改变了控件的intrinsicContentSize 需要调用 invalidateIntrinsicContentSize 方法告知layout系统,以便在下一个布局周期时更新 */
     [button invalidateIntrinsicContentSize];
-    
+
     /** 设置 intrinsicSize的约束优先级 */
     [button setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     
