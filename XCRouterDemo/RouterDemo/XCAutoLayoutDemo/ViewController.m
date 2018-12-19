@@ -17,8 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self p_missingViewDemo];
+//    [self p_missingViewDemo];
 //    [self p_intrinsicSizeDemo];
+    [self p_constraintsPrioritiesDemo];
 }
 
 
@@ -81,5 +82,22 @@
     
 }
 
+- (void)p_constraintsPrioritiesDemo{
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = UIColor.redColor;
+    [self.view addSubview:view];
+    
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0f constant:30.0f];
+    [view addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0f constant:100.0f];
+    [view addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeCenterXWithinMargins relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeCenterXWithinMargins multiplier:1.0f constant:130.0f];
+    [view addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeCenterYWithinMargins relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeCenterYWithinMargins multiplier:1.0f constant:10.0f];
+    [view addConstraint:constraint];
+}
 
 @end
