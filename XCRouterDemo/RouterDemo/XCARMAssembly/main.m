@@ -22,6 +22,15 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         testUnionFunc();
+       
+        /** c 环境的const 常量问题
+        const int a = 10;
+        int *p = &a;
+        *p = 20;
+        printf("a = %d\n",a);
+        
+         */
+        
     }
     return 0;
 }

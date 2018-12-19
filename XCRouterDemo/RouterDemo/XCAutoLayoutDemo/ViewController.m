@@ -87,6 +87,7 @@
     view.backgroundColor = UIColor.redColor;
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:view];
+    
     /** 宽高的约束添加的自身控件上 toItem可以为nil */
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0f constant:30.0f];
     constraint.priority = 500;  //  约束的优先级设置需要在被添加到控件之前,否则导致会崩溃(添加到控件后为不可变对象);
