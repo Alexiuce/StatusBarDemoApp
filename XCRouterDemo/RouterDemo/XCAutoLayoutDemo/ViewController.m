@@ -87,18 +87,29 @@
     view.backgroundColor = UIColor.redColor;
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:view];
-    
+    /** 宽高的约束添加的自身控件上 toItem可以为nil */
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0f constant:30.0f];
+    constraint.priority = 500;  //  约束的优先级设置需要在被添加到控件之前,否则导致会崩溃(添加到控件后为不可变对象);
     [view addConstraint:constraint];
+    NSLog(@"%f",constraint.priority);   // 默认的约束优先级值为1000.0f;
     
     constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0f constant:100.0f];
     [view addConstraint:constraint];
     
+    /** x 或者 y 坐标相关的约束需要添加的父控件上,并且 toItem参数不能为nil */
     constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:view.superview attribute:NSLayoutAttributeLeading multiplier:1.0f constant:130.0f];
     [self.view addConstraint:constraint];
 
     constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:view.superview attribute:NSLayoutAttributeTop multiplier:1.0f constant:90.0f];
     [self.view addConstraint:constraint];
+    
+    
+    /** 设置约束的优先级 */
+    constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0f constant:60.0f];
+    /** 优先级的取值范围 (0, 1000.0] , 超过这个范围会导致崩溃 */
+    constraint.priority = 600;
+    [view addConstraint:constraint];
+    
 }
 
 @end
