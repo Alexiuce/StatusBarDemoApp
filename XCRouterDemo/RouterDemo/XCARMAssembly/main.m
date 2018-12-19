@@ -18,10 +18,26 @@ void testUnionFunc(){
 }
 
 
+void testBitFieldFunc(){
+    struct MYStruce{
+        uint8 a : 6;
+        uint8 b : 1;
+        uint8 c : 8;
+    }s = {0x18,0x1,0x2};
+    printf("size of == %zu\n",sizeof(s));
+    printf("%.16X\n",*(uint32_t *)&s);
+    /** 字节对齐单位: 操作符_Alignof() */
+    size_t aligon = _Alignof(struct MYStruce);
+    printf("aligon == %zu\n",aligon);
+    size_t maxAlign = _Alignof(max_align_t);  // 获取支持的最大字节对齐单位;
+    printf("sys max align %zu\n",maxAlign);   // 打印16 :  macOS 下最大支持16字节
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        testUnionFunc();
+//        testUnionFunc();
+        testBitFieldFunc();
        
         /** c 环境的const 常量问题
         const int a = 10;
