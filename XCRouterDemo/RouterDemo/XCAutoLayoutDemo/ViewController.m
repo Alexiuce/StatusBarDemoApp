@@ -46,26 +46,26 @@
 //    viewB.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:viewB];
     
-//    /** 添加约束 : 设置相互矛盾的约束会导致视图可能 missing 如下例: */
-//    NSLayoutConstraint *constraint ;
-//    /** 设置viewA的宽度约束为viewB宽度的2倍*/
-//    constraint = [NSLayoutConstraint constraintWithItem:viewA attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:viewB attribute:NSLayoutAttributeWidth multiplier:2.0f constant:0.0f];
-//    [self.view addConstraint:constraint];
-//    /** 设置viewB的宽度为viewA宽度的3倍 */
-//    constraint = [NSLayoutConstraint constraintWithItem:viewB attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:viewA attribute:NSLayoutAttributeWidth multiplier:3.0f constant:0];
-//    [self.view addConstraint:constraint];
-//
-//    /** 检查view的约束是否有歧义: 仅对具体点view检查,不包含其内部的subviews */
-//    NSString *hasAmbiguous =  view.hasAmbiguousLayout ? @"Ambiguous" :@"unAmbiguous";
-//    NSLog(@"%@",hasAmbiguous);
-//
-//    /**  exerciseAmbiguityInLayout: 针对歧义约束进行随机设置frame */
-//    [view exerciseAmbiguityInLayout];
-//    /** 获取视图上的约束集合 */
-//    NSArray <NSLayoutConstraint *>*vc = view.constraints;
-//    for (NSLayoutConstraint *c in vc) {
-//        NSLog(@"%@",c);
-//    }
+    /** 添加约束 : 设置相互矛盾的约束会导致视图可能 missing 如下例: */
+    NSLayoutConstraint *constraint ;
+    /** 设置viewA的宽度约束为viewB宽度的2倍*/
+    constraint = [NSLayoutConstraint constraintWithItem:viewA attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:viewB attribute:NSLayoutAttributeWidth multiplier:2.0f constant:0.0f];
+    [self.view addConstraint:constraint];
+    /** 设置viewB的宽度为viewA宽度的3倍 */
+    constraint = [NSLayoutConstraint constraintWithItem:viewB attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:viewA attribute:NSLayoutAttributeWidth multiplier:3.0f constant:0];
+    [self.view addConstraint:constraint];
+
+    /** 检查view的约束是否有歧义: 仅对具体点view检查,不包含其内部的subviews */
+    NSString *hasAmbiguous =  view.hasAmbiguousLayout ? @"Ambiguous" :@"unAmbiguous";
+    NSLog(@"%@",hasAmbiguous);
+
+    /**  exerciseAmbiguityInLayout: 针对歧义约束进行随机设置frame */
+    [view exerciseAmbiguityInLayout];
+    /** 获取视图上的约束集合 */
+    NSArray <NSLayoutConstraint *>*vc = view.constraints;
+    for (NSLayoutConstraint *c in vc) {
+        NSLog(@"%@",c);
+    }
 }
 - (void)p_intrinsicSizeDemo{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -89,12 +89,12 @@
     [self.view addSubview:view];
     
     /** 宽高的约束添加的自身控件上 toItem可以为nil */
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0f constant:30.0f];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:30.0f];
     constraint.priority = 500;  //  约束的优先级设置需要在被添加到控件之前,否则导致会崩溃(添加到控件后为不可变对象);
     [view addConstraint:constraint];
     NSLog(@"%f",constraint.priority);   // 默认的约束优先级值为1000.0f;
     
-    constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0f constant:100.0f];
+    constraint = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:100.0f];
     [view addConstraint:constraint];
     
     /** x 或者 y 坐标相关的约束需要添加的父控件上,并且 toItem参数不能为nil */
