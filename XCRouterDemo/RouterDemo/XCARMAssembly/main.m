@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
 //        testUnionFunc();
-        testBitFieldFunc();
+//        testBitFieldFunc();
        
         /** c 环境的const 常量问题
         const int a = 10;
@@ -49,6 +49,18 @@ int main(int argc, const char * argv[]) {
         printf("a = %d\n",a);
         
          */
+        
+        /** 结构体的内存对齐 */
+        
+        struct MYStr {
+            int8_t a;
+            int32_t b;
+            int16_t c;
+            int64_t d;
+        }s = {0x01,0x02,0x03,0x04};
+        printf("%p",&s);
+        printf("alignof %zu\n",alignof(struct MYStr));
+        printf("size is %zu \n",sizeof(s));
         
     }
     return 0;
