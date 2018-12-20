@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <stdalign.h>
 void testUnionFunc(){
     union {
         int8_t a;
@@ -31,6 +31,9 @@ void testBitFieldFunc(){
     printf("aligon == %zu\n",aligon);
     size_t maxAlign = _Alignof(max_align_t);  // 获取支持的最大字节对齐单位;
     printf("sys max align %zu\n",maxAlign);   // 打印16 :  macOS 下最大支持16字节
+    
+    size_t b_align = alignof(BOOL); // 使用系统的宏定义 alignof()
+    printf("bool align size == %zu\n",b_align);
 }
 
 int main(int argc, const char * argv[]) {
