@@ -18,7 +18,8 @@ void testUnionFunc(){
 }
 
 static inline int testInlineFunc(int a){
-    return a + 10;
+    int c = a + rand();
+    return c  + 1;
 }
 
 
