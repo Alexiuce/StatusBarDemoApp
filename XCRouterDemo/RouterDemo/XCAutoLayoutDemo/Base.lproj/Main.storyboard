@@ -19,16 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="va0-Wv-eqD">
-                                <rect key="frame" x="30" y="88" width="51" height="31"/>
+                                <rect key="frame" x="50" y="88" width="62" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.19271725170000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="vXQ-w3-uDY"/>
+                                    <constraint firstAttribute="height" constant="40" id="wMN-yt-Znw"/>
+                                </constraints>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="va0-Wv-eqD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="Bqe-tA-raz"/>
-                            <constraint firstItem="va0-Wv-eqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ief-kD-3il"/>
+                            <constraint firstItem="va0-Wv-eqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ief-kD-3il"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="va0-Wv-eqD" id="bh9-4P-HOE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UISwitch *mySwitch;
 
 @end
 
@@ -19,8 +20,21 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    [self p_missingViewDemo];
 //    [self p_intrinsicSizeDemo];
-    [self p_constraintsPrioritiesDemo];
+//    [self p_constraintsPrioritiesDemo];
 }
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%@",NSStringFromCGSize(self.mySwitch.intrinsicContentSize));
+    
+//    for (NSLayoutConstraint *cs in self.view.constraints) {
+//        NSLog(@"%@",cs);
+//    }
+    
+}
+
+
+#pragma mark - private method for demo
 
 
 - (void)p_missingViewDemo{
