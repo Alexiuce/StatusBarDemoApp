@@ -50,18 +50,33 @@ int main(int argc, const char * argv[]) {
         
          */
         
+        /** 乘法运算 的汇编指令;
+        int a = 100;                 //  movl   $0x64, -0x14(%rbp)
+        int b = 10;                  //  movl   $0xa, -0x18(%rbp)
+        int c = a * b;               // imull  -0x18(%rbp), %ecx
+        printf(" a * b = %d",c);
+         */
+        
         /** 结构体的内存对齐 */
         
         struct MYStr {
-            int8_t a;
-            int32_t b;
-            int16_t c;
-            int64_t d;
+            int64_t d : 5;
+            int8_t a : 5 ;
+            int32_t b   : 5;
+            int16_t c   : 5;
         }s = {0x01,0x02,0x03,0x04};
-        printf("%p",&s);
+        printf("%p\n",&s);
         printf("alignof %zu\n",alignof(struct MYStr));
         printf("size is %zu \n",sizeof(s));
-        
+        printf("a = %d, b = %d, c = %d , d = %d\n",s.a,s.b,s.c,s.d);
+        /**
+          01 62 10 00 00 00 00 00
+         0000 0001 0110 0010 0001 0000 ....
+          0000 0001
+          0000 0010
+          0000 0011
+          0000 0100
+         */
     }
     return 0;
 }
