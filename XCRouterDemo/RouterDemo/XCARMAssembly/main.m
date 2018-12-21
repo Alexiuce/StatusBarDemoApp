@@ -17,6 +17,10 @@ void testUnionFunc(){
     printf("0x%.8X, 0x%.8x,0x%.8x\n",u.a,u.b,u.c);
 }
 
+static inline int testInlineFunc(int a){
+    return a + 10;
+}
+
 
 void testBitFieldFunc(){
     struct MYStruce{
@@ -36,12 +40,21 @@ void testBitFieldFunc(){
     printf("bool align size == %zu\n",b_align);
 }
 
+void testNSObjectDemo(){
+    NSObject *obj = [[NSObject alloc]init];
+    NSLog(@"%@",obj);
+    
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
 //        testUnionFunc();
 //        testBitFieldFunc();
-       
+//        testNSObjectDemo();
+        int a = testInlineFunc(1);
+        int b = testInlineFunc(2);
+        printf("a = %d, b = %d",a,b);
         /** c 环境的const 常量问题
         const int a = 10;
         int *p = &a;
@@ -57,7 +70,7 @@ int main(int argc, const char * argv[]) {
         printf(" a * b = %d",c);
          */
         
-        /** 结构体的内存对齐 */
+        /** 结构体的内存对齐
         
         struct MYStr {
             int64_t d : 5;
@@ -69,6 +82,7 @@ int main(int argc, const char * argv[]) {
         printf("alignof %zu\n",alignof(struct MYStr));
         printf("size is %zu \n",sizeof(s));
         printf("a = %d, b = %d, c = %d , d = %d\n",s.a,s.b,s.c,s.d);
+         */
         /**
           01 62 10 00 00 00 00 00
          0000 0001 0110 0010 0001 0000 ....
