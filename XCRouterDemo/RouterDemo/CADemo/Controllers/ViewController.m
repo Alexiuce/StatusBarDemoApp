@@ -105,9 +105,11 @@
 //    size_t lengthA = sizeof(NSString *);
 //    NSLog(@"%zu", lengthA);
     NSString *a = @"Hello~";
+    NSString *b = @"World";
+    NSLog(@"b address ==%p  b objc == %p",&b,b);
     id cls = [Spark class];
-//    NSLog(@"cls address == %p",cls);
-//    NSLog(@"a string address ==  %p",a);
+    NSLog(@"cls address == %p",&cls);
+    NSLog(@"a string address ==  %p",&a);
 //    NSLog(@"%p  %p",a,cls);
     void *obj = &cls;
 //    NSLog(@"%p, %p",&cls,self);
