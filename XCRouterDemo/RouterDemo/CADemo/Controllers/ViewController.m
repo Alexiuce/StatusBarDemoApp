@@ -105,16 +105,55 @@
 //    size_t lengthA = sizeof(NSString *);
 //    NSLog(@"%zu", lengthA);
     NSString *a = @"Hello~";
-    NSString *b = @"World";
-    NSLog(@"b address ==%p  b objc == %p",&b,b);
+//    NSString *b = @"World";
+//    NSLog(@"b address ==%p  b objc == %p",&b,b);
     id cls = [Spark class];
-    NSLog(@"cls address == %p",&cls);
-    NSLog(@"a string address ==  %p",&a);
+//    NSLog(@"cls address == %p",&cls);
+//    NSLog(@"a string address ==  %p",&a);
 //    NSLog(@"%p  %p",a,cls);
     void *obj = &cls;
 //    NSLog(@"%p, %p",&cls,self);
     
     [(__bridge id)obj speak];
+    
+    
+    /** 汇编代码
+     0x10df643c0 <+0>:   pushq  %rbp
+     0x10df643c1 <+1>:   movq   %rsp, %rbps
+     0x10df643c4 <+4>:   subq   $0x30, %rsp
+     0x10df643c8 <+8>:   leaq   0x5e71(%rip), %rax        ; @"Hello~"
+     0x10df643cf <+15>:  movq   %rdi, -0x8(%rbp)
+     0x10df643d3 <+19>:  movq   %rsi, -0x10(%rbp)
+     0x10df643d7 <+23>:  movq   %rax, %rdi
+     0x10df643da <+26>:  callq  *0x5c78(%rip)             ; (void *)0x000000010e920fa0: objc_retain
+     0x10df643e0 <+32>:  movq   %rax, -0x18(%rbp)
+     0x10df643e4 <+36>:  movq   0x8145(%rip), %rax        ; (void *)0x000000010df6c788: Spark
+     0x10df643eb <+43>:  movq   0x7d7e(%rip), %rsi        ; "class"
+     0x10df643f2 <+50>:  movq   %rax, %rdi
+     0x10df643f5 <+53>:  callq  *0x5c4d(%rip)             ; (void *)0x000000010e923d80: objc_msgSend
+     0x10df643fb <+59>:  movq   %rax, %rdi
+     0x10df643fe <+62>:  callq  0x10df677ca               ; symbol stub for: objc_retainAutoreleasedReturnValue
+     0x10df64403 <+67>:  leaq   -0x20(%rbp), %rsi
+     0x10df64407 <+71>:  movq   %rax, -0x20(%rbp)
+     0x10df6440b <+75>:  movq   %rsi, -0x28(%rbp)
+     0x10df6440f <+79>:  movq   -0x28(%rbp), %rdi
+     0x10df64413 <+83>:  movq   0x7f2e(%rip), %rsi        ; "speak"
+     0x10df6441a <+90>:  callq  *0x5c28(%rip)             ; (void *)0x000000010e923d80: objc_msgSend
+     0x10df64420 <+96>:  leaq   -0x20(%rbp), %rdi
+     0x10df64424 <+100>: xorl   %ecx, %ecx
+     0x10df64426 <+102>: movl   %ecx, %esi
+     0x10df64428 <+104>: callq  0x10df677d6               ; symbol stub for: objc_storeStrong
+     0x10df6442d <+109>: xorl   %ecx, %ecx
+     0x10df6442f <+111>: movl   %ecx, %esi
+     0x10df64431 <+113>: leaq   -0x18(%rbp), %rax
+     0x10df64435 <+117>: movq   %rax, %rdi
+     0x10df64438 <+120>: callq  0x10df677d6               ; symbol stub for: objc_storeStrong
+     0x10df6443d <+125>: addq   $0x30, %rsp
+     0x10df64441 <+129>: popq   %rbp
+     0x10df64442 <+130>: retq
+     
+     
+     */
 }
 
 - (void)p_shareLayer{
