@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D848356621B60760006C7AA4"
-               BuildableName = "CADemo.app"
-               BlueprintName = "CADemo"
+               BlueprintIdentifier = "D88B75ED21A77D7000951228"
+               BuildableName = "RouterDemo.app"
+               BlueprintName = "RouterDemo"
                ReferencedContainer = "container:RouterDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D848358121B63085006C7AA4"
-               BuildableName = "XCUnitTest.xctest"
-               BlueprintName = "XCUnitTest"
+               BlueprintIdentifier = "D8C138D121ACDAB400FA92C4"
+               BuildableName = "RouterDemoUITests.xctest"
+               BlueprintName = "RouterDemoUITests"
                ReferencedContainer = "container:RouterDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D848356621B60760006C7AA4"
-            BuildableName = "CADemo.app"
-            BlueprintName = "CADemo"
+            BlueprintIdentifier = "D88B75ED21A77D7000951228"
+            BuildableName = "RouterDemo.app"
+            BlueprintName = "RouterDemo"
             ReferencedContainer = "container:RouterDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D848356621B60760006C7AA4"
-            BuildableName = "CADemo.app"
-            BlueprintName = "CADemo"
+            BlueprintIdentifier = "D88B75ED21A77D7000951228"
+            BuildableName = "RouterDemo.app"
+            BlueprintName = "RouterDemo"
             ReferencedContainer = "container:RouterDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -84,9 +84,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D848356621B60760006C7AA4"
-            BuildableName = "CADemo.app"
-            BlueprintName = "CADemo"
+            BlueprintIdentifier = "D88B75ED21A77D7000951228"
+            BuildableName = "RouterDemo.app"
+            BlueprintName = "RouterDemo"
             ReferencedContainer = "container:RouterDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

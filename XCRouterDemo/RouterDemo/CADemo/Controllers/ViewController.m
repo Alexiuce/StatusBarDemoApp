@@ -38,6 +38,16 @@
 //}
 
 
+
+static inline CGFloat GetScreenWidth(){
+    return UIScreen.mainScreen.bounds.size.width;
+}
+
+//static inline CGFloat GetScreenHeight(){
+//    return UIScreen.mainScreen.bounds.size.height;
+//}
+
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (nonatomic, strong) CALayer *redLayer;
@@ -69,14 +79,15 @@
 //    <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
-    [self p_objcDemo];
-//    [self p_addLayer];
+//    [self p_objcDemo];
+    [self p_addLayer];
 //    [self p_addLayerContents];
 }
 
 - (void)p_addLayer{
     CALayer *layer = [CALayer layer];
-    layer.frame = CGRectMake(50, 50, 100, 100);
+    CGFloat w = GetScreenWidth();
+    layer.frame = CGRectMake(50, 50,w, 100);
     layer.backgroundColor = UIColor.blueColor.CGColor;
     [self.containerView.layer addSublayer:layer];
 }
