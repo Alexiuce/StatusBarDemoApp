@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    [self p_missingViewDemo];
 //    [self p_intrinsicSizeDemo];
-//    [self p_constraintsPrioritiesDemo];
+    [self p_constraintsPrioritiesDemo];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
