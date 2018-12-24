@@ -46,6 +46,13 @@ void testNSObjectDemo(){
     NSLog(@"%@",obj);
     
 }
+void testMutableArrayDemo(int arrayCount){
+    
+    int arr[4] = {1,3,[2]=10};
+    printf("arr address = %p, arr[0] address = %p\n",arr, &arr[0]);
+    printf("arr[0] = %d, arr[1] = %d, arr[2] = %d,arr[3] = %d\n",arr[0],arr[1],arr[2],arr[3]);
+    
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -53,9 +60,12 @@ int main(int argc, const char * argv[]) {
 //        testUnionFunc();
 //        testBitFieldFunc();
 //        testNSObjectDemo();
-        int a = testInlineFunc(1);
-        int b = testInlineFunc(2);
-        printf("a = %d, b = %d",a,b);
+        testMutableArrayDemo(0);
+        
+        
+//        int a = testInlineFunc(1);
+//        int b = testInlineFunc(2);
+//        printf("a = %d, b = %d",a,b);
         /** c 环境的const 常量问题
         const int a = 10;
         int *p = &a;
