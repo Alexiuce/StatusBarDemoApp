@@ -14,6 +14,7 @@ static NSString *const ReusedKey = @"prefetch_cell";
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDataSourcePrefetching>
 
 @property (nonatomic, strong) NSArray *icons;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -21,6 +22,9 @@ static NSString *const ReusedKey = @"prefetch_cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _collectionView.canCancelContentTouches = NO;
+    _collectionView.delaysContentTouches = NO;
     
     _icons = [@"🐍,👍,💄,🎏,🐠,🍔,🏩,🎈,🐷,👠,🐣,🐙,✈️,💅,⛑,👑,👛,🐝,🌂,🌻,🎼,🎧,🚧,📎,🍻" componentsSeparatedByString:@","];
     
