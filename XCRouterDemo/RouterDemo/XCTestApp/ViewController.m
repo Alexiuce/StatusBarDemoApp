@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "XCObj.h"
 @interface ViewController ()
 
 @property (weak) IBOutlet NSTextField *userName;
@@ -32,10 +32,10 @@
     // Do any additional setup after loading the view.
 }
 
-
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
+    XCObj *obj = (XCObj *)representedObject;
+    NSLog(@"obj name == %@",obj.name);
     // Update the view, if already loaded.
 }
 - (IBAction)login:(NSButton *)sender {

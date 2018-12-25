@@ -36,6 +36,7 @@
 		D89CA0F721D20E9200C117B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89CA0F621D20E9200C117B2 /* Assets.xcassets */; };
 		D89CA0FA21D20E9200C117B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89CA0F821D20E9200C117B2 /* Main.storyboard */; };
 		D89CA0FD21D20E9200C117B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D89CA0FC21D20E9200C117B2 /* main.m */; };
+		D89CA10421D2181000C117B2 /* XCObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D89CA10321D2181000C117B2 /* XCObj.m */; };
 		D8A4625121B8B16800914CE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4625021B8B16800914CE8 /* AppDelegate.m */; };
 		D8A4625421B8B16800914CE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4625321B8B16800914CE8 /* ViewController.m */; };
 		D8A4625721B8B16800914CE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A4625521B8B16800914CE8 /* Main.storyboard */; };
@@ -144,6 +145,8 @@
 		D89CA0FB21D20E9200C117B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D89CA0FC21D20E9200C117B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D89CA0FE21D20E9200C117B2 /* XCTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCTestApp.entitlements; sourceTree = "<group>"; };
+		D89CA10221D2181000C117B2 /* XCObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCObj.h; sourceTree = "<group>"; };
+		D89CA10321D2181000C117B2 /* XCObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCObj.m; sourceTree = "<group>"; };
 		D8A4624D21B8B16800914CE8 /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A4624F21B8B16800914CE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8A4625021B8B16800914CE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				D89CA0FB21D20E9200C117B2 /* Info.plist */,
 				D89CA0FC21D20E9200C117B2 /* main.m */,
 				D89CA0FE21D20E9200C117B2 /* XCTestApp.entitlements */,
+				D89CA10221D2181000C117B2 /* XCObj.h */,
+				D89CA10321D2181000C117B2 /* XCObj.m */,
 			);
 			path = XCTestApp;
 			sourceTree = "<group>";
@@ -802,6 +807,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89CA10421D2181000C117B2 /* XCObj.m in Sources */,
 				D89CA0F521D20E9100C117B2 /* ViewController.m in Sources */,
 				D89CA0FD21D20E9200C117B2 /* main.m in Sources */,
 				D89CA0F221D20E9100C117B2 /* AppDelegate.m in Sources */,
