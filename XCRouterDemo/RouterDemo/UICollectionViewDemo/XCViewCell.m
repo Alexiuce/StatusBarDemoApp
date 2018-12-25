@@ -10,4 +10,9 @@
 
 @implementation XCViewCell
 
+- (void)prepareForReuse{
+    [super prepareForReuse];
+    NSLog(@"old text === %@",self.iconLabel.text);
+}
+
 @end
