@@ -17,7 +17,6 @@
 
 
 @interface Spark : NSObject
-
 @property(nonatomic,copy) NSString *name;
 //@property (nonatomic, assign) int age1;
 //@property (nonatomic, assign) int age;
@@ -28,7 +27,7 @@
 
 - (void)speak {
 //    NSLog(@"self address == %p",self);
-   
+//    NSLog(@"%d",self.age);
 //    NSLog(@"self age1 =  %d, age = %d ",self.age1,self.age);
     NSLog(@"My name is:%@",self.name);
 }
@@ -124,12 +123,25 @@
 //    NSString *a = @"Hello~";
 //    NSString *b = @"World";
 //    NSLog(@"b address ==%p  b objc == %p",&b,b);
-//    int a = 4;
-//    int b = 3;
+    int a = 4;
+    int b = 3;
+    int c = 5;
+    int d = 2;
+//    NSObject *
+//     03 00 00 00 04 00 00 00
 //    NSString *s = @"adfd";
 //    UIView *v = self.view;
 //    NSNumber *n = @(2);
     id cls = [Spark class];
+    
+    
+//    {
+//        起始地址 +8 _
+//        isa, 8
+//        第一个属性
+//        第二个...
+//        第三个..
+//    }
 //    NSLog(@"cls address == %p",&cls);
 //    NSLog(@"a string address ==  %p",&a);
 //    NSLog(@"%p  %p",a,cls);
