@@ -25,9 +25,9 @@
 @implementation Spark
 
 - (void)speak {
-    NSLog(@"self address == %p",self);
-    NSLog(@"self name address ==  %p",self.name);
-    NSLog(@"My name is:%@",self.name);
+//    NSLog(@"self address == %p",self);
+    NSLog(@"self name address ==  %@",self.name);
+//    NSLog(@"My name is:%@",self.name);
 }
 
 @end
@@ -39,9 +39,9 @@
 
 
 
-static inline CGFloat GetScreenWidth(){
-    return UIScreen.mainScreen.bounds.size.width;
-}
+//static inline CGFloat GetScreenWidth(){
+//    return UIScreen.mainScreen.bounds.size.width;
+//}
 
 //static inline CGFloat GetScreenHeight(){
 //    return UIScreen.mainScreen.bounds.size.height;
@@ -79,15 +79,18 @@ static inline CGFloat GetScreenWidth(){
 //    <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
-//    [self p_objcDemo];
-    [self p_addLayer];
+    [self p_objcDemo];
+//    id cls = [Spark class];
+//    void *obj = &cls;
+//    [(__bridge id)obj speak];
+//    [self p_addLayer];
 //    [self p_addLayerContents];
 }
 
 - (void)p_addLayer{
     CALayer *layer = [CALayer layer];
-    CGFloat w = GetScreenWidth();
-    layer.frame = CGRectMake(50, 50,w, 100);
+//    CGFloat w = GetScreenWidth();
+//    layer.frame = CGRectMake(50, 50,w, 100);
     layer.backgroundColor = UIColor.blueColor.CGColor;
     [self.containerView.layer addSublayer:layer];
 }
@@ -115,7 +118,7 @@ static inline CGFloat GetScreenWidth(){
 //
 //    size_t lengthA = sizeof(NSString *);
 //    NSLog(@"%zu", lengthA);
-    NSString *a = @"Hello~";
+//    NSString *a = @"Hello~";
 //    NSString *b = @"World";
 //    NSLog(@"b address ==%p  b objc == %p",&b,b);
     id cls = [Spark class];
