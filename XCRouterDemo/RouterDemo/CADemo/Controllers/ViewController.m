@@ -126,7 +126,9 @@
 //    NSLog(@"b address ==%p  b objc == %p",&b,b);
 //    int a = 4;
 //    int b = 3;
-    NSString *s = @"adfd";
+//    NSString *s = @"adfd";
+//    UIView *v = self.view;
+//    NSNumber *n = @(2);
     id cls = [Spark class];
 //    NSLog(@"cls address == %p",&cls);
 //    NSLog(@"a string address ==  %p",&a);
