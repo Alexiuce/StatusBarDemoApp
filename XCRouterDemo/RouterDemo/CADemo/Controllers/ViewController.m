@@ -50,7 +50,7 @@
 //}
 
 
-@interface ViewController ()
+@interface ViewController ()<CALayerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (nonatomic, strong) CALayer *redLayer;
 
@@ -81,22 +81,32 @@
 //    <:self p_graphCAMediaTimingFunc:>;
 //    [self p_shareLayer];
    
-    [self p_objcDemo];
+//    [self p_objcDemo];
 //    id cls = [Spark class];
 //    void *obj = &cls;
 //    [(__bridge id)obj speak];
-//    [self p_addLayer];
+    [self p_addLayer];
 //    [self p_addLayerContents];
 }
 
 - (void)p_addLayer{
     CALayer *layer = [CALayer layer];
 //    CGFloat w = GetScreenWidth();
-//    layer.frame = CGRectMake(50, 50,w, 100);
+    layer.frame = CGRectMake(150, 20,100, 100);
     layer.backgroundColor = UIColor.blueColor.CGColor;
+    layer.delegate = self;
     [self.containerView.layer addSublayer:layer];
+    [layer display];
 }
 
+#pragma mark - CALayerDelegate
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
+    CGContextSetLineWidth(ctx, 10);
+    CGContextSetStrokeColorWithColor(ctx, UIColor.redColor.CGColor);
+    CGContextStrokeEllipseInRect(ctx, layer.bounds);
+}
+
+#pragma mark - Private method
 - (void)p_addLayerContents{
     UIImage *img = [UIImage imageNamed:@"icon_shangfen"];
     self.containerView.layer.contents = (__bridge id)img.CGImage;
