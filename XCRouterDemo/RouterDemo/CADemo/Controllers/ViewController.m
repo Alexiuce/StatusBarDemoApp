@@ -93,7 +93,10 @@
     CALayer *layer = [CALayer layer];
 //    CGFloat w = GetScreenWidth();
     layer.frame = CGRectMake(150, 20,100, 100);
-//    layer.backgroundColor = UIColor.blueColor.CGColor;
+    /** 1. layer 的背景色影响阴影效果: 如果时透明色,则阴影会根据layer的内容进行投射, 否则根据layer 形状进行投射
+     具体的阴影效果,需要根据阴影的相关属性显示
+     */
+    layer.backgroundColor = UIColor.blueColor.CGColor;
 //    layer.delegate = self;
     UIImage *img = [UIImage imageNamed:@"icon_datuan"];
     layer.contents = (__bridge id)img.CGImage;
@@ -102,10 +105,12 @@
     //    layer.hidden = YES;
     layer.shadowOpacity = 1;
     /** 阴影三件套属性 */
-    
-    layer.shadowColor = UIColor.redColor.CGColor;
-    layer.shadowOffset = CGSizeMake(130, 30);
-    layer.shadowRadius = 5;
+//    layer.shadowColor = UIColor.redColor.CGColor;
+//    layer.shadowOffset = CGSizeMake(130, 30);
+//    layer.shadowRadius = 5;
+    /** 使用shadowPath 可以绘制自定义的阴影形状 */
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 30, 50, 50)];
+    layer.shadowPath = path.CGPath;
     
     
 }
