@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F221AB758A00B59018 /* XCAppEnterViewController.m */; };
 		D82990F921ABBF8F00B59018 /* XCAppPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */; };
+		D82ABAA021D5D04900C73C44 /* XCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D82ABA9F21D5D04900C73C44 /* XCPerson.m */; };
 		D8409BAB21AF6542001670A1 /* XCRunloopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8409BAA21AF6542001670A1 /* XCRunloopManager.m */; };
 		D8409BAF21AF6A0D001670A1 /* XCView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8409BAE21AF6A0D001670A1 /* XCView.m */; };
 		D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D848356A21B60760006C7AA4 /* AppDelegate.m */; };
@@ -94,6 +95,8 @@
 		D82990F521AB783500B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
 		D82990F721ABBF8F00B59018 /* XCAppPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCAppPresentViewController.h; sourceTree = "<group>"; };
 		D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppPresentViewController.m; sourceTree = "<group>"; };
+		D82ABA9E21D5D04900C73C44 /* XCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPerson.h; sourceTree = "<group>"; };
+		D82ABA9F21D5D04900C73C44 /* XCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPerson.m; sourceTree = "<group>"; };
 		D8409BA921AF6542001670A1 /* XCRunloopManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRunloopManager.h; sourceTree = "<group>"; };
 		D8409BAA21AF6542001670A1 /* XCRunloopManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRunloopManager.m; sourceTree = "<group>"; };
 		D8409BAD21AF6A0D001670A1 /* XCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCView.h; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 			isa = PBXGroup;
 			children = (
 				D8CBB3FC21B4FF3700D243FC /* main.m */,
+				D82ABA9E21D5D04900C73C44 /* XCPerson.h */,
+				D82ABA9F21D5D04900C73C44 /* XCPerson.m */,
 			);
 			path = XCARMAssembly;
 			sourceTree = "<group>";
@@ -838,6 +843,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8CBB3FD21B4FF3700D243FC /* main.m in Sources */,
+				D82ABAA021D5D04900C73C44 /* XCPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

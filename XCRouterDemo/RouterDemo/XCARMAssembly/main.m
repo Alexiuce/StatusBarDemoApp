@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <stdalign.h>
+#import "XCPerson.h"
+
 void testUnionFunc(){
     union {
         int8_t a;
@@ -56,56 +58,79 @@ void testMutableArrayDemo(int arrayCount){
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
 //        testUnionFunc();
 //        testBitFieldFunc();
 //        testNSObjectDemo();
-        testMutableArrayDemo(0);
+//        testMutableArrayDemo(0);
         
         
 //        int a = testInlineFunc(1);
 //        int b = testInlineFunc(2);
 //        printf("a = %d, b = %d",a,b);
-        /** c 环境的const 常量问题
-        const int a = 10;
-        int *p = &a;
-        *p = 20;
-        printf("a = %d\n",a);
+       
+        int a = 1;
+        int b = 2;
+        int c = 3;
         
-         */
+        printf("a address = %p\n",&a);
+        printf("b address = %p\n",&b);
+        printf("c address = %p\n",&c);
+        int *pa = &a;
+        int *pb = &b;
+        int *pc = &c;
+
+        printf("p ==  %p\n",pa);
+        pa ++;
+        printf("pa ==  %p pb == %p, pc == %p \n",pa,pb,pc);
+        printf("p value ==%d", *pa);
         
-        /** 乘法运算 的汇编指令;
-        int a = 100;                 //  movl   $0x64, -0x14(%rbp)
-        int b = 10;                  //  movl   $0xa, -0x18(%rbp)
-        int c = a * b;               // imull  -0x18(%rbp), %ecx
-        printf(" a * b = %d",c);
-         */
+        XCPerson *p = [[XCPerson alloc]init];
+        p.name = @"alex";
+        p.age = 12;
         
-        /** 结构体的内存对齐
         
-        struct MYStr {
-            int64_t d : 5;
-            int8_t a : 5 ;
-            int32_t b   : 5;
-            int16_t c   : 5;
-        }s = {0x01,0x02,0x03,0x04};
-        printf("%p\n",&s);
-        printf("alignof %zu\n",alignof(struct MYStr));
-        printf("size is %zu \n",sizeof(s));
-        printf("a = %d, b = %d, c = %d , d = %d\n",s.a,s.b,s.c,s.d);
-         */
-        /**
-          01 62 10 00 00 00 00 00
-         0000 0001 0110 0010 0001 0000 ....
-          0000 0001
-          0000 0010
-          0000 0011
-          0000 0100
-         */
+        NSLog(@"name addr = %p ",p.name);
+        NSLog(@"person name = %@, age is %d",p.name,p.age);
     }
     return 0;
 }
 
+void testForConstantDemo(){
+    /** c 环境的const 常量问题   */
+     const int a = 10;
+     int *p = &a;
+     *p = 20;
+     printf("a = %d\n",a);
+    
+    
+    /** 乘法运算 的汇编指令;
+     int a = 100;                 //  movl   $0x64, -0x14(%rbp)
+     int b = 10;                  //  movl   $0xa, -0x18(%rbp)
+     int c = a * b;               // imull  -0x18(%rbp), %ecx
+     printf(" a * b = %d",c);
+     */
+}
+void testForAlignStructDemo(){
+    /** 结构体的内存对齐*/
+     struct MYStr {
+     int64_t d : 5;
+     int8_t a : 5 ;
+     int32_t b   : 5;
+     int16_t c   : 5;
+     }s = {0x01,0x02,0x03,0x04};
+     printf("%p\n",&s);
+     printf("alignof %zu\n",alignof(struct MYStr));
+     printf("size is %zu \n",sizeof(s));
+     printf("a = %d, b = %d, c = %d , d = %d\n",s.a,s.b,s.c,s.d);
+    /**
+     01 62 10 00 00 00 00 00
+     0000 0001 0110 0010 0001 0000 ....
+     0000 0001
+     0000 0010
+     0000 0011
+     0000 0100
+     */
+}
 
 void test1(){
     
