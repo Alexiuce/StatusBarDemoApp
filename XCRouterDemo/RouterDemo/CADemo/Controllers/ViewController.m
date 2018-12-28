@@ -93,10 +93,21 @@
     CALayer *layer = [CALayer layer];
 //    CGFloat w = GetScreenWidth();
     layer.frame = CGRectMake(150, 20,100, 100);
-    layer.backgroundColor = UIColor.blueColor.CGColor;
-    layer.delegate = self;
+//    layer.backgroundColor = UIColor.blueColor.CGColor;
+//    layer.delegate = self;
+    UIImage *img = [UIImage imageNamed:@"icon_datuan"];
+    layer.contents = (__bridge id)img.CGImage;
     [self.containerView.layer addSublayer:layer];
-    [layer display];
+//    [layer display];
+    //    layer.hidden = YES;
+    layer.shadowOpacity = 1;
+    /** 阴影三件套属性 */
+    
+    layer.shadowColor = UIColor.redColor.CGColor;
+    layer.shadowOffset = CGSizeMake(130, 30);
+    layer.shadowRadius = 5;
+    
+    
 }
 
 #pragma mark - CALayerDelegate
