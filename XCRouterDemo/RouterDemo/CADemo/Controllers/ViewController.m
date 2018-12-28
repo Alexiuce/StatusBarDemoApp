@@ -60,6 +60,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timeOffsetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+@property (weak, nonatomic) IBOutlet UIButton *showDrawingButton;
 
 @end
 
@@ -87,6 +88,8 @@
 //    [(__bridge id)obj speak];
     [self p_addLayer];
 //    [self p_addLayerContents];
+    
+    self.showDrawingButton.layer.opacity = 0.5;
 }
 
 - (void)p_addLayer{
@@ -111,8 +114,6 @@
     /** 使用shadowPath 可以绘制自定义的阴影形状 */
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 30, 50, 50)];
     layer.shadowPath = path.CGPath;
-    
-    
 }
 
 #pragma mark - CALayerDelegate
