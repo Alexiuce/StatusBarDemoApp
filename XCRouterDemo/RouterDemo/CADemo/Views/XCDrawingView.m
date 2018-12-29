@@ -61,6 +61,16 @@
     self.path.lineCapStyle = kCGLineCapRound;
     self.path.lineJoinStyle = kCGLineJoinRound;
     
+     
+    
+    /**  CGAffineTransform
+        struct CGAffineTransform {
+        CGFloat a, b, c, d;
+        CGFloat tx, ty;
+        };
+     
+     */
+    
 }
 
 

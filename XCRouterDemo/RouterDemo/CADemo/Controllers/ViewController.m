@@ -86,10 +86,20 @@
 //    id cls = [Spark class];
 //    void *obj = &cls;
 //    [(__bridge id)obj speak];
-    [self p_addLayer];
+//    [self p_addLayer];
 //    [self p_addLayerContents];
+    [self p_testCGAffineTransformCacule];
+//    self.showDrawingButton.layer.opacity = 0.5;
+}
+
+- (void)p_testCGAffineTransformCacule{
+    CGAffineTransform t = CGAffineTransformIdentity;
+    NSLog(@"a == %f  b == %f c == %f d == %f tx == %f ty == %f", t.a, t.b,t.c,t.d,t.tx,t.ty);
+    CGAffineTransform transT = CGAffineTransformTranslate(t, 10, 10);
     
-    self.showDrawingButton.layer.opacity = 0.5;
+    NSLog(@"a == %f  b == %f c == %f d == %f tx == %f ty == %f", transT.a, transT.b,transT.c,transT.d,transT.tx,transT.ty);
+    
+    
 }
 
 - (void)p_addLayer{
