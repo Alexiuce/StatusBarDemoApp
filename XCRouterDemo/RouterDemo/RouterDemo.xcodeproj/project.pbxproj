@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D822729121D8EF2800EEE11F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D822729021D8EF2800EEE11F /* AppDelegate.m */; };
+		D822729421D8EF2800EEE11F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D822729321D8EF2800EEE11F /* ViewController.m */; };
+		D822729721D8EF2800EEE11F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D822729521D8EF2800EEE11F /* Main.storyboard */; };
+		D822729921D8EF2900EEE11F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D822729821D8EF2900EEE11F /* Assets.xcassets */; };
+		D822729C21D8EF2900EEE11F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D822729A21D8EF2900EEE11F /* LaunchScreen.storyboard */; };
+		D822729F21D8EF2900EEE11F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D822729E21D8EF2900EEE11F /* main.m */; };
 		D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F221AB758A00B59018 /* XCAppEnterViewController.m */; };
 		D82990F921ABBF8F00B59018 /* XCAppPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */; };
 		D82ABAA021D5D04900C73C44 /* XCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D82ABA9F21D5D04900C73C44 /* XCPerson.m */; };
@@ -91,6 +97,16 @@
 
 /* Begin PBXFileReference section */
 		D80099B021BDE9980094AF89 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D822728D21D8EF2800EEE11F /* XCDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D822728F21D8EF2800EEE11F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D822729021D8EF2800EEE11F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D822729221D8EF2800EEE11F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D822729321D8EF2800EEE11F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D822729621D8EF2800EEE11F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D822729821D8EF2900EEE11F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D822729B21D8EF2900EEE11F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D822729D21D8EF2900EEE11F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D822729E21D8EF2900EEE11F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D82990F221AB758A00B59018 /* XCAppEnterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppEnterViewController.m; sourceTree = "<group>"; };
 		D82990F521AB783500B59018 /* XCAppEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCAppEnterViewController.h; sourceTree = "<group>"; };
 		D82990F721ABBF8F00B59018 /* XCAppPresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCAppPresentViewController.h; sourceTree = "<group>"; };
@@ -191,6 +207,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D822728A21D8EF2800EEE11F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D848356421B60760006C7AA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +273,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D822728E21D8EF2800EEE11F /* XCDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				D822728F21D8EF2800EEE11F /* AppDelegate.h */,
+				D822729021D8EF2800EEE11F /* AppDelegate.m */,
+				D822729221D8EF2800EEE11F /* ViewController.h */,
+				D822729321D8EF2800EEE11F /* ViewController.m */,
+				D822729521D8EF2800EEE11F /* Main.storyboard */,
+				D822729821D8EF2900EEE11F /* Assets.xcassets */,
+				D822729A21D8EF2900EEE11F /* LaunchScreen.storyboard */,
+				D822729D21D8EF2900EEE11F /* Info.plist */,
+				D822729E21D8EF2900EEE11F /* main.m */,
+			);
+			path = XCDrawing;
+			sourceTree = "<group>";
+		};
 		D82990F021AB755A00B59018 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +355,7 @@
 				D8A4624E21B8B16800914CE8 /* UICollectionViewDemo */,
 				D8E7FDBD21C737380031426F /* XCAutoLayoutDemo */,
 				D89CA0EF21D20E9100C117B2 /* XCTestApp */,
+				D822728E21D8EF2800EEE11F /* XCDrawing */,
 				D88B75EF21A77D7000951228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -331,6 +371,7 @@
 				D8A4624D21B8B16800914CE8 /* UICollectionViewDemo.app */,
 				D8E7FDBC21C737380031426F /* XCAutoLayoutDemo.app */,
 				D89CA0EE21D20E9100C117B2 /* XCTestApp.app */,
+				D822728D21D8EF2800EEE11F /* XCDrawing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -477,6 +518,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D822728C21D8EF2800EEE11F /* XCDrawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82272A221D8EF2900EEE11F /* Build configuration list for PBXNativeTarget "XCDrawing" */;
+			buildPhases = (
+				D822728921D8EF2800EEE11F /* Sources */,
+				D822728A21D8EF2800EEE11F /* Frameworks */,
+				D822728B21D8EF2800EEE11F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCDrawing;
+			productName = XCDrawing;
+			productReference = D822728D21D8EF2800EEE11F /* XCDrawing.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D848356621B60760006C7AA4 /* CADemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D848357C21B60762006C7AA4 /* Build configuration list for PBXNativeTarget "CADemo" */;
@@ -626,6 +684,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = dongjiu;
 				TargetAttributes = {
+					D822728C21D8EF2800EEE11F = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					D848356621B60760006C7AA4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -674,11 +735,22 @@
 				D8A4624C21B8B16800914CE8 /* UICollectionViewDemo */,
 				D8E7FDBB21C737380031426F /* XCAutoLayoutDemo */,
 				D89CA0ED21D20E9100C117B2 /* XCTestApp */,
+				D822728C21D8EF2800EEE11F /* XCDrawing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D822728B21D8EF2800EEE11F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D822729C21D8EF2900EEE11F /* LaunchScreen.storyboard in Resources */,
+				D822729921D8EF2900EEE11F /* Assets.xcassets in Resources */,
+				D822729721D8EF2800EEE11F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D848356521B60760006C7AA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -766,6 +838,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D822728921D8EF2800EEE11F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D822729421D8EF2800EEE11F /* ViewController.m in Sources */,
+				D822729F21D8EF2900EEE11F /* main.m in Sources */,
+				D822729121D8EF2800EEE11F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D848356321B60760006C7AA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -874,6 +956,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D822729521D8EF2800EEE11F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D822729621D8EF2800EEE11F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D822729A21D8EF2900EEE11F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D822729B21D8EF2900EEE11F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		D848356F21B60760006C7AA4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -949,6 +1047,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D82272A021D8EF2900EEE11F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				INFOPLIST_FILE = XCDrawing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCDrawing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D82272A121D8EF2900EEE11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				INFOPLIST_FILE = XCDrawing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCDrawing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D848357A21B60762006C7AA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1352,6 +1484,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D82272A221D8EF2900EEE11F /* Build configuration list for PBXNativeTarget "XCDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82272A021D8EF2900EEE11F /* Debug */,
+				D82272A121D8EF2900EEE11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D848357C21B60762006C7AA4 /* Build configuration list for PBXNativeTarget "CADemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
