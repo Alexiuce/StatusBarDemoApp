@@ -25,14 +25,14 @@
     
     CGRect rect = CGRectMake(0, 0, 80, 80);
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
-    rect.origin.x += 100;
+    rect.origin.x += 60;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(300, 80), NO, UIScreen.mainScreen.scale);
     [UIColor.purpleColor setFill];
     [path fill];
     
     
     UIBezierPath *path2 = [UIBezierPath bezierPathWithOvalInRect:rect];
-    [UIColor.redColor set];
+    [[UIColor.redColor colorWithAlphaComponent:0.5] set];
     [path2 fill];
     
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
