@@ -26,9 +26,10 @@
     CGRect rect = CGRectMake(0, 0, 80, 80);
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
     rect.origin.x += 60;
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(300, 80), NO, UIScreen.mainScreen.scale);
-    [UIColor.purpleColor setFill];
-    [path fill];
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(300, 80), YES, UIScreen.mainScreen.scale);
+    [UIColor.purpleColor set];
+    [path setLineWidth:10];
+    [path stroke];
     
     
     UIBezierPath *path2 = [UIBezierPath bezierPathWithOvalInRect:rect];
