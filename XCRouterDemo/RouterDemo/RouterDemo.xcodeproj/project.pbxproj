@@ -64,6 +64,7 @@
 		D8E7FDCB21C737390031426F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FDC921C737390031426F /* LaunchScreen.storyboard */; };
 		D8E7FDCE21C737390031426F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDCD21C737390031426F /* main.m */; };
 		D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */; };
+		D8F89ECF21D9FAF20053E131 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,8 @@
 		D8EB202521C08CE100F488E0 /* XCDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingViewController.h; sourceTree = "<group>"; };
 		D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingViewController.m; sourceTree = "<group>"; };
 		D8F3CAED21C506F5002FE705 /* Layer Tree.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Layer Tree.md"; sourceTree = "<group>"; };
+		D8F89ECD21D9FAF20053E131 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
+		D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +279,7 @@
 		D822728E21D8EF2800EEE11F /* XCDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				D8F89ECC21D9FAD60053E131 /* Views */,
 				D822728F21D8EF2800EEE11F /* AppDelegate.h */,
 				D822729021D8EF2800EEE11F /* AppDelegate.m */,
 				D822729221D8EF2800EEE11F /* ViewController.h */,
@@ -513,6 +517,15 @@
 				D8E7FDCD21C737390031426F /* main.m */,
 			);
 			path = XCAutoLayoutDemo;
+			sourceTree = "<group>";
+		};
+		D8F89ECC21D9FAD60053E131 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8F89ECD21D9FAF20053E131 /* XCDrawingView.h */,
+				D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -842,6 +855,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F89ECF21D9FAF20053E131 /* XCDrawingView.m in Sources */,
 				D822729421D8EF2800EEE11F /* ViewController.m in Sources */,
 				D822729F21D8EF2900EEE11F /* main.m in Sources */,
 				D822729121D8EF2800EEE11F /* AppDelegate.m in Sources */,
