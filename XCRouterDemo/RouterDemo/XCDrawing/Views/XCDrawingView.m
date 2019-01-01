@@ -17,7 +17,25 @@
     CGContextMoveToPoint(ctx, 10, 10);
     CGContextAddLineToPoint(ctx, 50, 50);
     
+    
+    /** 每个图形上下文都有一个自己的绘图状态栈,保存当前上下文的绘图属性信息:颜色,线条粗细等.. */
+    CGContextSetLineWidth(ctx, 5);
+    [UIColor.redColor set];
     CGContextStrokePath(ctx);
+    CGContextSaveGState(ctx);
+    
+    
+    [UIColor.yellowColor set];
+    CGContextSetLineWidth(ctx, 10);
+    CGContextAddRect(ctx, CGRectMake(20, 20, 100, 30));
+    CGContextStrokePath(ctx);
+    
+    CGContextRestoreGState(ctx);
+    CGContextMoveToPoint(ctx, 20, 30);
+    CGContextAddLineToPoint(ctx, 80, 30);
+    CGContextStrokePath(ctx);
+    
+    
 }
 
 @end
