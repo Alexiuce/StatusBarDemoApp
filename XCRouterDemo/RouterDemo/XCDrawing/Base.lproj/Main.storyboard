@@ -25,12 +25,22 @@
                                     <constraint firstAttribute="height" constant="200" id="Hld-5O-2Bs"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-f1-DTr" customClass="XCDrawingView">
+                                <rect key="frame" x="47" y="366" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="rs8-2U-yFY"/>
+                                    <constraint firstAttribute="height" constant="128" id="sHf-J0-59q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bGT-Fd-44K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1yk-Cz-Rhb"/>
                             <constraint firstItem="bGT-Fd-44K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="GwU-eL-dhM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bGT-Fd-44K" secondAttribute="trailing" id="HCP-af-IjD"/>
+                            <constraint firstItem="P7f-f1-DTr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="HFa-Ig-16e"/>
+                            <constraint firstItem="P7f-f1-DTr" firstAttribute="top" secondItem="bGT-Fd-44K" secondAttribute="bottom" constant="96" id="ooC-UR-uum"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
