@@ -88,7 +88,7 @@
 //    [(__bridge id)obj speak];
 //    [self p_addLayer];
 //    [self p_addLayerContents];
-    [self p_testCGAffineTransformCacule];
+//    [self p_testCGAffineTransformCacule];
 //    self.showDrawingButton.layer.opacity = 0.5;
 }
 

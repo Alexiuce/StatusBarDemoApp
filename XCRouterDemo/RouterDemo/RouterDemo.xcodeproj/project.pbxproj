@@ -35,6 +35,7 @@
 		D88B75FB21A77D7100951228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88B75FA21A77D7100951228 /* Assets.xcassets */; };
 		D88B75FE21A77D7100951228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75FC21A77D7100951228 /* LaunchScreen.storyboard */; };
 		D88B760121A77D7100951228 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B760021A77D7100951228 /* main.m */; };
+		D890DB2C21DC3FF400D82974 /* XCCubeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D890DB2B21DC3FF400D82974 /* XCCubeController.m */; };
 		D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */; };
 		D89608B721C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D89608B621C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m */; };
 		D89608B921C1E43D004A2EE1 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = D89608B821C1E43D004A2EE1 /* Image */; };
@@ -150,6 +151,8 @@
 		D88B75FF21A77D7100951228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88B760021A77D7100951228 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D88B760721A78AC100951228 /* XCFakeCode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCFakeCode.sh; sourceTree = "<group>"; };
+		D890DB2A21DC3FF400D82974 /* XCCubeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCubeController.h; sourceTree = "<group>"; };
+		D890DB2B21DC3FF400D82974 /* XCCubeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCubeController.m; sourceTree = "<group>"; };
 		D89608B221C1E069004A2EE1 /* XCCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCCollectionViewController.h; sourceTree = "<group>"; };
 		D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCCollectionViewController.m; sourceTree = "<group>"; };
 		D89608B521C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCImageIOCollectionViewCell.h; sourceTree = "<group>"; };
@@ -478,6 +481,8 @@
 				D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */,
 				D89608B221C1E069004A2EE1 /* XCCollectionViewController.h */,
 				D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */,
+				D890DB2A21DC3FF400D82974 /* XCCubeController.h */,
+				D890DB2B21DC3FF400D82974 /* XCCubeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -869,6 +874,7 @@
 				D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */,
 				D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */,
 				D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */,
+				D890DB2C21DC3FF400D82974 /* XCCubeController.m in Sources */,
 				D89608B721C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
