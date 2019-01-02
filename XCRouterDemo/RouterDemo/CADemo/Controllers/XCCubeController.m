@@ -23,14 +23,37 @@
     /** 统一设置所有sublayer 的 公共 transform 属性 */
     CATransform3D perspective = CATransform3DIdentity;
     perspective.m34 = - 1.0 / 500;
+    
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 1, 0, 0);
+    perspective = CATransform3DRotate(perspective, -M_PI_4, 0, 1, 0);
+    
     self.containerView.layer.sublayerTransform = perspective;
     /** 添加face (立方体的正面)*/
-    CATransform3D transform = CATransform3DMakeTranslation(0, 0, 100);
+    CATransform3D transform = CATransform3DMakeTranslation(0, 0, 55);
     [self addFace:0 transform:transform];
+    /** 添加立方体的右侧面*/
+    transform = CATransform3DMakeTranslation(55, 0, 0);
+    transform = CATransform3DRotate(transform,M_PI_2, 0, 1, 0);
+    [self addFace:1 transform:transform];
+    /** 添加立方体的顶部面 */
+    transform = CATransform3DMakeTranslation(0, -55, 0);
+    transform =  CATransform3DRotate(transform,M_PI_2, 1, 0, 0);
+    [self addFace:2 transform:transform];
+
+    /** 添加立方体的底部面 */
+    transform = CATransform3DMakeTranslation(0, 55, 0);
+    transform =  CATransform3DRotate(transform,-M_PI_2, 1, 0, 0);
+    [self addFace:3 transform:transform];
+    /** 添加立方体的左侧面 */
+    transform = CATransform3DMakeTranslation(-55, 0, 0);
+    transform =  CATransform3DRotate(transform,-M_PI_2, 0, 1, 0);
+    [self addFace:4 transform:transform];
+    /** 添加立方体的背部面 */
+    transform = CATransform3DMakeTranslation(0, 0, -55);
+    transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
+    [self addFace:5 transform:transform];
     
     
-    
-  
 }
 
 
