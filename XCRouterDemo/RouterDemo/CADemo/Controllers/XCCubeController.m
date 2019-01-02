@@ -97,7 +97,8 @@ static CGFloat const AMBIENT_LIGHT = 0.5;
 
 
     //get face normal
-    GLKVector3 normal = GLKVector3Make(0, 0, 1);
+    GLKVector3 normal = GLKVector3Make(0, 1, 0);
+   
     normal = GLKMatrix3MultiplyVector3(matrix3, normal);
     normal = GLKVector3Normalize(normal);
 
@@ -105,7 +106,7 @@ static CGFloat const AMBIENT_LIGHT = 0.5;
     GLKVector3 light = GLKVector3Normalize(GLKVector3Make(LIGHT_DIRECTION));
     float dotProduct = GLKVector3DotProduct(light, normal);
 
-    
+    NSLog(@"%f",dotProduct);
     
 //    /** GLK (GLKMatrix4 has the same structure as CATransform3D) */
 //    CATransform3D transform = face.transform;
