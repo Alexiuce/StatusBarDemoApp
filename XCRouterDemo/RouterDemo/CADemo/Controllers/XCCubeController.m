@@ -57,6 +57,9 @@
 }
 
 
+- (IBAction)clickButton:(UIButton *)sender {
+    NSLog(@"%s",__func__);
+}
 
 #pragma mark - private method
 
