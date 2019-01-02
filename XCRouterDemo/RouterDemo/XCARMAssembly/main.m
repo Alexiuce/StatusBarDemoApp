@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <stdalign.h>
-#import "XCPerson.h"
+#import "XCSon.h"
 
 void testUnionFunc(){
     union {
@@ -67,29 +67,21 @@ int main(int argc, const char * argv[]) {
 //        int a = testInlineFunc(1);
 //        int b = testInlineFunc(2);
 //        printf("a = %d, b = %d",a,b);
-       
-        int a = 1;
-        int b = 2;
-        int c = 3;
-        
-        printf("a address = %p\n",&a);
-        printf("b address = %p\n",&b);
-        printf("c address = %p\n",&c);
-        int *pa = &a;
-        int *pb = &b;
-        int *pc = &c;
-
-        printf("p ==  %p\n",pa);
-        pa ++;
-        printf("pa ==  %p pb == %p, pc == %p \n",pa,pb,pc);
-        printf("p value ==%d", *pa);
-        
+  
         XCPerson *p = [[XCPerson alloc]init];
         p.name = @"alex";
         p.age = 12;
+        p.starCount = 2;
+        p.stuNumber = 0x22;
         
+        XCSon *son = [XCSon new];
+        son.girlCount = 0xfeab;
+        void *tmp = (__bridge void *)p;
+        printf("p addre == %p \n",tmp);
+        int *a = (int *)(tmp + 8);
+        printf("age == %d\n",*a);
         
-        NSLog(@"name addr = %p ",p.name);
+        NSLog(@"name addr = %p, son addr = %p ",p.name, son);
         NSLog(@"person name = %@, age is %d",p.name,p.age);
     }
     return 0;

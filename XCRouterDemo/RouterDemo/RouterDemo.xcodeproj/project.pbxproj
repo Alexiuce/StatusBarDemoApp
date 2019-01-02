@@ -65,6 +65,7 @@
 		D8E7FDCB21C737390031426F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FDC921C737390031426F /* LaunchScreen.storyboard */; };
 		D8E7FDCE21C737390031426F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDCD21C737390031426F /* main.m */; };
 		D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */; };
+		D8F4CF8A21DCBD890081F78C /* XCSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4CF8921DCBD890081F78C /* XCSon.m */; };
 		D8F89ECF21D9FAF20053E131 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */; };
 /* End PBXBuildFile section */
 
@@ -208,6 +209,8 @@
 		D8EB202521C08CE100F488E0 /* XCDrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingViewController.h; sourceTree = "<group>"; };
 		D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingViewController.m; sourceTree = "<group>"; };
 		D8F3CAED21C506F5002FE705 /* Layer Tree.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Layer Tree.md"; sourceTree = "<group>"; };
+		D8F4CF8821DCBD890081F78C /* XCSon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSon.h; sourceTree = "<group>"; };
+		D8F4CF8921DCBD890081F78C /* XCSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSon.m; sourceTree = "<group>"; };
 		D8F89ECD21D9FAF20053E131 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -466,6 +469,8 @@
 				D8CBB3FC21B4FF3700D243FC /* main.m */,
 				D82ABA9E21D5D04900C73C44 /* XCPerson.h */,
 				D82ABA9F21D5D04900C73C44 /* XCPerson.m */,
+				D8F4CF8821DCBD890081F78C /* XCSon.h */,
+				D8F4CF8921DCBD890081F78C /* XCSon.m */,
 			);
 			path = XCARMAssembly;
 			sourceTree = "<group>";
@@ -944,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F4CF8A21DCBD890081F78C /* XCSon.m in Sources */,
 				D8CBB3FD21B4FF3700D243FC /* main.m in Sources */,
 				D82ABAA021D5D04900C73C44 /* XCPerson.m in Sources */,
 			);

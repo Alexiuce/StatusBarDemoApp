@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) int age;
+@property (nonatomic, assign) int starCount;
+@property (nonatomic, assign) int stuNumber;
 
 
 @end
