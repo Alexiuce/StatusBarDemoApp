@@ -13,7 +13,10 @@
 
 - (void)drawRect:(CGRect)rect{
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [self contextPedanticTranslateCTM:ctx];
+//    [self contextPedanticTranslateCTM:ctx];
+    
+    [self contextLinePattern:ctx];
+    
     /** UIKit 持有的CGContext 以左上角为0,0 ; 否则以左下角为0,0*/
 //    CGContextMoveToPoint(ctx, 10, 10);
 //    CGContextAddLineToPoint(ctx, 50, 50);
@@ -39,7 +42,7 @@
 //    [self contextTransform:ctx];
 }
 
-
+#pragma mark - Transform
 - (void)contextTransform:(CGContextRef)ctx{
     UIFont *font = [UIFont systemFontOfSize:15];
     NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -77,8 +80,8 @@
 - (void)contextPedanticTranslateCTM:(CGContextRef)ctx{
     UIFont *font = [UIFont systemFontOfSize:15];
     NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    CGPoint center = {120, 60};
-    CGFloat raduis = 50;
+    CGPoint center = {120, 63};
+    CGFloat raduis = 60;
 //    CGFloat detla = 2 * M_PI / 26.0;
     CGContextTranslateCTM(ctx, center.x, center.y);
     CGFloat totalWidth = 0;
@@ -101,6 +104,27 @@
         [letter drawAtPoint:CGPointZero withAttributes:@{NSFontAttributeName: font}];
         CGContextRestoreGState(ctx);
     }
+    
+}
+
+#pragma mark - Line Parameters
+
+- (void)contextLinePattern:(CGContextRef)ctx{
+    CGRect rect = CGRectMake(10, 10, 160, 100);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:12];
+    path.lineWidth = 4;
+    
+//    CGContextSetLineWidth(ctx, 20);
+//    CGContextAddPath(ctx, path.CGPath);
+//    [UIColor.purpleColor set];
+//    CGContextStrokePath(ctx);
+    
+    CGFloat dash[] = {10,2};
+//    [path setLineDash:dash count:2 phase:150];
+    CGContextSetLineDash(ctx, 0, dash, 2);
+    
+    [UIColor.yellowColor set];
+    [path stroke];
     
 }
 
