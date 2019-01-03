@@ -12,10 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XCPerson : NSObject
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) long stuNumber;
+@property (nonatomic, strong) NSNumber *house;
+@property (nonatomic, assign) char starCount;
 @property (nonatomic, assign) int age;
-@property (nonatomic, assign) int starCount;
-@property (nonatomic, assign) int stuNumber;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) char sex;
 
 
 @end
