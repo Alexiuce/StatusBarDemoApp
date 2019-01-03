@@ -13,6 +13,7 @@
 
 - (void)drawRect:(CGRect)rect{
     CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [self contextPedanticTranslateCTM:ctx];
     /** UIKit 持有的CGContext 以左上角为0,0 ; 否则以左下角为0,0*/
 //    CGContextMoveToPoint(ctx, 10, 10);
 //    CGContextAddLineToPoint(ctx, 50, 50);
@@ -35,7 +36,7 @@
 //    CGContextAddLineToPoint(ctx, 80, 30);
 //    CGContextStrokePath(ctx);
     
-    [self contextTransform:ctx];
+//    [self contextTransform:ctx];
 }
 
 
@@ -43,14 +44,64 @@
     UIFont *font = [UIFont systemFontOfSize:15];
     NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     CGFloat raduis = 50;
+    CGFloat detla = -2 * M_PI / 26.0;
     for (int i = 0; i < 26; i++) {
         NSString *letter = [alphabet substringWithRange:NSMakeRange(i, 1)];
         CGSize letterSize = [letter sizeWithAttributes:@{NSFontAttributeName: font}];
-        CGFloat theta = M_PI - i * (2 * M_PI / 26.0);
-        CGFloat x = 100 + raduis *sin(theta) - letterSize.width * 0.5;
-        CGFloat y = 70 + raduis *cos(theta) - letterSize.height * 0.5;
+        CGFloat theta = i * detla;
+        CGFloat x = 100 + raduis *cos(theta) - letterSize.width * 0.5;
+        CGFloat y = 70 + raduis *sin(theta) - letterSize.height * 0.5;
         [letter drawAtPoint:CGPointMake(x, y) withAttributes:@{NSFontAttributeName: font}];
     }
+}
+
+- (void)contextTranslateCTM:(CGContextRef)ctx{
+    UIFont *font = [UIFont systemFontOfSize:15];
+    NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    CGPoint center = {120, 60};
+    CGFloat raduis = 50;
+    CGFloat detla = 2 * M_PI / 26.0;
+    CGContextTranslateCTM(ctx, center.x, center.y);
+    for (int i = 0; i < 26 ; ++i) {
+        NSString *letter = [alphabet substringWithRange:NSMakeRange(i, 1)];
+        CGSize letterSize = [letter sizeWithAttributes:@{NSFontAttributeName: font}];
+        CGFloat theta = i * detla;
+        CGContextSaveGState(ctx);
+        CGContextRotateCTM(ctx, theta);
+        CGContextTranslateCTM(ctx, -letterSize.width * 0.5, -raduis);
+        [letter drawAtPoint:CGPointZero withAttributes:@{NSFontAttributeName: font}];
+        CGContextRestoreGState(ctx);
+    }
+}
+
+- (void)contextPedanticTranslateCTM:(CGContextRef)ctx{
+    UIFont *font = [UIFont systemFontOfSize:15];
+    NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    CGPoint center = {120, 60};
+    CGFloat raduis = 50;
+//    CGFloat detla = 2 * M_PI / 26.0;
+    CGContextTranslateCTM(ctx, center.x, center.y);
+    CGFloat totalWidth = 0;
+    for (int i = 0; i < 26 ; ++i) {
+        NSString *letter = [alphabet substringWithRange:NSMakeRange(i, 1)];
+        CGSize letterSize = [letter sizeWithAttributes:@{NSFontAttributeName: font}];
+        totalWidth += letterSize.width;
+    }
+    CGFloat consumeSize = 0;
+    for (int i = 0; i < 26 ; ++i) {
+        NSString *letter = [alphabet substringWithRange:NSMakeRange(i, 1)];
+        CGSize letterSize = [letter sizeWithAttributes:@{NSFontAttributeName: font}];
+        consumeSize += letterSize.width * 0.5;
+        CGFloat percent = consumeSize / totalWidth;
+        consumeSize += letterSize.width * 0.5;
+        CGFloat theta = percent * 2 * M_PI;
+        CGContextSaveGState(ctx);
+        CGContextRotateCTM(ctx, theta);
+        CGContextTranslateCTM(ctx, -letterSize.width * 0.5, -raduis);
+        [letter drawAtPoint:CGPointZero withAttributes:@{NSFontAttributeName: font}];
+        CGContextRestoreGState(ctx);
+    }
+    
 }
 
 @end

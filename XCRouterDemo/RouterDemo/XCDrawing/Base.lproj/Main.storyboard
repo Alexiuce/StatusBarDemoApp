@@ -27,7 +27,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-f1-DTr" customClass="XCDrawingView">
                                 <rect key="frame" x="47" y="366" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="rs8-2U-yFY"/>
                                     <constraint firstAttribute="height" constant="128" id="sHf-J0-59q"/>
