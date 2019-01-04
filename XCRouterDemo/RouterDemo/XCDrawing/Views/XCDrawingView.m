@@ -77,7 +77,7 @@
         CGContextRestoreGState(ctx);
     }
 }
-
+/** 根据每个文字的大小与整个字符串长度的比例,精确排布 :基于 context 的transform */
 - (void)contextPedanticTranslateCTM:(CGContextRef)ctx{
     UIFont *font = [UIFont systemFontOfSize:15];
     NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
