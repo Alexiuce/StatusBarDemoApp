@@ -43,6 +43,7 @@
 }
 
 #pragma mark - Transform
+/** 计算point 进行排列 */
 - (void)contextTransform:(CGContextRef)ctx{
     UIFont *font = [UIFont systemFontOfSize:15];
     NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
