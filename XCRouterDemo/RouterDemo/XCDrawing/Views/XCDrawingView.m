@@ -58,7 +58,7 @@
         [letter drawAtPoint:CGPointMake(x, y) withAttributes:@{NSFontAttributeName: font}];
     }
 }
-
+/** 设置context 的 transform实现圆形排列 */
 - (void)contextTranslateCTM:(CGContextRef)ctx{
     UIFont *font = [UIFont systemFontOfSize:15];
     NSString *alphabet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
