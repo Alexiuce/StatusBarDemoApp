@@ -18,9 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self drawImage];
+//    [self drawImage];
+    [self conversionDictionary];
 }
-
+/** CGPoint convert dictionary*/
+- (void)conversionDictionary{
+    /** CGPoint 转换 NSDictionary */
+    CGPoint p = {10,20};
+    NSDictionary *dic = CFBridgingRelease(CGPointCreateDictionaryRepresentation(p));
+    NSLog(@"%@",dic);
+}
 - (void)drawImage{
     
     CGRect rect = CGRectMake(0, 0, 80, 80);
