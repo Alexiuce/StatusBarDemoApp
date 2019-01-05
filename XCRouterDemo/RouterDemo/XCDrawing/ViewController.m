@@ -55,5 +55,11 @@
     self.imgView.image = img;
     
 }
+/**
+CGRectInset(rect, xinset, yinset)
+ This function enables you to create a smaller or larger rectangle that’s centered on the same point as the source rectangle.
+ Use a positive inset for smaller rectangles, negative for larger ones.
+ This function is particularly useful for moving drawings and subimages away from view edges to provide whitespace breathing room.
 
+ */
 @end
