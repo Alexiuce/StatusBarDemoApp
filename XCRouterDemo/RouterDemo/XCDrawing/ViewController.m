@@ -27,6 +27,11 @@
     CGPoint p = {10,20};
     NSDictionary *dic = CFBridgingRelease(CGPointCreateDictionaryRepresentation(p));
     NSLog(@"%@",dic);
+    CGPoint np;
+    BOOL s = CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)dic, &np);
+    if (s) {
+        NSLog(@"point form dict == %@",NSStringFromCGPoint(np));
+    }
 }
 - (void)drawImage{
     
