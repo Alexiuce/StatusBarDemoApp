@@ -28,6 +28,8 @@
 		D848358C21B630A7006C7AA4 /* XCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D848358B21B630A7006C7AA4 /* XCPerson.m */; };
 		D86BF0C521BF48B000405628 /* XCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D86BF0C421BF48B000405628 /* XCViewModel.m */; };
 		D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8709C3121E2146A00B63E6D /* XCShapeViewController.m */; };
+		D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3621E21BAB00B63E6D /* First.storyboard */; };
+		D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3821E21C4C00B63E6D /* Second.storyboard */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
 		D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8836FF621BA05800044C67C /* XCTabBarController.m */; };
 		D88B75F321A77D7000951228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F221A77D7000951228 /* AppDelegate.m */; };
@@ -140,6 +142,8 @@
 		D86BF0C421BF48B000405628 /* XCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCViewModel.m; sourceTree = "<group>"; };
 		D8709C3021E2146A00B63E6D /* XCShapeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCShapeViewController.h; sourceTree = "<group>"; };
 		D8709C3121E2146A00B63E6D /* XCShapeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCShapeViewController.m; sourceTree = "<group>"; };
+		D8709C3621E21BAB00B63E6D /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
+		D8709C3921E21C4C00B63E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CADemo/Base.lproj/Second.storyboard; sourceTree = "<group>"; };
 		D87E283B21B4AECF00CA93CD /* XCScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
 		D8836FF521BA05800044C67C /* XCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarController.h; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 				D848356A21B60760006C7AA4 /* AppDelegate.m */,
 				D80099B021BDE9980094AF89 /* README.md */,
 				D8F3CAED21C506F5002FE705 /* Layer Tree.md */,
+				D8709C3821E21C4C00B63E6D /* Second.storyboard */,
+				D8709C3621E21BAB00B63E6D /* First.storyboard */,
 				D848356F21B60760006C7AA4 /* Main.storyboard */,
 				D848357221B60762006C7AA4 /* Assets.xcassets */,
 				D848357421B60762006C7AA4 /* LaunchScreen.storyboard */,
@@ -792,10 +798,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */,
 				D89608B921C1E43D004A2EE1 /* Image in Resources */,
 				D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */,
 				D848357321B60762006C7AA4 /* Assets.xcassets in Resources */,
 				D848357121B60760006C7AA4 /* Main.storyboard in Resources */,
+				D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1035,14 @@
 				D848357521B60762006C7AA4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D8709C3821E21C4C00B63E6D /* Second.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8709C3921E21C4C00B63E6D /* Base */,
+			);
+			name = Second.storyboard;
 			sourceTree = "<group>";
 		};
 		D88B75F721A77D7000951228 /* Main.storyboard */ = {
