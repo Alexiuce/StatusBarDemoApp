@@ -31,11 +31,12 @@
 }
 
 - (void)simpleShapeDemo{
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 100, 60)];
-    
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(10, 150, 100, 60)];
     
     CAShapeLayer *layer = [CAShapeLayer layer];
-    layer.fillColor = UIColor.redColor.CGColor;
+    layer.strokeColor = UIColor.redColor.CGColor;
+    layer.fillColor = UIColor.clearColor.CGColor;
+    layer.lineWidth = 10;
     layer.path = path.CGPath;
     [self.view.layer addSublayer:layer];
 }
