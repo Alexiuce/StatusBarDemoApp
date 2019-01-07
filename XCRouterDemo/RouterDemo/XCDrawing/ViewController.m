@@ -20,7 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    [self drawImage];
 //    [self conversionDictionary];
-    [self IntegralRect];
+    /** 整数化rect */
+//    [self IntegralRect];
+    /** 切割rect */
+    [self rectDivide];
 }
 /** CGPoint convert dictionary*/
 - (void)conversionDictionary{
@@ -63,9 +66,35 @@ CGRectInset(rect, xinset, yinset)
  This function is particularly useful for moving drawings and subimages away from view edges to provide whitespace breathing room.
  */
 
-- (void)IntegralRect{
+- (void)integralRect{
+    
+    /**  CGRectIntegral(rect)
+     This function converts the source rectangle to integers.
+     The origin values are rounded down from any fractional values to whole integers.The size is rounded upward.
+     You are guaranteed that the new rectangle fully contains the original rectangle.
+     Integral rectangles speed up and clarify your drawing.
+     Views drawn exactly on pixel boundaries require less antialiasing and result in less blurry output.
+     */
     CGRect r = {10.2,12.5, 20.8,19.8};
     CGRect nr = CGRectIntegral(r);
     NSLog(@"%@",NSStringFromCGRect(nr));  // 输出  {{10, 12}, {21, 21}}
+}
+
+- (void)rectDivide{
+    /** CGRectDivide(rect, &sliceRect, &remainderRect, amount, edge)
+     矩形分割;
+     * rect : 需要拆分的矩形;
+     * sliceRect: 分割出来的矩形;
+     * remainderRect : rect被分割后的剩余部分;
+     * amount : 需要分割的大小(水平方向分隔,代表宽度, 垂直方向代表高度);
+     * edge : 分割的方向枚举值 CGRectMinXEdge, CGRectMinYEdge, CGRectMaxXEdge, and CGRectMaxYEdge.
+    */
+    
+    CGRect r = {50, 50, 100,100};
+    CGRect slice ,remaind;
+    CGRectDivide(r, &slice, &remaind, 20, CGRectMaxXEdge);
+    NSLog(@"slice frame %@",NSStringFromCGRect(slice));
+    
+    
 }
 @end
