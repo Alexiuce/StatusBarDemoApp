@@ -19,7 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self drawImage];
-    [self conversionDictionary];
+//    [self conversionDictionary];
+    [self IntegralRect];
 }
 /** CGPoint convert dictionary*/
 - (void)conversionDictionary{
@@ -60,6 +61,11 @@ CGRectInset(rect, xinset, yinset)
  This function enables you to create a smaller or larger rectangle that’s centered on the same point as the source rectangle.
  Use a positive inset for smaller rectangles, negative for larger ones.
  This function is particularly useful for moving drawings and subimages away from view edges to provide whitespace breathing room.
-
  */
+
+- (void)IntegralRect{
+    CGRect r = {10.2,12.5, 20.8,19.8};
+    CGRect nr = CGRectIntegral(r);
+    NSLog(@"%@",NSStringFromCGRect(nr));  // 输出  {{10, 12}, {21, 21}}
+}
 @end
