@@ -75,15 +75,12 @@ CGRect rectByFittingInRect(CGSize s, CGRect d){
     [path setLineWidth:10];
     [path stroke];
     
-    
     UIBezierPath *path2 = [UIBezierPath bezierPathWithOvalInRect:rect];
     [[UIColor.redColor colorWithAlphaComponent:0.5] set];
     [path2 fill];
     
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    
     self.imgView.image = img;
     
 }
@@ -122,8 +119,6 @@ CGRectInset(rect, xinset, yinset)
     CGRect slice ,remaind;
     CGRectDivide(r, &slice, &remaind, 20, CGRectMaxXEdge);
     NSLog(@"slice frame %@",NSStringFromCGRect(slice));
-    
-    
 }
 /** fiting 适配模式 */
 - (void)fitingMode{
