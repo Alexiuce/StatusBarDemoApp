@@ -13,6 +13,32 @@
 
 @end
 
+
+/** size 缩放 方法: 根据比例系数 返回一个新的size */
+CGSize sizeByFactor(CGSize s, CGFloat factor){
+    return CGSizeMake(s.width * factor, s.height * factor);
+}
+
+/** 计算合适的缩放比例 */
+CGFloat aspectRatio(CGSize s, CGRect d){
+    CGSize t = d.size;
+    CGFloat ws = t.width / s.width;
+    CGFloat hs = t.height / s.height;
+    return MIN(ws, hs);
+}
+/** 计算 fitting 后的 CGRect */
+CGRect rectByFittingInRect(CGSize s, CGRect d){
+    /** 1. 计算比例 */
+    CGFloat ratio = aspectRatio(s, d);
+    /** 2. 根据比例计算 需要fitting 的 size */
+    CGSize fittingSize = sizeByFactor(s, ratio);
+    /** 3. 根据size 生成 CGRect: 中心点与目标的CGRect 相同 */
+    CGFloat x = CGRectGetMidX(d) - fittingSize.width * 0.5;
+    CGFloat y = CGRectGetMidY(d) - fittingSize.height * 0.5;
+    return CGRectMake(x, y, fittingSize.width, fittingSize.height);
+}
+
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -23,7 +49,9 @@
     /** 整数化rect */
 //    [self IntegralRect];
     /** 切割rect */
-    [self rectDivide];
+//    [self rectDivide];
+    /** fitting模式*/
+    [self fitingMode];
 }
 /** CGPoint convert dictionary*/
 - (void)conversionDictionary{
@@ -97,4 +125,15 @@ CGRectInset(rect, xinset, yinset)
     
     
 }
+/** fiting 适配模式 */
+- (void)fitingMode{
+    CGRect dest = {0,0, 100,100};
+    CGSize sourceSize = {40,20};
+    CGRect fittingRect = rectByFittingInRect(sourceSize, dest);
+    NSLog(@"fitting rect == %@",NSStringFromCGRect(fittingRect));
+}
+
+
+
 @end
+
