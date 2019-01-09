@@ -17,6 +17,10 @@
 
 @implementation XCPerson
 
++ (void)p_test{
+    NSLog(@"p _ test");
+}
+
 - (instancetype)init{
     if (self = [super init]) {
         NSLog(@"person init ");

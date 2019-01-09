@@ -59,8 +59,16 @@ void testMutableArrayDemo(int arrayCount){
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        NSDictionary *dic = @{@"a":[XCPerson new],@"b": [XCSon new]};
-        NSLog(@"%@",dic);
+        NSMethodSignature *ms = [XCPerson.class methodSignatureForSelector:@selector(p_test)];
+        NSInvocation *it = [NSInvocation invocationWithMethodSignature:ms];
+        
+        NSMethodSignature *sn = [XCSon instanceMethodSignatureForSelector:@selector(new)];
+        NSInvocation *st = [NSInvocation invocationWithMethodSignature:sn];
+        
+        NSDictionary <NSString *, NSInvocation *>*dic = @{@"a":it,@"b": st};
+        
+        [dic[@"a"] invoke];
+        
    
     }
     return 0;
