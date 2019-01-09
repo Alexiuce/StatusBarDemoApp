@@ -58,47 +58,44 @@ void testMutableArrayDemo(int arrayCount){
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-//        testUnionFunc();
-//        testBitFieldFunc();
-//        testNSObjectDemo();
-//        testMutableArrayDemo(0);
-        
-        
-//        int a = testInlineFunc(1);
-//        int b = testInlineFunc(2);
-//        printf("a = %d, b = %d",a,b);
-  
-        XCPerson *p = [[XCPerson alloc]init];
-        p.name = @"alex"; //[NSString stringWithFormat:@"%@",@"alex"];
-        p.age = 12;
-        p.starCount = 2;
-        p.house = @(4);
-        p.sex = 'm';
-        p.stuNumber = 0x22;
-        
-        /** 内存数据
-         35 26 00 00 01 80 1D 00               BD 24 00 00 01 80 1D 00
-         0C 00 00 00 02 00 00 00               B0 20 00 00 01 00 00 00
-         22 00 00 00 00 00 00 00               FD 2C 6B 45 D2 6E 12 55
-         B0 20 00 00 01 00 00 00               00 00 00 00 00 00 00 00
-         F7 2E 10 99 81 E7 44 CC               F0 3F FA 8B FF 7F 00 00
-         00 00 00 00 00 00 00 00               00 00 00 00 00 00 00 00
-         80 19 AE 2A FF 7F 00 00               00 00 00 00 00 00 00 00
-         2D EC B0 58 FF 7F 00 00               00 00 00 00 00 00 00 00
-         */
-        
-        
-        XCSon *son = [XCSon new];
-        son.girlCount = 0xfeab;
-//        void *tmp = (__bridge void *)p;
-//        printf("p addre == %p \n",tmp);
-//        int *a = (int *)(tmp + 8);
-//        printf("age == %d\n",*a);
-        
-        NSLog(@"name addr = %p, house addr = %p  son addr = %p ",p.name, p.house,son);
-//        NSLog(@"person name = %@, age is %d",p.name,p.age);
+
+        NSDictionary *dic = @{@"a":[XCPerson new],@"b": [XCSon new]};
+        NSLog(@"%@",dic);
+   
     }
     return 0;
+}
+
+void testPerson(){
+    XCPerson *p = [[XCPerson alloc]init];
+    p.name = @"alex"; //[NSString stringWithFormat:@"%@",@"alex"];
+    p.age = 12;
+    p.starCount = 2;
+    p.house = @(4);
+    p.sex = 'm';
+    p.stuNumber = 0x22;
+    
+    /** 内存数据
+     35 26 00 00 01 80 1D 00               BD 24 00 00 01 80 1D 00
+     0C 00 00 00 02 00 00 00               B0 20 00 00 01 00 00 00
+     22 00 00 00 00 00 00 00               FD 2C 6B 45 D2 6E 12 55
+     B0 20 00 00 01 00 00 00               00 00 00 00 00 00 00 00
+     F7 2E 10 99 81 E7 44 CC               F0 3F FA 8B FF 7F 00 00
+     00 00 00 00 00 00 00 00               00 00 00 00 00 00 00 00
+     80 19 AE 2A FF 7F 00 00               00 00 00 00 00 00 00 00
+     2D EC B0 58 FF 7F 00 00               00 00 00 00 00 00 00 00
+     */
+    
+    
+    XCSon *son = [XCSon new];
+    son.girlCount = 0xfeab;
+    //        void *tmp = (__bridge void *)p;
+    //        printf("p addre == %p \n",tmp);
+    //        int *a = (int *)(tmp + 8);
+    //        printf("age == %d\n",*a);
+    
+    NSLog(@"name addr = %p, house addr = %p  son addr = %p ",p.name, p.house,son);
+    //        NSLog(@"person name = %@, age is %d",p.name,p.age);
 }
 
 void testForConstantDemo(){

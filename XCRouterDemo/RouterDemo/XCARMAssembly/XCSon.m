@@ -9,6 +9,16 @@
 #import "XCSon.h"
 
 @implementation XCSon
+
+
+- (instancetype)init{
+
+    if (self = [super init]) {
+        NSLog(@"son init ");
+    }
+    return self;
+}
+
 - (void)testSon{
     NSLog(@"%s",__func__);
 }
