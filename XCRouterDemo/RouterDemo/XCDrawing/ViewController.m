@@ -51,8 +51,36 @@ CGRect rectByFittingInRect(CGSize s, CGRect d){
     /** 切割rect */
 //    [self rectDivide];
     /** fitting模式*/
-    [self fitingMode];
+//    [self fitingMode];
+    
+    NSString *text = @"Hello World";
+    NSData *textData = [text dataUsingEncoding:NSUTF8StringEncoding];
+    
+    self.imgView.image = [self imageFromData:textData];
 }
+
+- (UIImage *)imageFromData:(NSData *)data{
+    
+    if (data == nil) {return nil;}
+    /** 获取数据总大小: 为了使用正方形,这步确保大小可以整除2, 即宽高相等  */
+    NSUInteger totalSize = data.length % 2 ? data.length : data.length + 1;
+    /** 计算宽高 : totalSize = width * height * 4 */
+    int wh = (int)((totalSize % 4) ? (totalSize / 4) : (totalSize / 4) + 1);
+    /** 创建颜色空间 */
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    if (colorSpaceRef == NULL) {return nil;}
+    Byte *bytes = (Byte *) data.bytes;
+    /** 创建位图上下文 */
+    CGContextRef ctx = CGBitmapContextCreate(bytes, wh, wh,8, wh * 4, colorSpaceRef, kCGImageAlphaPremultipliedFirst);
+    CGColorSpaceRelease(colorSpaceRef);
+    if (ctx == NULL) {return  nil;}
+    CGImageRef imgRef = CGBitmapContextCreateImage(ctx);
+    CGContextRelease(ctx);
+    UIImage *img = [UIImage imageWithCGImage:imgRef];
+    CGImageRelease(imgRef);
+    return img;
+}
+
 /** CGPoint convert dictionary*/
 - (void)conversionDictionary{
     /** CGPoint 转换 NSDictionary */
