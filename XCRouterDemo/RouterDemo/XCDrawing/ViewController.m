@@ -61,18 +61,29 @@ void logMemoryBitNumber(int number){
     /** fitting模式*/
 //    [self fitingMode];
     
+    
+    NSData *od = [[NSData alloc]init];
+    NSLog(@"%@",od);
+    
     NSString *text = @"Hello World";
     NSData *textData = [text dataUsingEncoding:NSUTF8StringEncoding];
     
-    UIImage *img = [self imageFromData:textData];
-    NSData *imgData = UIImagePNGRepresentation(img);
-    NSString *imgText = [[NSString alloc]initWithData:imgData encoding:NSUTF8StringEncoding];
-    NSLog(@"img text == %@",imgText);
+    UIImage *img = [self xc_drawPicture:textData];
+    self.imgView.image = img;
+//    NSData *imgData = UIImagePNGRepresentation(img);
+   
+//    NSString *imgText = [[NSString alloc]initWithData:imgData encoding:NSUTF8StringEncoding];
+//    NSLog(@"img text == %@",imgText);
     
     UIImage *icon = [UIImage imageNamed:@"icon_home_fish"];
-    self.imgView.image = icon;
+//    self.imgView.image = icon;
     
     NSData *iconData = UIImagePNGRepresentation(icon);
+    
+    self.imgView.image = [self xc_drawPicture:iconData];
+    
+    NSData *d_img = [NSData dataWithData:iconData];
+    NSLog(@"d_img ==%@",d_img);
     const Byte *bytes = iconData.bytes;
     NSUInteger count = iconData.length;
     for (int i = 0; i < count ; ++i) {
@@ -94,6 +105,40 @@ void logMemoryBitNumber(int number){
 //    }
 }
 
+/** 根据NSData 的内存数据,进行绘制画图 */
+
+- (UIImage *)xc_drawPicture:(NSData *)ori_data{
+    if (ori_data == nil) {return nil;}
+    
+    /** 获取数据总大小: 为了使用正方形,这步确保大小可以整除2, 即宽高相等  */
+    NSUInteger totalSize = ori_data.length % 2 ? ori_data.length : ori_data.length + 1;
+    /** 计算宽高 : totalSize = width * height * 4 */
+    NSUInteger wh = totalSize / 2;
+    /** 开启图形上下文  */
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(wh, wh), YES, UIScreen.mainScreen.scale);
+    /** 获取图形上下文 */
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    const Byte *totalBytes = ori_data.bytes;
+    /** 绘图   : 下面这个绘图性能非常差,仅仅用作 代码绘图测试用 */   
+    for (int i = 0; i < wh; i++) {   // 行号
+        for (int j = 0; j < wh; j++) { // 列号
+            NSUInteger index =  (i * wh) + j;
+            uint8_t d = totalBytes[index];
+            [[UIColor colorWithWhite:d / 255.0 alpha:1] set];
+            CGContextMoveToPoint(ctx, j, i);
+            CGContextStrokePath(ctx);
+        }
+    }
+    
+    /** 获取图片 */
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    /** 释放资源 */
+    UIGraphicsEndImageContext();
+    /** 返回结果 */
+    return  img;
+}
+
+/** 根据Byte 转换为 Image */
 - (UIImage *)imageFromData:(NSData *)data{
     
     if (data == nil) {return nil;}
