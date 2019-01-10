@@ -56,7 +56,11 @@ CGRect rectByFittingInRect(CGSize s, CGRect d){
     NSString *text = @"Hello World";
     NSData *textData = [text dataUsingEncoding:NSUTF8StringEncoding];
     
-    self.imgView.image = [self imageFromData:textData];
+    UIImage *img = [self imageFromData:textData];
+    NSData *imgData = UIImagePNGRepresentation(img);
+    NSString *imgText = [[NSString alloc]initWithData:imgData encoding:NSUTF8StringEncoding];
+    NSLog(@"img text == %@",imgText);
+    
 }
 
 - (UIImage *)imageFromData:(NSData *)data{
