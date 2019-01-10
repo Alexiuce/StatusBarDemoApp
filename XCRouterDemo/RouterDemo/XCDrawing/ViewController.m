@@ -61,6 +61,29 @@ CGRect rectByFittingInRect(CGSize s, CGRect d){
     NSString *imgText = [[NSString alloc]initWithData:imgData encoding:NSUTF8StringEncoding];
     NSLog(@"img text == %@",imgText);
     
+    UIImage *icon = [UIImage imageNamed:@"icon_home_fish"];
+    self.imgView.image = icon;
+    
+    NSData *iconData = UIImagePNGRepresentation(icon);
+    const char *bytes = iconData.bytes;
+    NSUInteger count = iconData.length;
+//    for (int i = 0; i < count ; ++i) {
+//        printf("%.2x ",bytes[i]);
+//        if (i % 8) {
+//            printf("\n");
+//        }
+//    }
+    int a = 0xff0f;
+    for (int i = 0; i < 32; i += 8) {
+        int bit = a >>( 24 - i);
+        int result = bit & 0xff;
+        printf("%.2x ",result);
+    }
+//    for (int i = 0; i < count; i++) {
+//        unsigned char bit = bytes[i];
+//
+//    }
+    printf("%p",&a);
 }
 
 - (UIImage *)imageFromData:(NSData *)data{
