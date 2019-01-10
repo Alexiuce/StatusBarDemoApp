@@ -37,7 +37,15 @@ CGRect rectByFittingInRect(CGSize s, CGRect d){
     CGFloat y = CGRectGetMidY(d) - fittingSize.height * 0.5;
     return CGRectMake(x, y, fittingSize.width, fittingSize.height);
 }
-
+/** 输出 int 类型的在内存中的存储 */
+void logMemoryBitNumber(int number){
+    
+    for (int i = 0; i < 32; i += 8) {
+        int bit = number >>( 24 - i);
+        int result = bit & 0xff;
+        printf("%.2x ",result);
+    }
+}
 
 @implementation ViewController
 
@@ -65,25 +73,25 @@ CGRect rectByFittingInRect(CGSize s, CGRect d){
     self.imgView.image = icon;
     
     NSData *iconData = UIImagePNGRepresentation(icon);
-    const char *bytes = iconData.bytes;
+    const Byte *bytes = iconData.bytes;
     NSUInteger count = iconData.length;
-//    for (int i = 0; i < count ; ++i) {
-//        printf("%.2x ",bytes[i]);
+    for (int i = 0; i < count ; ++i) {
+        Byte result = bytes[i];
+        printf("%.2x ",result);
+        if (i != 0 && i % 8 == 0) {
+            printf("\n");
+        }
+    }
+    // 0x00007fd38f8a4a00
+    // 00 4A 8A 8F D3 7F 00 00
+//    int *d = (__bridge void *)iconData;
+//    for (int i = 0; i < count; i++) {
+//        d += i;
+//        logMemoryBitNumber(*d);
 //        if (i % 8) {
 //            printf("\n");
 //        }
 //    }
-    int a = 0xff0f;
-    for (int i = 0; i < 32; i += 8) {
-        int bit = a >>( 24 - i);
-        int result = bit & 0xff;
-        printf("%.2x ",result);
-    }
-//    for (int i = 0; i < count; i++) {
-//        unsigned char bit = bytes[i];
-//
-//    }
-    printf("%p",&a);
 }
 
 - (UIImage *)imageFromData:(NSData *)data{
