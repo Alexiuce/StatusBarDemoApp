@@ -78,7 +78,7 @@ void logMemoryBitNumber(int number){
     for (int i = 0; i < count ; ++i) {
         Byte result = bytes[i];
         printf("%.2x ",result);
-        if (i != 0 && i % 8 == 0) {
+        if ( (i + 1) % 8 == 0) {
             printf("\n");
         }
     }
