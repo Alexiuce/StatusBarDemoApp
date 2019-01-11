@@ -14,7 +14,7 @@
 - (instancetype)init{
 
     if (self = [super init]) {
-        NSLog(@"son init ");
+//        NSLog(@"son init ");
     }
     return self;
 }

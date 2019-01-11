@@ -59,21 +59,46 @@ void testMutableArrayDemo(int arrayCount){
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        XCPerson *p = [XCPerson new];
-        NSMethodSignature *ms = [p.class methodSignatureForSelector:@selector(p_test)];
-        NSInvocation *it = [NSInvocation invocationWithMethodSignature:ms];
+        XCPerson *p1 = [XCPerson new];
+        p1.name = @"alex";
+        p1.age = 22;
+        XCPerson *p2 = [XCPerson new];
+        p2.name = @"jobs";
+        p2.age = 33;
+        XCPerson *p3 = [XCPerson new];
+        p3.name = @"gates";
+        p3.age = 20;
+        XCPerson *p4 = [XCPerson new];
+        p4.name = @"peter";
+        p4.age = 21;
         
-        XCSon *s = [XCSon new];
-        NSMethodSignature *sn = [s.class methodSignatureForSelector:@selector(new)];
-        NSInvocation *st = [NSInvocation invocationWithMethodSignature:sn];
-        
-        NSDictionary <NSString *, NSInvocation *>*dic = @{@"a":it,@"b": st};
-        
-        [dic[@"a"] invoke];
-        
+        NSArray *oldArr = @[p1,p2,p3,p4];
+        /** 如果需要动态设置匹配的Key 需要使用占位符 %K 而非%@  */
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"%K matches %@",@"name",@"alex"];
+        NSArray *resultArr = [oldArr filteredArrayUsingPredicate:pred];
+        for (XCPerson *r in resultArr) {
+            NSLog(@"name = %@   age =%d" ,r.name,r.age);
+        }
    
     }
     return 0;
+}
+
+
+
+
+void testNSInvocation(){
+    XCPerson *p = [XCPerson new];
+    NSMethodSignature *ms = [p.class methodSignatureForSelector:@selector(p_test)];
+    NSInvocation *it = [NSInvocation invocationWithMethodSignature:ms];
+    
+    XCSon *s = [XCSon new];
+    NSMethodSignature *sn = [s.class methodSignatureForSelector:@selector(new)];
+    NSInvocation *st = [NSInvocation invocationWithMethodSignature:sn];
+    
+    NSDictionary <NSString *, NSInvocation *>*dic = @{@"a":it,@"b": st};
+    
+    [dic[@"a"] invoke];
 }
 
 void testPerson(){

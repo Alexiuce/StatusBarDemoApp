@@ -23,7 +23,7 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        NSLog(@"person init ");
+//        NSLog(@"person init ");
     }
     return self;
 }
