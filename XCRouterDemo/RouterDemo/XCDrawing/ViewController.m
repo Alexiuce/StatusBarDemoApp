@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
@@ -68,22 +69,33 @@ void logMemoryBitNumber(int number){
     NSString *text = @"Hello World";
     NSData *textData = [text dataUsingEncoding:NSUTF8StringEncoding];
     
-    UIImage *img = [self xc_drawPicture:textData];
-    self.imgView.image = img;
+//    NSNumber *rcn = [textData valueForKeyPath:@"retainCount"];
+//    UIImage *img = [self xc_drawPicture:textData];
+//    self.imgView.image = img;
 //    NSData *imgData = UIImagePNGRepresentation(img);
-   
 //    NSString *imgText = [[NSString alloc]initWithData:imgData encoding:NSUTF8StringEncoding];
 //    NSLog(@"img text == %@",imgText);
     
-    UIImage *icon = [UIImage imageNamed:@"icon_home_fish"];
-//    self.imgView.image = icon;
+    UIImage *icon = [[UIImage imageNamed:@"icon_home_fish"] imageWithAlignmentRectInsets:UIEdgeInsetsMake(0, 0, 120, 120)];
+    self.imgView.image = icon;
     
     NSData *iconData = UIImagePNGRepresentation(icon);
+//   unsigned int p_count = 0;
+//    Ivar * allVars =  class_copyIvarList(iconData.class, &p_count);
+//    for (int i = 0; i < p_count; i++) {
+//        Ivar var = allVars[i];
+//        const char *ivar_name = ivar_getName(var);
+//        NSLog(@"%s",ivar_name);
+//        NSString *key = [[NSString alloc]initWithUTF8String:ivar_name];
+//        if ([key containsString:@"reserved"]) {
+//            continue;
+//        }
+//        NSLog(@" %@ == %@",key,[iconData valueForKeyPath:key]);
+//
+//    }
     
-    self.imgView.image = [self xc_drawPicture:iconData];
-    
-    NSData *d_img = [NSData dataWithData:iconData];
-    NSLog(@"d_img ==%@",d_img);
+//    NSData *d_img = [NSData dataWithData:iconData];
+//    NSLog(@"d_img ==%@",d_img);
     const Byte *bytes = iconData.bytes;
     NSUInteger count = iconData.length;
     for (int i = 0; i < count ; ++i) {
@@ -119,7 +131,7 @@ void logMemoryBitNumber(int number){
     /** 获取图形上下文 */
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     const Byte *totalBytes = ori_data.bytes;
-    /** 绘图   : 下面这个绘图性能非常差,仅仅用作 代码绘图测试用 */   
+    /** 绘图   : 下面这个绘图性能非常差,仅仅用作 代码绘图测试用 */
     for (int i = 0; i < wh; i++) {   // 行号
         for (int j = 0; j < wh; j++) { // 列号
             NSUInteger index =  (i * wh) + j;
