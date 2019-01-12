@@ -76,8 +76,16 @@ int main(int argc, const char * argv[]) {
         /** 如果需要动态设置匹配的Key 需要使用占位符 %K 而非%@  */
 //        NSPredicate *pred = [NSPredicate predicateWithFormat:@"%K matches %@",@"name",@"alex"];
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"age == 20"];
-        NSArray *resultArr = [oldArr filteredArrayUsingPredicate:pred];
-        for (XCPerson *r in resultArr) {
+//        NSArray *resultArr = [oldArr filteredArrayUsingPredicate:pred];
+//        
+//        
+//        for (XCPerson *r in resultArr) {
+//            NSLog(@"name = %@   age = %d" ,r.name,r.age);
+//        }
+        /** 可变集合 使用filte 会直接修改集合本身s原素 */
+        NSMutableArray *m_array = [oldArr mutableCopy];
+        [m_array filterUsingPredicate:pred];
+        for (XCPerson *r in m_array) {
             NSLog(@"name = %@   age = %d" ,r.name,r.age);
         }
    
