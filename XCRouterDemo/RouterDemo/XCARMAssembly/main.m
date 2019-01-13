@@ -75,10 +75,10 @@ int main(int argc, const char * argv[]) {
         NSArray *oldArr = @[p1,p2,p3,p4];
         /** 如果需要动态设置匹配的Key 需要使用占位符 %K 而非%@  */
 //        NSPredicate *pred = [NSPredicate predicateWithFormat:@"%K matches %@",@"name",@"alex"];
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"age == 20"];
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"age > 20"];
 //        NSArray *resultArr = [oldArr filteredArrayUsingPredicate:pred];
-//        
-//        
+//
+//
 //        for (XCPerson *r in resultArr) {
 //            NSLog(@"name = %@   age = %d" ,r.name,r.age);
 //        }
