@@ -29,6 +29,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     [self simpleShapeDemo];
+    [self coreRadius];
 }
 
 - (void)simpleShapeDemo{
@@ -39,6 +40,20 @@
     layer.fillColor = UIColor.clearColor.CGColor;
     layer.lineWidth = 10;
     layer.path = path.CGPath;
+    [self.view.layer addSublayer:layer];
+}
+/** Rounded Corners, Redux */
+- (void)coreRadius{
+    CGRect rect = {50,250,100,100};
+    CGSize size = {50,50};
+    UIRectCorner corner = UIRectCornerTopLeft;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corner cornerRadii:size];
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.strokeColor = UIColor.greenColor.CGColor;
+    layer.lineWidth = 3;
+    layer.path = path.CGPath;
+    
     [self.view.layer addSublayer:layer];
 }
 
