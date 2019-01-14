@@ -7,6 +7,7 @@
 //
 
 #import "XC_TableViewController.h"
+#import "XC_TableViewHeader.h"
 
 @interface XC_TableViewController ()
 
@@ -23,7 +24,9 @@
      self.clearsSelectionOnViewWillAppear = NO;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _controllerTitles = @[@"CAShapeLayer Demo",@"CATextLayer Demo",@"CATransformLayer Demo"
+    _controllerTitles = @[kShapeViewController,
+                          kTextViewController,
+                          kTransformViewController
                           ];
     
 }
@@ -44,7 +47,14 @@
     cell.textLabel.text = _controllerTitles[indexPath.row];
     return cell;
 }
-
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *text = _controllerTitles[indexPath.row];
+    NSString *controllerText = k_mapViewControllerString(text);
+    UIViewController *controller = [[NSClassFromString(controllerText) alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+}
 
 
 @end
