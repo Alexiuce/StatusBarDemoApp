@@ -32,6 +32,7 @@
 		D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3821E21C4C00B63E6D /* Second.storyboard */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
 		D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8836FF621BA05800044C67C /* XCTabBarController.m */; };
+		D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D885555121EC1A4A00A593BB /* XC_ableViewController.m */; };
 		D88B75F321A77D7000951228 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F221A77D7000951228 /* AppDelegate.m */; };
 		D88B75F621A77D7000951228 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88B75F521A77D7000951228 /* ViewController.m */; };
 		D88B75F921A77D7000951228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88B75F721A77D7000951228 /* Main.storyboard */; };
@@ -148,6 +149,8 @@
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
 		D8836FF521BA05800044C67C /* XCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarController.h; sourceTree = "<group>"; };
 		D8836FF621BA05800044C67C /* XCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarController.m; sourceTree = "<group>"; };
+		D885555021EC1A4A00A593BB /* XC_TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XC_TableViewController.h; sourceTree = "<group>"; };
+		D885555121EC1A4A00A593BB /* XC_ableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XC_ableViewController.m; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B75F121A77D7000951228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D88B75F221A77D7000951228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 			children = (
 				D8709C3021E2146A00B63E6D /* XCShapeViewController.h */,
 				D8709C3121E2146A00B63E6D /* XCShapeViewController.m */,
+				D885555021EC1A4A00A593BB /* XC_TableViewController.h */,
+				D885555121EC1A4A00A593BB /* XC_ableViewController.m */,
 			);
 			path = CAShapeLayer;
 			sourceTree = "<group>";
@@ -906,6 +911,7 @@
 				D89608B721C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
+				D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */,
 				D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */,
 				D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */,
 				D86BF0C521BF48B000405628 /* XCViewModel.m in Sources */,
