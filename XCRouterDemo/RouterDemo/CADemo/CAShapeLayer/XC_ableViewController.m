@@ -28,8 +28,10 @@
                           kTextViewController,
                           kTransformViewController
                           ];
+   
     
 }
+
 
 #pragma mark - Table view data source
 
@@ -52,6 +54,7 @@
     NSString *text = _controllerTitles[indexPath.row];
     NSString *controllerText = k_mapViewControllerString(text);
     UIViewController *controller = [[NSClassFromString(controllerText) alloc]init];
+     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
     
 }
