@@ -21,9 +21,6 @@ static inline NSString * k_mapViewControllerString(NSString *s){
                                                   kTextViewController:@"XCTextLayerViewController"
                            
                            };
-    
-    
-    
     return temp[s];
 }
 
