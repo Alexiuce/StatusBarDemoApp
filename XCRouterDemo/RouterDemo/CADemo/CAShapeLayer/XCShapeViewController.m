@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
     [self simpleShapeDemo];
     [self coreRadius];

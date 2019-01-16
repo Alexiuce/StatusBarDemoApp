@@ -17,8 +17,9 @@ static  NSString * kTransformViewController = @"CATransformLayer Demo";
 
 
 static inline NSString * k_mapViewControllerString(NSString *s){
-    NSDictionary <NSString *,NSString *>*temp = @{kShapeViewController:@"XCShapeViewController",
-                                                  kTextViewController:@"XCTextLayerViewController"
+    NSDictionary <NSString *,NSString *>*temp = @{kShapeViewController: @"XCShapeViewController",
+                                                  kTextViewController: @"XCTextLayerViewController",
+                                                  kTransformViewController: @"XCTransformLayerViewController"
                            
                            };
     return temp[s];

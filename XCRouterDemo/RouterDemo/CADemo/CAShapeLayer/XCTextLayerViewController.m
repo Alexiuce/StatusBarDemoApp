@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.title = NSStringFromClass(self.class);
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.orangeColor;
     [self attributedTextDemo];
