@@ -26,5 +26,11 @@
 		<key>controllerName</key>
 		<string>XCGradientLayerViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>ReplicatorLayer Demo</string>
+		<key>controllerName</key>
+		<string>XCReplicatorLayerViewController</string>
+	</dict>
 </array>
 </plist>

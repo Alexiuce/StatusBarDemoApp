@@ -74,6 +74,7 @@
 		D8F4CF8A21DCBD890081F78C /* XCSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4CF8921DCBD890081F78C /* XCSon.m */; };
 		D8F84B4C21F00FD1003B6627 /* XCGradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */; };
 		D8F84B4E21F012F9003B6627 /* XC_TabelViewControllerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F84B4D21F012F9003B6627 /* XC_TabelViewControllerConfig.plist */; };
+		D8F84B5121F04DE1003B6627 /* XCReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F84B5021F04DE1003B6627 /* XCReplicatorLayerViewController.m */; };
 		D8F89ECF21D9FAF20053E131 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */; };
 /* End PBXBuildFile section */
 
@@ -232,6 +233,8 @@
 		D8F84B4A21F00FD1003B6627 /* XCGradientLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCGradientLayerViewController.h; sourceTree = "<group>"; };
 		D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCGradientLayerViewController.m; sourceTree = "<group>"; };
 		D8F84B4D21F012F9003B6627 /* XC_TabelViewControllerConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = XC_TabelViewControllerConfig.plist; sourceTree = "<group>"; };
+		D8F84B4F21F04DE1003B6627 /* XCReplicatorLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCReplicatorLayerViewController.h; sourceTree = "<group>"; };
+		D8F84B5021F04DE1003B6627 /* XCReplicatorLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCReplicatorLayerViewController.m; sourceTree = "<group>"; };
 		D8F89ECD21D9FAF20053E131 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +395,8 @@
 				D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */,
 				D8F84B4A21F00FD1003B6627 /* XCGradientLayerViewController.h */,
 				D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */,
+				D8F84B4F21F04DE1003B6627 /* XCReplicatorLayerViewController.h */,
+				D8F84B5021F04DE1003B6627 /* XCReplicatorLayerViewController.m */,
 			);
 			path = CAShapeLayer;
 			sourceTree = "<group>";
@@ -930,6 +935,7 @@
 				D890DB2C21DC3FF400D82974 /* XCCubeController.m in Sources */,
 				D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */,
 				D89608B721C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m in Sources */,
+				D8F84B5121F04DE1003B6627 /* XCReplicatorLayerViewController.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
 				D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */,
