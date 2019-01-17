@@ -19,17 +19,17 @@
     // Do any additional setup after loading the view.
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
+    [self gradientLayerDemo];
+}
+
+- (void)gradientLayerDemo{
+    CAGradientLayer *gdLayer = [CAGradientLayer layer];
+    gdLayer.colors = @[(__bridge id)UIColor.redColor.CGColor,(__bridge id)UIColor.blueColor.CGColor];
+    gdLayer.startPoint = CGPointMake(0.5, 0.5);
+    gdLayer.frame = CGRectMake(20, 100, 100, 50);
+    [self.view.layer addSublayer:gdLayer];
+    NSLog(@"start point %@",NSStringFromCGPoint(gdLayer.startPoint));
+    NSLog(@"end point %@",NSStringFromCGPoint(gdLayer.endPoint));
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
