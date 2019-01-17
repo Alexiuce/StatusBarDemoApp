@@ -73,6 +73,7 @@
 		D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */; };
 		D8F4CF8A21DCBD890081F78C /* XCSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4CF8921DCBD890081F78C /* XCSon.m */; };
 		D8F84B4C21F00FD1003B6627 /* XCGradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */; };
+		D8F84B4E21F012F9003B6627 /* XC_TabelViewControllerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8F84B4D21F012F9003B6627 /* XC_TabelViewControllerConfig.plist */; };
 		D8F89ECF21D9FAF20053E131 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */; };
 /* End PBXBuildFile section */
 
@@ -156,7 +157,6 @@
 		D8836FF621BA05800044C67C /* XCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarController.m; sourceTree = "<group>"; };
 		D885555021EC1A4A00A593BB /* XC_TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XC_TableViewController.h; sourceTree = "<group>"; };
 		D885555121EC1A4A00A593BB /* XC_ableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XC_ableViewController.m; sourceTree = "<group>"; };
-		D885555321EC210B00A593BB /* XC_TableViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XC_TableViewHeader.h; sourceTree = "<group>"; };
 		D88B75EE21A77D7000951228 /* RouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B75F121A77D7000951228 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D88B75F221A77D7000951228 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -231,6 +231,7 @@
 		D8F4CF8921DCBD890081F78C /* XCSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSon.m; sourceTree = "<group>"; };
 		D8F84B4A21F00FD1003B6627 /* XCGradientLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCGradientLayerViewController.h; sourceTree = "<group>"; };
 		D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCGradientLayerViewController.m; sourceTree = "<group>"; };
+		D8F84B4D21F012F9003B6627 /* XC_TabelViewControllerConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = XC_TabelViewControllerConfig.plist; sourceTree = "<group>"; };
 		D8F89ECD21D9FAF20053E131 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -384,7 +385,7 @@
 				D8709C3121E2146A00B63E6D /* XCShapeViewController.m */,
 				D885555021EC1A4A00A593BB /* XC_TableViewController.h */,
 				D885555121EC1A4A00A593BB /* XC_ableViewController.m */,
-				D885555321EC210B00A593BB /* XC_TableViewHeader.h */,
+				D8F84B4D21F012F9003B6627 /* XC_TabelViewControllerConfig.plist */,
 				D86D2BCF21ED63B900CCD5E6 /* XCTextLayerViewController.h */,
 				D86D2BD021ED63B900CCD5E6 /* XCTextLayerViewController.m */,
 				D8A8CE0E21EED1A10098859F /* XCTransformLayerViewController.h */,
@@ -822,6 +823,7 @@
 			files = (
 				D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */,
 				D89608B921C1E43D004A2EE1 /* Image in Resources */,
+				D8F84B4E21F012F9003B6627 /* XC_TabelViewControllerConfig.plist in Resources */,
 				D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */,
 				D848357321B60762006C7AA4 /* Assets.xcassets in Resources */,
 				D848357121B60760006C7AA4 /* Main.storyboard in Resources */,

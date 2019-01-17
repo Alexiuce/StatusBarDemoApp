@@ -7,11 +7,10 @@
 //
 
 #import "XC_TableViewController.h"
-#import "XC_TableViewHeader.h"
 
 @interface XC_TableViewController ()
 
-@property (nonatomic, strong)NSArray <NSString *>*controllerTitles;
+@property (nonatomic, strong)NSArray <NSDictionary <NSString *,NSString *>*>*controllerTitles;
 
 @end
 
@@ -20,26 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Specialized Layers";
-    // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _controllerTitles = @[kShapeViewController,
-                          kTextViewController,
-                          kTransformViewController,
-                          kGradientViewController
-                          ];
-   
-    
+    NSString *plistFile = [NSBundle.mainBundle pathForResource:@"XC_TabelViewControllerConfig" ofType:@"plist"];
+    _controllerTitles = [NSArray arrayWithContentsOfFile:plistFile];
 }
 
 
 #pragma mark - Table view data source
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _controllerTitles.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shape"];
@@ -47,13 +35,14 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"shape"];
     }
     // Configure the cell...
-    cell.textLabel.text = _controllerTitles[indexPath.row];
+    NSDictionary *dict = _controllerTitles[indexPath.row];
+    cell.textLabel.text = dict[@"titleName"];
     return cell;
 }
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *text = _controllerTitles[indexPath.row];
-    NSString *controllerText = k_mapViewControllerString(text);
+    NSDictionary *dict = _controllerTitles[indexPath.row];
+    NSString *controllerText = dict[@"controllerName"];
     UIViewController *controller = [[NSClassFromString(controllerText) alloc]init];
      self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
