@@ -26,7 +26,8 @@
 //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _controllerTitles = @[kShapeViewController,
                           kTextViewController,
-                          kTransformViewController
+                          kTransformViewController,
+                          kGradientViewController
                           ];
    
     

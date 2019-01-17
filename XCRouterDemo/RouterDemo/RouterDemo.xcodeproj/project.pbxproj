@@ -72,6 +72,7 @@
 		D8E7FDCE21C737390031426F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDCD21C737390031426F /* main.m */; };
 		D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EB202621C08CE100F488E0 /* XCDrawingViewController.m */; };
 		D8F4CF8A21DCBD890081F78C /* XCSon.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4CF8921DCBD890081F78C /* XCSon.m */; };
+		D8F84B4C21F00FD1003B6627 /* XCGradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */; };
 		D8F89ECF21D9FAF20053E131 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +229,8 @@
 		D8F3CAED21C506F5002FE705 /* Layer Tree.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Layer Tree.md"; sourceTree = "<group>"; };
 		D8F4CF8821DCBD890081F78C /* XCSon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSon.h; sourceTree = "<group>"; };
 		D8F4CF8921DCBD890081F78C /* XCSon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSon.m; sourceTree = "<group>"; };
+		D8F84B4A21F00FD1003B6627 /* XCGradientLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCGradientLayerViewController.h; sourceTree = "<group>"; };
+		D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCGradientLayerViewController.m; sourceTree = "<group>"; };
 		D8F89ECD21D9FAF20053E131 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8F89ECE21D9FAF20053E131 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -386,6 +389,8 @@
 				D86D2BD021ED63B900CCD5E6 /* XCTextLayerViewController.m */,
 				D8A8CE0E21EED1A10098859F /* XCTransformLayerViewController.h */,
 				D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */,
+				D8F84B4A21F00FD1003B6627 /* XCGradientLayerViewController.h */,
+				D8F84B4B21F00FD1003B6627 /* XCGradientLayerViewController.m */,
 			);
 			path = CAShapeLayer;
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				D8A8CE1021EED1A10098859F /* XCTransformLayerViewController.m in Sources */,
 				D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */,
 				D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */,
+				D8F84B4C21F00FD1003B6627 /* XCGradientLayerViewController.m in Sources */,
 				D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */,
 				D890DB2C21DC3FF400D82974 /* XCCubeController.m in Sources */,
 				D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */,

@@ -11,16 +11,18 @@
 
 #import <Foundation/Foundation.h>
 
-static  NSString * kShapeViewController = @"CAShapeLayer Demo";
-static  NSString * kTextViewController = @"CATextLayer Demo";
-static  NSString * kTransformViewController = @"CATransformLayer Demo";
+static NSString * kShapeViewController = @"CAShapeLayer Demo";
+static NSString * kTextViewController = @"CATextLayer Demo";
+static NSString * kTransformViewController = @"CATransformLayer Demo";
+static NSString * kGradientViewController = @"GradientLayer Demo";
 
 
 static inline NSString * k_mapViewControllerString(NSString *s){
     NSDictionary <NSString *,NSString *>*temp = @{kShapeViewController: @"XCShapeViewController",
                                                   kTextViewController: @"XCTextLayerViewController",
-                                                  kTransformViewController: @"XCTransformLayerViewController"
-                           
+                                                  kTransformViewController: @"XCTransformLayerViewController",
+                                                  kGradientViewController : @"XCGradientLayerViewController"
+                                                  
                            };
     return temp[s];
 }
