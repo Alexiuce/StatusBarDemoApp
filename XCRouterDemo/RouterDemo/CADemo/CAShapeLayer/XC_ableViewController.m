@@ -44,7 +44,7 @@
     NSDictionary *dict = _controllerTitles[indexPath.row];
     NSString *controllerText = dict[@"controllerName"];
     UIViewController *controller = [[NSClassFromString(controllerText) alloc]init];
-     self.hidesBottomBarWhenPushed = YES;
+    controller.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
     
 }
