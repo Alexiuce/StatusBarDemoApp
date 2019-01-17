@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
+    [self multipartGradientLayer];
     [self gradientLayerDemo];
 }
 
@@ -28,8 +29,17 @@
     gdLayer.startPoint = CGPointMake(0.5, 0.5);
     gdLayer.frame = CGRectMake(20, 100, 100, 50);
     [self.view.layer addSublayer:gdLayer];
-    NSLog(@"start point %@",NSStringFromCGPoint(gdLayer.startPoint));
-    NSLog(@"end point %@",NSStringFromCGPoint(gdLayer.endPoint));
-    
+}
+
+- (void)multipartGradientLayer{
+    CAGradientLayer *gradLayer = [CAGradientLayer layer];
+    gradLayer.frame = CGRectMake(150, 100, 100, 100);
+    [self.view.layer addSublayer:gradLayer];
+    gradLayer.colors = @[(__bridge id)UIColor.redColor.CGColor,
+                         (__bridge id)UIColor.blueColor.CGColor,
+                         (__bridge id)UIColor.greenColor.CGColor];
+    gradLayer.startPoint = CGPointZero;
+    gradLayer.endPoint = CGPointMake(1,1);
+    gradLayer.locations = @[@0.0, @0.25, @0.5];
 }
 @end
