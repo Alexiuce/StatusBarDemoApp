@@ -31,6 +31,8 @@
     tansform = CATransform3DTranslate(tansform, 0, 100, 0);
     repLayer.instanceTransform = tansform;
     
+    repLayer.instanceRedOffset = -0.15;
+    
     CALayer *itemLayer = [CALayer layer];
     itemLayer.frame = CGRectMake(50, 100, 50, 50);
     itemLayer.backgroundColor = UIColor.redColor.CGColor;
