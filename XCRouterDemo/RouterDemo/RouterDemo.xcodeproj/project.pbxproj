@@ -350,7 +350,7 @@
 		D848356821B60760006C7AA4 /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
-				D8709C2F21E2143400B63E6D /* CAShapeLayer */,
+				D8709C2F21E2143400B63E6D /* SpecializedLayers */,
 				D89608B821C1E43D004A2EE1 /* Image */,
 				D8CF335021BF7F7200682A75 /* Views */,
 				D8CF334C21BF7F3A00682A75 /* ViewModels */,
@@ -381,7 +381,7 @@
 			path = XCUnitTest;
 			sourceTree = "<group>";
 		};
-		D8709C2F21E2143400B63E6D /* CAShapeLayer */ = {
+		D8709C2F21E2143400B63E6D /* SpecializedLayers */ = {
 			isa = PBXGroup;
 			children = (
 				D8709C3021E2146A00B63E6D /* XCShapeViewController.h */,
@@ -398,7 +398,7 @@
 				D8F84B4F21F04DE1003B6627 /* XCReplicatorLayerViewController.h */,
 				D8F84B5021F04DE1003B6627 /* XCReplicatorLayerViewController.m */,
 			);
-			path = CAShapeLayer;
+			path = SpecializedLayers;
 			sourceTree = "<group>";
 		};
 		D88B75E521A77D7000951228 = {

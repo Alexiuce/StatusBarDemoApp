@@ -160,11 +160,11 @@
 //    NSString *a = @"Hello~";
 //    NSString *b = @"World";
 //    NSLog(@"b address ==%p  b objc == %p",&b,b);
-    int a = 4;
-    int b = 3;
-    int c = 5;
-    int d = 2;
-//    NSObject *
+//    int a = 4;
+//    int b = 3;
+//    int c = 5;
+//    int d = 2;
+////    NSObject *
 //     03 00 00 00 04 00 00 00
 //    NSString *s = @"adfd";
 //    UIView *v = self.view;
