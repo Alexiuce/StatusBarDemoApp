@@ -19,6 +19,7 @@
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
     [self recplicatorLayerDemo];
+    [self reflectionDemo];
 }
 
 - (void)recplicatorLayerDemo{
@@ -42,13 +43,22 @@
 
 - (void)reflectionDemo{
     CAReplicatorLayer *repLayer = [CAReplicatorLayer layer];
-    repLayer.frame = self.view.bounds;
+    repLayer.backgroundColor = UIColor.lightGrayColor.CGColor;
+    repLayer.frame = (CGRect){200,150,100,44};
     [self.view.layer addSublayer:repLayer];
-    
     CALayer *oriLayer = [CALayer layer];
-    oriLayer.frame = CGRectMake(200, 150, 44, 44);
+    oriLayer.frame = CGRectMake(0, 0, 44, 44);
     oriLayer.contents = (__bridge id)([UIImage imageNamed:@"icon_datuan"].CGImage);
     [repLayer addSublayer:oriLayer];
+    
+    repLayer.instanceCount = 4;
+    CATransform3D trans = CATransform3DIdentity;
+    
+    trans = CATransform3DTranslate(trans, 0, 90, 0);
+    trans = CATransform3DRotate(trans, M_PI, 1, 0, 0);
+    repLayer.instanceTransform = trans;
+//    repLayer.instanceAlphaOffset = -0.7;
+    
     
 }
 
