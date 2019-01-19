@@ -40,4 +40,16 @@
     
 }
 
+- (void)reflectionDemo{
+    CAReplicatorLayer *repLayer = [CAReplicatorLayer layer];
+    repLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:repLayer];
+    
+    CALayer *oriLayer = [CALayer layer];
+    oriLayer.frame = CGRectMake(200, 150, 44, 44);
+    oriLayer.contents = (__bridge id)([UIImage imageNamed:@"icon_datuan"].CGImage);
+    [repLayer addSublayer:oriLayer];
+    
+}
+
 @end
