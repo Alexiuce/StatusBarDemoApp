@@ -51,13 +51,13 @@
     oriLayer.contents = (__bridge id)([UIImage imageNamed:@"icon_datuan"].CGImage);
     [repLayer addSublayer:oriLayer];
     
-    repLayer.instanceCount = 4;
+    repLayer.instanceCount = 2;
     CATransform3D trans = CATransform3DIdentity;
     
     trans = CATransform3DTranslate(trans, 0, 90, 0);
     trans = CATransform3DRotate(trans, M_PI, 1, 0, 0);
     repLayer.instanceTransform = trans;
-//    repLayer.instanceAlphaOffset = -0.7;
+    repLayer.instanceAlphaOffset = -0.7;
     
     
 }

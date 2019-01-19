@@ -32,5 +32,11 @@
 		<key>controllerName</key>
 		<string>XCReplicatorLayerViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>ScrollLayer Demo</string>
+		<key>controllerName</key>
+		<string>XCScrollLayerViewController</string>
+	</dict>
 </array>
 </plist>
