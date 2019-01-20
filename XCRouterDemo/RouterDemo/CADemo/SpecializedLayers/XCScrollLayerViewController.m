@@ -21,10 +21,19 @@
     // Do any additional setup after loading the view.
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
+    [self scrollLayerDemo];
 }
 
 - (void)scrollLayerDemo{
-    
+    CAScrollLayer *sl = [CAScrollLayer layer];
+    sl.backgroundColor = UIColor.lightGrayColor.CGColor;
+    sl.frame = CGRectMake(100, 150, 200, 200);
+    [self.view.layer addSublayer:sl];
+    UIImage *img = [UIImage imageNamed:@"scrollImage.jpg"];
+    sl.contents = (__bridge id _Nullable)(img.CGImage);
+    self.scrollLayer = sl;
 }
+
+
 
 @end
