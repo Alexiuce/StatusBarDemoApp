@@ -72,7 +72,7 @@
         NSData *data = UIImagePNGRepresentation(image);
         //NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *gifPath = @"/Users/Alexcai/Desktop/demo/";//path[0];
-        NSString *pathNum = [gifPath stringByAppendingString:[NSString stringWithFormat:@"%d.png",i]];
+        NSString *pathNum = [gifPath stringByAppendingString:[NSString stringWithFormat:@"vioce_gif_%d.png",i]];
         i++;
         [data writeToFile:pathNum atomically:NO];
     }
