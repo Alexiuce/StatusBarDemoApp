@@ -60,6 +60,7 @@
 		D8A4626521B8C8CA00914CE8 /* XCViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4626421B8C8CA00914CE8 /* XCViewCell.m */; };
 		D8A8CE1021EED1A10098859F /* XCTransformLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */; };
 		D8AB108B21CC8BFF002055CA /* XCSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB108A21CC8BFF002055CA /* XCSwitch.m */; };
+		D8B40AA521F5542400463428 /* 音频.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8B40AA421F5542400463428 /* 音频.gif */; };
 		D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */; };
 		D8C138D521ACDAB400FA92C4 /* RouterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138D421ACDAB400FA92C4 /* RouterDemoUITests.m */; };
 		D8CBB3FD21B4FF3700D243FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBB3FC21B4FF3700D243FC /* main.m */; };
@@ -207,6 +208,7 @@
 		D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTransformLayerViewController.m; sourceTree = "<group>"; };
 		D8AB108921CC8BFF002055CA /* XCSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSwitch.h; sourceTree = "<group>"; };
 		D8AB108A21CC8BFF002055CA /* XCSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSwitch.m; sourceTree = "<group>"; };
+		D8B40AA421F5542400463428 /* 音频.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "音频.gif"; sourceTree = "<group>"; };
 		D8C138CB21ACD25A00FA92C4 /* XCRecentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRecentViewController.h; sourceTree = "<group>"; };
 		D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRecentViewController.m; sourceTree = "<group>"; };
 		D8C138D221ACDAB400FA92C4 /* RouterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +355,7 @@
 		D848356821B60760006C7AA4 /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8B40AA421F5542400463428 /* 音频.gif */,
 				D8709C2F21E2143400B63E6D /* SpecializedLayers */,
 				D89608B821C1E43D004A2EE1 /* Image */,
 				D8CF335021BF7F7200682A75 /* Views */,
@@ -837,6 +840,7 @@
 				D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */,
 				D848357321B60762006C7AA4 /* Assets.xcassets in Resources */,
 				D848357121B60760006C7AA4 /* Main.storyboard in Resources */,
+				D8B40AA521F5542400463428 /* 音频.gif in Resources */,
 				D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
