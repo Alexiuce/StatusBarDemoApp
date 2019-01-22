@@ -38,5 +38,11 @@
 		<key>controllerName</key>
 		<string>XCScrollLayerViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>TiledLayer Demo</string>
+		<key>controllerName</key>
+		<string>XCTiledLayerViewController</string>
+	</dict>
 </array>
 </plist>

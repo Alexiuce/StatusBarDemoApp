@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81A30D521F6A44A003E3D18 /* XCTiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A30D421F6A44A003E3D18 /* XCTiledLayerViewController.m */; };
 		D81A5CEE21F2F04600CB6DBF /* XCScrollLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A5CED21F2F04600CB6DBF /* XCScrollLayerViewController.m */; };
 		D822729121D8EF2800EEE11F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D822729021D8EF2800EEE11F /* AppDelegate.m */; };
 		D822729421D8EF2800EEE11F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D822729321D8EF2800EEE11F /* ViewController.m */; };
@@ -111,6 +112,8 @@
 
 /* Begin PBXFileReference section */
 		D80099B021BDE9980094AF89 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D81A30D321F6A44A003E3D18 /* XCTiledLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTiledLayerViewController.h; sourceTree = "<group>"; };
+		D81A30D421F6A44A003E3D18 /* XCTiledLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTiledLayerViewController.m; sourceTree = "<group>"; };
 		D81A5CEC21F2F04600CB6DBF /* XCScrollLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollLayerViewController.h; sourceTree = "<group>"; };
 		D81A5CED21F2F04600CB6DBF /* XCScrollLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollLayerViewController.m; sourceTree = "<group>"; };
 		D822728D21D8EF2800EEE11F /* XCDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -405,6 +408,8 @@
 				D8F84B5021F04DE1003B6627 /* XCReplicatorLayerViewController.m */,
 				D81A5CEC21F2F04600CB6DBF /* XCScrollLayerViewController.h */,
 				D81A5CED21F2F04600CB6DBF /* XCScrollLayerViewController.m */,
+				D81A30D321F6A44A003E3D18 /* XCTiledLayerViewController.h */,
+				D81A30D421F6A44A003E3D18 /* XCTiledLayerViewController.m */,
 			);
 			path = SpecializedLayers;
 			sourceTree = "<group>";
@@ -949,6 +954,7 @@
 				D848357921B60762006C7AA4 /* main.m in Sources */,
 				D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */,
 				D86D2BD121ED63B900CCD5E6 /* XCTextLayerViewController.m in Sources */,
+				D81A30D521F6A44A003E3D18 /* XCTiledLayerViewController.m in Sources */,
 				D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */,
 				D81A5CEE21F2F04600CB6DBF /* XCScrollLayerViewController.m in Sources */,
 				D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */,
