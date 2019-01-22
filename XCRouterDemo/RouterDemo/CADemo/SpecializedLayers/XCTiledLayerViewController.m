@@ -24,13 +24,15 @@
 
 /** 将大图 分解为多个小图 : 瓦片化 */
 - (void)tiledImageDemo{
-    CGFloat tiledSize = 256;
-    NSString *pictureName = @"abc/png/123.jpg";
-    NSString *outpath = [pictureName stringByStandardizingPath];
-//    NSArray *result = [pictureName stringsByAppendingPaths:@[@"-",@"@",@"#"]];
-    NSArray *result = [pictureName pathComponents];
+    CGFloat tiledSize = 256.36;
+    NSString *picturePath = [NSBundle.mainBundle pathForResource:@"Image/scrollImage" ofType:@"jpg"];
+    //    NSString *outpath = [picturePath stringByDeletingPathExtension];
+    //    NSArray *result = [pictureName stringsByAppendingPaths:@[@"-",@"@",@"#"]];
+    //    NSArray *result = [picturePath pathComponents];
+    UIImage *img = [UIImage imageWithContentsOfFile:picturePath];
+    CGFloat t = ceil(tiledSize);
+    NSLog(@"%f",t);
     
-    NSLog(@"%@  - %@",outpath,result);
 }
 
 @end
