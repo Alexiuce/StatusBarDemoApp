@@ -19,16 +19,18 @@
     // Do any additional setup after loading the view.
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
+    [self tiledImageDemo];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/** 将大图 分解为多个小图 : 瓦片化 */
+- (void)tiledImageDemo{
+    CGFloat tiledSize = 256;
+    NSString *pictureName = @"abc/png/123.jpg";
+    NSString *outpath = [pictureName stringByStandardizingPath];
+//    NSArray *result = [pictureName stringsByAppendingPaths:@[@"-",@"@",@"#"]];
+    NSArray *result = [pictureName pathComponents];
+    
+    NSLog(@"%@  - %@",outpath,result);
 }
-*/
 
 @end
