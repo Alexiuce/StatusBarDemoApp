@@ -44,5 +44,11 @@
 		<key>controllerName</key>
 		<string>XCTiledLayerViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>EmitterLayer Demo</string>
+		<key>controllerName</key>
+		<string>XCEmitterLayerViewController</string>
+	</dict>
 </array>
 </plist>
