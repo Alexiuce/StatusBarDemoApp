@@ -44,7 +44,6 @@
 #pragma mark - CALayerDelegate
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
     CGRect rect = {0,100, 100,100};
-    
     for (int i = 0; i < 400; i += 100) {
        CGRect r = CGRectOffset(rect, i, i);
         NSLog(@"i = %d, r = %@",i,NSStringFromCGRect(r));
@@ -54,8 +53,6 @@
         UIGraphicsPopContext();
         CGImageRelease(imgRef);
     }
-    
-    
 }
 
 #pragma mark - test demo
