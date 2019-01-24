@@ -44,11 +44,18 @@
 #pragma mark - CALayerDelegate
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
     CGRect rect = {0,100, 100,100};
-    CGImageRef imgRef = CGImageCreateWithImageInRect(self.picture.CGImage, rect);
-    UIGraphicsPushContext(ctx);
-    [[UIImage imageWithCGImage:imgRef] drawInRect:rect];
-    UIGraphicsPopContext();
-    CGImageRelease(imgRef);
+    
+    for (int i = 0; i < 400; i += 100) {
+       CGRect r = CGRectOffset(rect, i, i);
+        NSLog(@"i = %d, r = %@",i,NSStringFromCGRect(r));
+        CGImageRef imgRef = CGImageCreateWithImageInRect(self.picture.CGImage, r);
+        UIGraphicsPushContext(ctx);
+        [[UIImage imageWithCGImage:imgRef] drawInRect:r];
+        UIGraphicsPopContext();
+        CGImageRelease(imgRef);
+    }
+    
+    
 }
 
 #pragma mark - test demo
