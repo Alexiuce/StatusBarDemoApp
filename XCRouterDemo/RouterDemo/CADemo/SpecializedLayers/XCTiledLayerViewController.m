@@ -38,13 +38,17 @@
     layer.frame = CGRectMake(0, 0, img.size.width, img.size.height);
     [self.view.layer addSublayer:layer];
     self.tileLayer = layer;
-//    [layer setNeedsDisplay];
+    [layer setNeedsDisplay];
     
 }
 #pragma mark - CALayerDelegate
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
-    CGRect rect = {0,0, 100,100};
-    [self.picture drawInRect:rect];
+    CGRect rect = {0,100, 100,100};
+    CGImageRef imgRef = CGImageCreateWithImageInRect(self.picture.CGImage, rect);
+    UIGraphicsPushContext(ctx);
+    [[UIImage imageWithCGImage:imgRef] drawInRect:rect];
+    UIGraphicsPopContext();
+    CGImageRelease(imgRef);
 }
 
 #pragma mark - test demo
