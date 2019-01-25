@@ -21,6 +21,7 @@
     self.title = @"Specialized Layers";
     NSString *plistFile = [NSBundle.mainBundle pathForResource:@"XC_TabelViewControllerConfig" ofType:@"plist"];
     _controllerTitles = [NSArray arrayWithContentsOfFile:plistFile];
+    self.navigationController.view.backgroundColor = UIColor.whiteColor;
     /** 分解gif 图片 */
 //    [self deCompositionGif];
 }

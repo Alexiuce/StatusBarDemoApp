@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vC6-bA-Zja">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="gtN-P6-MWF" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="gtN-P6-MWF" customClass="XCTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ubb-zv-rGs">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

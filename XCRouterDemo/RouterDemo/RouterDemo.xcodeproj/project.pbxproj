@@ -22,6 +22,7 @@
 		D83F958A21FABDB500140042 /* XCMotionConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D83F958921FABDB500140042 /* XCMotionConfig.plist */; };
 		D83F958D21FAC6A500140042 /* XCImplictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F958C21FAC6A500140042 /* XCImplictViewController.m */; };
 		D83F959021FAC73000140042 /* Motion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83F958E21FAC73000140042 /* Motion.storyboard */; };
+		D83F959321FAD3AF00140042 /* XCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F959221FAD3AF00140042 /* XCTabBarViewController.m */; };
 		D8409BAB21AF6542001670A1 /* XCRunloopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8409BAA21AF6542001670A1 /* XCRunloopManager.m */; };
 		D8409BAF21AF6A0D001670A1 /* XCView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8409BAE21AF6A0D001670A1 /* XCView.m */; };
 		D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D848356A21B60760006C7AA4 /* AppDelegate.m */; };
@@ -143,6 +144,8 @@
 		D83F958B21FAC6A500140042 /* XCImplictViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCImplictViewController.h; sourceTree = "<group>"; };
 		D83F958C21FAC6A500140042 /* XCImplictViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCImplictViewController.m; sourceTree = "<group>"; };
 		D83F958F21FAC73000140042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CADemo/Base.lproj/Motion.storyboard; sourceTree = "<group>"; };
+		D83F959121FAD3AF00140042 /* XCTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarViewController.h; sourceTree = "<group>"; };
+		D83F959221FAD3AF00140042 /* XCTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarViewController.m; sourceTree = "<group>"; };
 		D8409BA921AF6542001670A1 /* XCRunloopManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCRunloopManager.h; sourceTree = "<group>"; };
 		D8409BAA21AF6542001670A1 /* XCRunloopManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCRunloopManager.m; sourceTree = "<group>"; };
 		D8409BAD21AF6A0D001670A1 /* XCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCView.h; sourceTree = "<group>"; };
@@ -577,6 +580,8 @@
 				D89608B321C1E069004A2EE1 /* XCCollectionViewController.m */,
 				D890DB2A21DC3FF400D82974 /* XCCubeController.h */,
 				D890DB2B21DC3FF400D82974 /* XCCubeController.m */,
+				D83F959121FAD3AF00140042 /* XCTabBarViewController.h */,
+				D83F959221FAD3AF00140042 /* XCTabBarViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -989,6 +994,7 @@
 				D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */,
 				D86D2BD121ED63B900CCD5E6 /* XCTextLayerViewController.m in Sources */,
 				D81A30D521F6A44A003E3D18 /* XCTiledLayerViewController.m in Sources */,
+				D83F959321FAD3AF00140042 /* XCTabBarViewController.m in Sources */,
 				D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */,
 				D81A5CEE21F2F04600CB6DBF /* XCScrollLayerViewController.m in Sources */,
 				D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */,

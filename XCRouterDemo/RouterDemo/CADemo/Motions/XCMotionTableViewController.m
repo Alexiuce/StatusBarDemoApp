@@ -21,6 +21,7 @@
     self.title = @"Motion";
     NSString *plistFile = [NSBundle.mainBundle pathForResource:@"XCMotionConfig" ofType:@"plist"];
     _controllerTitles = [NSArray arrayWithContentsOfFile:plistFile];
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 #pragma mark - Table view data source

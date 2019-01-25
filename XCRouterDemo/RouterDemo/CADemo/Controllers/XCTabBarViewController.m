@@ -1,23 +1,22 @@
 //
-//  XCImplictViewController.m
+//  XCTabBarViewController.m
 //  CADemo
 //
 //  Created by Alexcai on 2019/1/25.
 //  Copyright © 2019 dongjiu. All rights reserved.
 //
 
-#import "XCImplictViewController.h"
+#import "XCTabBarViewController.h"
 
-@interface XCImplictViewController ()
+@interface XCTabBarViewController ()
 
 @end
 
-@implementation XCImplictViewController
+@implementation XCTabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
 }
 
