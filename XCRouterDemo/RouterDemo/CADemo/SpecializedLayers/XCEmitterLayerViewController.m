@@ -22,6 +22,13 @@
 }
 
 - (void)emitterDemo{
+    CAEmitterLayer *emitterLayer = [CAEmitterLayer layer];
+    emitterLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:emitterLayer];
+    
+    emitterLayer.renderMode = kCAEmitterLayerAdditive;
+    emitterLayer.emitterPosition = CGPointMake(emitterLayer.frame.size.width * 0.5, emitterLayer.frame.size.height * 0.5);
+    
     
 }
 
