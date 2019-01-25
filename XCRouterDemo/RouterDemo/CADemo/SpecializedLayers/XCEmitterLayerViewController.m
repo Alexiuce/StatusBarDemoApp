@@ -33,12 +33,12 @@
     CAEmitterCell *cell = [CAEmitterCell emitterCell];
     cell.contents = (__bridge id _Nullable)([UIImage imageNamed:@"icon-service4"].CGImage);
     
-    cell.birthRate = 150;
+    cell.birthRate = 1;
     cell.lifetime = 5.0;
-    cell.color = [UIColor colorWithRed:1 green:0.5 blue:0.1 alpha:1].CGColor;
+//    cell.color = [UIColor colorWithRed:1 green:0.5 blue:0.1 alpha:1].CGColor;
     cell.alphaSpeed = -0.4;
     cell.velocity = 40;
-    cell.velocityRange = 50;
+    cell.velocityRange = 30;
     cell.emissionRange = M_PI ;
     
     emitterLayer.emitterCells = @[cell];
