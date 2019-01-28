@@ -56,6 +56,8 @@
         NSLog(@"finished....");
     }];
     self.colorLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1].CGColor;
+    /** btn 的layer 不会有隐式动画: 因为layer 是root layer */
+    btn.layer.backgroundColor = self.colorLayer.backgroundColor;
     [CATransaction commit];
 }
 
