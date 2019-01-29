@@ -32,6 +32,7 @@
     [self.view addSubview:btn];
 
     [btn setTitle:@"Chage Color" forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"girlIcon_3.9.2"] forState:UIControlStateNormal];
     [btn setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
     [btn setBackgroundColor:UIColor.lightGrayColor];
     [btn addTarget:self action:@selector(clickButtonForChangeColor:) forControlEvents:UIControlEventTouchUpInside];
