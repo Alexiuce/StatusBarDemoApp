@@ -45,11 +45,13 @@
     self.colorLayer = layer;
     
     /** 自定义(方式1: 设置actions字典 ) 隐式动画  */
-//    CATransition *transition = [CATransition animation];
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromRight;
-//    layer.actions = @{@"backgroundColor":transition};
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromRight;
+    layer.actions = @{@"backgroundColor":transition};
     
+    /** presentation Layer : 仅当layer displayed on screen 才会创建 */
+    NSLog(@"presentation layer %@",layer.presentationLayer);
     
 }
 
@@ -71,7 +73,7 @@
 }
 
 #pragma mark - CALayerDelegate
-/** 自定义 隐式动画 */
+/** 自定义(方式2) 隐式动画( 代理方法的优先级高于 layer的actions 字典 ) */
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event{
     if ([event isEqualToString:@"backgroundColor"]) {
         CATransition *transition = [CATransition animation];
