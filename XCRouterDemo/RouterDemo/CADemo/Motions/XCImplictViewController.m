@@ -43,6 +43,13 @@
     [self.view.layer addSublayer:layer];
     self.colorLayer = layer;
     
+    /** 自定义 隐式动画  */
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromRight;
+    layer.actions = @{@"backgroundColor":transition};
+    
+    
 }
 
 #pragma mark IBAction
