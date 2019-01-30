@@ -10,7 +10,7 @@
 
 #define XCFrame(x,y,w,h) (CGRect){x,y, w, h}
 
-@interface XCImplictViewController ()
+@interface XCImplictViewController ()<CALayerDelegate>
 
 @property (nonatomic, weak) CALayer *colorLayer;
 
@@ -38,16 +38,17 @@
     [btn addTarget:self action:@selector(clickButtonForChangeColor:) forControlEvents:UIControlEventTouchUpInside];
     
     CALayer *layer = [CALayer layer];
+    layer.delegate = self;
     layer.frame = XCFrame(15, 150, 100, 100);
     layer.backgroundColor = UIColor.redColor.CGColor;
     [self.view.layer addSublayer:layer];
     self.colorLayer = layer;
     
-    /** 自定义 隐式动画  */
-    CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromRight;
-    layer.actions = @{@"backgroundColor":transition};
+    /** 自定义(方式1: 设置actions字典 ) 隐式动画  */
+//    CATransition *transition = [CATransition animation];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromRight;
+//    layer.actions = @{@"backgroundColor":transition};
     
     
 }
@@ -69,4 +70,15 @@
     [CATransaction commit];
 }
 
+#pragma mark - CALayerDelegate
+/** 自定义 隐式动画 */
+- (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event{
+    if ([event isEqualToString:@"backgroundColor"]) {
+        CATransition *transition = [CATransition animation];
+        transition.type = kCATransitionPush;
+        transition.subtype = kCATransitionFromLeft;
+        return  transition;
+    }
+    return nil;
+}
 @end
