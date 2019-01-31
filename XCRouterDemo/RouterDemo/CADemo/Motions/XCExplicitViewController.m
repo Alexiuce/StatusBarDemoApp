@@ -17,8 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSStringFromClass(self.class);
-    self.view.backgroundColor = UIColor.whiteColor;}
+    self.view.backgroundColor = UIColor.whiteColor;
+    [self basicAnimationDemo];
+}
 
+- (void)basicAnimationDemo{
+    CALayer *layer = [CALayer layer];
+    layer.frame = (CGRect){30,130,100,50};
+    layer.backgroundColor = UIColor.redColor.CGColor;
+    layer.anchorPoint = CGPointZero;
+    [self.view.layer addSublayer:layer];
+    
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.y";
+    animation.toValue = @(400);
+    animation.duration = 3.0f;
+    [layer addAnimation:animation forKey:nil];
+    
+    
+}
 
 
 @end
