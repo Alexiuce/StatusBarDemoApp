@@ -639,6 +639,35 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		D87B32B62202CEC800AE9C41 /* PythonDemo */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D87B32B72202CEC800AE9C41 /* Build configuration list for PBXLegacyTarget "PythonDemo" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/python3;
+			dependencies = (
+			);
+			name = PythonDemo;
+			passBuildSettingsInEnvironment = 1;
+			productName = PythonDemo;
+		};
+		D87B32BA2202CEFD00AE9C41 /* XCPython */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = D87B32BB2202CEFD00AE9C41 /* Build configuration list for PBXLegacyTarget "XCPython" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/python3;
+			dependencies = (
+			);
+			name = XCPython;
+			passBuildSettingsInEnvironment = 1;
+			productName = XCPython;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		D822728C21D8EF2800EEE11F /* XCDrawing */ = {
 			isa = PBXNativeTarget;
@@ -816,6 +845,12 @@
 					D848358121B63085006C7AA4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					D87B32B62202CEC800AE9C41 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D87B32BA2202CEFD00AE9C41 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					D88B75ED21A77D7000951228 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -859,6 +894,8 @@
 				D8E7FDBB21C737380031426F /* XCAutoLayoutDemo */,
 				D89CA0ED21D20E9100C117B2 /* XCTestApp */,
 				D822728C21D8EF2800EEE11F /* XCDrawing */,
+				D87B32B62202CEC800AE9C41 /* PythonDemo */,
+				D87B32BA2202CEFD00AE9C41 /* XCPython */,
 			);
 		};
 /* End PBXProject section */
@@ -1318,6 +1355,60 @@
 			};
 			name = Release;
 		};
+		D87B32B82202CEC800AE9C41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D87B32B92202CEC800AE9C41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D87B32BC2202CEFD00AE9C41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D87B32BD2202CEFD00AE9C41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D88B760221A77D7100951228 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1668,6 +1759,24 @@
 			buildConfigurations = (
 				D848358721B63086006C7AA4 /* Debug */,
 				D848358821B63086006C7AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D87B32B72202CEC800AE9C41 /* Build configuration list for PBXLegacyTarget "PythonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D87B32B82202CEC800AE9C41 /* Debug */,
+				D87B32B92202CEC800AE9C41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D87B32BB2202CEFD00AE9C41 /* Build configuration list for PBXLegacyTarget "XCPython" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D87B32BC2202CEFD00AE9C41 /* Debug */,
+				D87B32BD2202CEFD00AE9C41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
