@@ -39,6 +39,7 @@
 		D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8709C3121E2146A00B63E6D /* XCShapeViewController.m */; };
 		D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3621E21BAB00B63E6D /* First.storyboard */; };
 		D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3821E21C4C00B63E6D /* Second.storyboard */; };
+		D87B32B522028E3A00AE9C41 /* XCExplicitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
 		D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8836FF621BA05800044C67C /* XCTabBarController.m */; };
 		D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D885555121EC1A4A00A593BB /* XC_ableViewController.m */; };
@@ -175,6 +176,8 @@
 		D8709C3121E2146A00B63E6D /* XCShapeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCShapeViewController.m; sourceTree = "<group>"; };
 		D8709C3621E21BAB00B63E6D /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		D8709C3921E21C4C00B63E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CADemo/Base.lproj/Second.storyboard; sourceTree = "<group>"; };
+		D87B32B322028E3A00AE9C41 /* XCExplicitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCExplicitViewController.h; sourceTree = "<group>"; };
+		D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCExplicitViewController.m; sourceTree = "<group>"; };
 		D87E283B21B4AECF00CA93CD /* XCScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
 		D8836FF521BA05800044C67C /* XCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarController.h; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				D83F958721FABD8B00140042 /* XCMotionTableViewController.m */,
 				D83F958B21FAC6A500140042 /* XCImplictViewController.h */,
 				D83F958C21FAC6A500140042 /* XCImplictViewController.m */,
+				D87B32B322028E3A00AE9C41 /* XCExplicitViewController.h */,
+				D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */,
 			);
 			path = Motions;
 			sourceTree = "<group>";
@@ -994,6 +999,7 @@
 				D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */,
 				D86D2BD121ED63B900CCD5E6 /* XCTextLayerViewController.m in Sources */,
 				D81A30D521F6A44A003E3D18 /* XCTiledLayerViewController.m in Sources */,
+				D87B32B522028E3A00AE9C41 /* XCExplicitViewController.m in Sources */,
 				D83F959321FAD3AF00140042 /* XCTabBarViewController.m in Sources */,
 				D89608B421C1E069004A2EE1 /* XCCollectionViewController.m in Sources */,
 				D81A5CEE21F2F04600CB6DBF /* XCScrollLayerViewController.m in Sources */,

@@ -8,5 +8,11 @@
 		<key>controllerName</key>
 		<string>XCImplictViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>Explicit Demo</string>
+		<key>controllerName</key>
+		<string>XCExplicitViewController</string>
+	</dict>
 </array>
 </plist>
