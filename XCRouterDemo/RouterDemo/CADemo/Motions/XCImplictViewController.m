@@ -83,4 +83,8 @@
     }
     return nil;
 }
+
+- (void)dealloc{
+    self.colorLayer.delegate = nil;
+}
 @end
