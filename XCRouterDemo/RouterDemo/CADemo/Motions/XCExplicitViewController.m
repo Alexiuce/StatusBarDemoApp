@@ -29,6 +29,7 @@
     [self.view.layer addSublayer:layer];
     
     CABasicAnimation *animation = [CABasicAnimation animation];
+    NSLog(@"create animation %@",animation);
     animation.delegate = self;
     animation.keyPath = @"position.y";
     animation.toValue = @(400);
@@ -39,6 +40,7 @@
 }
 
 #pragma mark CAAnimationDelegate
+/** anim 与layer 都animation 不是同一个对象: 代理方法中都anim 是layer 都animation都一个不可变copy */
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     if (flag) {
         NSLog(@"animation finished %@",anim);
