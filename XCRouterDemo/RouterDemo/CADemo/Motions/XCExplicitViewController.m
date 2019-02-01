@@ -8,7 +8,7 @@
 
 #import "XCExplicitViewController.h"
 
-@interface XCExplicitViewController ()
+@interface XCExplicitViewController ()<CAAnimationDelegate>
 
 @end
 
@@ -29,6 +29,7 @@
     [self.view.layer addSublayer:layer];
     
     CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.delegate = self;
     animation.keyPath = @"position.y";
     animation.toValue = @(400);
     animation.duration = 3.0f;
@@ -37,5 +38,11 @@
     
 }
 
+#pragma mark CAAnimationDelegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    if (flag) {
+        NSLog(@"animation finished");
+    }
+}
 
 @end
