@@ -59,6 +59,28 @@
     [colorLayer addAnimation:keyAnimation forKey:nil];
     
     
+    /** CAShapeLayer & Animation */
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.fillColor = UIColor.clearColor.CGColor;
+    shapeLayer.strokeColor = UIColor.redColor.CGColor;
+    shapeLayer.lineWidth = 4;
+    
+    [self.view.layer addSublayer:shapeLayer];
+    
+    /** 添加路径 */
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:(CGPoint){180, 250} radius:50 startAngle:0 endAngle:M_PI_2 clockwise:YES];
+    shapeLayer.path = path.CGPath;
+
+    /** 添加动画 */
+    CABasicAnimation *lineAnimation = [CABasicAnimation animation];
+    lineAnimation.keyPath = @"lineWidth";
+    lineAnimation.toValue = @(10);
+    lineAnimation.duration = 5;
+    [shapeLayer addAnimation:lineAnimation forKey:nil];
+    
+    
+    
+    
 }
 
 #pragma mark CAAnimationDelegate
