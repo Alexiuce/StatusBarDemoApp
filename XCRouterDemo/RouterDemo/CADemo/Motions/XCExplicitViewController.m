@@ -19,6 +19,7 @@
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
     [self basicAnimationDemo];
+    [self keyFrameAnimationDemo];
 }
 
 - (void)basicAnimationDemo{
@@ -39,8 +40,29 @@
     
 }
 
+- (void)keyFrameAnimationDemo{
+    CATextLayer *colorLayer = [CATextLayer layer];
+    colorLayer.frame = (CGRect){180,130, 100,50};
+    colorLayer.string = @"Color Layer";
+    [self.view.layer addSublayer:colorLayer];
+    
+    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animation];
+    keyAnimation.keyPath = @"backgroundColor";
+    keyAnimation.duration = 3.0;
+    keyAnimation.values = @[(__bridge id)UIColor.blueColor.CGColor,
+                            (__bridge id)UIColor.redColor.CGColor,
+                            (__bridge id)UIColor.yellowColor.CGColor,
+                            (__bridge id)UIColor.blueColor.CGColor
+                            ];
+    
+    
+    [colorLayer addAnimation:keyAnimation forKey:nil];
+    
+    
+}
+
 #pragma mark CAAnimationDelegate
-/** anim 与layer 都animation 不是同一个对象: 代理方法中都anim 是layer 都animation都一个不可变copy */
+/** anim 与layer 的animation 不是同一个对象: 代理方法中anim 是layer animation 的一个不可变copy */
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     if (flag) {
         NSLog(@"animation finished %@",anim);
