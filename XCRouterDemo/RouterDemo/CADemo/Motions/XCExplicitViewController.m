@@ -127,8 +127,6 @@
     
     [layer addAnimation:group forKey:nil];
     
-    
-    
 }
 #pragma mark CAAnimationDelegate
 /** anim 与layer 的animation 不是同一个对象: 代理方法中anim 是layer animation 的一个不可变copy */

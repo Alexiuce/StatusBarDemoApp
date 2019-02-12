@@ -369,8 +369,8 @@
     
     [self.imageView.layer addAnimation:transition forKey:nil];
     
-//    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
-    self.imageView.image = [UIImage imageNamed:imageNames[0]];
+    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
+//    self.imageView.image = [UIImage imageNamed:imageNames[0]];
     index++;
     
 }
