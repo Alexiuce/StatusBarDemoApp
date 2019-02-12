@@ -62,7 +62,7 @@
     /** CAShapeLayer & Animation */
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.fillColor = UIColor.clearColor.CGColor;
-    shapeLayer.strokeColor = UIColor.redColor.CGColor;
+    shapeLayer.strokeColor = UIColor.grayColor.CGColor;
     shapeLayer.lineWidth = 4;
     
     [self.view.layer addSublayer:shapeLayer];
@@ -71,12 +71,19 @@
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:(CGPoint){180, 250} radius:50 startAngle:0 endAngle:M_PI_2 clockwise:YES];
     shapeLayer.path = path.CGPath;
 
+    /** 添加红色layer */
+    CALayer *redLayer = [CALayer layer];
+    redLayer.frame = (CGRect){180,250,20,20};
+    redLayer.backgroundColor = UIColor.redColor.CGColor;
+    [self.view.layer addSublayer:redLayer];
+    
     /** 添加动画 */
-    CABasicAnimation *lineAnimation = [CABasicAnimation animation];
-    lineAnimation.keyPath = @"lineWidth";
-    lineAnimation.toValue = @(10);
-    lineAnimation.duration = 5;
-    [shapeLayer addAnimation:lineAnimation forKey:nil];
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animation];
+    anim.keyPath = @"position";
+    anim.path = path.CGPath;
+    anim.duration = 3.0;
+    [redLayer addAnimation:anim forKey:nil];
+   
     
     
     
