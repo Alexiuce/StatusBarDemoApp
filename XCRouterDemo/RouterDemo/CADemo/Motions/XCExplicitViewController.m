@@ -20,6 +20,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     [self basicAnimationDemo];
     [self keyFrameAnimationDemo];
+    [self groupAnimationDemo];
 }
 
 - (void)basicAnimationDemo{
@@ -83,13 +84,52 @@
     anim.path = path.CGPath;
     anim.duration = 3.0;
     [redLayer addAnimation:anim forKey:nil];
-   
     
+}
+
+- (void)groupAnimationDemo{
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    CGFloat x = 50;
+    CGFloat y = 500;
+    CGFloat x_length = 300;
+    CGFloat y_control = 150;
+    CGFloat x_control = 150;
+    [path moveToPoint:(CGPoint){x,y}];
+    
+    [path addCurveToPoint:(CGPoint){x + x_length,y} controlPoint1:(CGPoint){x+x_control,y - y_control} controlPoint2:(CGPoint){x + x_length - x_control,y + y_control}];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    [self.view.layer addSublayer:shapeLayer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.fillColor = UIColor.clearColor.CGColor;
+    shapeLayer.strokeColor = UIColor.blueColor.CGColor;
+    shapeLayer.lineWidth = 2.0;
+    
+    CALayer *layer = [CALayer layer];
+    layer.frame = (CGRect){0,0,50,50};
+    layer.position = (CGPoint){x,y};
+    layer.backgroundColor = UIColor.redColor.CGColor;
+    [self.view.layer addSublayer:layer];
+    
+    CAKeyframeAnimation *a1 = [CAKeyframeAnimation animation];
+    a1.keyPath = @"position";
+    a1.path = path.CGPath;
+    
+    CABasicAnimation *a2 = [CABasicAnimation animation];
+    a2.keyPath = @"backgroundColor";
+    a2.toValue = (__bridge id _Nullable)(UIColor.blueColor.CGColor);
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.duration = 3.0;
+    group.animations = @[a1,a2];
+    
+    [layer addAnimation:group forKey:nil];
     
     
     
 }
-
 #pragma mark CAAnimationDelegate
 /** anim 与layer 的animation 不是同一个对象: 代理方法中anim 是layer animation 的一个不可变copy */
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
