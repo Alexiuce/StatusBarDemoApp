@@ -10,6 +10,8 @@
 
 @interface XCExplicitViewController ()<CAAnimationDelegate>
 
+@property (nonatomic, weak) UIImageView *imageView;
+
 @end
 
 @implementation XCExplicitViewController
@@ -18,6 +20,7 @@
     [super viewDidLoad];
     self.title = NSStringFromClass(self.class);
     self.view.backgroundColor = UIColor.whiteColor;
+    [self imageView];
     [self basicAnimationDemo];
     [self keyFrameAnimationDemo];
     [self groupAnimationDemo];
@@ -128,6 +131,17 @@
     [layer addAnimation:group forKey:nil];
     
 }
+
+- (void)transitionDemo{
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromTop;
+    transition.duration = 2.0;
+    
+    [self.imageView.layer addAnimation:transition forKey:nil];
+    self.imageView.image = [UIImage imageNamed:@"icon-service4"];
+}
+
 #pragma mark CAAnimationDelegate
 /** anim 与layer 的animation 不是同一个对象: 代理方法中anim 是layer animation 的一个不可变copy */
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
@@ -137,4 +151,20 @@
     }
 }
 
+#pragma mark - getter
+- (UIImageView *)imageView{
+    if (_imageView == nil) {
+        UIImage *img = [UIImage imageNamed:@"icon_inform"];
+        UIImageView *imgView = [[UIImageView alloc]initWithImage:img];
+        imgView.frame = (CGRect){150,550, 80,80};
+        [self.view addSubview:imgView];
+        
+        imgView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(transitionDemo)];
+        [imgView addGestureRecognizer:tap];
+        
+        _imageView = imgView;
+    }
+    return _imageView;
+}
 @end
