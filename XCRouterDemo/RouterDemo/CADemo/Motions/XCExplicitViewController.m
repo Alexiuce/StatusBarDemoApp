@@ -11,6 +11,7 @@
 @interface XCExplicitViewController ()<CAAnimationDelegate>
 
 @property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, weak) CATextLayer *textLayer;
 
 @end
 
@@ -46,9 +47,12 @@
 
 - (void)keyFrameAnimationDemo{
     CATextLayer *colorLayer = [CATextLayer layer];
-    colorLayer.frame = (CGRect){180,130, 100,50};
+    colorLayer.backgroundColor = UIColor.blueColor.CGColor;
+    colorLayer.frame = (CGRect){220,130, 190,50};
     colorLayer.string = @"Color Layer";
     [self.view.layer addSublayer:colorLayer];
+    self.textLayer = colorLayer;
+    
     
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animation];
     keyAnimation.keyPath = @"backgroundColor";
@@ -140,6 +144,20 @@
     
     [self.imageView.layer addAnimation:transition forKey:nil];
     self.imageView.image = [UIImage imageNamed:@"icon-service4"];
+}
+
+#pragma mark Touch Event handle
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    CGPoint p = [touch locationInView:self.view];
+    CGPoint np = [self.view.layer convertPoint:p toLayer:self.textLayer];
+    if ([self.textLayer containsPoint:np]) {
+        CATransition *transition = [CATransition animation];
+        transition.duration = 2.0;
+        transition.type = kCATransitionReveal;
+        [self.textLayer addAnimation:transition forKey:nil];
+        self.textLayer.string = @"New Text";
+    }
 }
 
 #pragma mark CAAnimationDelegate
