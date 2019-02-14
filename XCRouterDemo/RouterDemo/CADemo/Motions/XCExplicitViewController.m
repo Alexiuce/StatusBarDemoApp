@@ -165,7 +165,30 @@
         transition.type = kCATransitionFade;
         [self.textLayer addAnimation:transition forKey:nil];
         self.textLayer.string = @"New Text";
+        return;
     }
+    
+    /** 开启位图上下文 , 进行截屏*/
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, UIScreen.mainScreen.scale);
+    /** 保存layer 的内容 到位图上下文 */
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    /** 获取图片 */
+    UIImage *pic = UIGraphicsGetImageFromCurrentImageContext();
+    /** 关闭图形上下文 */
+    UIGraphicsEndImageContext();
+    /** 创建snap view */
+    UIImageView *maskImageView = [[UIImageView alloc]initWithImage:pic];
+    maskImageView.frame = self.view.bounds;
+    [self.view addSubview:maskImageView];
+    
+    [UIView animateWithDuration:2.0 animations:^{
+        CGAffineTransform transform = CGAffineTransformMakeScale(0.01, 0.01);
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        maskImageView.transform = transform;
+    } completion:^(BOOL finished) {
+        [maskImageView removeFromSuperview];
+    }];
+    
 }
 
 #pragma mark CAAnimationDelegate
