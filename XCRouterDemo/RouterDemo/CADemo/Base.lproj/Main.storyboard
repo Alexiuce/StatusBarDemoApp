@@ -23,6 +23,7 @@
                         <segue destination="CKk-Mr-VNY" kind="relationship" relationship="viewControllers" id="6Jv-SQ-8yq"/>
                         <segue destination="fIX-V1-6qS" kind="relationship" relationship="viewControllers" id="8eP-1m-s4K"/>
                         <segue destination="bYk-vD-IiR" kind="relationship" relationship="viewControllers" id="Zjn-kX-7hX"/>
+                        <segue destination="wZc-Fm-N9S" kind="relationship" relationship="viewControllers" id="4k6-Gf-yeC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utu-j8-qqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,7 +38,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7R-Vx-EIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="209"/>
+            <point key="canvasLocation" x="640" y="227"/>
         </scene>
         <!--Second-->
         <scene sceneID="nMu-yn-vsK">
@@ -47,7 +48,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVi-Uj-sko" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="363"/>
+            <point key="canvasLocation" x="640" y="317"/>
         </scene>
         <!--Motion-->
         <scene sceneID="0lj-1q-AlO">
@@ -57,7 +58,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTc-H0-stA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690" y="783"/>
+            <point key="canvasLocation" x="637" y="402"/>
+        </scene>
+        <!--LayerTimer-->
+        <scene sceneID="uBk-ov-lFf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LayerTimer" id="wZc-Fm-N9S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Time" id="bM4-lx-X1u"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOd-MX-wuy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="533"/>
         </scene>
     </scenes>
 </document>

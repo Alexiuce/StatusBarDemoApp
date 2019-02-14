@@ -40,6 +40,9 @@
 		D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3621E21BAB00B63E6D /* First.storyboard */; };
 		D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3821E21C4C00B63E6D /* Second.storyboard */; };
 		D87B32B522028E3A00AE9C41 /* XCExplicitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */; };
+		D87DF5CE2215084900228CB2 /* LayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */; };
+		D87DF5D12215092800228CB2 /* XCTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */; };
+		D87DF5D3221509E200228CB2 /* XCTimeConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
 		D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8836FF621BA05800044C67C /* XCTabBarController.m */; };
 		D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D885555121EC1A4A00A593BB /* XC_ableViewController.m */; };
@@ -178,6 +181,10 @@
 		D8709C3921E21C4C00B63E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CADemo/Base.lproj/Second.storyboard; sourceTree = "<group>"; };
 		D87B32B322028E3A00AE9C41 /* XCExplicitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCExplicitViewController.h; sourceTree = "<group>"; };
 		D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCExplicitViewController.m; sourceTree = "<group>"; };
+		D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LayerTimer.storyboard; sourceTree = "<group>"; };
+		D87DF5CF2215092800228CB2 /* XCTimeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeTableViewController.h; sourceTree = "<group>"; };
+		D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeTableViewController.m; sourceTree = "<group>"; };
+		D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = XCTimeConfig.plist; sourceTree = "<group>"; };
 		D87E283B21B4AECF00CA93CD /* XCScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
 		D8836FF521BA05800044C67C /* XCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarController.h; sourceTree = "<group>"; };
@@ -350,6 +357,17 @@
 			path = XCDrawing;
 			sourceTree = "<group>";
 		};
+		D8227A322215006900AF1062 /* LayerTimer */ = {
+			isa = PBXGroup;
+			children = (
+				D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */,
+				D87DF5CF2215092800228CB2 /* XCTimeTableViewController.h */,
+				D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */,
+				D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */,
+			);
+			path = LayerTimer;
+			sourceTree = "<group>";
+		};
 		D82990F021AB755A00B59018 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +410,7 @@
 		D848356821B60760006C7AA4 /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8227A322215006900AF1062 /* LayerTimer */,
 				D8B40AA421F5542400463428 /* 音频.gif */,
 				D83F958521FABC2400140042 /* Motions */,
 				D8709C2F21E2143400B63E6D /* SpecializedLayers */,
@@ -919,10 +938,12 @@
 				D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */,
 				D89608B921C1E43D004A2EE1 /* Image in Resources */,
 				D8F84B4E21F012F9003B6627 /* XC_TabelViewControllerConfig.plist in Resources */,
+				D87DF5D3221509E200228CB2 /* XCTimeConfig.plist in Resources */,
 				D83F959021FAC73000140042 /* Motion.storyboard in Resources */,
 				D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */,
 				D848357321B60762006C7AA4 /* Assets.xcassets in Resources */,
 				D848357121B60760006C7AA4 /* Main.storyboard in Resources */,
+				D87DF5CE2215084900228CB2 /* LayerTimer.storyboard in Resources */,
 				D8B40AA521F5542400463428 /* 音频.gif in Resources */,
 				D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */,
 			);
@@ -1042,6 +1063,7 @@
 				D81A5CEE21F2F04600CB6DBF /* XCScrollLayerViewController.m in Sources */,
 				D848356B21B60760006C7AA4 /* AppDelegate.m in Sources */,
 				D86BF0C521BF48B000405628 /* XCViewModel.m in Sources */,
+				D87DF5D12215092800228CB2 /* XCTimeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
