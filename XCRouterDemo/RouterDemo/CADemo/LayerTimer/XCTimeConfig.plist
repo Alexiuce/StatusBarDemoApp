@@ -4,9 +4,9 @@
 <array>
 	<dict>
 		<key>titleName</key>
-		<string>Implicit Demo</string>
+		<string>TimeProcotol</string>
 		<key>controllerName</key>
-		<string>XCImplictViewController</string>
+		<string>XCTimeProtocolViewController</string>
 	</dict>
 </array>
 </plist>

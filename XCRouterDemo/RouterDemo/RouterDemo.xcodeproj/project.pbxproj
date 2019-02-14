@@ -43,6 +43,7 @@
 		D87DF5CE2215084900228CB2 /* LayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */; };
 		D87DF5D12215092800228CB2 /* XCTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */; };
 		D87DF5D3221509E200228CB2 /* XCTimeConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */; };
+		D87DF5D6221542A000228CB2 /* XCTimeProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF5D5221542A000228CB2 /* XCTimeProtocolViewController.m */; };
 		D87E283D21B4AECF00CA93CD /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E283C21B4AECF00CA93CD /* XCScrollView.m */; };
 		D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8836FF621BA05800044C67C /* XCTabBarController.m */; };
 		D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D885555121EC1A4A00A593BB /* XC_ableViewController.m */; };
@@ -185,6 +186,8 @@
 		D87DF5CF2215092800228CB2 /* XCTimeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeTableViewController.h; sourceTree = "<group>"; };
 		D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeTableViewController.m; sourceTree = "<group>"; };
 		D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = XCTimeConfig.plist; sourceTree = "<group>"; };
+		D87DF5D4221542A000228CB2 /* XCTimeProtocolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeProtocolViewController.h; sourceTree = "<group>"; };
+		D87DF5D5221542A000228CB2 /* XCTimeProtocolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeProtocolViewController.m; sourceTree = "<group>"; };
 		D87E283B21B4AECF00CA93CD /* XCScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
 		D87E283C21B4AECF00CA93CD /* XCScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
 		D8836FF521BA05800044C67C /* XCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarController.h; sourceTree = "<group>"; };
@@ -361,9 +364,11 @@
 			isa = PBXGroup;
 			children = (
 				D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */,
+				D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */,
 				D87DF5CF2215092800228CB2 /* XCTimeTableViewController.h */,
 				D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */,
-				D87DF5D2221509E200228CB2 /* XCTimeConfig.plist */,
+				D87DF5D4221542A000228CB2 /* XCTimeProtocolViewController.h */,
+				D87DF5D5221542A000228CB2 /* XCTimeProtocolViewController.m */,
 			);
 			path = LayerTimer;
 			sourceTree = "<group>";
@@ -1054,6 +1059,7 @@
 				D8610EDB21F7F19C00A18279 /* XCEmitterLayerViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
 				D83F958821FABD8B00140042 /* XCMotionTableViewController.m in Sources */,
+				D87DF5D6221542A000228CB2 /* XCTimeProtocolViewController.m in Sources */,
 				D885555221EC1A4A00A593BB /* XC_ableViewController.m in Sources */,
 				D86D2BD121ED63B900CCD5E6 /* XCTextLayerViewController.m in Sources */,
 				D81A30D521F6A44A003E3D18 /* XCTiledLayerViewController.m in Sources */,
