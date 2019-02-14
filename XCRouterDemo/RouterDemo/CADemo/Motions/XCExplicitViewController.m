@@ -137,13 +137,21 @@
 }
 
 - (void)transitionDemo{
-    CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromTop;
-    transition.duration = 2.0;
+    /** layer transition animation */
+//    CATransition *transition = [CATransition animation];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromTop;
+//    transition.duration = 2.0;
+//
+//    [self.imageView.layer addAnimation:transition forKey:nil];
+//    self.imageView.image = [UIImage imageNamed:@"icon-service4"];
     
-    [self.imageView.layer addAnimation:transition forKey:nil];
-    self.imageView.image = [UIImage imageNamed:@"icon-service4"];
+    /** UIView transition */
+    [UIView transitionWithView:self.imageView duration:2.0 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        self.imageView.image =  [UIImage imageNamed:@"icon-service4"];
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 #pragma mark Touch Event handle
@@ -154,7 +162,7 @@
     if ([self.textLayer containsPoint:np]) {
         CATransition *transition = [CATransition animation];
         transition.duration = 2.0;
-        transition.type = kCATransitionReveal;
+        transition.type = kCATransitionFade;
         [self.textLayer addAnimation:transition forKey:nil];
         self.textLayer.string = @"New Text";
     }
