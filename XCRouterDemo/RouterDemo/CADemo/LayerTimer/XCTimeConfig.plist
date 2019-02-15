@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>titleName</key>
-		<string>TimeProcotol</string>
+		<string>CAMediaTiming</string>
 		<key>controllerName</key>
 		<string>XCTimeProtocolViewController</string>
 	</dict>
