@@ -4,9 +4,15 @@
 <array>
 	<dict>
 		<key>titleName</key>
-		<string>CAMediaTiming</string>
+		<string>Duration&amp;RepeatCount</string>
 		<key>controllerName</key>
 		<string>XCTimeProtocolViewController</string>
+	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>BeginTime&amp;TimeOff</string>
+		<key>controllerName</key>
+		<string>XCBeginTimeViewController</string>
 	</dict>
 </array>
 </plist>

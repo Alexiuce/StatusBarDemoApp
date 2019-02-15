@@ -121,7 +121,6 @@
     [self.view addSubview:hightest_imgView];
     hightest_imgView.image = [self createNonInterpolatedUIImageFormCIImage:img withSize:200];
     
-    
 }
 
 

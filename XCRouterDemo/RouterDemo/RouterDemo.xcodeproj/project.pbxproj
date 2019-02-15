@@ -78,6 +78,8 @@
 		D8CBB3FD21B4FF3700D243FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBB3FC21B4FF3700D243FC /* main.m */; };
 		D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CF334021BF565A00682A75 /* XCTableViewController.m */; };
 		D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */; };
+		D8D703FB22166BA4003DEDCB /* XCBeginTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */; };
+		D8D703FC22166BA4003DEDCB /* XCBeginTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */; };
 		D8E7FDC021C737380031426F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDBF21C737380031426F /* AppDelegate.m */; };
 		D8E7FDC321C737380031426F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDC221C737380031426F /* ViewController.m */; };
 		D8E7FDC621C737380031426F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FDC421C737380031426F /* Main.storyboard */; };
@@ -252,6 +254,9 @@
 		D8CF334021BF565A00682A75 /* XCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTableViewController.m; sourceTree = "<group>"; };
 		D8CF334D21BF7F6C00682A75 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
+		D8D703F822166BA4003DEDCB /* XCBeginTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBeginTimeViewController.h; sourceTree = "<group>"; };
+		D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBeginTimeViewController.m; sourceTree = "<group>"; };
+		D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCBeginTimeViewController.xib; sourceTree = "<group>"; };
 		D8E7FDBC21C737380031426F /* XCAutoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCAutoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E7FDBE21C737380031426F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8E7FDBF21C737380031426F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -369,6 +374,9 @@
 				D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */,
 				D87DF5D4221542A000228CB2 /* XCTimeProtocolViewController.h */,
 				D87DF5D5221542A000228CB2 /* XCTimeProtocolViewController.m */,
+				D8D703F822166BA4003DEDCB /* XCBeginTimeViewController.h */,
+				D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */,
+				D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */,
 			);
 			path = LayerTimer;
 			sourceTree = "<group>";
@@ -940,6 +948,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D83F958A21FABDB500140042 /* XCMotionConfig.plist in Resources */,
+				D8D703FC22166BA4003DEDCB /* XCBeginTimeViewController.xib in Resources */,
 				D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */,
 				D89608B921C1E43D004A2EE1 /* Image in Resources */,
 				D8F84B4E21F012F9003B6627 /* XC_TabelViewControllerConfig.plist in Resources */,
@@ -1051,6 +1060,7 @@
 				D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */,
 				D8F84B4C21F00FD1003B6627 /* XCGradientLayerViewController.m in Sources */,
 				D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */,
+				D8D703FB22166BA4003DEDCB /* XCBeginTimeViewController.m in Sources */,
 				D890DB2C21DC3FF400D82974 /* XCCubeController.m in Sources */,
 				D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */,
 				D89608B721C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m in Sources */,
