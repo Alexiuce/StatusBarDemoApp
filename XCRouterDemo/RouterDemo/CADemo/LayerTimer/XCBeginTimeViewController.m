@@ -20,7 +20,11 @@
 }
 
 /** Core Animation Time 相对时间 : begin time , time off , speed , */
-
+/** begin time : 动画开始时间,用作延时, 默认是0,也就是动画添加到可视layer后,立刻开始动画效果
+ time offset: 动画偏移时间,相当于快进效果,也就是动画从duration的哪个时间开始执行;
+ 
+ 
+ */
 
 
 @end
