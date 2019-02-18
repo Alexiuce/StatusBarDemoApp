@@ -60,7 +60,6 @@
 }
 
 - (IBAction)playButtonClicked:(UIButton *)sender {
-   
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.duration = 1.0f;
