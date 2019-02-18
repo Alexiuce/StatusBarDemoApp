@@ -43,7 +43,9 @@
     CAShapeLayer *animLayer = [CAShapeLayer layer];
     [self.view.layer addSublayer:animLayer];
     self.animationLayer = animLayer;
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:(CGRect){16,200,20,20}];
+    animLayer.frame = (CGRect){0,200,20,20};
+//    animLayer.backgroundColor = UIColor.yellowColor.CGColor;
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:(CGRect){0,0,20,20}];
     animLayer.path = path.CGPath;
     animLayer.fillColor = UIColor.yellowColor.CGColor;
     
@@ -58,6 +60,13 @@
 }
 
 - (IBAction)playButtonClicked:(UIButton *)sender {
+   
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.duration = 1.0f;
+    animation.keyPath = @"position";
+    animation.path = self.animationPath.CGPath;
+    [self.animationLayer addAnimation:animation forKey:nil];
 }
 
 @end
