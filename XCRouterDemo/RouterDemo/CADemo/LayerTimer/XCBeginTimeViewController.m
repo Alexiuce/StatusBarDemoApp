@@ -60,14 +60,20 @@
 }
 
 - (IBAction)playButtonClicked:(UIButton *)sender {
-    
+    self.animationLayer.speed = 1;
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-    animation.duration = 1.0f;
+    animation.duration = 3.0f;
     animation.keyPath = @"position";
     animation.timeOffset = self.timeOffsetLabel.text.floatValue;
     animation.speed = self.speedLabel.text.floatValue;
     animation.path = self.animationPath.CGPath;
+    animation.removedOnCompletion = NO;
     [self.animationLayer addAnimation:animation forKey:nil];
+}
+
+#pragma mark - UI Touch Event
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.animationLayer.speed = self.animationLayer.speed == 0 ? 1 : 0;
 }
 
 @end
