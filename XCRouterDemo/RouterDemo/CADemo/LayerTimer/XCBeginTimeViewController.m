@@ -64,6 +64,8 @@
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.duration = 1.0f;
     animation.keyPath = @"position";
+    animation.timeOffset = self.timeOffsetLabel.text.floatValue;
+    animation.speed = self.speedLabel.text.floatValue;
     animation.path = self.animationPath.CGPath;
     [self.animationLayer addAnimation:animation forKey:nil];
 }
