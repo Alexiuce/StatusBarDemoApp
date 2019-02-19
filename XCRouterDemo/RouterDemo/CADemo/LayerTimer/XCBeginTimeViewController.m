@@ -49,6 +49,8 @@
     animLayer.path = path.CGPath;
     animLayer.fillColor = UIColor.yellowColor.CGColor;
     
+    animLayer.speed = 0;
+    
 }
 
 #pragma mark - IBAction
@@ -60,20 +62,23 @@
 }
 
 - (IBAction)playButtonClicked:(UIButton *)sender {
-    self.animationLayer.speed = 1;
+//    self.animationLayer.speed = 1;
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.duration = 3.0f;
     animation.keyPath = @"position";
-    animation.timeOffset = self.timeOffsetLabel.text.floatValue;
-    animation.speed = self.speedLabel.text.floatValue;
+//    animation.timeOffset = self.timeOffsetLabel.text.floatValue;
+//    animation.speed = self.speedLabel.text.floatValue;
     animation.path = self.animationPath.CGPath;
-    animation.removedOnCompletion = NO;
+//    animation.removedOnCompletion = NO;
     [self.animationLayer addAnimation:animation forKey:nil];
 }
 
 #pragma mark - UI Touch Event
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.animationLayer.speed = self.animationLayer.speed == 0 ? 1 : 0;
+//    self.animationLayer.speed = self.animationLayer.speed == 0 ? 1 : 0;
+    self.animationLayer.timeOffset += 0.1;
 }
+
+
 
 @end
