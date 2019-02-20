@@ -39,6 +39,8 @@
 		D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8709C3121E2146A00B63E6D /* XCShapeViewController.m */; };
 		D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3621E21BAB00B63E6D /* First.storyboard */; };
 		D8709C3A21E21C4C00B63E6D /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8709C3821E21C4C00B63E6D /* Second.storyboard */; };
+		D8739754221CD51700F44202 /* XCTimeFuncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8739752221CD51700F44202 /* XCTimeFuncViewController.m */; };
+		D8739755221CD51700F44202 /* XCTimeFuncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8739753221CD51700F44202 /* XCTimeFuncViewController.xib */; };
 		D87B32B522028E3A00AE9C41 /* XCExplicitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */; };
 		D87DF5CE2215084900228CB2 /* LayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */; };
 		D87DF5D12215092800228CB2 /* XCTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF5D02215092800228CB2 /* XCTimeTableViewController.m */; };
@@ -182,6 +184,9 @@
 		D8709C3121E2146A00B63E6D /* XCShapeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCShapeViewController.m; sourceTree = "<group>"; };
 		D8709C3621E21BAB00B63E6D /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		D8709C3921E21C4C00B63E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CADemo/Base.lproj/Second.storyboard; sourceTree = "<group>"; };
+		D8739751221CD51700F44202 /* XCTimeFuncViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeFuncViewController.h; sourceTree = "<group>"; };
+		D8739752221CD51700F44202 /* XCTimeFuncViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeFuncViewController.m; sourceTree = "<group>"; };
+		D8739753221CD51700F44202 /* XCTimeFuncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCTimeFuncViewController.xib; sourceTree = "<group>"; };
 		D87B32B322028E3A00AE9C41 /* XCExplicitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCExplicitViewController.h; sourceTree = "<group>"; };
 		D87B32B422028E3A00AE9C41 /* XCExplicitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCExplicitViewController.m; sourceTree = "<group>"; };
 		D87DF5CD2215084900228CB2 /* LayerTimer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LayerTimer.storyboard; sourceTree = "<group>"; };
@@ -377,6 +382,9 @@
 				D8D703F822166BA4003DEDCB /* XCBeginTimeViewController.h */,
 				D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */,
 				D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */,
+				D8739751221CD51700F44202 /* XCTimeFuncViewController.h */,
+				D8739752221CD51700F44202 /* XCTimeFuncViewController.m */,
+				D8739753221CD51700F44202 /* XCTimeFuncViewController.xib */,
 			);
 			path = LayerTimer;
 			sourceTree = "<group>";
@@ -959,6 +967,7 @@
 				D848357121B60760006C7AA4 /* Main.storyboard in Resources */,
 				D87DF5CE2215084900228CB2 /* LayerTimer.storyboard in Resources */,
 				D8B40AA521F5542400463428 /* 音频.gif in Resources */,
+				D8739755221CD51700F44202 /* XCTimeFuncViewController.xib in Resources */,
 				D8709C3721E21BAB00B63E6D /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,6 +1075,7 @@
 				D89608B721C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m in Sources */,
 				D8F84B5121F04DE1003B6627 /* XCReplicatorLayerViewController.m in Sources */,
 				D848356E21B60760006C7AA4 /* ViewController.m in Sources */,
+				D8739754221CD51700F44202 /* XCTimeFuncViewController.m in Sources */,
 				D8610EDB21F7F19C00A18279 /* XCEmitterLayerViewController.m in Sources */,
 				D848357921B60762006C7AA4 /* main.m in Sources */,
 				D83F958821FABD8B00140042 /* XCMotionTableViewController.m in Sources */,

@@ -14,5 +14,11 @@
 		<key>controllerName</key>
 		<string>XCBeginTimeViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>CAMediaTimingFunc</string>
+		<key>controllerName</key>
+		<string>XCTimeFuncViewController</string>
+	</dict>
 </array>
 </plist>

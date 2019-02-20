@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Layer Time";
+    self.navigationController.view.backgroundColor = UIColor.whiteColor;
     NSString *plistFile = [NSBundle.mainBundle pathForResource:@"XCTimeConfig" ofType:@"plist"];
     _controllerTitles = [NSArray arrayWithContentsOfFile:plistFile];
     
