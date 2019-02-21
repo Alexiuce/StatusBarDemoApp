@@ -61,6 +61,7 @@
     
     [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
          self.colorLayer.position = [touches.anyObject locationInView:self.view];
+        self.colorLayer.backgroundColor = UIColor.blueColor.CGColor;
          self.colorView.center =  [touches.anyObject locationInView:self.view];
     } completion:nil];
 //    [self viewKeyAnimation];
