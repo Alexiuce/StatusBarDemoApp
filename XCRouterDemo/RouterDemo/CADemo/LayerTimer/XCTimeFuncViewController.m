@@ -12,6 +12,8 @@
 
 @property (nonatomic, weak) CALayer *colorLayer;
 
+@property (nonatomic, weak) UIView *colorView;
+
 @end
 
 @implementation XCTimeFuncViewController
@@ -20,7 +22,17 @@
     [super viewDidLoad];
 
     [self timingFuncDemo];
+    
+    UIView *v = [[UIView alloc]initWithFrame:(CGRect){100,100,100,100}];
+    v.backgroundColor = UIColor.greenColor;
+    [self.view addSubview:v];
+    self.colorView = v;
 }
+
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    [self viewKeyAnimation];
+//}
 
 - (void)timingFuncDemo{
     CALayer *layer = [CALayer layer];
@@ -43,9 +55,32 @@
 //    [CATransaction commit];
     
     
-    [UIView animateKeyframesWithDuration:1.0 delay:0 options:UIViewKeyframeAnimationOptionAutoreverse animations:^{
-         self.colorLayer.position = [touches.anyObject locationInView:self.view];
-    } completion:nil];
+//    [UIView animateKeyframesWithDuration:3.0 delay:0 options:UIViewKeyframeAnimationOptionAutoreverse animations:^{
+//         self.colorLayer.position = [touches.anyObject locationInView:self.view];
+//    } completion:nil];
     
+    [UIView animateWithDuration:3.0 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+         self.colorLayer.position = [touches.anyObject locationInView:self.view];
+         self.colorView.center =  [touches.anyObject locationInView:self.view];
+    } completion:nil];
+//    [self viewKeyAnimation];
+    
+}
+
+- (void)viewKeyAnimation{
+    [UIView animateKeyframesWithDuration:5.0 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{
+            self.colorLayer.position = (CGPoint){100,200};
+            self.colorView.center =  (CGPoint){100,200};
+        }];
+//        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+//            self.colorLayer.position = (CGPoint){340,200};
+//        }];
+//        [UIView addKeyframeWithRelativeStartTime:0.75 relativeDuration:0.25 animations:^{
+//            self.colorLayer.position = (CGPoint){340,500};
+//        }];
+    } completion:^(BOOL finished) {
+        NSLog(@"key animation finished");
+    }];
 }
 @end
