@@ -34,12 +34,18 @@
 #pragma mark - UITouch
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [CATransaction begin];
-    [CATransaction setAnimationDuration:1.0];
-    CAMediaTimingFunction *func = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    [CATransaction setAnimationTimingFunction:func];
-    self.colorLayer.position = [touches.anyObject locationInView:self.view];
+//    [CATransaction begin];
+//    [CATransaction setAnimationDuration:1.0];
+//    CAMediaTimingFunction *func = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+//    [CATransaction setAnimationTimingFunction:func];
+//    self.colorLayer.position = [touches.anyObject locationInView:self.view];
+//
+//    [CATransaction commit];
     
-    [CATransaction commit];
+    
+    [UIView animateKeyframesWithDuration:1.0 delay:0 options:UIViewKeyframeAnimationOptionAutoreverse animations:^{
+         self.colorLayer.position = [touches.anyObject locationInView:self.view];
+    } completion:nil];
+    
 }
 @end
