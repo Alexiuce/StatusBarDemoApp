@@ -20,5 +20,11 @@
 		<key>controllerName</key>
 		<string>XCTimeFuncViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>Custom Easing Functions</string>
+		<key>controllerName</key>
+		<string>XCTimeCustomFuncViewController</string>
+	</dict>
 </array>
 </plist>

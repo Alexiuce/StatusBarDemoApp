@@ -73,6 +73,8 @@
 		D8A4625F21B8B16A00914CE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4625E21B8B16A00914CE8 /* main.m */; };
 		D8A4626521B8C8CA00914CE8 /* XCViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4626421B8C8CA00914CE8 /* XCViewCell.m */; };
 		D8A8CE1021EED1A10098859F /* XCTransformLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */; };
+		D8A92ABE221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A92ABC221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m */; };
+		D8A92ABF221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A92ABD221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib */; };
 		D8AB108B21CC8BFF002055CA /* XCSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB108A21CC8BFF002055CA /* XCSwitch.m */; };
 		D8B40AA521F5542400463428 /* 音频.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8B40AA421F5542400463428 /* 音频.gif */; };
 		D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */; };
@@ -245,6 +247,9 @@
 		D8A4626421B8C8CA00914CE8 /* XCViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCViewCell.m; sourceTree = "<group>"; };
 		D8A8CE0E21EED1A10098859F /* XCTransformLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTransformLayerViewController.h; sourceTree = "<group>"; };
 		D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTransformLayerViewController.m; sourceTree = "<group>"; };
+		D8A92ABB221F7B9A00DA3839 /* XCTimeCustomFuncViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeCustomFuncViewController.h; sourceTree = "<group>"; };
+		D8A92ABC221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeCustomFuncViewController.m; sourceTree = "<group>"; };
+		D8A92ABD221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCTimeCustomFuncViewController.xib; sourceTree = "<group>"; };
 		D8AB108921CC8BFF002055CA /* XCSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSwitch.h; sourceTree = "<group>"; };
 		D8AB108A21CC8BFF002055CA /* XCSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSwitch.m; sourceTree = "<group>"; };
 		D8B40AA421F5542400463428 /* 音频.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "音频.gif"; sourceTree = "<group>"; };
@@ -385,6 +390,9 @@
 				D8739751221CD51700F44202 /* XCTimeFuncViewController.h */,
 				D8739752221CD51700F44202 /* XCTimeFuncViewController.m */,
 				D8739753221CD51700F44202 /* XCTimeFuncViewController.xib */,
+				D8A92ABB221F7B9A00DA3839 /* XCTimeCustomFuncViewController.h */,
+				D8A92ABC221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m */,
+				D8A92ABD221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib */,
 			);
 			path = LayerTimer;
 			sourceTree = "<group>";
@@ -961,6 +969,7 @@
 				D89608B921C1E43D004A2EE1 /* Image in Resources */,
 				D8F84B4E21F012F9003B6627 /* XC_TabelViewControllerConfig.plist in Resources */,
 				D87DF5D3221509E200228CB2 /* XCTimeConfig.plist in Resources */,
+				D8A92ABF221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib in Resources */,
 				D83F959021FAC73000140042 /* Motion.storyboard in Resources */,
 				D848357621B60762006C7AA4 /* LaunchScreen.storyboard in Resources */,
 				D848357321B60762006C7AA4 /* Assets.xcassets in Resources */,
@@ -1065,6 +1074,7 @@
 			files = (
 				D8A8CE1021EED1A10098859F /* XCTransformLayerViewController.m in Sources */,
 				D83F958D21FAC6A500140042 /* XCImplictViewController.m in Sources */,
+				D8A92ABE221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m in Sources */,
 				D8EB202721C08CE100F488E0 /* XCDrawingViewController.m in Sources */,
 				D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */,
 				D8F84B4C21F00FD1003B6627 /* XCGradientLayerViewController.m in Sources */,
