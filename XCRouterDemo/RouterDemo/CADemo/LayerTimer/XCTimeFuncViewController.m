@@ -27,12 +27,30 @@
     v.backgroundColor = UIColor.greenColor;
     [self.view addSubview:v];
     self.colorView = v;
+    [self keyFuncWithKeyFrameAnimation];
+    
 }
-
-//- (void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-//    [self viewKeyAnimation];
-//}
+/**  Using CAMediaTimingFunction with CAKeyframeAnimation */
+- (void)keyFuncWithKeyFrameAnimation{
+    CALayer *c = [CALayer layer];
+    c.frame = CGRectMake(200, 200, 100, 100);
+    c.backgroundColor = UIColor.blueColor.CGColor;
+    [self.view.layer addSublayer:c];
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"backgroundColor";
+    animation.duration = 5.0;
+    animation.values = @[(__bridge id)UIColor.blueColor.CGColor,
+                         (__bridge id)UIColor.redColor.CGColor,
+                         (__bridge id)UIColor.greenColor.CGColor,
+                         (__bridge id)UIColor.blueColor.CGColor,];
+    
+    animation.repeatCount = MAXFLOAT;
+    animation.autoreverses = YES;
+    CAMediaTimingFunction *fn = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.timingFunctions = @[fn,fn,fn];
+    [c addAnimation:animation forKey:nil];
+}
 
 - (void)timingFuncDemo{
     CALayer *layer = [CALayer layer];
