@@ -21,7 +21,14 @@
 }
 
 - (void)customEasingFuncDemo{
-    CAMediaTimingFunction *fn = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    CAMediaTimingFunction *fn = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    /**  Creates a timing function modelled on a cubic Bezier curve. The end
+     * points of the curve are at (0,0) and (1,1), the two points 'c1' and
+     * 'c2' defined by the class instance are the control points. Thus the
+     * points defining the Bezier curve are: '[(0,0), c1, c2, (1,1)]'
+    + (instancetype)functionWithControlPoints:(float)c1x :(float)c1y :(float)c2x :(float)c2y
+     */
+    CAMediaTimingFunction *fn = [CAMediaTimingFunction functionWithControlPoints:1 :0 :0.75 :1];
     float ctrp1[2],ctrp2[2];
     [fn getControlPointAtIndex:1 values:ctrp1];
     [fn getControlPointAtIndex:2 values:ctrp2];
@@ -34,7 +41,8 @@
     
     
     CALayer *cl = [CALayer layer];
-    cl.frame = (CGRect){10,100,300,300};
+    cl.backgroundColor = UIColor.lightGrayColor.CGColor;
+    cl.frame = (CGRect){10,100,200,200};
     [self.view.layer addSublayer:cl];
     cl.geometryFlipped = YES;
     
