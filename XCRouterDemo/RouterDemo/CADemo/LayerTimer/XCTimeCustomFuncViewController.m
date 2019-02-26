@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self customEasingFuncDemo];
+    [self keyAnimationFunctionDemo];
 }
 
 - (void)customEasingFuncDemo{
@@ -54,6 +55,46 @@
     layer.fillColor = UIColor.clearColor.CGColor;
     [cl addSublayer:layer];
 
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self keyAnimationFunctionDemo];
+}
+
+- (void)keyAnimationFunctionDemo{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"position";
+    animation.duration = 2.0;
+    animation.values = @[
+                         [NSValue valueWithCGPoint:(CGPoint){100,300}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,350}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,400}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,450}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         ];
+    animation.timingFunctions = @[
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 ];
+    animation.keyTimes = @[@(0.0),@(0.3),@(5.0),@(0.7),@(0.8),@(0.9),@(0.95),@(1.0)];
+    
+    CALayer *ball = [CALayer layer];
+    ball.frame = (CGRect){100,300,50,50};
+    ball.cornerRadius = 25;
+    ball.masksToBounds = YES;
+    ball.backgroundColor = UIColor.blueColor.CGColor;
+    [self.view.layer addSublayer:ball];
+    
+    [ball addAnimation:animation forKey:nil];
 }
 
 @end
