@@ -53,7 +53,7 @@
     
     CALayer *cl = [CALayer layer];
     cl.backgroundColor = UIColor.lightGrayColor.CGColor;
-    cl.frame = (CGRect){10,400,200,200};
+    cl.frame = (CGRect){250,400,200,200};
     [self.view.layer addSublayer:cl];
     cl.geometryFlipped = YES;
     
@@ -72,30 +72,29 @@
 }
 
 - (void)keyAnimationFunctionDemo{
-//    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-//    animation.keyPath = @"position";
-//    animation.duration = 2.0;
-//    animation.values = @[
-//                         [NSValue valueWithCGPoint:(CGPoint){100,300}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,350}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,400}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,450}],
-//                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
-//                         ];
-//    animation.timingFunctions = @[
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//                                 ];
-//    animation.keyTimes = @[@(0.0),@(0.3),@(5.0),@(0.7),@(0.8),@(0.9),@(0.95),@(1.0)];
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"position";
+    animation.duration = 2.0;
+    animation.values = @[
+                         [NSValue valueWithCGPoint:(CGPoint){100,300}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,350}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,400}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,450}],
+                         [NSValue valueWithCGPoint:(CGPoint){100,500}],
+                         ];
+    animation.timingFunctions = @[
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                 ];
+    animation.keyTimes = @[@0.0,@0.3,@0.5,@0.7,@0.8,@0.9,@0.95,@(1.0)];
 //
 //
 //
@@ -103,28 +102,28 @@
     
     self.ballView.center = CGPointMake(150, 32);
     
-    //create keyframe animation
-    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-    animation.keyPath = @"position";
-    animation.duration = 1.0;
-    animation.values = @[[NSValue valueWithCGPoint:CGPointMake(150, 32)],
-                        [NSValue valueWithCGPoint:CGPointMake(150, 268)],
-                        [NSValue valueWithCGPoint:CGPointMake(150, 140)],
-                         [NSValue valueWithCGPoint:CGPointMake(150, 268)],
-                         [NSValue valueWithCGPoint:CGPointMake(150, 220)],
-                         [NSValue valueWithCGPoint:CGPointMake(150, 268)],
-                         [NSValue valueWithCGPoint:CGPointMake(150, 250)],
-                         [NSValue valueWithCGPoint:CGPointMake(150, 268)]];
-    animation.timingFunctions = @[
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]
-                                  ];
-    animation.keyTimes = @[@0.0, @0.3, @0.5, @0.7, @0.8, @0.9, @0.95, @1.0];
+//    //create keyframe animation
+//    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+//    animation.keyPath = @"position";
+//    animation.duration = 1.0;
+//    animation.values = @[[NSValue valueWithCGPoint:CGPointMake(150, 32)],
+//                        [NSValue valueWithCGPoint:CGPointMake(150, 268)],
+//                        [NSValue valueWithCGPoint:CGPointMake(150, 140)],
+//                         [NSValue valueWithCGPoint:CGPointMake(150, 268)],
+//                         [NSValue valueWithCGPoint:CGPointMake(150, 220)],
+//                         [NSValue valueWithCGPoint:CGPointMake(150, 268)],
+//                         [NSValue valueWithCGPoint:CGPointMake(150, 250)],
+//                         [NSValue valueWithCGPoint:CGPointMake(150, 268)]];
+//    animation.timingFunctions = @[
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+//                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]
+//                                  ];
+//    animation.keyTimes = @[@0.0, @0.3, @0.5, @0.7, @0.8, @0.9, @0.95, @1.0];
     
 
     //apply animation
