@@ -8,6 +8,13 @@
 
 #import "XCTimeCustomFuncViewController.h"
 
+
+/** 插值function */
+float interpolate(float from,float to,float time){
+    return (to - from) * time + from;
+}
+
+
 @interface XCTimeCustomFuncViewController ()
 
 @property (nonatomic, weak) UIView *ballView;
@@ -103,5 +110,7 @@
     [self.ballView.layer addAnimation:animation forKey:nil];
     
 }
+
+
 
 @end
