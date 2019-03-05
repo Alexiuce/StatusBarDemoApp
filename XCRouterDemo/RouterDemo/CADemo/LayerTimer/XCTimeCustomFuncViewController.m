@@ -15,6 +15,7 @@ float interpolate(float from,float to,float time){
 }
 
 
+
 @interface XCTimeCustomFuncViewController ()
 
 @property (nonatomic, weak) UIView *ballView;
@@ -112,5 +113,16 @@ float interpolate(float from,float to,float time){
 }
 
 
+#pragma mark - private
+
+- (id)interplate:(id)fromValue toValue:(id)toValue time:(float)time{
+    if ([fromValue isKindOfClass:[NSValue class]]) {
+        const char *type = [fromValue objCType];
+        if (strcmp(type, @encode(CGPoint)) == 0) {
+            CGPoint fromPoint = [fromValue CGPointValue];
+        }
+    }
+    return nil;
+}
 
 @end
