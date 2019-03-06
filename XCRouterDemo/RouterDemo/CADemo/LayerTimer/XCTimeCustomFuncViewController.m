@@ -37,6 +37,9 @@ float interpolate(float from,float to,float time){
     // Do any additional setup after loading the view from its nib.
     [self customEasingFuncDemo];
     [self keyAnimationFunctionDemo];
+    
+    NSArray *array = [NSArray array];
+    char *c = @encode(NSArray);
 }
 
 - (void)customEasingFuncDemo{
