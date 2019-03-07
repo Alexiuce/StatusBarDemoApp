@@ -38,8 +38,12 @@ float interpolate(float from,float to,float time){
     [self customEasingFuncDemo];
     [self keyAnimationFunctionDemo];
     
-    NSArray *array = [NSArray array];
-    char *c = @encode(NSArray);
+//    NSArray *array = [NSArray array];
+//    char *c = @encode(NSArray);
+    const char *c = [@(1) objCType];
+    printf("%s\n",c);
+    char *point = @encode(NSValue);
+    NSLog(@"%s",point);
 }
 
 - (void)customEasingFuncDemo{
