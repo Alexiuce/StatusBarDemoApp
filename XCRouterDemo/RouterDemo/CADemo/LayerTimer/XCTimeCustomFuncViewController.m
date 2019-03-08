@@ -44,6 +44,8 @@ float interpolate(float from,float to,float time){
     printf("%s\n",c);
     char *point = @encode(NSValue);
     NSLog(@"%s",point);
+    
+    
 }
 
 - (void)customEasingFuncDemo{
@@ -127,6 +129,9 @@ float interpolate(float from,float to,float time){
         const char *type = [fromValue objCType];
         if (strcmp(type, @encode(CGPoint)) == 0) {
             CGPoint fromPoint = [fromValue CGPointValue];
+            CGPoint toPoint = [toValue CGPointValue];
+            CGPoint resultPoint = CGPointMake(interpolate(fromPoint.x, to.x, time), interpolate(fromPoint.y, toPoint.y, time));
+            return [NSValue valueWithCGPoint:resultPoint];
         }
     }
     return nil;
