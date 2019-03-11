@@ -130,7 +130,7 @@ float interpolate(float from,float to,float time){
         if (strcmp(type, @encode(CGPoint)) == 0) {
             CGPoint fromPoint = [fromValue CGPointValue];
             CGPoint toPoint = [toValue CGPointValue];
-            CGPoint resultPoint = CGPointMake(interpolate(fromPoint.x, to.x, time), interpolate(fromPoint.y, toPoint.y, time));
+            CGPoint resultPoint = CGPointMake(interpolate(fromPoint.x, toPoint.x, time), interpolate(fromPoint.y, toPoint.y, time));
             return [NSValue valueWithCGPoint:resultPoint];
         }
     }
