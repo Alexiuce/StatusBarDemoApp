@@ -44,6 +44,8 @@ float interpolate(float from,float to,float time){
     printf("%s\n",c);
     char *point = @encode(NSValue);
     NSLog(@"%s",point);
+    char *mySelfEncode = @encode(XCTimeCustomFuncViewController);
+    NSLog(@"self == %s",mySelfEncode);
     
     
 }
