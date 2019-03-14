@@ -48,6 +48,7 @@ float interpolate(float from,float to,float time){
     NSLog(@"self == %s",mySelfEncode);
     char *i = @encode(double);
     NSLog(@" int encode == %s",i);
+    /** @encode 使用测试 */
     
     
 }
