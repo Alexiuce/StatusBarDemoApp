@@ -26,5 +26,11 @@
 		<key>controllerName</key>
 		<string>XCTimeCustomFuncViewController</string>
 	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>Time-Base Animation</string>
+		<key>controllerName</key>
+		<string>XCTimeBaseViewController</string>
+	</dict>
 </array>
 </plist>
