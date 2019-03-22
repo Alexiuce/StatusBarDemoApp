@@ -18,6 +18,11 @@
 		D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F221AB758A00B59018 /* XCAppEnterViewController.m */; };
 		D82990F921ABBF8F00B59018 /* XCAppPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */; };
 		D82ABAA021D5D04900C73C44 /* XCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D82ABA9F21D5D04900C73C44 /* XCPerson.m */; };
+		D82CAEA42244663D006DEB37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CAEA32244663D006DEB37 /* AppDelegate.m */; };
+		D82CAEA72244663D006DEB37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CAEA62244663D006DEB37 /* ViewController.m */; };
+		D82CAEA92244663F006DEB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82CAEA82244663F006DEB37 /* Assets.xcassets */; };
+		D82CAEAC2244663F006DEB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CAEAA2244663F006DEB37 /* Main.storyboard */; };
+		D82CAEAF2244663F006DEB37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CAEAE2244663F006DEB37 /* main.m */; };
 		D83CFB79223B247900BF92EC /* XCTimeBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83CFB77223B247900BF92EC /* XCTimeBaseViewController.m */; };
 		D83CFB7A223B247900BF92EC /* XCTimeBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83CFB78223B247900BF92EC /* XCTimeBaseViewController.xib */; };
 		D83F958821FABD8B00140042 /* XCMotionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F958721FABD8B00140042 /* XCMotionTableViewController.m */; };
@@ -151,6 +156,16 @@
 		D82990F821ABBF8F00B59018 /* XCAppPresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCAppPresentViewController.m; sourceTree = "<group>"; };
 		D82ABA9E21D5D04900C73C44 /* XCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCPerson.h; sourceTree = "<group>"; };
 		D82ABA9F21D5D04900C73C44 /* XCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCPerson.m; sourceTree = "<group>"; };
+		D82CAEA02244663D006DEB37 /* CoreAnimationForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82CAEA22244663D006DEB37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D82CAEA32244663D006DEB37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D82CAEA52244663D006DEB37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D82CAEA62244663D006DEB37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D82CAEA82244663F006DEB37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D82CAEAB2244663F006DEB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D82CAEAD2244663F006DEB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82CAEAE2244663F006DEB37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D82CAEB02244663F006DEB37 /* CoreAnimationForMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreAnimationForMac.entitlements; sourceTree = "<group>"; };
 		D83CFB76223B247900BF92EC /* XCTimeBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeBaseViewController.h; sourceTree = "<group>"; };
 		D83CFB77223B247900BF92EC /* XCTimeBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeBaseViewController.m; sourceTree = "<group>"; };
 		D83CFB78223B247900BF92EC /* XCTimeBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCTimeBaseViewController.xib; sourceTree = "<group>"; };
@@ -304,6 +319,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D82CAE9D2244663D006DEB37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D848356421B60760006C7AA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +440,22 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		D82CAEA12244663D006DEB37 /* CoreAnimationForMac */ = {
+			isa = PBXGroup;
+			children = (
+				D82CAEA22244663D006DEB37 /* AppDelegate.h */,
+				D82CAEA32244663D006DEB37 /* AppDelegate.m */,
+				D82CAEA52244663D006DEB37 /* ViewController.h */,
+				D82CAEA62244663D006DEB37 /* ViewController.m */,
+				D82CAEA82244663F006DEB37 /* Assets.xcassets */,
+				D82CAEAA2244663F006DEB37 /* Main.storyboard */,
+				D82CAEAD2244663F006DEB37 /* Info.plist */,
+				D82CAEAE2244663F006DEB37 /* main.m */,
+				D82CAEB02244663F006DEB37 /* CoreAnimationForMac.entitlements */,
+			);
+			path = CoreAnimationForMac;
+			sourceTree = "<group>";
+		};
 		D83F958521FABC2400140042 /* Motions */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +557,7 @@
 				D8E7FDBD21C737380031426F /* XCAutoLayoutDemo */,
 				D89CA0EF21D20E9100C117B2 /* XCTestApp */,
 				D822728E21D8EF2800EEE11F /* XCDrawing */,
+				D82CAEA12244663D006DEB37 /* CoreAnimationForMac */,
 				D88B75EF21A77D7000951228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -535,6 +574,7 @@
 				D8E7FDBC21C737380031426F /* XCAutoLayoutDemo.app */,
 				D89CA0EE21D20E9100C117B2 /* XCTestApp.app */,
 				D822728D21D8EF2800EEE11F /* XCDrawing.app */,
+				D82CAEA02244663D006DEB37 /* CoreAnimationForMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -742,6 +782,23 @@
 			productReference = D822728D21D8EF2800EEE11F /* XCDrawing.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D82CAE9F2244663D006DEB37 /* CoreAnimationForMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82CAEB32244663F006DEB37 /* Build configuration list for PBXNativeTarget "CoreAnimationForMac" */;
+			buildPhases = (
+				D82CAE9C2244663D006DEB37 /* Sources */,
+				D82CAE9D2244663D006DEB37 /* Frameworks */,
+				D82CAE9E2244663D006DEB37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreAnimationForMac;
+			productName = CoreAnimationForMac;
+			productReference = D82CAEA02244663D006DEB37 /* CoreAnimationForMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D848356621B60760006C7AA4 /* CADemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D848357C21B60762006C7AA4 /* Build configuration list for PBXNativeTarget "CADemo" */;
@@ -895,6 +952,9 @@
 					D822728C21D8EF2800EEE11F = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					D82CAE9F2244663D006DEB37 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					D848356621B60760006C7AA4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -952,6 +1012,7 @@
 				D822728C21D8EF2800EEE11F /* XCDrawing */,
 				D87B32B62202CEC800AE9C41 /* PythonDemo */,
 				D87B32BA2202CEFD00AE9C41 /* XCPython */,
+				D82CAE9F2244663D006DEB37 /* CoreAnimationForMac */,
 			);
 		};
 /* End PBXProject section */
@@ -964,6 +1025,15 @@
 				D822729C21D8EF2900EEE11F /* LaunchScreen.storyboard in Resources */,
 				D822729921D8EF2900EEE11F /* Assets.xcassets in Resources */,
 				D822729721D8EF2800EEE11F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82CAE9E2244663D006DEB37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CAEA92244663F006DEB37 /* Assets.xcassets in Resources */,
+				D82CAEAC2244663F006DEB37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,6 +1144,16 @@
 				D822729421D8EF2800EEE11F /* ViewController.m in Sources */,
 				D822729F21D8EF2900EEE11F /* main.m in Sources */,
 				D822729121D8EF2800EEE11F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82CAE9C2244663D006DEB37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82CAEA72244663D006DEB37 /* ViewController.m in Sources */,
+				D82CAEAF2244663F006DEB37 /* main.m in Sources */,
+				D82CAEA42244663D006DEB37 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1222,6 +1302,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D82CAEAA2244663F006DEB37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82CAEAB2244663F006DEB37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		D83F958E21FAC73000140042 /* Motion.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1344,6 +1432,48 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCDrawing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D82CAEB12244663F006DEB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoreAnimationForMac/CoreAnimationForMac.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				INFOPLIST_FILE = CoreAnimationForMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.CoreAnimationForMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D82CAEB22244663F006DEB37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoreAnimationForMac/CoreAnimationForMac.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AAV8FD48R9;
+				INFOPLIST_FILE = CoreAnimationForMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.CoreAnimationForMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1809,6 +1939,15 @@
 			buildConfigurations = (
 				D82272A021D8EF2900EEE11F /* Debug */,
 				D82272A121D8EF2900EEE11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82CAEB32244663F006DEB37 /* Build configuration list for PBXNativeTarget "CoreAnimationForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82CAEB12244663F006DEB37 /* Debug */,
+				D82CAEB22244663F006DEB37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
