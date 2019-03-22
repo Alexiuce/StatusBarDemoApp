@@ -23,6 +23,7 @@
 		D82CAEA92244663F006DEB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82CAEA82244663F006DEB37 /* Assets.xcassets */; };
 		D82CAEAC2244663F006DEB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82CAEAA2244663F006DEB37 /* Main.storyboard */; };
 		D82CAEAF2244663F006DEB37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CAEAE2244663F006DEB37 /* main.m */; };
+		D82CAEB6224499AA006DEB37 /* XCResponseWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CAEB5224499AA006DEB37 /* XCResponseWindowController.m */; };
 		D83CFB79223B247900BF92EC /* XCTimeBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83CFB77223B247900BF92EC /* XCTimeBaseViewController.m */; };
 		D83CFB7A223B247900BF92EC /* XCTimeBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83CFB78223B247900BF92EC /* XCTimeBaseViewController.xib */; };
 		D83F958821FABD8B00140042 /* XCMotionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F958721FABD8B00140042 /* XCMotionTableViewController.m */; };
@@ -166,6 +167,8 @@
 		D82CAEAD2244663F006DEB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D82CAEAE2244663F006DEB37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D82CAEB02244663F006DEB37 /* CoreAnimationForMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreAnimationForMac.entitlements; sourceTree = "<group>"; };
+		D82CAEB4224499AA006DEB37 /* XCResponseWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCResponseWindowController.h; sourceTree = "<group>"; };
+		D82CAEB5224499AA006DEB37 /* XCResponseWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCResponseWindowController.m; sourceTree = "<group>"; };
 		D83CFB76223B247900BF92EC /* XCTimeBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeBaseViewController.h; sourceTree = "<group>"; };
 		D83CFB77223B247900BF92EC /* XCTimeBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeBaseViewController.m; sourceTree = "<group>"; };
 		D83CFB78223B247900BF92EC /* XCTimeBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCTimeBaseViewController.xib; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 			children = (
 				D82CAEA22244663D006DEB37 /* AppDelegate.h */,
 				D82CAEA32244663D006DEB37 /* AppDelegate.m */,
+				D82CAEB4224499AA006DEB37 /* XCResponseWindowController.h */,
+				D82CAEB5224499AA006DEB37 /* XCResponseWindowController.m */,
 				D82CAEA52244663D006DEB37 /* ViewController.h */,
 				D82CAEA62244663D006DEB37 /* ViewController.m */,
 				D82CAEA82244663F006DEB37 /* Assets.xcassets */,
@@ -1152,6 +1157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82CAEA72244663D006DEB37 /* ViewController.m in Sources */,
+				D82CAEB6224499AA006DEB37 /* XCResponseWindowController.m in Sources */,
 				D82CAEAF2244663F006DEB37 /* main.m in Sources */,
 				D82CAEA42244663D006DEB37 /* AppDelegate.m in Sources */,
 			);

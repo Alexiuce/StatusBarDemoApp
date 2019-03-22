@@ -24,22 +24,39 @@
     _endFrame = NSMakeRect(100, 100, 212, 120);
 
     self.motoImageView.frame = _startFrame;
-    NSLog(@"%d",self.acceptsFirstResponder);
     // Do any additional setup after loading the view.
+//   [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^NSEvent * _Nullable(NSEvent * event) {
+//        NSLog(@"key down....");
+//        return event;
+//    }];
+    
 }
 
+- (void)viewDidAppear{
+    [super viewDidAppear];
+    NSLog(@"%@",self.view.nextResponder);
+    NSLog(@"%@",self.nextResponder);
+    [NSApplication.sharedApplication.keyWindow setNextResponder:self];
+     [self setNextResponder:nil] ;
+
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
 }
+
 - (BOOL)acceptsFirstResponder{
     return YES;
 }
 
 - (void)keyDown:(NSEvent *)event{
-    NSLog(@"%s",__func__);
+    NSLog(@"%s",__FUNCTION__);
+    
+}
+- (void)mouseDown:(NSEvent *)event{
+    NSLog(@"%s",__FUNCTION__);
 }
 
 @end
