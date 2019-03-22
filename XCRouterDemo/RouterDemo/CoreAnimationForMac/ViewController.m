@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 @property (weak) IBOutlet NSImageView *motoImageView;
@@ -30,6 +31,8 @@
 //        return event;
 //    }];
     
+    
+    
 }
 
 - (void)viewDidAppear{
@@ -51,14 +54,14 @@
     // Update the view, if already loaded.
 }
 
-- (BOOL)becomeFirstResponder{
-    return YES;
-}
-
 - (void)keyDown:(NSEvent *)event{
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)flagsChanged:(NSEvent *)event{
     NSLog(@"%s",__FUNCTION__);
     
 }
+
 - (void)mouseDown:(NSEvent *)event{
     NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
     NSLog(@"%s",__FUNCTION__);
