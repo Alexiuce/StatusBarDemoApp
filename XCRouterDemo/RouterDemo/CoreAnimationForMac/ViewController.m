@@ -37,7 +37,7 @@
     NSLog(@"%@",self.view.nextResponder);
     NSLog(@"%@",self.nextResponder);
     [NSApplication.sharedApplication.keyWindow setNextResponder:self];
-     [self setNextResponder:nil] ;
+    [self setNextResponder:NSApp] ;
 
 }
 
@@ -45,10 +45,6 @@
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
-}
-
-- (BOOL)acceptsFirstResponder{
-    return YES;
 }
 
 - (void)keyDown:(NSEvent *)event{
