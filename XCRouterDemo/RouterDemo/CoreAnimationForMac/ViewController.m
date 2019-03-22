@@ -36,9 +36,13 @@
     [super viewDidAppear];
     NSLog(@"%@",self.view.nextResponder);
     NSLog(@"%@",self.nextResponder);
-    [NSApplication.sharedApplication.keyWindow setNextResponder:self];
-    [self setNextResponder:NSApp] ;
-
+//    [NSApplication.sharedApplication.keyWindow setNextResponder:self];
+//    [self setNextResponder:NSApp] ;
+    NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
+    NSLog(@"key window = %@",NSApp.keyWindow);
+    BOOL isSuccess = [NSApp.keyWindow makeFirstResponder:self];
+    NSLog(@"%d",isSuccess);
+    NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -47,12 +51,18 @@
     // Update the view, if already loaded.
 }
 
+- (BOOL)becomeFirstResponder{
+    return YES;
+}
+
 - (void)keyDown:(NSEvent *)event{
     NSLog(@"%s",__FUNCTION__);
     
 }
 - (void)mouseDown:(NSEvent *)event{
+    NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
     NSLog(@"%s",__FUNCTION__);
+    
 }
 
 @end
