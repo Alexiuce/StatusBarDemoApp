@@ -10,8 +10,15 @@
 
 @implementation XCView
 
-- (BOOL)acceptsFirstResponder{
-    return YES;
-}
+//- (BOOL)acceptsFirstResponder{
+//    return NO;
+//}
+//
+//- (BOOL)resignFirstResponder{
+//    return YES;
+//}
+//- (BOOL)becomeFirstResponder{
+//    return NO;
+//}
 
 @end

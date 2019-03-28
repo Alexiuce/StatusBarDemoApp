@@ -44,15 +44,17 @@
     NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
     NSLog(@"key window = %@",NSApp.keyWindow);
     BOOL isSuccess = [NSApp.keyWindow makeFirstResponder:self];
+    
     NSLog(@"%d",isSuccess);
     NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
 }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
 
-    // Update the view, if already loaded.
+- (BOOL)resignFirstResponder{
+    return NO;
 }
+
+
 
 - (void)keyDown:(NSEvent *)event{
     NSLog(@"%s",__FUNCTION__);
