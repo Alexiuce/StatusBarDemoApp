@@ -91,6 +91,8 @@
 		D8CBB3FD21B4FF3700D243FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CBB3FC21B4FF3700D243FC /* main.m */; };
 		D8CF334121BF565A00682A75 /* XCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CF334021BF565A00682A75 /* XCTableViewController.m */; };
 		D8CF334F21BF7F6C00682A75 /* XCDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */; };
+		D8D3DD2022535201006906C0 /* FCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D3DD1E22535200006906C0 /* FCRouter.m */; };
+		D8D3DD2422535393006906C0 /* RouterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D3DD2322535393006906C0 /* RouterTableViewController.m */; };
 		D8D703FB22166BA4003DEDCB /* XCBeginTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */; };
 		D8D703FC22166BA4003DEDCB /* XCBeginTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */; };
 		D8E7FDC021C737380031426F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDBF21C737380031426F /* AppDelegate.m */; };
@@ -290,6 +292,10 @@
 		D8CF334021BF565A00682A75 /* XCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTableViewController.m; sourceTree = "<group>"; };
 		D8CF334D21BF7F6C00682A75 /* XCDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDrawingView.h; sourceTree = "<group>"; };
 		D8CF334E21BF7F6C00682A75 /* XCDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDrawingView.m; sourceTree = "<group>"; };
+		D8D3DD1E22535200006906C0 /* FCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRouter.m; sourceTree = "<group>"; };
+		D8D3DD1F22535201006906C0 /* FCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRouter.h; sourceTree = "<group>"; };
+		D8D3DD2222535393006906C0 /* RouterTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterTableViewController.h; sourceTree = "<group>"; };
+		D8D3DD2322535393006906C0 /* RouterTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTableViewController.m; sourceTree = "<group>"; };
 		D8D703F822166BA4003DEDCB /* XCBeginTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBeginTimeViewController.h; sourceTree = "<group>"; };
 		D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBeginTimeViewController.m; sourceTree = "<group>"; };
 		D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCBeginTimeViewController.xib; sourceTree = "<group>"; };
@@ -592,6 +598,9 @@
 		D88B75F021A77D7000951228 /* RouterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8D3DD1F22535201006906C0 /* FCRouter.h */,
+				D8D3DD1E22535200006906C0 /* FCRouter.m */,
+				D8D3DD2122535284006906C0 /* ListControllers */,
 				D8409BAC21AF6931001670A1 /* Views */,
 				D82990F021AB755A00B59018 /* Router */,
 				D88B75F121A77D7000951228 /* AppDelegate.h */,
@@ -715,6 +724,15 @@
 				D89608B621C1E1D8004A2EE1 /* XCImageIOCollectionViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D8D3DD2122535284006906C0 /* ListControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8D3DD2222535393006906C0 /* RouterTableViewController.h */,
+				D8D3DD2322535393006906C0 /* RouterTableViewController.m */,
+			);
+			path = ListControllers;
 			sourceTree = "<group>";
 		};
 		D8E7FDBD21C737380031426F /* XCAutoLayoutDemo */ = {
@@ -1227,6 +1245,8 @@
 				D88B760121A77D7100951228 /* main.m in Sources */,
 				D82990F321AB758A00B59018 /* XCAppEnterViewController.m in Sources */,
 				D8836FF721BA05800044C67C /* XCTabBarController.m in Sources */,
+				D8D3DD2022535201006906C0 /* FCRouter.m in Sources */,
+				D8D3DD2422535393006906C0 /* RouterTableViewController.m in Sources */,
 				D88B75F321A77D7000951228 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
