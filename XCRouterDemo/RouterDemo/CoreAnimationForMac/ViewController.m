@@ -43,16 +43,16 @@
 //    [self setNextResponder:NSApp] ;
     NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
     NSLog(@"key window = %@",NSApp.keyWindow);
-    BOOL isSuccess = [NSApp.keyWindow makeFirstResponder:self];
+//    BOOL isSuccess = [NSApp.keyWindow makeFirstResponder:self];
     
-    NSLog(@"%d",isSuccess);
-    NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
+//    NSLog(@"%d",isSuccess);
+//    NSLog(@"first responder = %@",NSApp.keyWindow.firstResponder);
 }
 
 
-- (BOOL)resignFirstResponder{
-    return NO;
-}
+//- (BOOL)resignFirstResponder{
+//    return NO;
+//}
 
 
 
