@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [FCRouter.share regsiterUrl:@"app://enter/" mapViewControllerClass:UIViewController.class];
+    
+    [FCRouter.share regsiterUrl:@"app://handle" mapHandle:^id(NSDictionary *paramters) {
+        NSLog(@"hello handle");
+        return @"";
+    }];
 }
 
 #pragma mark - Table view data source
