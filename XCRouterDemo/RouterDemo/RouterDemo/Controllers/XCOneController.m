@@ -9,6 +9,9 @@
 #import "XCOneController.h"
 #import "FCRouter.h"
 
+
+static NSString * const TwoURL = @"app://two";
+
 @interface XCOneController ()
 
 @end
@@ -18,20 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"One Controller";
+    
+    Class Two = NSClassFromString(@"XCTwoController");
+    [FCRouter.share regsiterUrl:TwoURL mapViewControllerClass:Two];
     
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)clickedButton:(UIButton *)sender {
+    
+    UIViewController *two = [FCRouter.share matchViewControllerWithUrl:TwoURL];
+    [self.navigationController pushViewController:two animated:YES];
+    
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
