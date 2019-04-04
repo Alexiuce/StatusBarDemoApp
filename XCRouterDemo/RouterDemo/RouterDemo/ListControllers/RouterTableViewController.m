@@ -7,7 +7,7 @@
 //
 
 #import "RouterTableViewController.h"
-#import "FCRouter.h"
+#import "XCOneController.h"
 
 @interface RouterTableViewController ()
 
@@ -17,12 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [FCRouter.share regsiterUrl:@"app://enter/" mapViewControllerClass:UIViewController.class];
-    
-    [FCRouter.share regsiterUrl:@"app://handle" mapHandle:^id(NSDictionary *paramters) {
-        NSLog(@"hello handle");
-        return @"";
-    }];
+  
 }
 
 #pragma mark - Table view data source
@@ -45,10 +40,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%zd",indexPath.row);
-    
-    UIViewController *vc = [FCRouter.share matchViewControllerWithUrl:@"app://enter"];
-    NSLog(@"vc = %@",vc);
+
+    XCOneController *vc = [XCOneController new];
+    [self.navigationController pushViewController:vc animated:YES];
+   
+  
     
 }
 
