@@ -29,8 +29,8 @@ static NSString * const TwoURL = @"app://two";
     
     self.title = @"One Controller";
     
-    NSString *path = XCToOCString("abc","def");
-    NSLog(@"%@",path);
+//    NSString *path = XCToOCString("abc","def");
+//    NSLog(@"%@",path);
     
     
     
