@@ -9,6 +9,8 @@
 #import "XCOneController.h"
 #import "FCRouter.h"
 
+#define XCBasePath @"C:home//"
+
 
 static NSString * const TwoURL = @"app://two";
 
@@ -22,6 +24,10 @@ static NSString * const TwoURL = @"app://two";
     [super viewDidLoad];
     
     self.title = @"One Controller";
+    
+    NSString *path = XCBasePath;
+    
+    
     
     Class Two = NSClassFromString(@"XCTwoController");
     [FCRouter.share regsiterUrl:TwoURL mapViewControllerClass:Two];
