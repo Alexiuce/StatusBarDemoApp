@@ -8,25 +8,49 @@
 
 #import "ViewController.h"
 
+#import "XCViewModel.h"
+
+
+#define MYNUMBER 10
+
+%:define MYNEWNUMBER 20
 
 
 @interface Spark : NSObject
-
 @property(nonatomic,copy) NSString *name;
+//@property (nonatomic, assign) int age1;
+//@property (nonatomic, assign) int age;
 
 @end
 
 @implementation Spark
 
 - (void)speak {
+//    NSLog(@"self address == %p",self);
+//    NSLog(@"%d",self.age);
+//    NSLog(@"self age1 =  %d, age = %d ",self.age1,self.age);
     NSLog(@"My name is:%@",self.name);
 }
 
 @end
 
+/** c89 中 如果函数的返回值为int 类型,可以省略不写 */
+//my_function(){
+//    return 20;
+//}
 
 
-@interface ViewController ()
+
+//static inline CGFloat GetScreenWidth(){
+//    return UIScreen.mainScreen.bounds.size.width;
+//}
+
+//static inline CGFloat GetScreenHeight(){
+//    return UIScreen.mainScreen.bounds.size.height;
+//}
+
+
+@interface ViewController ()<CALayerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (nonatomic, strong) CALayer *redLayer;
 
@@ -36,6 +60,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timeOffsetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+@property (weak, nonatomic) IBOutlet UIButton *showDrawingButton;
 
 @end
 
@@ -43,22 +68,174 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /**
+    int 哈哈 = 20;
+    NSString *😀 = @"empty";
+
+    NSLog(@"%@",😀);
+    NSLog(@"%d",MYNEWNUMBER);
 //    [self p_setupBezierPath];
     // 获取系统最后一次重启后到当前的时间秒数;
-    CFTimeInterval time = CACurrentMediaTime();
-    NSLog(@"time = %f",time);
-     [self p_graphCAMediaTimingFunc];
+//    CFTimeInterval time = CACurrentMediaTime();
+//    NSLog(@"time = %f",time);
+     */
+//    <:self p_graphCAMediaTimingFunc:>;
+//    [self p_shareLayer];
+   
+//    [self p_objcDemo];
+//    id cls = [Spark class];
+//    void *obj = &cls;
+//    [(__bridge id)obj speak];
+//    [self p_addLayer];
+//    [self p_addLayerContents];
+//    [self p_testCGAffineTransformCacule];
+//    self.showDrawingButton.layer.opacity = 0.5;
+}
+
+- (void)p_testCGAffineTransformCacule{
+    CGAffineTransform t = CGAffineTransformIdentity;
+    NSLog(@"a == %f  b == %f c == %f d == %f tx == %f ty == %f", t.a, t.b,t.c,t.d,t.tx,t.ty);
+    CGAffineTransform transT = CGAffineTransformTranslate(t, 10, 10);
     
+    NSLog(@"a == %f  b == %f c == %f d == %f tx == %f ty == %f", transT.a, transT.b,transT.c,transT.d,transT.tx,transT.ty);
+    
+    
+}
+
+- (void)p_addLayer{
+    CALayer *layer = [CALayer layer];
+//    CGFloat w = GetScreenWidth();
+    layer.frame = CGRectMake(150, 20,100, 100);
+    /** 1. layer 的背景色影响阴影效果: 如果时透明色,则阴影会根据layer的内容进行投射, 否则根据layer 形状进行投射
+     具体的阴影效果,需要根据阴影的相关属性显示
+     */
+    layer.backgroundColor = UIColor.blueColor.CGColor;
+//    layer.delegate = self;
+    UIImage *img = [UIImage imageNamed:@"icon_datuan"];
+    layer.contents = (__bridge id)img.CGImage;
+    [self.containerView.layer addSublayer:layer];
+//    [layer display];
+    //    layer.hidden = YES;
+    layer.shadowOpacity = 1;
+    /** 阴影三件套属性 */
+//    layer.shadowColor = UIColor.redColor.CGColor;
+//    layer.shadowOffset = CGSizeMake(130, 30);
+//    layer.shadowRadius = 5;
+    /** 使用shadowPath 可以绘制自定义的阴影形状 */
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(100, 30, 50, 50)];
+    layer.shadowPath = path.CGPath;
+}
+
+#pragma mark - CALayerDelegate
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
+    CGContextSetLineWidth(ctx, 10);
+    CGContextSetStrokeColorWithColor(ctx, UIColor.redColor.CGColor);
+    CGContextStrokeEllipseInRect(ctx, layer.bounds);
+}
+
+#pragma mark - Private method
+- (void)p_addLayerContents{
+    UIImage *img = [UIImage imageNamed:@"icon_shangfen"];
+    self.containerView.layer.contents = (__bridge id)img.CGImage;
+    /** contentsGravity 相当于UIView的contentMode: 设置内容的对齐方式 */
+//    self.containerView.layer.geometryFlipped = YES;
+    self.containerView.layer.contentsGravity = kCAGravityResizeAspect;
+    self.containerView.layer.contentsScale = img.scale;
 }
 
 - (void)p_objcDemo{
+    
+//    char *a = "a";
+//    char *b = "b";
+//    char *c = "f";
+//    NSLog(@"%d == %d == %d",a[4],*b,*c);
+    
+//    float f1 = 3.141526;
+//    double d1 = f1; // d1 = 3.141526
+//    NSLog(@"d1 == f1 ?  %d",d1 == f1);
+//
+//
+//    size_t lengthA = sizeof(NSString *);
+//    NSLog(@"%zu", lengthA);
+//    NSString *a = @"Hello~";
+//    NSString *b = @"World";
+//    NSLog(@"b address ==%p  b objc == %p",&b,b);
+//    int a = 4;
+//    int b = 3;
+//    int c = 5;
+//    int d = 2;
+////    NSObject *
+//     03 00 00 00 04 00 00 00
+//    NSString *s = @"adfd";
+//    UIView *v = self.view;
+//    NSNumber *n = @(2);
     id cls = [Spark class];
     
+    
+//    {
+//        起始地址 +8 _
+//        isa, 8
+//        第一个属性
+//        第二个...
+//        第三个..
+//    }
+//    NSLog(@"cls address == %p",&cls);
+//    NSLog(@"a string address ==  %p",&a);
+//    NSLog(@"%p  %p",a,cls);
     void *obj = &cls;
+//    NSLog(@"%p, %p",&cls,self);
     
     [(__bridge id)obj speak];
+    
+    
+    /** 汇编代码
+     0x10df643c0 <+0>:   pushq  %rbp
+     0x10df643c1 <+1>:   movq   %rsp, %rbps
+     0x10df643c4 <+4>:   subq   $0x30, %rsp
+     0x10df643c8 <+8>:   leaq   0x5e71(%rip), %rax        ; @"Hello~"
+     0x10df643cf <+15>:  movq   %rdi, -0x8(%rbp)
+     0x10df643d3 <+19>:  movq   %rsi, -0x10(%rbp)
+     0x10df643d7 <+23>:  movq   %rax, %rdi
+     0x10df643da <+26>:  callq  *0x5c78(%rip)             ; (void *)0x000000010e920fa0: objc_retain
+     0x10df643e0 <+32>:  movq   %rax, -0x18(%rbp)
+     0x10df643e4 <+36>:  movq   0x8145(%rip), %rax        ; (void *)0x000000010df6c788: Spark
+     0x10df643eb <+43>:  movq   0x7d7e(%rip), %rsi        ; "class"
+     0x10df643f2 <+50>:  movq   %rax, %rdi
+     0x10df643f5 <+53>:  callq  *0x5c4d(%rip)             ; (void *)0x000000010e923d80: objc_msgSend
+     0x10df643fb <+59>:  movq   %rax, %rdi
+     0x10df643fe <+62>:  callq  0x10df677ca               ; symbol stub for: objc_retainAutoreleasedReturnValue
+     0x10df64403 <+67>:  leaq   -0x20(%rbp), %rsi
+     0x10df64407 <+71>:  movq   %rax, -0x20(%rbp)
+     0x10df6440b <+75>:  movq   %rsi, -0x28(%rbp)
+     0x10df6440f <+79>:  movq   -0x28(%rbp), %rdi
+     0x10df64413 <+83>:  movq   0x7f2e(%rip), %rsi        ; "speak"
+     0x10df6441a <+90>:  callq  *0x5c28(%rip)             ; (void *)0x000000010e923d80: objc_msgSend
+     0x10df64420 <+96>:  leaq   -0x20(%rbp), %rdi
+     0x10df64424 <+100>: xorl   %ecx, %ecx
+     0x10df64426 <+102>: movl   %ecx, %esi
+     0x10df64428 <+104>: callq  0x10df677d6               ; symbol stub for: objc_storeStrong
+     0x10df6442d <+109>: xorl   %ecx, %ecx
+     0x10df6442f <+111>: movl   %ecx, %esi
+     0x10df64431 <+113>: leaq   -0x18(%rbp), %rax
+     0x10df64435 <+117>: movq   %rax, %rdi
+     0x10df64438 <+120>: callq  0x10df677d6               ; symbol stub for: objc_storeStrong
+     0x10df6443d <+125>: addq   $0x30, %rsp
+     0x10df64441 <+129>: popq   %rbp
+     0x10df64442 <+130>: retq
+     
+     
+     */
 }
 
+- (void)p_shareLayer{
+    CAShapeLayer *blueLayer = [CAShapeLayer layer];
+//    blueLayer.frame = CGRectMake(50, 50, 200, 200);
+    blueLayer.position = CGPointMake(50, 50);
+    blueLayer.fillColor = UIColor.blueColor.CGColor;
+//    blueLayer.backgroundColor = UIColor.redColor.CGColor;
+    blueLayer.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 100) cornerRadius:20].CGPath;
+    [self.containerView.layer addSublayer:blueLayer];
+}
 
 - (IBAction)playAnimationDemo:(UIButton *)sender{
     /** 创建关键帧动画 */
@@ -192,8 +369,8 @@
     
     [self.imageView.layer addAnimation:transition forKey:nil];
     
-//    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
-    self.imageView.image = [UIImage imageNamed:imageNames[0]];
+    self.imageView.image = [UIImage imageNamed:imageNames[index % 2]];
+//    self.imageView.image = [UIImage imageNamed:imageNames[0]];
     index++;
     
 }
@@ -259,3 +436,5 @@
 }
 
 @end
+
+

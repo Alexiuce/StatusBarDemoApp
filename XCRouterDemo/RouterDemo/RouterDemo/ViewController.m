@@ -82,6 +82,10 @@
     
 //    NSLog(@"button frame = %@",NSStringFromCGRect(sender.frame));
 }
+- (IBAction)pushButtonAction:(UIButton *)sender {
+}
+- (IBAction)pushAction:(UIBarButtonItem *)sender {
+}
 /** 点击push button */
 - (IBAction)clickPushButton:(UIButton *)sender {
     XCAppEnterViewController *controller = [[XCAppEnterViewController alloc]init];

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue2610.js"></script>
+</head>
+<body>
+   <div id="app">
+       <span v-text="name"></span>
+       <span v-html="html"></span>
+       <span v-text="html"></span>
+   </div>
+
+</body>
+
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+          name:"programmer",
+            html:"<div>html div</div>"
+        }
+
+    });
+</script>
+</html>
