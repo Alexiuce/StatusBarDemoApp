@@ -9,7 +9,11 @@
 #import "XCOneController.h"
 #import "FCRouter.h"
 
-#define XCBasePath @"C:home//"
+#define XCBasePath "C:home//"
+
+#define XCAT @
+#define XCToString(x) #x
+#define XCToOCString(x,y) x##y
 
 
 static NSString * const TwoURL = @"app://two";
@@ -25,7 +29,8 @@ static NSString * const TwoURL = @"app://two";
     
     self.title = @"One Controller";
     
-    NSString *path = XCBasePath;
+    NSString *path = XCToOCString("abc","def");
+    NSLog(@"%@",path);
     
     
     
