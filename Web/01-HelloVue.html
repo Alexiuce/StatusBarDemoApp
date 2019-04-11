@@ -9,14 +9,21 @@
 
 <div id="app">
     {{name}}
+    <input type="text" :value="name">
+    <input type="text" v-bind:value="age">
+    <a v-bind="{href:'http://baidu.com/'+age}">jump</a>
+    <div>
+        <input type="text" v-bind="{value:name + age}">
+    </div>
 </div>
 
 <script>
 
-    new Vue({
+  let vm = new Vue({
         el:'#app',
         data:{
-            name:"hello"
+            name:"hello",
+            age:12
         }
     });
 </script>
