@@ -4,9 +4,11 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="2">
+          <list size="4">
             <item index="0" class="java.lang.String" itemvalue="v-bind:value" />
             <item index="1" class="java.lang.String" itemvalue="v-model" />
+            <item index="2" class="java.lang.String" itemvalue=":key" />
+            <item index="3" class="java.lang.String" itemvalue="key" />
           </list>
         </value>
       </option>
