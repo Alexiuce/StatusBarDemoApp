@@ -21,6 +21,7 @@ static NSString * const TwoURL = @"app://two";
 @interface XCOneController ()
 
 @property (nonatomic, strong) NSDictionary *actionDict;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
 
@@ -34,6 +35,8 @@ static NSString * const TwoURL = @"app://two";
     [FCRouter.share regsiterUrl:@"app://oneHandle" mapHandle:^id(NSDictionary *paramters) {
         NSLog(@"%@",paramters);
         NSLog(@"%@",weakSelf.title);
+        self.textLabel.text = paramters[@"name"];
+        
         return nil;
     }];
 //    NSString *path = XCToOCString("abc","def");
