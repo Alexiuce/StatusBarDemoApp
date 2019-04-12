@@ -7,6 +7,7 @@
 //
 
 #import "XCTwoController.h"
+#import "FCRouter.h"
 
 @interface XCTwoController ()
 
@@ -19,16 +20,12 @@
     self.title = @"Two Controller";
 }
 - (IBAction)clickedButton:(UIButton *)sender {
+    /** 调用注册的 block */
+    [FCRouter.share matchHandleWithUrl:@"app://oneHandle" userInfo:@{@"a":@"hello",@"b": self.title}];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc{
+    NSLog(@"%s",__FUNCTION__);
 }
-*/
 
 @end

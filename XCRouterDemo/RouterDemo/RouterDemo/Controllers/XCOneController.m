@@ -30,7 +30,12 @@ static NSString * const TwoURL = @"app://two";
     [super viewDidLoad];
     
     self.title = @"One Controller";
-    
+    __weak typeof(self)  weakSelf = self;
+    [FCRouter.share regsiterUrl:@"app://oneHandle" mapHandle:^id(NSDictionary *paramters) {
+        NSLog(@"%@",paramters);
+        NSLog(@"%@",weakSelf.title);
+        return nil;
+    }];
 //    NSString *path = XCToOCString("abc","def");
 //    NSLog(@"%@",path);
     
@@ -47,8 +52,8 @@ static NSString * const TwoURL = @"app://two";
     
     NSInvocation *inv = self.actionDict[@"b"];
     [inv invoke];
-//    UIViewController *two = [FCRouter.share matchViewControllerWithUrl:TwoURL];
-//    [self.navigationController pushViewController:two animated:YES];
+    UIViewController *two = [FCRouter.share matchViewControllerWithUrl:TwoURL];
+    [self.navigationController pushViewController:two animated:YES];
     
 }
 
@@ -69,7 +74,7 @@ static NSString * const TwoURL = @"app://two";
     return invocation;
 }
 - (void)dealloc{
-    NSLog(@"dealloc");
+     NSLog(@"%s",__FUNCTION__);
 }
 
 @end
