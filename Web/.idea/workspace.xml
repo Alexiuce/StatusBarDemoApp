@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1e3d1aee-13e6-4596-b043-fe6614928549" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="1e3d1aee-13e6-4596-b043-fe6614928549" name="Default Changelist" comment="" />
+>>>>>>> feat(#v-on): 添加v-on 指令 code
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -45,12 +49,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04-v-for.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="589">
+=======
+            <state relative-caret-position="576">
+>>>>>>> feat(#v-on): 添加v-on 指令 code
               <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05-v-on.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,6 +74,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
               <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/05-v-on.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+>>>>>>> feat(#v-on): 添加v-on 指令 code
             </state>
           </provider>
         </entry>
@@ -91,7 +107,10 @@
         <option value="$PROJECT_DIR$/03-v-model.html" />
         <option value="$PROJECT_DIR$/04-v-for.html" />
         <option value="$PROJECT_DIR$/05-v-on.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/06-v-if.html" />
+=======
+>>>>>>> feat(#v-on): 添加v-on 指令 code
       </list>
     </option>
   </component>
@@ -166,14 +185,22 @@
       <workItem from="1554960832792" duration="622000" />
       <workItem from="1555052922317" duration="880000" />
       <workItem from="1555054515030" duration="1380000" />
+<<<<<<< HEAD
       <workItem from="1555056740661" duration="490000" />
       <workItem from="1555117147605" duration="15000" />
       <workItem from="1555117163922" duration="681000" />
+=======
+      <workItem from="1555056740661" duration="269000" />
+>>>>>>> feat(#v-on): 添加v-on 指令 code
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="6313000" />
+=======
+    <option name="totallyTimeSpent" value="5396000" />
+>>>>>>> feat(#v-on): 添加v-on 指令 code
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -202,6 +229,16 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vue2610.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="11906" selection-start-line="11906" selection-end-line="11907" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01-HelloVue.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -217,6 +254,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03-v-model.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
@@ -241,6 +279,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/05-v-on.html">
+=======
+>>>>>>> feat(#v-on): 添加v-on 指令 code
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
@@ -249,8 +289,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/06-v-if.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="247">
           <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+=======
+        <state relative-caret-position="576">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05-v-on.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+>>>>>>> feat(#v-on): 添加v-on 指令 code
         </state>
       </provider>
     </entry>
