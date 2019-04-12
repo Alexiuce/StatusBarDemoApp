@@ -21,7 +21,7 @@
 }
 - (IBAction)clickedButton:(UIButton *)sender {
     /** 调用注册的 block */
-    [FCRouter.share matchHandleWithUrl:@"app://oneHandle" userInfo:@{@"a":@"hello",@"b": self.title}];
+    [FCRouter.share matchHandleWithUrl:@"app://oneHandle" userInfo:@{@"name":@"hello",@"b": self.title}];
 }
 
 - (void)dealloc{
