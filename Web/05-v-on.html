@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-ON</title>
+    <script src="vue2610.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{name}}</div>
+    <button v-on:click="myClick"></button>
+</div>
+
+</body>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+        name:'alex'
+        },
+        methods:{
+            myClick : function () {
+                this.name = "job"
+            },
+
+        }
+    });
+</script>
+</html>
