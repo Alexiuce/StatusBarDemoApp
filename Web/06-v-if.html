@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>V-IF</title>
+    <script src="vue2610.js"></script>
+</head>
+<body>
+<div id="app">
+        <button v-on:click="changeDisplay">显示/隐藏</button>
+<!--    v-if 通过添加或者移除dom 实现显示或隐藏元素; -->
+        <div v-if="isDisplay">div is display</div>
+    <hr>
+<!--    v-show 通过对dom元素添加style:display=none 实现隐藏或显示-->
+    <div v-show="isDisplay"> v-show </div>
+</div>
+</body>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            isDisplay: true,
+        },
+        methods:{
+            changeDisplay:function () {
+                this.isDisplay = !this.isDisplay;
+            }
+        }
+    }) ;
+</script>
+
+</html>
