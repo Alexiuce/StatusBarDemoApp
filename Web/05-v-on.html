@@ -8,7 +8,11 @@
 <body>
 <div id="app">
     <div>{{name}}</div>
-    <button v-on:click="myClick"></button>
+    <button v-on:click="myopic">change name</button>
+    <hr>
+    <button v-on:click="submit">提交</button>
+    <hr>
+    <button @click="acyclic">@click</button>
 </div>
 
 </body>
@@ -20,9 +24,17 @@
         name:'alex'
         },
         methods:{
-            myClick : function () {
+
+            myopic : function () {
                 this.name = "job"
             },
+            submit:function () {
+                console.log("submit click")
+                this.name = "submit"
+            },
+            acyclic:function () {
+                this.name = "@click"
+            }
 
         }
     });
