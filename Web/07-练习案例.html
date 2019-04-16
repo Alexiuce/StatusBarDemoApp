@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>品牌列表案例</title>
@@ -36,13 +36,15 @@
         <th>创建时间</th>
         <th>操作</th>
         </tr>
-
+        <td colspan="4" v-if="list.length == 0">
+            当前列表暂无数据
+        </td>
         <tr v-for="item in list">
             <td>{{item.id}}</td>
             <td>{{item.name}}</td>
             <td>{{item.ctime}}</td>
             <td>
-                <a href="#">删除</a>
+                <a href="#" v-on:click="test">删除</a>
             </td>
         </tr>
     </table>
@@ -57,7 +59,9 @@
             list:[{id:1,name:'奔驰',ctime:new Date}]
         },
         methods:{
+            test:function () {
 
+            }
         }
     });
 </script>
