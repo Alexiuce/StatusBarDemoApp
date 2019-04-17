@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XCOneController">
             <connections>
+                <outlet property="testLabel" destination="nmf-XL-ydi" id="pLj-aC-qCN"/>
                 <outlet property="textLabel" destination="sxo-Yx-ntO" id="ViD-ih-lQb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -44,12 +45,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-XL-ydi">
+                    <rect key="frame" x="157" y="368" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Fmm-xe-vAC"/>
+                        <constraint firstAttribute="width" constant="100" id="VjC-zh-Mxd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
             <constraints>
                 <constraint firstItem="sxo-Yx-ntO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Pak-OZ-nGx"/>
+                <constraint firstItem="nmf-XL-ydi" firstAttribute="top" secondItem="sxo-Yx-ntO" secondAttribute="bottom" constant="42" id="SnC-4s-EBe"/>
                 <constraint firstItem="TIu-77-Ybq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XbF-Tm-A1A"/>
                 <constraint firstItem="6fc-hi-d6B" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="101" id="ZOX-6u-Uap"/>
+                <constraint firstItem="nmf-XL-ydi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zl8-7A-NQz"/>
                 <constraint firstItem="sxo-Yx-ntO" firstAttribute="top" secondItem="TIu-77-Ybq" secondAttribute="bottom" constant="46" id="plg-1z-jNT"/>
                 <constraint firstItem="6fc-hi-d6B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="svV-mm-S07"/>
                 <constraint firstItem="TIu-77-Ybq" firstAttribute="top" secondItem="6fc-hi-d6B" secondAttribute="bottom" constant="63" id="x9d-0p-Sc8"/>
