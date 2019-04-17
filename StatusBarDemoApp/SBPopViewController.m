@@ -17,6 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    NSString *serverPath = @"https://www.tianqiapi.com/api/?version=v1";
+    NSURL *url = [[NSURL alloc]initWithString:serverPath];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration];
+    
+    NSURLSessionDataTask *dt = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        NSLog(@"dict = %@",dict);
+        NSLog(@"responde = %@",response);
+    }];
+    [dt resume];
 }
 - (IBAction)quit:(NSButton *)sender {
     
