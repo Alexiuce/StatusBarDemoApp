@@ -19,18 +19,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
     NSStatusBar *sb = [NSStatusBar systemStatusBar];
-    
-    
-   
-    
     // 创建NSStatusItem并添加到系统状态栏上
     self.demoItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    
-    
-    
     NSNumber *n = [self.demoItem valueForKey:@"_fPriority"];
     NSLog(@"before = %d",n.intValue);
-    
 //    [self.demoItem setValue:@(INT_MAX) forKey:@"_fPriority"];
      NSNumber *n1 = [self.demoItem valueForKey:@"_fPriority"];
     NSLog(@"after = %d",n1.intValue);
@@ -59,8 +51,8 @@
         }
     }];
     
-    NSArray *is = [sb valueForKeyPath:@"items"];
-    NSLog(@"%zd",is.count);
+//    NSArray *is = [sb valueForKeyPath:@"items"];
+//    NSLog(@"%zd",is.count);
 }
 // 显示popover方法
 - (void)showMyPopover:(NSStatusBarButton *)button{
@@ -70,5 +62,7 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
+
+
 
 @end
