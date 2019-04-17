@@ -5,6 +5,10 @@
     <title>品牌列表案例</title>
     <script src="vue2610.js"></script>
     <style>
+        #addView{
+            width: 800px;
+            margin: 20px auto;
+        }
         #tb{
             width: 800px;
             border-collapse: collapse;
@@ -29,6 +33,11 @@
 
 <body>
 <div id="app">
+    <div id="addView">
+        <input type="text" v-model="pid">
+        <input type="text" v-model="pname">
+        <button @click="addData">添加数据</button>
+    </div>
     <table id="tb">
         <tr>
         <th>编号</th>
@@ -39,12 +48,12 @@
         <td colspan="4" v-if="list.length == 0">
             当前列表暂无数据
         </td>
-        <tr v-for="item in list">
+        <tr v-for="(item,index) in list">
             <td>{{item.id}}</td>
             <td>{{item.name}}</td>
             <td>{{item.ctime}}</td>
             <td>
-                <a href="#" v-on:click="test">删除</a>
+                <a href="#" v-on:click="test(index)">删除</a>
             </td>
         </tr>
     </table>
@@ -56,12 +65,25 @@
     let vm = new Vue({
         el:'#app',
         data:{
-            list:[{id:1,name:'奔驰',ctime:new Date}]
+            list:[{id:1,name:'奔驰',ctime:new Date},
+                {id:2,name:'酷奇',ctime:new Date},
+                {id:3,name:'奇瑞',ctime:new Date}
+            ],
+            pid:0,
+            pname:'',
+
         },
         methods:{
-            test:function () {
+            test:function (index) {
+                this.list.splice(index,1)
+            },
+            addData: function () {
 
+                this.list.push({id:this.pid,name:this.pname,ctime:new Date})
+                this.pid = 0
+                this.pname = ''
             }
+
         }
     });
 </script>
