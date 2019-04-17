@@ -22,6 +22,7 @@ static NSString * const TwoURL = @"app://two";
 
 @property (nonatomic, strong) NSDictionary *actionDict;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *testLabel;
 
 @end
 
@@ -48,6 +49,17 @@ static NSString * const TwoURL = @"app://two";
     
     Class Two = NSClassFromString(@"XCTwoController");
     [FCRouter.share regsiterUrl:TwoURL mapViewControllerClass:Two];
+    
+    
+    NSString *test = @"hello world is a programming code";
+    CGSize limitSize = (CGSize){100,100};
+    CGRect textRect = [test boundingRectWithSize:limitSize options:NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil];
+    
+    CGFloat w = ceilf(CGRectGetWidth(textRect));
+    CGFloat h = ceilf(CGRectGetHeight(textRect));
+    
+    NSLog(@"w =%f,h=%f,textRect = %@",w,h,NSStringFromCGRect(textRect));
+    self.testLabel.text = test;
     
     // Do any additional setup after loading the view from its nib.
 }
