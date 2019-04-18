@@ -37,6 +37,9 @@
         <input type="text" v-model="pid">
         <input type="text" v-model="pname">
         <button @click="addData">添加数据</button>
+        <div>
+            <input type="text"v-model="sname">
+        </div>
     </div>
     <table id="tb">
         <tr>
@@ -48,12 +51,13 @@
         <td colspan="4" v-if="list.length == 0">
             当前列表暂无数据
         </td>
-        <tr v-for="(item,index) in list">
+        <tr v-for="item in filterItem(list)">
             <td>{{item.id}}</td>
             <td>{{item.name}}</td>
             <td>{{item.ctime}}</td>
             <td>
-                <a href="#" v-on:click="test(index)">删除</a>
+<!--                <a href="#" v-on:click="test(index)">删除</a>-->
+                <a href="#" v-on:click="test(item.id)">删除</a>
             </td>
         </tr>
     </table>
@@ -71,20 +75,41 @@
             ],
             pid:0,
             pname:'',
+            sname:'',
 
         },
         methods:{
             test:function (index) {
-                this.list.splice(index,1)
+                //提醒弹窗
+                if (!confirm('是否要删除数据')){
+                    return
+                }
+               let di = this.list.findIndex(function (item) {
+                    return item.id === index
+                })
+                this.list.splice(di,1)
+
+                // this.list.splice(index,1)
             },
             addData: function () {
 
                 this.list.push({id:this.pid,name:this.pname,ctime:new Date})
                 this.pid = 0
                 this.pname = ''
+            },
+            filterItem:function (item) {
+                let r = item.filter(function (obj) {
+                    console.log(obj.name)
+                    let i =  obj.name.indexOf(this.sname)
+                    return i !== -1
+                })
+
+                console.log(r)
+                return r
+
             }
 
-        }
+        },
     });
 </script>
 </html>
