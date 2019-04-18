@@ -99,6 +99,16 @@
 		D8D3DD2422535393006906C0 /* RouterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D3DD2322535393006906C0 /* RouterTableViewController.m */; };
 		D8D703FB22166BA4003DEDCB /* XCBeginTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */; };
 		D8D703FC22166BA4003DEDCB /* XCBeginTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */; };
+		D8DBD328226829F200FACB3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD327226829F200FACB3F /* AppDelegate.swift */; };
+		D8DBD32A226829F200FACB3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD329226829F200FACB3F /* ViewController.swift */; };
+		D8DBD32D226829F200FACB3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DBD32B226829F200FACB3F /* Main.storyboard */; };
+		D8DBD32F226829F300FACB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DBD32E226829F300FACB3F /* Assets.xcassets */; };
+		D8DBD332226829F300FACB3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DBD330226829F300FACB3F /* LaunchScreen.storyboard */; };
+		D8DBD3382268308800FACB3F /* XCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD3372268308800FACB3F /* XCCoordinator.swift */; };
+		D8DBD33A22683F3200FACB3F /* XCStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD33922683F3200FACB3F /* XCStoryboard.swift */; };
+		D8DBD33C2268487300FACB3F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD33B2268487300FACB3F /* MainCoordinator.swift */; };
+		D8DBD33E22684EF900FACB3F /* XCCreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD33D22684EF900FACB3F /* XCCreateAccountViewController.swift */; };
+		D8DBD34022684F0E00FACB3F /* XCBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBD33F22684F0E00FACB3F /* XCBuyViewController.swift */; };
 		D8E7FDC021C737380031426F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDBF21C737380031426F /* AppDelegate.m */; };
 		D8E7FDC321C737380031426F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E7FDC221C737380031426F /* ViewController.m */; };
 		D8E7FDC621C737380031426F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E7FDC421C737380031426F /* Main.storyboard */; };
@@ -309,6 +319,18 @@
 		D8D703F822166BA4003DEDCB /* XCBeginTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBeginTimeViewController.h; sourceTree = "<group>"; };
 		D8D703F922166BA4003DEDCB /* XCBeginTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBeginTimeViewController.m; sourceTree = "<group>"; };
 		D8D703FA22166BA4003DEDCB /* XCBeginTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCBeginTimeViewController.xib; sourceTree = "<group>"; };
+		D8DBD325226829F200FACB3F /* XCCoordinatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCCoordinatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8DBD327226829F200FACB3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8DBD329226829F200FACB3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8DBD32C226829F200FACB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8DBD32E226829F300FACB3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8DBD331226829F300FACB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8DBD333226829F300FACB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8DBD3372268308800FACB3F /* XCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCCoordinator.swift; sourceTree = "<group>"; };
+		D8DBD33922683F3200FACB3F /* XCStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCStoryboard.swift; sourceTree = "<group>"; };
+		D8DBD33B2268487300FACB3F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D8DBD33D22684EF900FACB3F /* XCCreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCCreateAccountViewController.swift; sourceTree = "<group>"; };
+		D8DBD33F22684F0E00FACB3F /* XCBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBuyViewController.swift; sourceTree = "<group>"; };
 		D8E7FDBC21C737380031426F /* XCAutoLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCAutoLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E7FDBE21C737380031426F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8E7FDBF21C737380031426F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -391,6 +413,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D8CBB3F721B4FF3700D243FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8DBD322226829F200FACB3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -597,6 +626,7 @@
 				D89CA0EF21D20E9100C117B2 /* XCTestApp */,
 				D822728E21D8EF2800EEE11F /* XCDrawing */,
 				D82CAEA12244663D006DEB37 /* CoreAnimationForMac */,
+				D8DBD326226829F200FACB3F /* XCCoordinatorDemo */,
 				D88B75EF21A77D7000951228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -614,6 +644,7 @@
 				D89CA0EE21D20E9100C117B2 /* XCTestApp.app */,
 				D822728D21D8EF2800EEE11F /* XCDrawing.app */,
 				D82CAEA02244663D006DEB37 /* CoreAnimationForMac.app */,
+				D8DBD325226829F200FACB3F /* XCCoordinatorDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -757,6 +788,24 @@
 				D8D3DD2322535393006906C0 /* RouterTableViewController.m */,
 			);
 			path = ListControllers;
+			sourceTree = "<group>";
+		};
+		D8DBD326226829F200FACB3F /* XCCoordinatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8DBD327226829F200FACB3F /* AppDelegate.swift */,
+				D8DBD329226829F200FACB3F /* ViewController.swift */,
+				D8DBD32B226829F200FACB3F /* Main.storyboard */,
+				D8DBD32E226829F300FACB3F /* Assets.xcassets */,
+				D8DBD330226829F300FACB3F /* LaunchScreen.storyboard */,
+				D8DBD333226829F300FACB3F /* Info.plist */,
+				D8DBD3372268308800FACB3F /* XCCoordinator.swift */,
+				D8DBD33922683F3200FACB3F /* XCStoryboard.swift */,
+				D8DBD33B2268487300FACB3F /* MainCoordinator.swift */,
+				D8DBD33D22684EF900FACB3F /* XCCreateAccountViewController.swift */,
+				D8DBD33F22684F0E00FACB3F /* XCBuyViewController.swift */,
+			);
+			path = XCCoordinatorDemo;
 			sourceTree = "<group>";
 		};
 		D8E7FDBD21C737380031426F /* XCAutoLayoutDemo */ = {
@@ -973,6 +1022,23 @@
 			productReference = D8CBB3FA21B4FF3700D243FC /* XCARMAssembly */;
 			productType = "com.apple.product-type.tool";
 		};
+		D8DBD324226829F200FACB3F /* XCCoordinatorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8DBD336226829F300FACB3F /* Build configuration list for PBXNativeTarget "XCCoordinatorDemo" */;
+			buildPhases = (
+				D8DBD321226829F200FACB3F /* Sources */,
+				D8DBD322226829F200FACB3F /* Frameworks */,
+				D8DBD323226829F200FACB3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XCCoordinatorDemo;
+			productName = XCCoordinatorDemo;
+			productReference = D8DBD325226829F200FACB3F /* XCCoordinatorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D8E7FDBB21C737380031426F /* XCAutoLayoutDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8E7FDD121C737390031426F /* Build configuration list for PBXNativeTarget "XCAutoLayoutDemo" */;
@@ -998,6 +1064,7 @@
 			attributes = {
 				CLASSPREFIX = XC;
 				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = dongjiu;
 				TargetAttributes = {
@@ -1035,6 +1102,9 @@
 					D8CBB3F921B4FF3700D243FC = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					D8DBD324226829F200FACB3F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					D8E7FDBB21C737380031426F = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1065,6 +1135,7 @@
 				D87B32B62202CEC800AE9C41 /* PythonDemo */,
 				D87B32BA2202CEFD00AE9C41 /* XCPython */,
 				D82CAE9F2244663D006DEB37 /* CoreAnimationForMac */,
+				D8DBD324226829F200FACB3F /* XCCoordinatorDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -1154,6 +1225,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8DBD323226829F200FACB3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DBD332226829F300FACB3F /* LaunchScreen.storyboard in Resources */,
+				D8DBD32F226829F300FACB3F /* Assets.xcassets in Resources */,
+				D8DBD32D226829F200FACB3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1319,6 +1400,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8DBD321226829F200FACB3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DBD32A226829F200FACB3F /* ViewController.swift in Sources */,
+				D8DBD33A22683F3200FACB3F /* XCStoryboard.swift in Sources */,
+				D8DBD328226829F200FACB3F /* AppDelegate.swift in Sources */,
+				D8DBD33C2268487300FACB3F /* MainCoordinator.swift in Sources */,
+				D8DBD3382268308800FACB3F /* XCCoordinator.swift in Sources */,
+				D8DBD34022684F0E00FACB3F /* XCBuyViewController.swift in Sources */,
+				D8DBD33E22684EF900FACB3F /* XCCreateAccountViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8E7FDB821C737380031426F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1438,6 +1533,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				D8A4625B21B8B16A00914CE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D8DBD32B226829F200FACB3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DBD32C226829F200FACB3F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8DBD330226829F300FACB3F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DBD331226829F300FACB3F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1957,6 +2068,48 @@
 			};
 			name = Release;
 		};
+		D8DBD334226829F300FACB3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57SDN968Q2;
+				INFOPLIST_FILE = XCCoordinatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCCoordinatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8DBD335226829F300FACB3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57SDN968Q2;
+				INFOPLIST_FILE = XCCoordinatorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexiuce.XCCoordinatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D8E7FDCF21C737390031426F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2098,6 +2251,15 @@
 			buildConfigurations = (
 				D8CBB3FE21B4FF3700D243FC /* Debug */,
 				D8CBB3FF21B4FF3700D243FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8DBD336226829F300FACB3F /* Build configuration list for PBXNativeTarget "XCCoordinatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8DBD334226829F300FACB3F /* Debug */,
+				D8DBD335226829F300FACB3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
