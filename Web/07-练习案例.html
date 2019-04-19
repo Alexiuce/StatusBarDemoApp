@@ -38,7 +38,7 @@
         <input type="text" v-model="pname">
         <button @click="addData">添加数据</button>
         <div>
-            <input type="text"v-model="sname">
+            <input type="text" v-model="sname" placeholder="过滤条件">
         </div>
     </div>
     <table id="tb">
@@ -76,7 +76,6 @@
             pid:0,
             pname:'',
             sname:'',
-
         },
         methods:{
             test:function (index) {
@@ -98,13 +97,10 @@
                 this.pname = ''
             },
             filterItem:function (item) {
+                let t = this.sname
                 let r = item.filter(function (obj) {
-                    console.log(obj.name)
-                    let i =  obj.name.indexOf(this.sname)
-                    return i !== -1
+                    return  obj.name.indexOf(t) !== -1
                 })
-
-                console.log(r)
                 return r
 
             }
