@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol XCCoordinator {
+protocol XCCoordinator: AnyObject {
     var chileCoordinators : [XCCoordinator] {get set}
     var navigationController : UINavigationController {get set}
     func start()

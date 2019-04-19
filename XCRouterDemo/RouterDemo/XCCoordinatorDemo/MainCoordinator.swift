@@ -25,10 +25,25 @@ class MainCoordinator: XCCoordinator {
     }
     
     
+    func childDidFinished(_ child : XCCoordinator?)  {
+        for (index,coordinator) in chileCoordinators.enumerated(){
+            if coordinator === child {
+                chileCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+    
+    
     func buySubscription()  {
-        let vc = XCBuyViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+//        let vc = XCBuyViewController.instantiate()
+//        vc.coordinator = self
+//        navigationController.pushViewController(vc, animated: true)
+        
+        let child = XCBuyCoordinator(navigatroller: navigationController)
+        child.parentCoordinator = self
+        chileCoordinators.append(child)
+        child.start()
     }
     
     func creatAccount()  {
