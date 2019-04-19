@@ -16,9 +16,9 @@ class XCBuyViewController: UIViewController,XCStoryboard {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didFinishedBuying()
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        coordinator?.didFinishedBuying()
+//    }
 
 }

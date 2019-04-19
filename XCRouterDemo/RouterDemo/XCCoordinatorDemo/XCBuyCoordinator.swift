@@ -27,8 +27,8 @@ class XCBuyCoordinator: XCCoordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func didFinishedBuying()  {
-        parentCoordinator?.childDidFinished(self)
-    }
+//    func didFinishedBuying()  {
+//        parentCoordinator?.childDidFinished(self)
+//    }
     
 }
