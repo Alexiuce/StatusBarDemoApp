@@ -37,9 +37,6 @@ class MainCoordinator: NSObject , XCCoordinator {
     
     
     func buySubscription()  {
-//        let vc = XCBuyViewController.instantiate()
-//        vc.coordinator = self
-//        navigationController.pushViewController(vc, animated: true)
         
         let child = XCBuyCoordinator(navigatroller: navigationController)
         child.parentCoordinator = self
