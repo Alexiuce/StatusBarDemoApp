@@ -55,20 +55,30 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inb-dH-SY5">
+                    <rect key="frame" x="52.5" y="604" width="309" height="175"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="e9G-xA-RU7"/>
+                        <constraint firstAttribute="width" constant="309" id="hIZ-bl-Fnv"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
             <constraints>
                 <constraint firstItem="sxo-Yx-ntO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Pak-OZ-nGx"/>
                 <constraint firstItem="nmf-XL-ydi" firstAttribute="top" secondItem="sxo-Yx-ntO" secondAttribute="bottom" constant="42" id="SnC-4s-EBe"/>
                 <constraint firstItem="TIu-77-Ybq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XbF-Tm-A1A"/>
+                <constraint firstItem="inb-dH-SY5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yjb-i3-v2H"/>
                 <constraint firstItem="6fc-hi-d6B" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="101" id="ZOX-6u-Uap"/>
                 <constraint firstItem="nmf-XL-ydi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zl8-7A-NQz"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="inb-dH-SY5" secondAttribute="bottom" constant="83" id="e02-eg-nTt"/>
                 <constraint firstItem="sxo-Yx-ntO" firstAttribute="top" secondItem="TIu-77-Ybq" secondAttribute="bottom" constant="46" id="plg-1z-jNT"/>
                 <constraint firstItem="6fc-hi-d6B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="svV-mm-S07"/>
                 <constraint firstItem="TIu-77-Ybq" firstAttribute="top" secondItem="6fc-hi-d6B" secondAttribute="bottom" constant="63" id="x9d-0p-Sc8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="135" y="137"/>
+            <point key="canvasLocation" x="134.78260869565219" y="136.60714285714286"/>
         </view>
     </objects>
 </document>
