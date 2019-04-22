@@ -42,6 +42,9 @@ static NSString * const TwoURL = @"app://two";
     }];
 //    NSString *path = XCToOCString("abc","def");
 //    NSLog(@"%@",path);
+    NSArray *temps = @[@"d",@"c"];
+    temps[1] = @"d";
+    
     
     _actionDict = @{@"a":[self invocationWithSEL:@selector(testA)],
                     @"b":[self invocationWithSEL:@selector(testB)]
