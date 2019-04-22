@@ -7,8 +7,18 @@
 </head>
 <body>
 <div id="app">
+    <p>系统过滤器</p>
 <!--    json 是系统过滤器,将object转换为json形式 -->
     {{list | json}}
+    <hr>
+<!--    自定义私有的过滤器: 在vue对象内部定义的过滤器,作用域为vue对象监管的范围 -->
+    <p>私有过滤器</p>
+    <div class="app">
+        {{my_time}}
+        <p>
+            {{my_time | time_filter}}
+        </p>
+    </div>
     
 </div>
 </body>
@@ -18,7 +28,19 @@
     let vm = new Vue({
         el:'#app',
         data:{
-            list:[{uname:'alex'},{uname:'jobs'}]
+            list:[{uname:'alex'},{uname:'jobs'}],
+            my_time:new Date()
+        },
+        // 内部自定义的过滤器
+        filters:{
+            time_filter:function (input) {   /** input的值取决 | 左边传的内容 */
+                var reslut = ''
+                var year = input.getFullYear()
+                var month = input.getMonth()+ 1
+                var day = input.getDate()
+                reslut = year +'-' + month +'-'+ day
+                return reslut
+            }
         }
     });
 </script>
