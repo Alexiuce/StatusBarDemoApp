@@ -19,12 +19,40 @@
             {{my_time | time_filter}}
         </p>
     </div>
+
+
     
+</div>
+<!--    全局过滤器 : -->
+<div id="global">
+    <p>
+        全局过滤器
+    </p>
+    {{my_time | dateFmt}}
 </div>
 </body>
 
 
 <script>
+<!--    定义全局过滤器 -->
+    Vue.filter('dateFmt',function (input) {
+        var reslut = ''
+        var year = input.getFullYear()
+        var month = input.getMonth()+ 1
+        var day = input.getDate()
+        reslut = year +'-' + month +'-'+ day
+        return reslut
+    });
+
+    let vm0 = new Vue({
+        el:'#global',
+        data:{
+            list:[{uname:'alex'},{uname:'jobs'}],
+            my_time:new Date()
+
+        }
+    });
+
     let vm = new Vue({
         el:'#app',
         data:{
