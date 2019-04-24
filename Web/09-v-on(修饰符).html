@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-ON修饰符</title>
+    <script src="vue2610.js"></script>
+    <style>
+        #app{
+            width: 800px;
+            margin: 20px auto;
+        }
+        #tb{
+            border-collapse: collapse;
+            width: 800px;
+            margin: 20px auto;
+        }
+        #tb td{
+            font-size: 16px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        #tb th{
+            font-size: 16px;
+            border: 1px solid black;
+            background-color: #0094ff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="sid" placeholder="序号">
+<!--    添加按键修饰符,指定按键触发特定的事件响应 -->
+    <input type="text" v-model="sname" placeholder="名称" @keydown.enter="addData">
+    <button @click="addData">添加数据</button>
+    <table id="tb">
+        <tr>
+            <th>序号</th>
+            <th>名称</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="item in list">
+            <td>{{item.sortID}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.ctime}}</td>
+            <td>{{item.op}}</td>
+        </tr>
+
+    </table>
+
+</div>
+</body>
+
+
+<script>
+
+// 查看Vue中的所有键盘修饰符
+console.log(Vue.config.keyCodes)
+// 自定义按键修饰符
+// Vue.config.keyCodes.按键 = 按键的keycode值;
+
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            list:[{sortID:1,name:'alex',ctime:new Date(),op:'del'},
+                  {sortID:2,name:'jobs',ctime:new Date(),op:'del'}
+                  ],
+            sid:0,
+            sname:''
+        },
+        methods:{
+            addData:function () {
+                this.list.push({sortID:this.sid,name:this.sname,ctime:new Date(),op:'del'})
+            }
+        }
+    });
+</script>
+</html>
