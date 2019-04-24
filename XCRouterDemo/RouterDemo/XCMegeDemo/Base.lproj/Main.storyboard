@@ -112,8 +112,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <outlet property="myData" destination="OU3-hi-5g8" id="em1-P8-dLE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+                <customObject id="OU3-hi-5g8" customClass="XCStoryObj"/>
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
@@ -135,6 +139,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>
