@@ -54,6 +54,7 @@
 		D84C263E226F1629008D5374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84C263C226F1629008D5374 /* LaunchScreen.storyboard */; };
 		D84C2641226F1629008D5374 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C2640226F1629008D5374 /* main.m */; };
 		D8610EDB21F7F19C00A18279 /* XCEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8610EDA21F7F19C00A18279 /* XCEmitterLayerViewController.m */; };
+		D86A7FA3226FEC0A00DDCE6E /* XCStoryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A7FA2226FEC0A00DDCE6E /* XCStoryObj.m */; };
 		D86BF0C521BF48B000405628 /* XCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D86BF0C421BF48B000405628 /* XCViewModel.m */; };
 		D86D2BD121ED63B900CCD5E6 /* XCTextLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86D2BD021ED63B900CCD5E6 /* XCTextLayerViewController.m */; };
 		D8709C3221E2146A00B63E6D /* XCShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8709C3121E2146A00B63E6D /* XCShapeViewController.m */; };
@@ -246,6 +247,8 @@
 		D84C2640226F1629008D5374 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8610ED921F7F19C00A18279 /* XCEmitterLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCEmitterLayerViewController.h; sourceTree = "<group>"; };
 		D8610EDA21F7F19C00A18279 /* XCEmitterLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCEmitterLayerViewController.m; sourceTree = "<group>"; };
+		D86A7FA1226FEC0A00DDCE6E /* XCStoryObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCStoryObj.h; sourceTree = "<group>"; };
+		D86A7FA2226FEC0A00DDCE6E /* XCStoryObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCStoryObj.m; sourceTree = "<group>"; };
 		D86BF0C321BF48B000405628 /* XCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCViewModel.h; sourceTree = "<group>"; };
 		D86BF0C421BF48B000405628 /* XCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCViewModel.m; sourceTree = "<group>"; };
 		D86D2BCF21ED63B900CCD5E6 /* XCTextLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTextLayerViewController.h; sourceTree = "<group>"; };
@@ -629,6 +632,8 @@
 				D84C263C226F1629008D5374 /* LaunchScreen.storyboard */,
 				D84C263F226F1629008D5374 /* Info.plist */,
 				D84C2640226F1629008D5374 /* main.m */,
+				D86A7FA1226FEC0A00DDCE6E /* XCStoryObj.h */,
+				D86A7FA2226FEC0A00DDCE6E /* XCStoryObj.m */,
 			);
 			path = XCMegeDemo;
 			sourceTree = "<group>";
@@ -1426,6 +1431,7 @@
 				D84C2633226F1628008D5374 /* MasterViewController.m in Sources */,
 				D84C2630226F1628008D5374 /* AppDelegate.m in Sources */,
 				D84C2641226F1629008D5374 /* main.m in Sources */,
+				D86A7FA3226FEC0A00DDCE6E /* XCStoryObj.m in Sources */,
 				D84C2636226F1628008D5374 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
