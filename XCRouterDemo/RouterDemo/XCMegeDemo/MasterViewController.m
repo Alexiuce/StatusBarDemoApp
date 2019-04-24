@@ -8,10 +8,15 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "XCStoryObj.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+
+@property (strong, nonatomic) IBOutlet XCStoryObj *myData;
+
+
 @end
 
 @implementation MasterViewController
