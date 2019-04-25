@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义指令应用</title>
+    <script src="vue2610.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" placeholder="请输入序号"><br>
+    <input type="text" placeholder="请输入名称"><br>
+<!--    v-focus 是自定义的指令 -->
+    <input type="text" v-focus placeholder="请输入操作">
+</div>
+</body>
+
+
+<script>
+// 自定义Vue指令 : 指令名称定义时不需要v- 前缀,但使用时,必须使用v-前缀;
+    Vue.directive('focus', {
+        insert:function (el) {
+            console.log(el)
+            el.focus()
+        }
+
+    })
+
+    let vm = new Vue({
+        el:'#app',
+        data:{
+
+        },
+    });
+</script>
+
+</html>
