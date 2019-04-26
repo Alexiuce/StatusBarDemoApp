@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-Source GET请求</title>
+    <script src="vue2610.js"></script>
+    <script src="v-resource151.js"></script>
+</head>
+<body>
+
+</body>
+<div id="app">
+    <button @click="getData">Get 请求</button>
+    <p>{{result}}</p>
+</div>
+
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            result:null
+        },
+        methods: {
+            getData:function () {
+                let url = 'http://httpbin.org/get'
+                this.$http.get(url)
+                          .then(function (response) {
+                              this.result = response.body
+                          })
+
+            }
+        }
+    });
+</script>
+</html>
