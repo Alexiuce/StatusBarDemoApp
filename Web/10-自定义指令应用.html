@@ -12,15 +12,20 @@
 <!--    v-focus 是自定义的指令 -->
     <input type="text" v-focus placeholder="请输入操作">
 </div>
+
 </body>
 
 
 <script>
-// 自定义Vue指令 : 指令名称定义时不需要v- 前缀,但使用时,必须使用v-前缀;
+    c = 10;
+    console.log(c);
+    let a = 100;
+    console.log(typeof a);
+    // 自定义Vue指令 : 指令名称定义时不需要v- 前缀,但使用时,必须使用v-前缀;
     Vue.directive('focus', {
         insert:function (el) {
-            console.log(el)
-            el.focus()
+            console.log(el);
+            el.focus();
         }
 
     })
