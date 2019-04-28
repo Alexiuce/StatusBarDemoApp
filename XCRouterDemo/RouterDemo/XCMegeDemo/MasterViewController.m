@@ -29,8 +29,18 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    [self testDemo];
 }
-
+- (void)testDemo{
+    int a = 1;
+    
+    (a > 9) && [self doingOK];
+    
+}
+- (int)doingOK{
+    NSLog(@"a is larger");
+    return 1;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
