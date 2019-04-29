@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>V-Model</title>
     <script src="vue2610.js"></script>
 </head>
+
 <body>
-<div id="app">
-    <p >
-      {{name}}
-    </p>
-    <div>
-        <input type="text" v-model="name">
+    <div id="app">
+        <p>
+            {{name}}
+        </p>
+        <div>
+            <input type="text" v-model="name">
+        </div>
     </div>
-</div>
 </body>
 
 <script>
     let vm = new Vue({
-        el:'#app',
-        data:{
-            name:'good morning',
+        el: '#app',
+        data: {
+            name: 'good morning',
         }
     });
 </script>
+
 </html>

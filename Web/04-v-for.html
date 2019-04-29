@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>V-FOR</title>
     <script src="vue2610.js"></script>
 </head>
+
 <body>
-<div id="app">
-    <ul>
-        <li v-for="item in list">{{item}}</li>
-        <hr>
-        <li v-for="(item,index) in list">{{index}} : {{item}}</li>
-        <hr>
-        <li v-for="item in list">{{$index}}--{{item}}</li>
-        <hr>
-        <li v-for="item in user">{{item}}</li>
-        <hr>
-        <li v-for="(item,key) in user">{{key}}== {{item}}</li>
-        <hr>
-        <li v-for="(item,key,index) in user">{{item}}=={{key}}=={{index}}</li>
-        <hr>
-        <li v-for="(item,index) in list" :key="index">{{item}}</li>
-    </ul>
-</div>
+    <div id="app">
+        <ul>
+            <li v-for="item in list">{{item}}</li>
+            <hr>
+            <li v-for="(item,index) in list">{{index}} : {{item}}</li>
+            <hr>
+            <li v-for="item in list">{{$index}}--{{item}}</li>
+            <hr>
+            <li v-for="item in user">{{item}}</li>
+            <hr>
+            <li v-for="(item,key) in user">{{key}}== {{item}}</li>
+            <hr>
+            <li v-for="(item,key,index) in user">{{item}}=={{key}}=={{index}}</li>
+            <hr>
+            <li v-for="(item,index) in list" :key="index">{{item}}</li>
+        </ul>
+    </div>
 </body>
 
 <script>
     new Vue({
-        el:'#app',
-        data:{
-            list:[1,2,3,4,4],
-            user:{"name":'alex',"age":20}
+        el: '#app',
+        data: {
+            list: [1, 2, 3, 4, 4],
+            user: { "name": 'alex', "age": 20 }
         }
     });
 </script>
+
 </html>

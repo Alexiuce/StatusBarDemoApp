@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <title>Vue生命周期</title>
+</head>
+<body>
+    <div id="app">
+        {{name}}
+    </div>
+</body>
+
+
+<script>
+
+    let vm = new Vue({
+            el:'#app',
+            // Vue 生命周期方法: 在vue实例对象创建后会自动调用此方法; 通常在这个方法中进行网络请求;
+            created:function(){
+                console.log('hello create vue obj');
+            },
+            data:{
+                name:'hello'
+            }
+    })
+</script>
+</html>
