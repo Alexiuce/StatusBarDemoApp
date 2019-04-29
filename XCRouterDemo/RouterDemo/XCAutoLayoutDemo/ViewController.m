@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *mySwitch;
+@property (weak, nonatomic) IBOutlet UILabel *leftLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 
 @end
 
@@ -21,6 +23,10 @@
 //    [self p_missingViewDemo];
 //    [self p_intrinsicSizeDemo];
     [self p_constraintsPrioritiesDemo];
+    
+    self.leftLabel.text = @"alkdjfa;lkdjf;aklsdfjieuqwpeija;kdsf123";
+    self.rightLabel.text = @"aksdlfja;ldkfja;dkfjaldjfewiofja;123123";
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -48,6 +54,7 @@
 //    /** 设置宽度 */
 //    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(view)]];
     
+ 
     
     
     UIView *viewA = [[UIView alloc]initWithFrame:CGRectMake(10, 100, 20, 20)];
