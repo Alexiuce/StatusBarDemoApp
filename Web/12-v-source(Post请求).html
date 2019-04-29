@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>V-Source POST请求</title>
     <script src="vue2610.js"></script>
     <script src="v-resource151.js"></script>
 </head>
-<body>
 
+<body>
+    <div id="app">
+        <button @click="getData">POST 请求</button>
+        <p>{{result}}</p>
+    </div>
 </body>
-<div id="app">
-    <button @click="getData">POST 请求</button>
-    <p>{{result}}</p>
-</div>
 
 <script>
     let vm = new Vue({
-        el:'#app',
-        data:{
-            result:null
+        el: '#app',
+        data: {
+            result: null
         },
         methods: {
-            getData:function () {
+            getData: function () {
                 let url = 'http://httpbin.org/post'
-                this.$http.post(url,{name:'alex'})
-                          .then(function (response) {
-                              this.result = response.body
-                          })
+                this.$http.post(url, { name: 'alex' })
+                    .then(function (response) {
+                        this.result = response.body
+                    })
 
             }
         }
     });
 </script>
+
 </html>

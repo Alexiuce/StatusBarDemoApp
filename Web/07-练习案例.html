@@ -78,7 +78,7 @@
             sname:'',
         },
         methods:{
-            test:function (index) {
+            test (index) {
                 //提醒弹窗
                 if (!confirm('是否要删除数据')){
                     return
@@ -90,13 +90,12 @@
 
                 // this.list.splice(index,1)
             },
-            addData: function () {
-
+            addData () {
                 this.list.push({id:this.pid,name:this.pname,ctime:new Date})
                 this.pid = 0
                 this.pname = ''
             },
-            filterItem:function (item) {
+            filterItem (item) {
                 let t = this.sname
                 let r = item.filter(function (obj) {
                     return  obj.name.indexOf(t) !== -1
@@ -104,7 +103,6 @@
                 return r
 
             }
-
         },
     });
 </script>
