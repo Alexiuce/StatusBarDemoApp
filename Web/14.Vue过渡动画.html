@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue 过渡动画</title>
+
+    <style>
+        .anim-enter-active, .anim-leave-active {
+                     transition: all 0.4s ease;
+                     padding-left: 10px;
+        }
+        .anim-enter, .anim-leave-active {
+            padding-left: 100px;
+        }
+
+    </style>
     <script src="vue2610.js"></script>
 </head>
 <body>
     <div id="app">
         <button @click="change_show">显示/隐藏</button>
-        <div v-show="show">Hello Showing</div>
+        <transition name = "anim">
+
+            <div v-show="show">Hello Showing</div>
+        </transition>
 
     </div>
 </body>
