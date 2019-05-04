@@ -11,8 +11,10 @@
 <body>
 <div id="app">
      <button @click="change_show">显示/隐藏</button>
-       
-         <div class="animated infinite bounce delay-2s" v-text="msg" v-if="isShow"></div>        
+       <transition>
+           
+           <div class="animated infinite bounce delay-2s" v-text="msg" v-if="isShow"></div>        
+        </transition>
 
     </div>
 </body>
