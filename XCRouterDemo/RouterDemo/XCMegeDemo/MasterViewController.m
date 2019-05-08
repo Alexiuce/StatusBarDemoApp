@@ -33,7 +33,6 @@
 }
 - (void)testDemo{
     int a = 1;
-    
     (a > 9) && [self doingOK];
     
 }
