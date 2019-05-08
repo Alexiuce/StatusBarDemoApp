@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <title>Vue自定义组件</title>
+</head>
+
+<body>
+
+<template id="account">
+    <!-- 仅可以使用一个子容器包裹内容!!!! -->
+    <div>
+        <a href="#">登录123</a> 
+        <a href="#">注册</a>
+    </div>
+</template>
+
+    <div id="app">
+        <!-- 使用注册的组件  -->
+        <login></login>
+        <register></register>
+        <!-- 使用模版定义的组件 -->
+        <account></account>
+    </div>
+</body>
+<script>
+    // 定义全局组件
+    /***  Vue 1.0 写法 */
+    let loginView = Vue.extend({
+        template: '<h1>登录组件</h1>'
+    });
+    // 注册组件
+    Vue.component('login', loginView);
+
+/** Vue 2.0 写法 : */
+    Vue.component('register',{
+        template:'<h1>注册组件</h1>'
+    });
+/*** 注册组件的另一直常用写法: 使用模版 */
+
+    Vue.component('account',{
+        template:'#account'
+    });
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+    });
+</script>
+
+</html>
