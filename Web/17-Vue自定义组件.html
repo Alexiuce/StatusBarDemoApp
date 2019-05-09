@@ -11,13 +11,14 @@
 
 <body>
 
-<template id="account">
-    <!-- 仅可以使用一个子容器包裹内容!!!! -->
-    <div>
-        <a href="#">登录123</a> 
-        <a href="#">注册</a>
-    </div>
-</template>
+    <template id="account">
+        <!-- 仅可以使用一个子容器包裹内容!!!! -->
+        <div>
+            {{msg}}
+            <a href="#">登录123</a>
+            <a href="#" @click="userLogin">注册</a>
+        </div>
+    </template>
 
     <div id="app">
         <!-- 使用注册的组件  -->
@@ -36,14 +37,26 @@
     // 注册组件
     Vue.component('login', loginView);
 
-/** Vue 2.0 写法 : */
-    Vue.component('register',{
-        template:'<h1>注册组件</h1>'
+    /** Vue 2.0 写法 : */
+    Vue.component('register', {
+        template: '<h1>注册组件</h1>'
     });
-/*** 注册组件的另一直常用写法: 使用模版 */
+    /*** 注册组件的另一直常用写法: 使用模版 */
 
-    Vue.component('account',{
-        template:'#account'
+    Vue.component('account', {
+        template: '#account',
+        // !!!!! 组件内的data不是一个对象,而是一个函数,在函数内部,返回一个对象!!!!! 
+        data:function(){
+            return {
+                msg:"组件内data 属性字段"
+            }
+        },
+        // !!!! 组件内事件方法
+        methods:{
+          userLogin:function(){
+            console.log('123')
+          }  
+        } 
     });
 
     let vm = new Vue({
