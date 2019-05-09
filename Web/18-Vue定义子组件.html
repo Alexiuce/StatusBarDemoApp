@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <title>子组件定义</title>
+</head>
+<body>
+    <div id="app">
+        <vmogin></vmogin>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data:{
+
+        },
+        methods:{
+
+        },
+        // !!!! 定义子组件,(非全局组件)!!!! 组建名称不支持驼峰写法!!!!!
+        components:{
+                vmogin:{
+                    template:'<h1>vm 登录子组件</h1>'
+                }
+        }
+    });
+</script>
+</html>
