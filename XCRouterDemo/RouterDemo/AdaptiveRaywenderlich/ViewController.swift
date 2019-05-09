@@ -16,6 +16,10 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.init(named: "L1")
     }
 
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        present(XCAdaptiveViewController(), animated: true, completion: nil)
+    }
 
 }
 
