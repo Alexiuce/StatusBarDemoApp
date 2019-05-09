@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="app">
-
+        <vmogin></vmogin>
     </div>
 </body>
 <script>
@@ -19,7 +19,13 @@
 
         },
         methods:{
-            
+
+        },
+        // !!!! 定义子组件,(非全局组件)!!!! 组建名称不支持驼峰写法!!!!!
+        components:{
+                vmogin:{
+                    template:'<h1>vm 登录子组件</h1>'
+                }
         }
     });
 </script>
