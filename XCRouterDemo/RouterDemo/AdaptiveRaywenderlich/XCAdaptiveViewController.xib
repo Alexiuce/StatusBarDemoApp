@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XCAdaptiveViewController" customModule="AdaptiveRaywenderlich" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud_small" translatesAutoresizingMaskIntoConstraints="NO" id="qo6-3J-57i">
+                    <rect key="frame" x="57" y="64" width="300" height="196.5"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wG5-9D-1Oe" userLabel="TextContainer">
+                    <rect key="frame" x="0.0" y="280.5" width="414" height="581.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fas-vo-Qdd">
+                            <rect key="frame" x="0.0" y="10" width="414" height="107.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="150"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 28C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nwO-t6-l1R">
+                            <rect key="frame" x="0.0" y="392" width="414" height="179.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="250"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="150"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="L2"/>
+                    <constraints>
+                        <constraint firstItem="nwO-t6-l1R" firstAttribute="width" secondItem="wG5-9D-1Oe" secondAttribute="width" id="BFF-Jn-iDA"/>
+                        <constraint firstItem="fas-vo-Qdd" firstAttribute="centerX" secondItem="wG5-9D-1Oe" secondAttribute="centerX" id="S8t-xj-E70"/>
+                        <constraint firstItem="fas-vo-Qdd" firstAttribute="top" secondItem="wG5-9D-1Oe" secondAttribute="top" constant="10" id="fGk-Ga-F77"/>
+                        <constraint firstAttribute="bottom" secondItem="nwO-t6-l1R" secondAttribute="bottom" constant="10" id="kE8-Hr-cPZ"/>
+                        <constraint firstItem="nwO-t6-l1R" firstAttribute="centerX" secondItem="wG5-9D-1Oe" secondAttribute="centerX" id="kJq-nN-3Lf"/>
+                        <constraint firstItem="fas-vo-Qdd" firstAttribute="width" secondItem="wG5-9D-1Oe" secondAttribute="width" id="wGI-7h-Lp4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="L1"/>
+            <constraints>
+                <constraint firstItem="qo6-3J-57i" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.45" id="DAe-3B-ZuF"/>
+                <constraint firstItem="qo6-3J-57i" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dhc-7B-v8P"/>
+                <constraint firstItem="wG5-9D-1Oe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="F7B-dR-MD4"/>
+                <constraint firstItem="wG5-9D-1Oe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IXR-b5-HgV"/>
+                <constraint firstItem="wG5-9D-1Oe" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.5" id="PMh-RC-Bzb"/>
+                <constraint firstItem="qo6-3J-57i" firstAttribute="height" relation="lessThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="ZeF-9x-px2"/>
+                <constraint firstItem="qo6-3J-57i" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gvY-PS-2hb"/>
+                <constraint firstItem="wG5-9D-1Oe" firstAttribute="firstBaseline" secondItem="qo6-3J-57i" secondAttribute="baseline" constant="20" id="hFe-Xi-ccl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wG5-9D-1Oe" secondAttribute="bottom" id="inf-Of-u6c"/>
+                <constraint firstItem="qo6-3J-57i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="qFM-ha-4P7"/>
+                <constraint firstItem="qo6-3J-57i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="w9D-b5-oq0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wG5-9D-1Oe" secondAttribute="trailing" id="xR2-gw-y3j"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="DAe-3B-ZuF"/>
+                    <exclude reference="gvY-PS-2hb"/>
+                    <exclude reference="qFM-ha-4P7"/>
+                    <exclude reference="F7B-dR-MD4"/>
+                    <exclude reference="PMh-RC-Bzb"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="DAe-3B-ZuF"/>
+                    <exclude reference="Dhc-7B-v8P"/>
+                    <exclude reference="ZeF-9x-px2"/>
+                    <include reference="gvY-PS-2hb"/>
+                    <include reference="qFM-ha-4P7"/>
+                    <exclude reference="w9D-b5-oq0"/>
+                    <include reference="F7B-dR-MD4"/>
+                    <exclude reference="IXR-b5-HgV"/>
+                    <include reference="PMh-RC-Bzb"/>
+                    <exclude reference="hFe-Xi-ccl"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="cloud_small" width="300" height="196.5"/>
+        <namedColor name="L1">
+            <color red="0.28999999165534973" green="0.67100000381469727" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="L2">
+            <color red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
