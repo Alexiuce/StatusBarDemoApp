@@ -102,6 +102,8 @@
 		D8A8CE1021EED1A10098859F /* XCTransformLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A8CE0F21EED1A10098859F /* XCTransformLayerViewController.m */; };
 		D8A92ABE221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A92ABC221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m */; };
 		D8A92ABF221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A92ABD221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib */; };
+		D8AAD9F32283B64B001ABB20 /* XCAdaptiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AAD9F12283B64B001ABB20 /* XCAdaptiveViewController.swift */; };
+		D8AAD9F42283B64B001ABB20 /* XCAdaptiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AAD9F22283B64B001ABB20 /* XCAdaptiveViewController.xib */; };
 		D8AB108B21CC8BFF002055CA /* XCSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB108A21CC8BFF002055CA /* XCSwitch.m */; };
 		D8B40AA521F5542400463428 /* 音频.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8B40AA421F5542400463428 /* 音频.gif */; };
 		D8C138CD21ACD25A00FA92C4 /* XCRecentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C138CC21ACD25A00FA92C4 /* XCRecentViewController.m */; };
@@ -334,6 +336,8 @@
 		D8A92ABB221F7B9A00DA3839 /* XCTimeCustomFuncViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTimeCustomFuncViewController.h; sourceTree = "<group>"; };
 		D8A92ABC221F7B9A00DA3839 /* XCTimeCustomFuncViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTimeCustomFuncViewController.m; sourceTree = "<group>"; };
 		D8A92ABD221F7B9A00DA3839 /* XCTimeCustomFuncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCTimeCustomFuncViewController.xib; sourceTree = "<group>"; };
+		D8AAD9F12283B64B001ABB20 /* XCAdaptiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAdaptiveViewController.swift; sourceTree = "<group>"; };
+		D8AAD9F22283B64B001ABB20 /* XCAdaptiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCAdaptiveViewController.xib; sourceTree = "<group>"; };
 		D8AB108921CC8BFF002055CA /* XCSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCSwitch.h; sourceTree = "<group>"; };
 		D8AB108A21CC8BFF002055CA /* XCSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCSwitch.m; sourceTree = "<group>"; };
 		D8B40AA421F5542400463428 /* 音频.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "音频.gif"; sourceTree = "<group>"; };
@@ -755,6 +759,8 @@
 			children = (
 				D8925C2A22826C2800617D75 /* AppDelegate.swift */,
 				D8925C2C22826C2800617D75 /* ViewController.swift */,
+				D8AAD9F12283B64B001ABB20 /* XCAdaptiveViewController.swift */,
+				D8AAD9F22283B64B001ABB20 /* XCAdaptiveViewController.xib */,
 				D8925C2E22826C2800617D75 /* Main.storyboard */,
 				D8925C3122826C2A00617D75 /* Assets.xcassets */,
 				D8925C3322826C2A00617D75 /* LaunchScreen.storyboard */,
@@ -1347,6 +1353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8925C3522826C2A00617D75 /* LaunchScreen.storyboard in Resources */,
+				D8AAD9F42283B64B001ABB20 /* XCAdaptiveViewController.xib in Resources */,
 				D8925C3222826C2A00617D75 /* Assets.xcassets in Resources */,
 				D8925C3022826C2800617D75 /* Main.storyboard in Resources */,
 			);
@@ -1527,6 +1534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8925C2D22826C2800617D75 /* ViewController.swift in Sources */,
+				D8AAD9F32283B64B001ABB20 /* XCAdaptiveViewController.swift in Sources */,
 				D8925C2B22826C2800617D75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
