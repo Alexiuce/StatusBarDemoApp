@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <title>Vue组件切换</title>
+</head>
+
+<body>
+    <div id="app">
+        <a href="#" @click="modelName='login'">登录页面</a>
+        <a href="#" @click="modelName='register'">注册页面</a>
+        <!-- 利用component的 is 属性进行组件的切换显示  -->
+        <component :is="modelName"></component>
+    </div>
+</body>
+
+<script>
+    // 注册全局组件 : 登录
+    Vue.component('login', {
+        template: "<h1>登录组件View</h1>"
+    });
+    // 注册全局组件: 注册
+    Vue.component('register', {
+        template: "<h1>注册组件View</h1>"
+    });
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            modelName:'login'
+        }
+    });
+</script>
+
+</html>
