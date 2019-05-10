@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <title>父子组件传值</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <p>下面是子组件view</p>
+        <!-- 向子组件传递数据,通过子组件内部定义的id属性进行绑定,然后将父组件的id属性值传递过去 -->
+        <m1 :id='id' @childsend='fetchData'></m1>
+        <p>下面是接收子组件的数据</p>
+        this is value form child : {{msg}}
+    </div>
+
+</body>
+
+<template id="sub">
+    <div>
+        this is value form super :{{id}}
+        <button @click='sendSuper'>Give super</button>
+    </div>
+</template>
+
+<script>
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            id: "0x0010",
+            msg: "old"
+        },
+        methods: {
+            fetchData(input) {
+                this.msg = input
+            }
+        },
+        components: {
+            m1: {
+                template: '#sub',
+                //  定义接收的数据的数据名称;!!!!!! 用来接收父组件进行传值
+                props: ["id"],
+                methods: {
+                    sendSuper() {
+                        // 子组件使用 this.$emit()方法进行逆向传递数据: 即子组件向父组件传递数据, 
+                        // childsend 为key,用来在父组件中进行注册使用; 这里注意,不支持驼峰命名写法;
+                        //  
+                        this.$emit('childsend', '0x10 from child')
+                    }
+                },
+            }
+        }
+    });
+
+</script>
+
+</html>
