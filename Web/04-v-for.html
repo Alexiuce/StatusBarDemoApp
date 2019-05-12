@@ -10,25 +10,31 @@
 <body>
     <div id="app">
         <ul>
+            <p>v-for </p>
             <li v-for="item in list">{{item}}</li>
             <hr>
-            <li v-for="(item,index) in list">{{index}} : {{item}}</li>
+            <p>(item,index) in list</p>
+            <li v-for="(item,index) in list">index:{{index}} : item:{{item}}</li>
             <hr>
-            <li v-for="item in list">{{$index}}--{{item}}</li>
+            <li v-for="item in list">$index--{{item}}</li>
             <hr>
+            <p> item in user </p>
             <li v-for="item in user">{{item}}</li>
             <hr>
-            <li v-for="(item,key) in user">{{key}}== {{item}}</li>
+            <p>(item, key) in user</p>
+            <li v-for="(item,key) in user">key:{{key}}== item:{{item}}</li>
             <hr>
+            <p>(item,key,index) in user</p>
             <li v-for="(item,key,index) in user">{{item}}=={{key}}=={{index}}</li>
             <hr>
+            <p> (item, index) in list  v-bind key=index </p>
             <li v-for="(item,index) in list" :key="index">{{item}}</li>
         </ul>
     </div>
 </body>
 
 <script>
-    new Vue({
+    let vm = new Vue({
         el: '#app',
         data: {
             list: [1, 2, 3, 4, 4],
