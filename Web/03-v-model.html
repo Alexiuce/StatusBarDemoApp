@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>V-Model</title>
+    <title>V-Model(数据双向绑定)</title>
     <script src="vue2610.js"></script>
 </head>
 
@@ -13,7 +13,12 @@
             {{name}}
         </p>
         <div>
+            <p>v - model</p>
+            <!-- input中输入变化时,会直接影响name的值,v-bind是单向的(值->view), -->
             <input type="text" v-model="name">
+            <hr>
+            <p>v - bind </p>
+            <input type="text" v-bind:value='name'>
         </div>
     </div>
 </body>
