@@ -9,7 +9,7 @@
 
 <body>
     <div id="app">
-        <button v-on:click="changeDisplay">显示/隐藏</button>
+        <button @click="changeDisplay">显示/隐藏</button>
         <!--    v-if 通过添加或者移除dom 实现显示或隐藏元素; -->
         <div v-if="isDisplay">div is display</div>
         <hr>
@@ -25,7 +25,7 @@
             isDisplay: true,
         },
         methods: {
-            changeDisplay: function () {
+            changeDisplay() {
                 this.isDisplay = !this.isDisplay;
             }
         }
