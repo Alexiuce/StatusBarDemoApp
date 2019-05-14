@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <title>获取Dom指令</title>
+</head>
+
+<body>
+    <div id="app">
+        <div ref="sdiv" id="div1">
+            hello v-el
+        </div>
+        <button @click="getdom">获取Dom对象</button>
+        <hr>
+        <button @click="getcomp">获取组件对象</button>
+        <subview ref="subview"></subview>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+
+        },
+        methods: {
+            getdom() {
+
+                alert(this.$refs.sdiv);
+            },
+            getcomp() {
+                alert(this.$refs.subview.msg);
+            }
+        },
+        components: {
+
+            subview: {
+                data: function () {
+                    return {
+                        msg: "sub msg"
+                    }
+                },
+                template: "<h1>sub view</h1>"
+            }
+
+        },
+    });
+</script>
+
+</html>
