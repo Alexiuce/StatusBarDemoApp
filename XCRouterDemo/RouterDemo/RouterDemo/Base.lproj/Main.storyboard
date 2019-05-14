@@ -225,9 +225,22 @@
                             <outlet property="delegate" destination="rOM-mk-5ZT" id="ikQ-PA-ziL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0hc-fi-ycZ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="0hc-fi-ycZ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="aOl-qA-ouR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Vqr-cg-WF7" id="SfI-lV-2C7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOf-On-Bhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Vqr-cg-WF7">
+                    <connections>
+                        <outlet property="delegate" destination="rOM-mk-5ZT" id="z9W-1N-4SW"/>
+                        <outlet property="searchContentsController" destination="rOM-mk-5ZT" id="K5n-nT-pjs"/>
+                        <outlet property="searchResultsDataSource" destination="rOM-mk-5ZT" id="gf3-Gp-ShY"/>
+                        <outlet property="searchResultsDelegate" destination="rOM-mk-5ZT" id="jWc-ls-dIs"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2030" y="821"/>
         </scene>
