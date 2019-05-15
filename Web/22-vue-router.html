@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <script src="vue-router306.js"></script>
+    <title>Vue-router</title>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login">登录</router-link>
+        <router-link v-bind="{to:'/register/' + name}">注册</router-link>
+        <router-view></router-view>
+    </div>
+</body>
+<script>
+    // 1. 准备组件
+    const login = Vue.extend({
+        template: "<div><h1>登录</h1></div>"
+    });
+    const register = Vue.extend({
+        template: "<div><h1>注册{{name}}</h1></div>",
+        data() {
+            return {
+                name:''
+            }
+        },
+        created() {
+            this.name = this.$route.params.name;
+        },
+    });
+    // 2. 实例路由对象,路由规则
+    const router = new VueRouter({
+        routes: [
+            {path:"/",redirect:"/login"},        
+            { path: "/login", component: login },
+            { path: "/register/:name", component: register }
+        ]
+    });
+    // 3. 开启路由
+    const App = new Vue({
+        el:"#app",
+        data:{
+            name:"good"
+        },
+        router: router
+    })
+
+</script>
+
+</html>
