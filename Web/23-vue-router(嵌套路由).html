@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+    <script src="vue-router306.js"></script>
+    <title>V-router嵌套路由</title>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <router-link to="/account">用户账号</router-link>
+        <router-view></router-view>
+    </div>
+</body>
+
+<template id="account">
+    <div>
+        <p>子路由嵌套</p>
+        <router-link to="/account/subv">s1</router-link>
+        <router-link to="/account/sub2">s1</router-link>
+        <router-view></router-view>
+    </div>
+</template>
+
+<script>
+    const login = Vue.extend({
+        template: "<h1>登录</h1>"
+    });
+    const register = Vue.extend({
+        template: "<h1>注册</h1>"
+    });
+
+    // 包含嵌套路由
+    const account = Vue.extend({
+        template: "#account"
+    })
+
+    const subview = Vue.extend({
+        template: "<h1>Sub view</h1>"
+    })
+    const subview2 = Vue.extend({
+        template:"<h1>sub 2</h1>"
+    })
+
+    const routes = [
+        { path: '/login', component: login },
+        { path: '/register', component: register },
+        {
+            path: '/account',
+            component: account,
+            children: [
+                { path: 'subv', component: subview },
+                {path:'sub2',component:subview2}
+            ]
+        },
+    ]
+    const router = new VueRouter({
+        routes: routes
+    })
+    let App = new Vue({
+        el: '#app',
+        router: router
+    })
+
+</script>
+
+</html>
