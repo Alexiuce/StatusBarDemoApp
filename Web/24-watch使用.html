@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue2610.js"></script>
+
+    <title>watch</title>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="firstname">
+        <input type="text" v-model="lastname">
+        <p>
+            {{fullname}}
+        </p>
+    </div>
+</body>
+<script>
+const app = new Vue({
+    el: "#app",
+    data:{
+        firstname:'a',
+        lastname:"b",
+        fullname:""
+    },
+    watch: {
+        firstname(newval,oldval){
+            this.fullname = this.firstname + this.lastname;
+        }
+    },
+
+});
+
+</script>
+</html>
