@@ -12,8 +12,10 @@
 
 <body>
     <div id="app">
+        <!-- 使用router-link标签进行显示路由 -->
         <router-link to="/login">登录</router-link>
         <router-link v-bind="{to:'/register/' + name}">注册</router-link>
+        <!--  子组件会占据router-view -->
         <router-view></router-view>
     </div>
 </body>
