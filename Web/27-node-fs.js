@@ -4,3 +4,6 @@ const fs = require('fs')
 fs.readFile("27-test.txt",(err,data)=>{
     console.log(data.toString());
 })
+
+
+exports.a = 12
