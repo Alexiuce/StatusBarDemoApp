@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="vue2610.js"></script>
+    <style>
+        #app {
+            background: #00ff00;
+            margin: 20px 40px 
+        }
+        #text {
+            background: #ff9900;
+        }
+        .footer {
+            background: #ff6600;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,9 +26,12 @@
         <input type="text" :value="name">
         <input type="text" v-bind:value="age">
         <a v-bind="{href:'http://baidu.com/'+age}">jump</a>
-        <div>
+        <div id="text">
             <input type="text" v-bind="{value:name + age}">
         </div>
+    </div>
+    <div class="footer"> 
+        footer  div
     </div>
 
     <script>
