@@ -1,10 +1,4 @@
+//  npm install express 
+
+//  引入模块
 const express = require('express')
-
-const server = express();
-
-
-server.get((req,rep)=>{
-    rep.send("hello").end();
-});
-
-server.listen(8080);
