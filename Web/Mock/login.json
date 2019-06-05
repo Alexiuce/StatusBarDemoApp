@@ -1,0 +1,12 @@
+{
+    "code":10,
+    "msg":"test not ok",
+    "data":{
+        "user":{
+            "token":"0bee89b07a248e27c83fc3d5951213c1",
+            "phone":"1234567890123",
+            "name":"省委大佬",
+            "avator":"http://xxx.png",
+        }
+    }
+}
