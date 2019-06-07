@@ -1,0 +1,13 @@
+{
+   "code":0,
+   "message":"ok",
+   "data":{
+       "banners":[
+           {
+               "item_id":"0x00",
+               "item_url":"http://www.baidu.com/img?xxxx"
+           }
+       ]
+   }
+
+}
