@@ -1,0 +1,36 @@
+{
+    "code": 0,
+    "data": {
+        "id": 591591111588,
+        "item_id": 591591111588,
+        "item_url": "https://h5.m.taobao.com/awp/core/detail.htm?id=591591111588",
+        "cover": "https://img.alicdn.com/bao/uploaded/i2/37704812/O1CN01ZOO8cl1lPwNolFaBH_!!37704812.jpg",
+        "title": "DANGARA韩国东大门女装2019夏季新圆领字母宽松显瘦大码长袖卫衣",
+        "description": "",
+        "discount_price": "225",
+        "price": "225",
+        "coupon_price": "5",
+        "coupon_start_fee": "95.00",
+        "coupon_end_time": "2019-06-30",
+        "coupon_start_time": "2019-01-13",
+        "coupon_remain_count": 99672,
+        "CouponTotalCount": 99999,
+        "coupon_info": "满95.00元减5元",
+        "buyer_total": 0,
+        "prediction_price": "9",
+        "commodity_resource": 0,
+        "images": {
+            "string": [
+                "https://img.alicdn.com/i3/37704812/O1CN01CXIanX1lPwNnq9Mzg_!!37704812.jpg",
+                "https://img.alicdn.com/i3/37704812/O1CN01YffiAa1lPwNmQ3ZQH_!!37704812.jpg",
+                "https://img.alicdn.com/i2/37704812/O1CN01ppjZL31lPwNnVnuZY_!!37704812.jpg",
+                "https://img.alicdn.com/i1/37704812/O1CN01Q9F7Q91lPwNmQ4F1S_!!37704812.jpg"
+            ]
+        },
+        "shop_name": "jing521958",
+        "seller_id": 37704812,
+        "description_url": "https://mdetail.tmall.com/templates/pages/desc?id=591591111588",
+        "subsidy_price": "0.01"
+    },
+    "message": ""
+}
