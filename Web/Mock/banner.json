@@ -1,13 +1,1 @@
-{
-   "code":0,
-   "message":"ok",
-   "data":{
-       "banners":[
-           {
-               "item_id":"0x00",
-               "item_url":"http://www.baidu.com/img?xxxx"
-           }
-       ]
-   }
-
-}
+{"code":0,"data":{"banners":[{"image":"https://img.alicdn.com/tfs/TB1OisobBiE3KVjSZFMXXbQhVXa-440-180.jpg","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111"},{"image":"https://img.alicdn.com/tfs/TB1OisobBiE3KVjSZFMXXbQhVXa-440-180.jpg","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111"},{"image":"https://img.alicdn.com/tfs/TB1OisobBiE3KVjSZFMXXbQhVXa-440-180.jpg","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111"},{"image":"https://img.alicdn.com/tfs/TB1OisobBiE3KVjSZFMXXbQhVXa-440-180.jpg","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111"},{"image":"https://img.alicdn.com/tfs/TB1OisobBiE3KVjSZFMXXbQhVXa-440-180.jpg","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111"}],"ico":[{"image":"https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111","title":"测试标0"},{"image":"https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111","title":"测试标1"},{"image":"https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111","title":"测试标2"},{"image":"https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111","title":"测试标3"},{"image":"https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png","uri":"app://home/outerHtml?url=https://s.click.taobao.com/QyujL8w?k=接口调试\u0026m=1111","title":"测试标4"}]},"message":""}
