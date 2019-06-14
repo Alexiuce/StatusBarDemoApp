@@ -6,17 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>绝对定位</title>
     <style>
-        h3 {
+        
+        #left{
             position: absolute;
-            top: 100px;
-            left: 100px;
+            left: 0px;
+            top: 10px;
+            width: 100px;
+        }
+        #middle{
+            position: absolute;
+            left: 110px;
+            top: 10px;
+            width: 100px;
+        }
+        #right{
+            position: absolute;
+            left: 220px;
+            top: 10px;
+            width: 100px;
         }
     </style>
 </head>
 <body>
-    <h3>Hello , this is H3</h3>
-    <p> World, can be better </p>
-     <p>Dom is HTML base item for content,it can contain every thing that you will user see it
-     </p>
+    
+
+    <div id="wrapper">
+        <div id="left">
+            “几乎不假任何思索，我们就能想出一个快速但并不那么优雅的布局方法——使用绝对定位：首先分别为三栏指定固定的宽度，然后从页面的左上角开始为这三栏依次指定固定的位置即可。若是不考虑页脚的话，现在就算大功告成了（图3-1-6）”
+
+            摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
+        </div>
+        <div id="middle">
+            “在本节开始部分Backyard的截图中可以看到，整个作品分为三栏，并带有页脚。出于对搜索引擎优化以及禁用浏览器CSS选项的用户的考虑，源代码中主要内容区域1声明在左右两栏之前——正文部分在源代码中的位置越靠前，就越会被首先下载并显示于浏览器中，那些次要的导航条和链接也不会占据下载刚开始时的那段宝贵时间。”
+
+摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
+        </div>
+        <div id="right">
+            “这正是CSS浮动的本意和要点所在：若将插入到文章中的图片设置为浮动，那么图片下方的文字将自动环绕在其周围，页面上也就自然不会出现那块丑陋的空白。
+            浮动的语法看似简单，但却并不那么容易完全掌握。对于上面的这个场景，CSS代码将类似如下所示：
+            #photo {float: left; margin: 10px 10px 10px 0;}
+            这段代码非常简单易懂，其效果也不难预测。
+            采用浮动实现布局的优势在于，浮动元素仍保留在文档流中，其周围环绕的元素也都清楚它的位置。但由于不同的浏览器对浮动的支持良莠不齐，”
+            
+            摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
+        </div>
+    </div>
+
 </body>
 </html>
