@@ -16,22 +16,19 @@
               position: relative;
         }
         #left{
-            position: absolute;
-            left: 0px;
-            top: 10px;
+            float: left;
             width: 100px;
         }
         #middle{
-            position: absolute;
-            left: 110px;
-            top: 10px;
+            float: left;
             width: 100px;
         }
         #right{
-            position: absolute;
-            left: 220px;
-            top: 10px;
+           float: left;
             width: 100px;
+        }
+        #bottom{
+            clear: both;
         }
     </style>
 </head>
@@ -59,6 +56,13 @@
             采用浮动实现布局的优势在于，浮动元素仍保留在文档流中，其周围环绕的元素也都清楚它的位置。但由于不同的浏览器对浮动的支持良莠不齐，”
             
             摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
+        </div>
+
+        <div id="bottom">
+            “但页脚又该如何处理呢？由于绝对定位的三栏并不会影响到页面中其他的元素，所以页脚将忽略它们的存在，就像这三栏根本不在页面中一样。因此，在这里页脚将显示在页面第一个元素的位置上。
+若仍要采用绝对定位的话，那么必须预先知道这三栏中每一栏的高度，然后再根据其中最高的一栏定位页脚。若是三栏中任意一栏中的文本长度无法确定的话，除了使用JavaScript，我们也只能放弃绝对定位的念头，转而投入到浮动布局的怀抱中。”
+
+摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
         </div>
     </div>
 
