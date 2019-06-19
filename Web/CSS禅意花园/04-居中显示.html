@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>居中显示</title>
+  
+</head>
+
+<style>
+        #content {
+            /* margin-left: auto;
+            margin-right: auto; */
+            width: 600px;
+        }
+        #two{
+            width: 700px;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+
+
+
+<body>
+    
+    <div id="content">
+        “用CSS让元素居中显示并不是件很简单的事情——同样的合法CSS居中设置在不同浏览器中的表现行为却各有千秋。在处理Entomology时Hicks也自然遇到了这个问题，但幸运的是，他最终找到了一种临时补救措施。在介绍他的做法之前，让我们先来看一下CSS中常见的几种让元素水平居中显示的方法。”
+
+摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
+    </div>
+
+    <div id="two">
+            “另一种实现元素居中的方法是使用text-align属性，将该属性值设置为center并应用到body元素上即可。这种做法是彻头彻尾的hack，但它却能兼容大多数浏览器，所以在某些情况下也自然必不可少。
+            之所以说它是hack，是因为这种方法并没有将文本属性应用到文本上，而是应用到了作为容器的元素上。这也就给我们带来了额外的工作。”
+            
+            摘录来自: [美]Dave Shea　Molly E. Holzschlag. “CSS禅意花园（修订版）。” Apple Books. 
+    </div>
+
+
+</body>
+</html>
