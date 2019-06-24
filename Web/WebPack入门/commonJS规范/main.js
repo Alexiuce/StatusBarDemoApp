@@ -1,8 +1,9 @@
 
 const cals = require ("./cals")
 
+function mainAdd(x, y){
+    return cals(x,y);
+}
 
-let result = cals(1,11);
-console.log(result);
 
 
